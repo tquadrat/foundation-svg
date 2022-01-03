@@ -1,0 +1,563 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:svg="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     version='1.1'
+     baseProfile='full'
+     width='3618.000'
+     height='1089.000'>
+    <defs>
+        <style><![CDATA[
+            line
+            {
+              stroke: black;
+            }
+            line.separator
+            {
+              stroke:       black;
+              stroke-width: 1;
+            }
+            marker
+            {
+              fill: white;
+            }
+            path
+            {
+              fill:   white;
+              stroke: black;
+            }
+            path.implementation
+            {
+              fill:             none;
+              stroke-dasharray: 5,5;
+              stroke-width:     3;
+            }
+            path.inheritance
+            {
+              fill:         none;
+              stroke-width: 3;
+            }
+            rect
+            {
+              fill:         none;
+              stroke:       black;
+              stroke-width: 2;
+            }
+            rect.externalClass
+            {
+              fill:         #D0D0D0;
+              fill-opacity: 0.8;
+            }
+            rect.focusClass
+            {
+              fill:         #FFFFF9;
+              fill-opacity: 0.8;
+            }
+            rect.otherClass
+            {
+              fill:         #F0E68C;
+              fill-opacity: 0.8;
+            }
+            rect.template
+            {
+              fill:             #FFFFFF;
+              fill-opacity:     1.0;
+              stroke-dasharray: 3,3;
+            }
+            text
+            {
+              font-family: monospace;
+              font-size:   10px;
+              font-weight: bold;
+            }
+            text.abstract
+            {
+              font-style: italic;
+            }
+            text.final
+            {
+              text-decoration: underline;
+            }
+            text.static
+            {
+              font-weight: normal;
+            }
+            text.stereotype
+            {
+              font-size:   8px;
+              font-weight: normal;
+            }
+            ]]></style>
+        <marker id='inheritance'
+                viewBox='0,0,40,40'
+                markerUnits='strokeWidth'
+                refX='40'
+                refY='20'
+                markerWidth='6'
+                markerHeight='6'
+                orient='auto'>
+            <path d='M40,20 l-40,-20 v40 Z'
+                  fill='#ffffff'
+                  stroke='#000000'
+                  stroke-width='3'/>
+        </marker>
+        <marker id='implementation'
+                viewBox='0,0,40,40'
+                markerUnits='strokeWidth'
+                refX='40'
+                refY='20'
+                markerWidth='6'
+                markerHeight='6'
+                orient='auto'>
+            <path d='M40,20 l-40,-20 v40 Z'
+                  fill='#ffffff'
+                  stroke='#000000'
+                  stroke-width='3'/>
+        </marker>
+        <clipPath id='ID000001'>
+            <rect class='focusClass'
+                  height='678.000'
+                  width='352.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='org.tquadrat.foundation.svg.AllowsGlobalEventAttributes'>
+            <g>
+                <g class='focusClass'
+                   clip-path='url(#ID000001)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='352.000'
+                          height='678.000'
+                          class='focusClass'/>
+                    <line x1='0.000'
+                          y1='28.000'
+                          x2='352.000'
+                          y2='28.000'
+                          class='separator'/>
+                    <text x='149.600'
+                          y='13.000'
+                          class='stereotype'>&#xAB;Interface&#xBB;</text>
+                    <text x='95.000'
+                          y='24.000'
+                          class='abstract'>AllowsGlobalEventAttributes</text>
+                    <line x1='0.000'
+                          y1='45.000'
+                          x2='352.000'
+                          y2='45.000'
+                          class='separator'/>
+                    <text y='41.000'
+                          class='static final'>+ GLOBALEVENT_ATTRIBUTES:java.util.List&lt;java.lang.String&gt;</text>
+                    <text x='5.000'
+                          y='58.000'
+                          class='abstract'>+ setCancelHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='69.000'
+                          class='abstract'>+ setCanPlayHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='80.000'
+                          class='abstract'>+ setCanPlayThroughHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='91.000'
+                          class='abstract'>+ setChangeHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='102.000'
+                          class='abstract'>+ setClickHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='113.000'
+                          class='abstract'>+ setCloseHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='124.000'
+                          class='abstract'>+ setCueChangeHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='135.000'
+                          class='abstract'>+ setDblClickHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='146.000'
+                          class='abstract'>+ setDragEndHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='157.000'
+                          class='abstract'>+ setDragEnterHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='168.000'
+                          class='abstract'>+ setDragExitHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='179.000'
+                          class='abstract'>+ setDragHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='190.000'
+                          class='abstract'>+ setDragLeaveHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='201.000'
+                          class='abstract'>+ setDragOverHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='212.000'
+                          class='abstract'>+ setDragStartHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='223.000'
+                          class='abstract'>+ setDropHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='234.000'
+                          class='abstract'>+ setDurationChangeHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='245.000'
+                          class='abstract'>+ setEmptiedHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='256.000'
+                          class='abstract'>+ setEndedHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='267.000'
+                          class='abstract'>+ setErrorHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='278.000'
+                          class='abstract'>+ setFocusHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='289.000'
+                          class='abstract'>+ setInputHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='300.000'
+                          class='abstract'>+ setInvalidHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='311.000'
+                          class='abstract'>+ setKeyDownHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='322.000'
+                          class='abstract'>+ setKeyPressHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='333.000'
+                          class='abstract'>+ setKeyUpHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='344.000'
+                          class='abstract'>+ setLoadedDataHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='355.000'
+                          class='abstract'>+ setLoadedMetadataHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='366.000'
+                          class='abstract'>+ setLoadHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='377.000'
+                          class='abstract'>+ setLoadStartHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='388.000'
+                          class='abstract'>+ setMouseDownHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='399.000'
+                          class='abstract'>+ setMouseEnterHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='410.000'
+                          class='abstract'>+ setMouseLeaveHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='421.000'
+                          class='abstract'>+ setMouseMoveHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='432.000'
+                          class='abstract'>+ setMouseOutHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='443.000'
+                          class='abstract'>+ setMouseOverHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='454.000'
+                          class='abstract'>+ setMouseUpHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='465.000'
+                          class='abstract'>+ setMouseWheelHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='476.000'
+                          class='abstract'>+ setPauseHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='487.000'
+                          class='abstract'>+ setPlayHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='498.000'
+                          class='abstract'>+ setPlayingHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='509.000'
+                          class='abstract'>+ setProgressHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='520.000'
+                          class='abstract'>+ setRateChangeHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='531.000'
+                          class='abstract'>+ setResetHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='542.000'
+                          class='abstract'>+ setResizeHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='553.000'
+                          class='abstract'>+ setScrollHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='564.000'
+                          class='abstract'>+ setSeekedHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='575.000'
+                          class='abstract'>+ setSeekingHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='586.000'
+                          class='abstract'>+ setSelectHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='597.000'
+                          class='abstract'>+ setShowHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='608.000'
+                          class='abstract'>+ setStalledHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='619.000'
+                          class='abstract'>+ setSubmitHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='630.000'
+                          class='abstract'>+ setSuspendHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='641.000'
+                          class='abstract'>+ setTimeUpdateHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='652.000'
+                          class='abstract'>+ setToggleHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='663.000'
+                          class='abstract'>+ setVolumeChangeHandler(value:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='674.000'
+                          class='abstract'>+ setWaitHandler(value:java.lang.String):void</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000002'>
+            <rect class='otherClass'
+                  height='161.000'
+                  width='1282.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='org.tquadrat.foundation.svg.SVGRectangle'>
+            <g>
+                <g clip-path='url(#ID000002)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='1282.000'
+                          height='161.000'
+                          class='otherClass'/>
+                    <line x1='0.000'
+                          y1='28.000'
+                          x2='1282.000'
+                          y2='28.000'
+                          class='separator'/>
+                    <text x='614.600'
+                          y='13.000'
+                          class='stereotype'>&#xAB;Interface&#xBB;</text>
+                    <text x='605.000'
+                          y='24.000'
+                          class='abstract'>SVGRectangle</text>
+                    <line x1='0.000'
+                          y1='45.000'
+                          x2='1282.000'
+                          y2='45.000'
+                          class='separator'/>
+                    <text y='41.000'
+                          class='static final'>+ EMPTY_SVGRectangle_ARRAY:org.tquadrat.foundation.svg.SVGRectangle[]</text>
+                    <text x='5.000'
+                          y='58.000'>&#x2A22; defineRectangle(x:org.tquadrat.foundation.svg.type.SVGNumber,y:org.tquadrat.foundation.svg.type.SVGNumber,width:org.tquadrat.foundation.svg.type.SVGNumber,height:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='69.000'
+                          class='abstract'>+ setHeight(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='80.000'
+                          class='abstract'>+ setPathLength(length:org.tquadrat.foundation.svg.type.SVGNumber.SVGUserUnitValue):void</text>
+                    <text x='5.000'
+                          y='91.000'>&#x2A22; setPathLength(length:double):void</text>
+                    <text x='5.000'
+                          y='102.000'>&#x2A22; setPathLength(length:long):void</text>
+                    <text x='5.000'
+                          y='113.000'
+                          class='abstract'>+ setRx(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='124.000'
+                          class='abstract'>+ setRy(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='135.000'
+                          class='abstract'>+ setWidth(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='146.000'
+                          class='abstract'>+ setX(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='157.000'
+                          class='abstract'>+ setY(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000003'>
+            <rect class='otherClass'
+                  height='95.000'
+                  width='538.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='org.tquadrat.foundation.svg.SVGPath'>
+            <g>
+                <g clip-path='url(#ID000003)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='538.000'
+                          height='95.000'
+                          class='otherClass'/>
+                    <line x1='0.000'
+                          y1='28.000'
+                          x2='538.000'
+                          y2='28.000'
+                          class='separator'/>
+                    <text x='242.600'
+                          y='13.000'
+                          class='stereotype'>&#xAB;Interface&#xBB;</text>
+                    <text x='248.000'
+                          y='24.000'
+                          class='abstract'>SVGPath</text>
+                    <line x1='0.000'
+                          y1='45.000'
+                          x2='538.000'
+                          y2='45.000'
+                          class='separator'/>
+                    <text y='41.000'
+                          class='static final'>+ EMPTY_SVGPath_ARRAY:org.tquadrat.foundation.svg.SVGPath[]</text>
+                    <text x='5.000'
+                          y='58.000'
+                          class='abstract'>+ setPathDefinition(pathElements:org.tquadrat.foundation.svg.type.SVGPathElement&#x2026;):void</text>
+                    <text x='5.000'
+                          y='69.000'
+                          class='abstract'>+ setPathLength(length:org.tquadrat.foundation.svg.type.SVGNumber.SVGUserUnitValue):void</text>
+                    <text x='5.000'
+                          y='80.000'>&#x2A22; setPathLength(length:double):void</text>
+                    <text x='5.000'
+                          y='91.000'>&#x2A22; setPathLength(length:long):void</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000004'>
+            <rect class='otherClass'
+                  height='62.000'
+                  width='376.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='org.tquadrat.foundation.svg.SVGGroup'>
+            <g>
+                <g clip-path='url(#ID000004)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='376.000'
+                          height='62.000'
+                          class='otherClass'/>
+                    <line x1='0.000'
+                          y1='28.000'
+                          x2='376.000'
+                          y2='28.000'
+                          class='separator'/>
+                    <text x='161.600'
+                          y='13.000'
+                          class='stereotype'>&#xAB;Interface&#xBB;</text>
+                    <text x='164.000'
+                          y='24.000'
+                          class='abstract'>SVGGroup</text>
+                    <line x1='0.000'
+                          y1='45.000'
+                          x2='376.000'
+                          y2='45.000'
+                          class='separator'/>
+                    <text y='41.000'
+                          class='static final'>+ EMPTY_SVGGroup_ARRAY:org.tquadrat.foundation.svg.SVGGroup[]</text>
+                    <text x='5.000'
+                          y='58.000'/>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000005'>
+            <rect class='otherClass'
+                  height='161.000'
+                  width='1222.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='org.tquadrat.foundation.svg.SVGLine'>
+            <g>
+                <g clip-path='url(#ID000005)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='1222.000'
+                          height='161.000'
+                          class='otherClass'/>
+                    <line x1='0.000'
+                          y1='28.000'
+                          x2='1222.000'
+                          y2='28.000'
+                          class='separator'/>
+                    <text x='584.600'
+                          y='13.000'
+                          class='stereotype'>&#xAB;Interface&#xBB;</text>
+                    <text x='590.000'
+                          y='24.000'
+                          class='abstract'>SVGLine</text>
+                    <line x1='0.000'
+                          y1='45.000'
+                          x2='1222.000'
+                          y2='45.000'
+                          class='separator'/>
+                    <text y='41.000'
+                          class='static final'>+ EMPTY_SVGLine_ARRAY:org.tquadrat.foundation.svg.SVGLine[]</text>
+                    <text x='5.000'
+                          y='58.000'>&#x2A22; defineLine(x1:org.tquadrat.foundation.svg.type.SVGNumber,y1:org.tquadrat.foundation.svg.type.SVGNumber,x2:org.tquadrat.foundation.svg.type.SVGNumber,y2:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='69.000'>&#x2A22; setEndPoint(x:org.tquadrat.foundation.svg.type.SVGNumber,y:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='80.000'
+                          class='abstract'>+ setPathLength(length:org.tquadrat.foundation.svg.type.SVGNumber.SVGUserUnitValue):void</text>
+                    <text x='5.000'
+                          y='91.000'>&#x2A22; setPathLength(length:double):void</text>
+                    <text x='5.000'
+                          y='102.000'>&#x2A22; setPathLength(length:long):void</text>
+                    <text x='5.000'
+                          y='113.000'>&#x2A22; setStartPoint(x:org.tquadrat.foundation.svg.type.SVGNumber,y:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='124.000'
+                          class='abstract'>+ setX1(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='135.000'
+                          class='abstract'>+ setX2(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='146.000'
+                          class='abstract'>+ setY1(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='157.000'
+                          class='abstract'>+ setY2(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                </g>
+            </g>
+        </symbol>
+    </defs>
+    <path class='inheritance'
+          d='M666.000,803.000 c0.000,-85.000,1098.000,0.000,1098.000,-85.000 v-15'
+          marker-end='url(#inheritance)'/>
+    <path class='inheritance'
+          d='M1626.000,803.000 c0.000,-85.000,168.000,0.000,168.000,-85.000 v-15'
+          marker-end='url(#inheritance)'/>
+    <path class='inheritance'
+          d='M2133.000,803.000 c0.000,-85.000,-309.000,0.000,-309.000,-85.000 v-15'
+          marker-end='url(#inheritance)'/>
+    <path class='inheritance'
+          d='M2982.000,803.000 c0.000,-85.000,-1128.000,0.000,-1128.000,-85.000 v-15'
+          marker-end='url(#inheritance)'/>
+    <use x='1633.000'
+         y='25.000'
+         xlink:href='#org.tquadrat.foundation.svg.AllowsGlobalEventAttributes'/>
+    <use x='25.000'
+         y='803.000'
+         xlink:href='#org.tquadrat.foundation.svg.SVGRectangle'/>
+    <use x='1357.000'
+         y='803.000'
+         xlink:href='#org.tquadrat.foundation.svg.SVGPath'/>
+    <use x='1945.000'
+         y='803.000'
+         xlink:href='#org.tquadrat.foundation.svg.SVGGroup'/>
+    <use x='2371.000'
+         y='803.000'
+         xlink:href='#org.tquadrat.foundation.svg.SVGLine'/>
+</svg>

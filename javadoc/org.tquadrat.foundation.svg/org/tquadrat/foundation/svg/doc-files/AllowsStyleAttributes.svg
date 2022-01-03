@@ -1,0 +1,664 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:svg="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     version='1.1'
+     baseProfile='full'
+     width='7374.000'
+     height='506.000'>
+    <defs>
+        <style><![CDATA[
+            line
+            {
+              stroke: black;
+            }
+            line.separator
+            {
+              stroke:       black;
+              stroke-width: 1;
+            }
+            marker
+            {
+              fill: white;
+            }
+            path
+            {
+              fill:   white;
+              stroke: black;
+            }
+            path.implementation
+            {
+              fill:             none;
+              stroke-dasharray: 5,5;
+              stroke-width:     3;
+            }
+            path.inheritance
+            {
+              fill:         none;
+              stroke-width: 3;
+            }
+            rect
+            {
+              fill:         none;
+              stroke:       black;
+              stroke-width: 2;
+            }
+            rect.externalClass
+            {
+              fill:         #D0D0D0;
+              fill-opacity: 0.8;
+            }
+            rect.focusClass
+            {
+              fill:         #FFFFF9;
+              fill-opacity: 0.8;
+            }
+            rect.otherClass
+            {
+              fill:         #F0E68C;
+              fill-opacity: 0.8;
+            }
+            rect.template
+            {
+              fill:             #FFFFFF;
+              fill-opacity:     1.0;
+              stroke-dasharray: 3,3;
+            }
+            text
+            {
+              font-family: monospace;
+              font-size:   10px;
+              font-weight: bold;
+            }
+            text.abstract
+            {
+              font-style: italic;
+            }
+            text.final
+            {
+              text-decoration: underline;
+            }
+            text.static
+            {
+              font-weight: normal;
+            }
+            text.stereotype
+            {
+              font-size:   8px;
+              font-weight: normal;
+            }
+            ]]></style>
+        <marker id='inheritance'
+                viewBox='0,0,40,40'
+                markerUnits='strokeWidth'
+                refX='40'
+                refY='20'
+                markerWidth='6'
+                markerHeight='6'
+                orient='auto'>
+            <path d='M40,20 l-40,-20 v40 Z'
+                  fill='#ffffff'
+                  stroke='#000000'
+                  stroke-width='3'/>
+        </marker>
+        <marker id='implementation'
+                viewBox='0,0,40,40'
+                markerUnits='strokeWidth'
+                refX='40'
+                refY='20'
+                markerWidth='6'
+                markerHeight='6'
+                orient='auto'>
+            <path d='M40,20 l-40,-20 v40 Z'
+                  fill='#ffffff'
+                  stroke='#000000'
+                  stroke-width='3'/>
+        </marker>
+        <clipPath id='ID000001'>
+            <rect class='focusClass'
+                  height='73.000'
+                  width='316.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='org.tquadrat.foundation.svg.AllowsStyleAttributes'>
+            <g>
+                <g class='focusClass'
+                   clip-path='url(#ID000001)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='316.000'
+                          height='73.000'
+                          class='focusClass'/>
+                    <line x1='0.000'
+                          y1='28.000'
+                          x2='316.000'
+                          y2='28.000'
+                          class='separator'/>
+                    <text x='131.600'
+                          y='13.000'
+                          class='stereotype'>&#xAB;Interface&#xBB;</text>
+                    <text x='95.000'
+                          y='24.000'
+                          class='abstract'>AllowsStyleAttributes</text>
+                    <line x1='0.000'
+                          y1='45.000'
+                          x2='316.000'
+                          y2='45.000'
+                          class='separator'/>
+                    <text y='41.000'
+                          class='static final'>+ STYLE_ATTRIBUTES:java.util.List&lt;java.lang.String&gt;</text>
+                    <text x='5.000'
+                          y='58.000'
+                          class='abstract'>+ setClass(value:java.lang.CharSequence):void</text>
+                    <text x='5.000'
+                          y='69.000'
+                          class='abstract'>+ setStyle(value:java.lang.CharSequence):void</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000002'>
+            <rect class='otherClass'
+                  height='150.000'
+                  width='526.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='org.tquadrat.foundation.svg.SVGText'>
+            <g>
+                <g clip-path='url(#ID000002)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='526.000'
+                          height='150.000'
+                          class='otherClass'/>
+                    <line x1='0.000'
+                          y1='28.000'
+                          x2='526.000'
+                          y2='28.000'
+                          class='separator'/>
+                    <text x='236.600'
+                          y='13.000'
+                          class='stereotype'>&#xAB;Interface&#xBB;</text>
+                    <text x='242.000'
+                          y='24.000'
+                          class='abstract'>SVGText</text>
+                    <line x1='0.000'
+                          y1='45.000'
+                          x2='526.000'
+                          y2='45.000'
+                          class='separator'/>
+                    <text y='41.000'
+                          class='static final'>+ EMPTY_SVGText_ARRAY:org.tquadrat.foundation.svg.SVGText[]</text>
+                    <text x='5.000'
+                          y='58.000'
+                          class='abstract'>+ addCDATA(text:java.lang.CharSequence):org.tquadrat.foundation.xml.builder.XMLElement</text>
+                    <text x='5.000'
+                          y='69.000'
+                          class='abstract'>+ addText(text:java.lang.CharSequence):org.tquadrat.foundation.xml.builder.XMLElement</text>
+                    <text x='5.000'
+                          y='80.000'
+                          class='abstract'>+ setDx(values:org.tquadrat.foundation.svg.type.SVGNumber&#x2026;):void</text>
+                    <text x='5.000'
+                          y='91.000'
+                          class='abstract'>+ setDy(values:org.tquadrat.foundation.svg.type.SVGNumber&#x2026;):void</text>
+                    <text x='5.000'
+                          y='102.000'
+                          class='abstract'>+ setLengthAdjust(flag:boolean):void</text>
+                    <text x='5.000'
+                          y='113.000'
+                          class='abstract'>+ setRotate(values:org.tquadrat.foundation.svg.type.SVGNumber.SVGDegree&#x2026;):void</text>
+                    <text x='5.000'
+                          y='124.000'
+                          class='abstract'>+ setTextLength(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='135.000'
+                          class='abstract'>+ setX(values:org.tquadrat.foundation.svg.type.SVGNumber&#x2026;):void</text>
+                    <text x='5.000'
+                          y='146.000'
+                          class='abstract'>+ setY(values:org.tquadrat.foundation.svg.type.SVGNumber&#x2026;):void</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000003'>
+            <rect class='otherClass'
+                  height='183.000'
+                  width='1252.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='org.tquadrat.foundation.svg.SVG'>
+            <g>
+                <g clip-path='url(#ID000003)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='1252.000'
+                          height='183.000'
+                          class='otherClass'/>
+                    <line x1='0.000'
+                          y1='28.000'
+                          x2='1252.000'
+                          y2='28.000'
+                          class='separator'/>
+                    <text x='599.600'
+                          y='13.000'
+                          class='stereotype'>&#xAB;Interface&#xBB;</text>
+                    <text x='617.000'
+                          y='24.000'
+                          class='abstract'>SVG</text>
+                    <line x1='0.000'
+                          y1='45.000'
+                          x2='1252.000'
+                          y2='45.000'
+                          class='separator'/>
+                    <text y='41.000'
+                          class='static final'>+ EMPTY_SVG_ARRAY:org.tquadrat.foundation.svg.SVG[]</text>
+                    <text x='5.000'
+                          y='58.000'
+                          class='abstract'>+ addDefinition(child:E):void</text>
+                    <text x='5.000'
+                          y='69.000'
+                          class='abstract'>+ addStyle(style:org.tquadrat.foundation.svg.SVGStyle):void</text>
+                    <text x='5.000'
+                          y='80.000'
+                          class='abstract'>+ setContentScriptType(value:jakarta.activation.MimeType):void</text>
+                    <text x='5.000'
+                          y='91.000'>&#x2A22; setDimension(width:org.tquadrat.foundation.svg.type.SVGNumber,height:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='102.000'
+                          class='abstract'>+ setHeight(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='113.000'
+                          class='abstract'>+ setPreserveAspectRatio(value:org.tquadrat.foundation.svg.type.SVGPreserveAspectRatio):void</text>
+                    <text x='5.000'
+                          y='124.000'
+                          class='abstract'>+ setStyleSheet(styles:java.lang.CharSequence&#x2026;):org.tquadrat.foundation.svg.SVGStyle</text>
+                    <text x='5.000'
+                          y='135.000'
+                          class='abstract'>+ setViewBox(x:org.tquadrat.foundation.svg.type.SVGNumber,y:org.tquadrat.foundation.svg.type.SVGNumber,width:org.tquadrat.foundation.svg.type.SVGNumber,height:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='146.000'
+                          class='abstract'>+ setWidth(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='157.000'
+                          class='abstract'>+ setX(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='168.000'
+                          class='abstract'>+ setY(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='179.000'
+                          class='abstract'>+ setZoomAndPan(flag:boolean):void</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000004'>
+            <rect class='otherClass'
+                  height='150.000'
+                  width='526.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='org.tquadrat.foundation.svg.SVGTSpan'>
+            <g>
+                <g clip-path='url(#ID000004)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='526.000'
+                          height='150.000'
+                          class='otherClass'/>
+                    <line x1='0.000'
+                          y1='28.000'
+                          x2='526.000'
+                          y2='28.000'
+                          class='separator'/>
+                    <text x='236.600'
+                          y='13.000'
+                          class='stereotype'>&#xAB;Interface&#xBB;</text>
+                    <text x='239.000'
+                          y='24.000'
+                          class='abstract'>SVGTSpan</text>
+                    <line x1='0.000'
+                          y1='45.000'
+                          x2='526.000'
+                          y2='45.000'
+                          class='separator'/>
+                    <text y='41.000'
+                          class='static final'>+ EMPTY_SVGTSpan_ARRAY:org.tquadrat.foundation.svg.SVGTSpan[]</text>
+                    <text x='5.000'
+                          y='58.000'
+                          class='abstract'>+ addCDATA(text:java.lang.CharSequence):org.tquadrat.foundation.xml.builder.XMLElement</text>
+                    <text x='5.000'
+                          y='69.000'
+                          class='abstract'>+ addText(text:java.lang.CharSequence):org.tquadrat.foundation.xml.builder.XMLElement</text>
+                    <text x='5.000'
+                          y='80.000'
+                          class='abstract'>+ setDx(values:org.tquadrat.foundation.svg.type.SVGNumber&#x2026;):void</text>
+                    <text x='5.000'
+                          y='91.000'
+                          class='abstract'>+ setDy(values:org.tquadrat.foundation.svg.type.SVGNumber&#x2026;):void</text>
+                    <text x='5.000'
+                          y='102.000'
+                          class='abstract'>+ setLengthAdjust(flag:boolean):void</text>
+                    <text x='5.000'
+                          y='113.000'
+                          class='abstract'>+ setRotate(values:org.tquadrat.foundation.svg.type.SVGNumber.SVGDegree&#x2026;):void</text>
+                    <text x='5.000'
+                          y='124.000'
+                          class='abstract'>+ setTextLength(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='135.000'
+                          class='abstract'>+ setX(values:org.tquadrat.foundation.svg.type.SVGNumber&#x2026;):void</text>
+                    <text x='5.000'
+                          y='146.000'
+                          class='abstract'>+ setY(values:org.tquadrat.foundation.svg.type.SVGNumber&#x2026;):void</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000005'>
+            <rect class='otherClass'
+                  height='161.000'
+                  width='1282.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='org.tquadrat.foundation.svg.SVGRectangle'>
+            <g>
+                <g clip-path='url(#ID000005)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='1282.000'
+                          height='161.000'
+                          class='otherClass'/>
+                    <line x1='0.000'
+                          y1='28.000'
+                          x2='1282.000'
+                          y2='28.000'
+                          class='separator'/>
+                    <text x='614.600'
+                          y='13.000'
+                          class='stereotype'>&#xAB;Interface&#xBB;</text>
+                    <text x='605.000'
+                          y='24.000'
+                          class='abstract'>SVGRectangle</text>
+                    <line x1='0.000'
+                          y1='45.000'
+                          x2='1282.000'
+                          y2='45.000'
+                          class='separator'/>
+                    <text y='41.000'
+                          class='static final'>+ EMPTY_SVGRectangle_ARRAY:org.tquadrat.foundation.svg.SVGRectangle[]</text>
+                    <text x='5.000'
+                          y='58.000'>&#x2A22; defineRectangle(x:org.tquadrat.foundation.svg.type.SVGNumber,y:org.tquadrat.foundation.svg.type.SVGNumber,width:org.tquadrat.foundation.svg.type.SVGNumber,height:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='69.000'
+                          class='abstract'>+ setHeight(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='80.000'
+                          class='abstract'>+ setPathLength(length:org.tquadrat.foundation.svg.type.SVGNumber.SVGUserUnitValue):void</text>
+                    <text x='5.000'
+                          y='91.000'>&#x2A22; setPathLength(length:double):void</text>
+                    <text x='5.000'
+                          y='102.000'>&#x2A22; setPathLength(length:long):void</text>
+                    <text x='5.000'
+                          y='113.000'
+                          class='abstract'>+ setRx(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='124.000'
+                          class='abstract'>+ setRy(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='135.000'
+                          class='abstract'>+ setWidth(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='146.000'
+                          class='abstract'>+ setX(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='157.000'
+                          class='abstract'>+ setY(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000006'>
+            <rect class='otherClass'
+                  height='84.000'
+                  width='1252.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='org.tquadrat.foundation.svg.SVGSymbol'>
+            <g>
+                <g clip-path='url(#ID000006)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='1252.000'
+                          height='84.000'
+                          class='otherClass'/>
+                    <line x1='0.000'
+                          y1='28.000'
+                          x2='1252.000'
+                          y2='28.000'
+                          class='separator'/>
+                    <text x='599.600'
+                          y='13.000'
+                          class='stereotype'>&#xAB;Interface&#xBB;</text>
+                    <text x='599.000'
+                          y='24.000'
+                          class='abstract'>SVGSymbol</text>
+                    <line x1='0.000'
+                          y1='45.000'
+                          x2='1252.000'
+                          y2='45.000'
+                          class='separator'/>
+                    <text y='41.000'
+                          class='static final'>+ EMPTY_SVGSymbol_ARRAY:org.tquadrat.foundation.svg.SVGSymbol[]</text>
+                    <text x='5.000'
+                          y='58.000'
+                          class='abstract'>+ setExternalResourcesRequired(flag:boolean):void</text>
+                    <text x='5.000'
+                          y='69.000'
+                          class='abstract'>+ setPreserveAspectRatio(value:org.tquadrat.foundation.svg.type.SVGPreserveAspectRatio):void</text>
+                    <text x='5.000'
+                          y='80.000'
+                          class='abstract'>+ setViewBox(x:org.tquadrat.foundation.svg.type.SVGNumber,y:org.tquadrat.foundation.svg.type.SVGNumber,width:org.tquadrat.foundation.svg.type.SVGNumber,height:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000007'>
+            <rect class='otherClass'
+                  height='95.000'
+                  width='538.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='org.tquadrat.foundation.svg.SVGPath'>
+            <g>
+                <g clip-path='url(#ID000007)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='538.000'
+                          height='95.000'
+                          class='otherClass'/>
+                    <line x1='0.000'
+                          y1='28.000'
+                          x2='538.000'
+                          y2='28.000'
+                          class='separator'/>
+                    <text x='242.600'
+                          y='13.000'
+                          class='stereotype'>&#xAB;Interface&#xBB;</text>
+                    <text x='248.000'
+                          y='24.000'
+                          class='abstract'>SVGPath</text>
+                    <line x1='0.000'
+                          y1='45.000'
+                          x2='538.000'
+                          y2='45.000'
+                          class='separator'/>
+                    <text y='41.000'
+                          class='static final'>+ EMPTY_SVGPath_ARRAY:org.tquadrat.foundation.svg.SVGPath[]</text>
+                    <text x='5.000'
+                          y='58.000'
+                          class='abstract'>+ setPathDefinition(pathElements:org.tquadrat.foundation.svg.type.SVGPathElement&#x2026;):void</text>
+                    <text x='5.000'
+                          y='69.000'
+                          class='abstract'>+ setPathLength(length:org.tquadrat.foundation.svg.type.SVGNumber.SVGUserUnitValue):void</text>
+                    <text x='5.000'
+                          y='80.000'>&#x2A22; setPathLength(length:double):void</text>
+                    <text x='5.000'
+                          y='91.000'>&#x2A22; setPathLength(length:long):void</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000008'>
+            <rect class='otherClass'
+                  height='62.000'
+                  width='376.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='org.tquadrat.foundation.svg.SVGGroup'>
+            <g>
+                <g clip-path='url(#ID000008)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='376.000'
+                          height='62.000'
+                          class='otherClass'/>
+                    <line x1='0.000'
+                          y1='28.000'
+                          x2='376.000'
+                          y2='28.000'
+                          class='separator'/>
+                    <text x='161.600'
+                          y='13.000'
+                          class='stereotype'>&#xAB;Interface&#xBB;</text>
+                    <text x='164.000'
+                          y='24.000'
+                          class='abstract'>SVGGroup</text>
+                    <line x1='0.000'
+                          y1='45.000'
+                          x2='376.000'
+                          y2='45.000'
+                          class='separator'/>
+                    <text y='41.000'
+                          class='static final'>+ EMPTY_SVGGroup_ARRAY:org.tquadrat.foundation.svg.SVGGroup[]</text>
+                    <text x='5.000'
+                          y='58.000'/>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000009'>
+            <rect class='otherClass'
+                  height='161.000'
+                  width='1222.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='org.tquadrat.foundation.svg.SVGLine'>
+            <g>
+                <g clip-path='url(#ID000009)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='1222.000'
+                          height='161.000'
+                          class='otherClass'/>
+                    <line x1='0.000'
+                          y1='28.000'
+                          x2='1222.000'
+                          y2='28.000'
+                          class='separator'/>
+                    <text x='584.600'
+                          y='13.000'
+                          class='stereotype'>&#xAB;Interface&#xBB;</text>
+                    <text x='590.000'
+                          y='24.000'
+                          class='abstract'>SVGLine</text>
+                    <line x1='0.000'
+                          y1='45.000'
+                          x2='1222.000'
+                          y2='45.000'
+                          class='separator'/>
+                    <text y='41.000'
+                          class='static final'>+ EMPTY_SVGLine_ARRAY:org.tquadrat.foundation.svg.SVGLine[]</text>
+                    <text x='5.000'
+                          y='58.000'>&#x2A22; defineLine(x1:org.tquadrat.foundation.svg.type.SVGNumber,y1:org.tquadrat.foundation.svg.type.SVGNumber,x2:org.tquadrat.foundation.svg.type.SVGNumber,y2:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='69.000'>&#x2A22; setEndPoint(x:org.tquadrat.foundation.svg.type.SVGNumber,y:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='80.000'
+                          class='abstract'>+ setPathLength(length:org.tquadrat.foundation.svg.type.SVGNumber.SVGUserUnitValue):void</text>
+                    <text x='5.000'
+                          y='91.000'>&#x2A22; setPathLength(length:double):void</text>
+                    <text x='5.000'
+                          y='102.000'>&#x2A22; setPathLength(length:long):void</text>
+                    <text x='5.000'
+                          y='113.000'>&#x2A22; setStartPoint(x:org.tquadrat.foundation.svg.type.SVGNumber,y:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='124.000'
+                          class='abstract'>+ setX1(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='135.000'
+                          class='abstract'>+ setX2(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='146.000'
+                          class='abstract'>+ setY1(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                    <text x='5.000'
+                          y='157.000'
+                          class='abstract'>+ setY2(value:org.tquadrat.foundation.svg.type.SVGNumber):void</text>
+                </g>
+            </g>
+        </symbol>
+    </defs>
+    <path class='inheritance'
+          d='M288.000,198.000 c0.000,-85.000,3294.000,0.000,3294.000,-85.000 v-15'
+          marker-end='url(#inheritance)'/>
+    <path class='inheritance'
+          d='M1227.000,198.000 c0.000,-85.000,2385.000,0.000,2385.000,-85.000 v-15'
+          marker-end='url(#inheritance)'/>
+    <path class='inheritance'
+          d='M2166.000,198.000 c0.000,-85.000,1476.000,0.000,1476.000,-85.000 v-15'
+          marker-end='url(#inheritance)'/>
+    <path class='inheritance'
+          d='M3120.000,198.000 c0.000,-85.000,552.000,0.000,552.000,-85.000 v-15'
+          marker-end='url(#inheritance)'/>
+    <path class='inheritance'
+          d='M4437.000,198.000 c0.000,-85.000,-735.000,0.000,-735.000,-85.000 v-15'
+          marker-end='url(#inheritance)'/>
+    <path class='inheritance'
+          d='M5382.000,198.000 c0.000,-85.000,-1650.000,0.000,-1650.000,-85.000 v-15'
+          marker-end='url(#inheritance)'/>
+    <path class='inheritance'
+          d='M5889.000,198.000 c0.000,-85.000,-2127.000,0.000,-2127.000,-85.000 v-15'
+          marker-end='url(#inheritance)'/>
+    <path class='inheritance'
+          d='M6738.000,198.000 c0.000,-85.000,-2946.000,0.000,-2946.000,-85.000 v-15'
+          marker-end='url(#inheritance)'/>
+    <use x='3529.000'
+         y='25.000'
+         xlink:href='#org.tquadrat.foundation.svg.AllowsStyleAttributes'/>
+    <use x='25.000'
+         y='198.000'
+         xlink:href='#org.tquadrat.foundation.svg.SVGText'/>
+    <use x='601.000'
+         y='198.000'
+         xlink:href='#org.tquadrat.foundation.svg.SVG'/>
+    <use x='1903.000'
+         y='198.000'
+         xlink:href='#org.tquadrat.foundation.svg.SVGTSpan'/>
+    <use x='2479.000'
+         y='198.000'
+         xlink:href='#org.tquadrat.foundation.svg.SVGRectangle'/>
+    <use x='3811.000'
+         y='198.000'
+         xlink:href='#org.tquadrat.foundation.svg.SVGSymbol'/>
+    <use x='5113.000'
+         y='198.000'
+         xlink:href='#org.tquadrat.foundation.svg.SVGPath'/>
+    <use x='5701.000'
+         y='198.000'
+         xlink:href='#org.tquadrat.foundation.svg.SVGGroup'/>
+    <use x='6127.000'
+         y='198.000'
+         xlink:href='#org.tquadrat.foundation.svg.SVGLine'/>
+</svg>

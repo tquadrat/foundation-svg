@@ -1,2 +1,5 @@
-# foundation-svg
-A library for the generation of SVG files
+# tquadrat *Foundation Library*
+## `foundation-svg`
+### Documentation
+
+- [Javadoc Reference](https://htmlpreview.github.io/?https://github.com/tquadrat/foundation-svg/blob/master/javadoc/index.html)
