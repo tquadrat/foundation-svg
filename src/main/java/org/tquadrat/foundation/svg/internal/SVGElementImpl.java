@@ -210,9 +210,9 @@ import org.tquadrat.foundation.xml.builder.XMLElement;
 import org.tquadrat.foundation.xml.builder.spi.XMLElementAdapter;
 
 /**
- *  The base class for all SVG elements. <br>
- *  <br>Some internal elements are even implemented by this class only (that's
- *  why it is not abstract).
+ *  <p>{@summary The base class for all SVG elements.}</p>
+ *  <p>Some internal elements are even implemented by this class only (that's
+ *  why it is not abstract).</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
  *  @version $Id: SVGElementImpl.java 840 2021-01-10 21:37:03Z tquadrat $
@@ -311,13 +311,13 @@ public sealed class SVGElementImpl extends XMLElementAdapter implements SVGEleme
     /**
      *  Sets the attribute with the given name.
      *
-     *  @param  name    The name of the attribute; the name is case sensitive.
+     *  @param  name    The name of the attribute; the name is case-sensitive.
      *  @param  value   The attribute's type; if {@code null} the
      *      attribute will be removed.
      *  @throws IllegalArgumentException    An attribute with the given name is
      *      not valid for the element, or no attributes are allowed at all.
      */
-    @SuppressWarnings( "PublicMethodNotExposedInInterface" )
+    @SuppressWarnings( {"PublicMethodNotExposedInInterface", "UseOfConcreteClass"} )
     public void setAttribute( final String name, final SVGNumber value ) throws IllegalArgumentException
     {
         setAttribute( name, nonNull( value ) ? value.value() : null, NO_APPEND );
@@ -430,6 +430,7 @@ public sealed class SVGElementImpl extends XMLElementAdapter implements SVGEleme
      *
      *  @see SVGUtils#SVGATTRIBUTE_Color
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setColor( final SVGColor value )
     {
         setAttribute( SVGATTRIBUTE_Color, nonNull( value ) ? value.value() : null );
@@ -706,6 +707,7 @@ public sealed class SVGElementImpl extends XMLElementAdapter implements SVGEleme
      *
      *  @see SVGUtils#SVGATTRIBUTE_Fill
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setFill( final SVGPaint value )
     {
         setAttribute( SVGATTRIBUTE_Fill, nonNull( value ) ? value.value() : null );
@@ -869,6 +871,7 @@ public sealed class SVGElementImpl extends XMLElementAdapter implements SVGEleme
      *
      *  @param  value   The height.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setHeight( final SVGNumber value )
     {
         if( nonNull( value ) && value.isNegative() ) throw new IllegalArgumentException( "height is negative" );
@@ -1186,6 +1189,7 @@ public sealed class SVGElementImpl extends XMLElementAdapter implements SVGEleme
      *
      *  @throws IllegalArgumentException    The type is less than 0.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setPathLength( final SVGUserUnitValue length )
     {
         if( nonNull( length ) && length.isNegative() ) throw new IllegalArgumentException( format( "length is negative: %s", length.value() ) );
@@ -1230,7 +1234,7 @@ public sealed class SVGElementImpl extends XMLElementAdapter implements SVGEleme
     public void setPointerEvents( final String value ) { setAttribute( SVGATTRIBUTE_PointerEvents, value ); }
 
     /**
-     *  Sets the mode for the aspect ration preservation for this element.
+     *  Sets the mode for the aspect ratio preservation for this element.
      *
      *  @param  value   The type; if {@code null} the
      *      attribute will be removed.
@@ -1336,6 +1340,7 @@ public sealed class SVGElementImpl extends XMLElementAdapter implements SVGEleme
      *
      *  @see SVGUtils#SVGATTRIBUTE_rx
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setRx( final SVGNumber value )
     {
         if( nonNull( value ) && value.isNegative() ) throw new IllegalArgumentException( "rx is negative" );
@@ -1352,6 +1357,7 @@ public sealed class SVGElementImpl extends XMLElementAdapter implements SVGEleme
      *
      *  @see SVGUtils#SVGATTRIBUTE_ry
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setRy( final SVGNumber value )
     {
         if( nonNull( value ) && value.isNegative() ) throw new IllegalArgumentException( "ry is negative" );
@@ -1446,6 +1452,7 @@ public sealed class SVGElementImpl extends XMLElementAdapter implements SVGEleme
      *
      *  @see SVGUtils#SVGATTRIBUTE_Stroke
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setStroke( final SVGPaint value )
     {
         setAttribute( SVGATTRIBUTE_Stroke, nonNull( value ) ? value.value() : null );
@@ -1519,6 +1526,7 @@ public sealed class SVGElementImpl extends XMLElementAdapter implements SVGEleme
      *
      *  @see SVGUtils#SVGATTRIBUTE_StrokeWidth
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setStrokeWidth( final SVGNumber value )
     {
         setAttribute( SVGATTRIBUTE_StrokeWidth, nonNull( value ) ? value.toString() : null );
@@ -1663,7 +1671,7 @@ public sealed class SVGElementImpl extends XMLElementAdapter implements SVGEleme
     public void setUnicodeBidi( final String value ) { setAttribute( SVGATTRIBUTE_UnicodeBidi, value ); }
 
     /**
-     *  Sets the unload handler for this SVG element.
+     *  Sets the &quot;unload&quot; handler for this SVG element.
      *
      *  @param  value   The unload handler.
      *
@@ -1688,6 +1696,7 @@ public sealed class SVGElementImpl extends XMLElementAdapter implements SVGEleme
      *  @param  width   The width of the area.
      *  @param  height  The height of the area.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setViewBox( final SVGNumber x, final SVGNumber y, final SVGNumber width, final SVGNumber height )
     {
         final var value = format( "%s,%s,%s,%s", requireNonNullArgument( x, "x" ), requireNonNullArgument( y, "y" ), requireNonNullArgument( width, "width" ), requireNonNullArgument( height, "height" ) );
@@ -1726,6 +1735,7 @@ public sealed class SVGElementImpl extends XMLElementAdapter implements SVGEleme
      *
      *  @param  value   The width.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setWidth( final SVGNumber value )
     {
         if( nonNull( value ) && value.isNegative() ) throw new IllegalArgumentException( "width is negative" );
@@ -1755,6 +1765,7 @@ public sealed class SVGElementImpl extends XMLElementAdapter implements SVGEleme
      *
      *  @param  value   The x coordinate.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setX( final SVGNumber value ) { setAttribute( SVGATTRIBUTE_x, value ); }
 
     /**
@@ -1835,6 +1846,7 @@ public sealed class SVGElementImpl extends XMLElementAdapter implements SVGEleme
      *
      *  @param  value   The y coordinate.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setY( final SVGNumber value ) { setAttribute( SVGATTRIBUTE_y, value ); }
 
     /**

@@ -17,12 +17,8 @@
 
 package org.tquadrat.foundation.svg;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.tquadrat.foundation.svg.SVGGroup.EMPTY_SVGGroup_ARRAY;
 import static org.tquadrat.foundation.svg.SVGUtils.createGroup;
-
-import java.util.List;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -47,14 +43,10 @@ public class TestAutoSVGGroup extends SVGTestBase
     /**
      *  Satisfies the test coverage ratio.
      */
-    @SuppressWarnings( "MisorderedAssertEqualsArguments" )
     @Test
     final void cover()
     {
         skipThreadTest();
-
-        final List<SVGGroup> list = List.of();
-        assertEquals( 0, list.toArray( EMPTY_SVGGroup_ARRAY ).length );
 
         assertNotNull( createCandidate() );
     }   //  cover()

@@ -51,77 +51,69 @@
 <span class="source-line-no">038</span><span id="line-38">@API( status = STABLE, since = "0.0.5" )</span>
 <span class="source-line-no">039</span><span id="line-39">public sealed interface SVGPath extends SVGElementWithChildren, AllowsConditionalProcessingAttributes, AllowsGlobalEventAttributes, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes permits SVGElementAdapter, org.tquadrat.foundation.svg.internal.SVGPathImpl</span>
 <span class="source-line-no">040</span><span id="line-40">{</span>
-<span class="source-line-no">041</span><span id="line-41">        /*-----------*\</span>
-<span class="source-line-no">042</span><span id="line-42">    ====** Constants **========================================================</span>
-<span class="source-line-no">043</span><span id="line-43">        \*-----------*/</span>
+<span class="source-line-no">041</span><span id="line-41">        /*---------*\</span>
+<span class="source-line-no">042</span><span id="line-42">    ====** Methods **==========================================================</span>
+<span class="source-line-no">043</span><span id="line-43">        \*---------*/</span>
 <span class="source-line-no">044</span><span id="line-44">    /**</span>
-<span class="source-line-no">045</span><span id="line-45">     *  An empty array of {@code SVGPath} objects.</span>
-<span class="source-line-no">046</span><span id="line-46">     */</span>
-<span class="source-line-no">047</span><span id="line-47">    public static final SVGPath [] EMPTY_SVGPath_ARRAY = new SVGPath [0];</span>
-<span class="source-line-no">048</span><span id="line-48"></span>
-<span class="source-line-no">049</span><span id="line-49">        /*---------*\</span>
-<span class="source-line-no">050</span><span id="line-50">    ====** Methods **==========================================================</span>
-<span class="source-line-no">051</span><span id="line-51">        \*---------*/</span>
-<span class="source-line-no">052</span><span id="line-52">    /**</span>
-<span class="source-line-no">053</span><span id="line-53">     *  Sets the path definition for this SVG {@code &lt;path&gt;} element.</span>
+<span class="source-line-no">045</span><span id="line-45">     *  Sets the path definition for this SVG {@code &lt;path&gt;} element.</span>
+<span class="source-line-no">046</span><span id="line-46">     *</span>
+<span class="source-line-no">047</span><span id="line-47">     *  @param  pathElements    The elements of the path.</span>
+<span class="source-line-no">048</span><span id="line-48">     */</span>
+<span class="source-line-no">049</span><span id="line-49">    public void setPathDefinition( final SVGPathElement... pathElements );</span>
+<span class="source-line-no">050</span><span id="line-50"></span>
+<span class="source-line-no">051</span><span id="line-51">    /**</span>
+<span class="source-line-no">052</span><span id="line-52">     *  Sets the length of the path represented by this SVG {@code &lt;path&gt;}</span>
+<span class="source-line-no">053</span><span id="line-53">     *  element.</span>
 <span class="source-line-no">054</span><span id="line-54">     *</span>
-<span class="source-line-no">055</span><span id="line-55">     *  @param  pathElements    The elements of the path.</span>
-<span class="source-line-no">056</span><span id="line-56">     */</span>
-<span class="source-line-no">057</span><span id="line-57">    public void setPathDefinition( final SVGPathElement... pathElements );</span>
-<span class="source-line-no">058</span><span id="line-58"></span>
-<span class="source-line-no">059</span><span id="line-59">    /**</span>
-<span class="source-line-no">060</span><span id="line-60">     *  Sets the length of the path represented by this SVG {@code &lt;path&gt;}</span>
-<span class="source-line-no">061</span><span id="line-61">     *  element.</span>
+<span class="source-line-no">055</span><span id="line-55">     *  @param  length  The author's computation of the total length of the</span>
+<span class="source-line-no">056</span><span id="line-56">     *      path, in user units. This type is used to calibrate the user</span>
+<span class="source-line-no">057</span><span id="line-57">     *      agent's own distance-along-a-path calculations with that of the</span>
+<span class="source-line-no">058</span><span id="line-58">     *      author. The user agent will scale all distance-along-a-path</span>
+<span class="source-line-no">059</span><span id="line-59">     *      computations by the ratio of this type to the user agent's own</span>
+<span class="source-line-no">060</span><span id="line-60">     *      computed type for total path length.&lt;br&gt;</span>
+<span class="source-line-no">061</span><span id="line-61">     *      &lt;br&gt;A type of zero is valid, but a negative type is an error.</span>
 <span class="source-line-no">062</span><span id="line-62">     *</span>
-<span class="source-line-no">063</span><span id="line-63">     *  @param  length  The author's computation of the total length of the</span>
-<span class="source-line-no">064</span><span id="line-64">     *      path, in user units. This type is used to calibrate the user</span>
-<span class="source-line-no">065</span><span id="line-65">     *      agent's own distance-along-a-path calculations with that of the</span>
-<span class="source-line-no">066</span><span id="line-66">     *      author. The user agent will scale all distance-along-a-path</span>
-<span class="source-line-no">067</span><span id="line-67">     *      computations by the ratio of this type to the user agent's own</span>
-<span class="source-line-no">068</span><span id="line-68">     *      computed type for total path length.&lt;br&gt;</span>
-<span class="source-line-no">069</span><span id="line-69">     *      &lt;br&gt;A type of zero is valid, but a negative type is an error.</span>
+<span class="source-line-no">063</span><span id="line-63">     *  @throws IllegalArgumentException    The type is less than 0.</span>
+<span class="source-line-no">064</span><span id="line-64">     */</span>
+<span class="source-line-no">065</span><span id="line-65">    public void setPathLength( final SVGUserUnitValue length );</span>
+<span class="source-line-no">066</span><span id="line-66"></span>
+<span class="source-line-no">067</span><span id="line-67">    /**</span>
+<span class="source-line-no">068</span><span id="line-68">     *  Sets the length of the path represented by this SVG {@code &lt;path&gt;}</span>
+<span class="source-line-no">069</span><span id="line-69">     *  element.</span>
 <span class="source-line-no">070</span><span id="line-70">     *</span>
-<span class="source-line-no">071</span><span id="line-71">     *  @throws IllegalArgumentException    The type is less than 0.</span>
-<span class="source-line-no">072</span><span id="line-72">     */</span>
-<span class="source-line-no">073</span><span id="line-73">    public void setPathLength( final SVGUserUnitValue length );</span>
-<span class="source-line-no">074</span><span id="line-74"></span>
-<span class="source-line-no">075</span><span id="line-75">    /**</span>
-<span class="source-line-no">076</span><span id="line-76">     *  Sets the length of the path represented by this SVG {@code &lt;path&gt;}</span>
-<span class="source-line-no">077</span><span id="line-77">     *  element.</span>
+<span class="source-line-no">071</span><span id="line-71">     *  @param  length  The author's computation of the total length of the</span>
+<span class="source-line-no">072</span><span id="line-72">     *      path, in user units. This type is used to calibrate the user</span>
+<span class="source-line-no">073</span><span id="line-73">     *      agent's own distance-along-a-path calculations with that of the</span>
+<span class="source-line-no">074</span><span id="line-74">     *      author. The user agent will scale all distance-along-a-path</span>
+<span class="source-line-no">075</span><span id="line-75">     *      computations by the ratio of this type to the user agent's own</span>
+<span class="source-line-no">076</span><span id="line-76">     *      computed type for total path length.&lt;br&gt;</span>
+<span class="source-line-no">077</span><span id="line-77">     *      &lt;br&gt;A type of zero is valid, but a negative type is an error.</span>
 <span class="source-line-no">078</span><span id="line-78">     *</span>
-<span class="source-line-no">079</span><span id="line-79">     *  @param  length  The author's computation of the total length of the</span>
-<span class="source-line-no">080</span><span id="line-80">     *      path, in user units. This type is used to calibrate the user</span>
-<span class="source-line-no">081</span><span id="line-81">     *      agent's own distance-along-a-path calculations with that of the</span>
-<span class="source-line-no">082</span><span id="line-82">     *      author. The user agent will scale all distance-along-a-path</span>
-<span class="source-line-no">083</span><span id="line-83">     *      computations by the ratio of this type to the user agent's own</span>
-<span class="source-line-no">084</span><span id="line-84">     *      computed type for total path length.&lt;br&gt;</span>
-<span class="source-line-no">085</span><span id="line-85">     *      &lt;br&gt;A type of zero is valid, but a negative type is an error.</span>
+<span class="source-line-no">079</span><span id="line-79">     *  @throws IllegalArgumentException    The type is less than 0.</span>
+<span class="source-line-no">080</span><span id="line-80">     */</span>
+<span class="source-line-no">081</span><span id="line-81">    public default void setPathLength( final double length ) { setPathLength( number( length ) ); }</span>
+<span class="source-line-no">082</span><span id="line-82"></span>
+<span class="source-line-no">083</span><span id="line-83">    /**</span>
+<span class="source-line-no">084</span><span id="line-84">     *  Sets the length of the path represented by this SVG {@code &lt;path&gt;}</span>
+<span class="source-line-no">085</span><span id="line-85">     *  element.</span>
 <span class="source-line-no">086</span><span id="line-86">     *</span>
-<span class="source-line-no">087</span><span id="line-87">     *  @throws IllegalArgumentException    The type is less than 0.</span>
-<span class="source-line-no">088</span><span id="line-88">     */</span>
-<span class="source-line-no">089</span><span id="line-89">    public default void setPathLength( final double length ) { setPathLength( number( length ) ); }</span>
-<span class="source-line-no">090</span><span id="line-90"></span>
-<span class="source-line-no">091</span><span id="line-91">    /**</span>
-<span class="source-line-no">092</span><span id="line-92">     *  Sets the length of the path represented by this SVG {@code &lt;path&gt;}</span>
-<span class="source-line-no">093</span><span id="line-93">     *  element.</span>
+<span class="source-line-no">087</span><span id="line-87">     *  @param  length  The author's computation of the total length of the</span>
+<span class="source-line-no">088</span><span id="line-88">     *      path, in user units. This type is used to calibrate the user</span>
+<span class="source-line-no">089</span><span id="line-89">     *      agent's own distance-along-a-path calculations with that of the</span>
+<span class="source-line-no">090</span><span id="line-90">     *      author. The user agent will scale all distance-along-a-path</span>
+<span class="source-line-no">091</span><span id="line-91">     *      computations by the ratio of this type to the user agent's own</span>
+<span class="source-line-no">092</span><span id="line-92">     *      computed type for total path length.&lt;br&gt;</span>
+<span class="source-line-no">093</span><span id="line-93">     *      &lt;br&gt;A type of zero is valid, but a negative type is an error.</span>
 <span class="source-line-no">094</span><span id="line-94">     *</span>
-<span class="source-line-no">095</span><span id="line-95">     *  @param  length  The author's computation of the total length of the</span>
-<span class="source-line-no">096</span><span id="line-96">     *      path, in user units. This type is used to calibrate the user</span>
-<span class="source-line-no">097</span><span id="line-97">     *      agent's own distance-along-a-path calculations with that of the</span>
-<span class="source-line-no">098</span><span id="line-98">     *      author. The user agent will scale all distance-along-a-path</span>
-<span class="source-line-no">099</span><span id="line-99">     *      computations by the ratio of this type to the user agent's own</span>
-<span class="source-line-no">100</span><span id="line-100">     *      computed type for total path length.&lt;br&gt;</span>
-<span class="source-line-no">101</span><span id="line-101">     *      &lt;br&gt;A type of zero is valid, but a negative type is an error.</span>
-<span class="source-line-no">102</span><span id="line-102">     *</span>
-<span class="source-line-no">103</span><span id="line-103">     *  @throws IllegalArgumentException    The type is less than 0.</span>
-<span class="source-line-no">104</span><span id="line-104">     */</span>
-<span class="source-line-no">105</span><span id="line-105">    public default void setPathLength( final long length ) { setPathLength( number( length ) ); }</span>
-<span class="source-line-no">106</span><span id="line-106">}</span>
-<span class="source-line-no">107</span><span id="line-107">//  interface SVGPath</span>
-<span class="source-line-no">108</span><span id="line-108"></span>
-<span class="source-line-no">109</span><span id="line-109">/*</span>
-<span class="source-line-no">110</span><span id="line-110"> *  End of File</span>
-<span class="source-line-no">111</span><span id="line-111"> */</span>
+<span class="source-line-no">095</span><span id="line-95">     *  @throws IllegalArgumentException    The type is less than 0.</span>
+<span class="source-line-no">096</span><span id="line-96">     */</span>
+<span class="source-line-no">097</span><span id="line-97">    public default void setPathLength( final long length ) { setPathLength( number( length ) ); }</span>
+<span class="source-line-no">098</span><span id="line-98">}</span>
+<span class="source-line-no">099</span><span id="line-99">//  interface SVGPath</span>
+<span class="source-line-no">100</span><span id="line-100"></span>
+<span class="source-line-no">101</span><span id="line-101">/*</span>
+<span class="source-line-no">102</span><span id="line-102"> *  End of File</span>
+<span class="source-line-no">103</span><span id="line-103"> */</span>
 
 
 

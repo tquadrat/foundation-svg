@@ -7,7 +7,7 @@
      version='1.1'
      baseProfile='full'
      width='2604.000'
-     height='4638.000'>
+     height='4627.000'>
     <defs>
         <style><![CDATA[
             line
@@ -538,8 +538,8 @@
                           x2='1252.000'
                           y2='45.000'
                           class='separator'/>
-                    <text y='41.000'
-                          class='static final'>+ EMPTY_SVGSymbol_ARRAY:org.tquadrat.foundation.svg.SVGSymbol[]</text>
+                    <text x='5.000'
+                          y='41.000'/>
                     <text x='5.000'
                           y='58.000'
                           class='abstract'>+ setExternalResourcesRequired(flag:boolean):void</text>
@@ -594,7 +594,7 @@
         </symbol>
         <clipPath id='ID000005'>
             <rect class='otherClass'
-                  height='172.000'
+                  height='161.000'
                   width='604.000'
                   x='0.000'
                   y='0.000'/>
@@ -605,7 +605,7 @@
                     <rect x='0.000'
                           y='0.000'
                           width='604.000'
-                          height='172.000'
+                          height='161.000'
                           class='otherClass'/>
                     <line x1='0.000'
                           y1='28.000'
@@ -619,42 +619,40 @@
                           y='24.000'
                           class='abstract'>SVGElement</text>
                     <line x1='0.000'
-                          y1='56.000'
+                          y1='45.000'
                           x2='604.000'
-                          y2='56.000'
+                          y2='45.000'
                           class='separator'/>
                     <text y='41.000'
-                          class='static final'>+ EMPTY_SVGElement_ARRAY:org.tquadrat.foundation.svg.SVGElement[]</text>
-                    <text y='52.000'
                           class='static final'>+ CORE_ATTRIBUTES:java.util.List&lt;java.lang.String&gt;</text>
                     <text x='5.000'
-                          y='69.000'
+                          y='58.000'
                           class='abstract'>+ addComment(comment:java.lang.CharSequence):org.tquadrat.foundation.xml.builder.XMLElement</text>
                     <text x='5.000'
-                          y='80.000'>&#x2A22; getSVGElementCategory():java.util.Collection&lt;org.tquadrat.foundation.svg.type.SVGElementCategory&gt;</text>
+                          y='69.000'>&#x2A22; getSVGElementCategory():java.util.Collection&lt;org.tquadrat.foundation.svg.type.SVGElementCategory&gt;</text>
                     <text x='5.000'
-                          y='91.000'
+                          y='80.000'
                           class='abstract'>+ setId(id:java.lang.String):org.tquadrat.foundation.xml.builder.XMLElement</text>
                     <text x='5.000'
-                          y='102.000'
+                          y='91.000'
                           class='abstract'>+ setLang(value:java.util.Locale):void</text>
                     <text x='5.000'
-                          y='113.000'
+                          y='102.000'
                           class='abstract'>+ setPreserveSpace(flag:boolean):void</text>
                     <text x='5.000'
-                          y='124.000'
+                          y='113.000'
                           class='abstract'>+ setTabIndex(value:int):void</text>
                     <text x='5.000'
-                          y='135.000'
+                          y='124.000'
                           class='abstract'>+ setTitle(title:java.lang.CharSequence):void</text>
                     <text x='5.000'
-                          y='146.000'
+                          y='135.000'
                           class='abstract'>+ setXMLBase(value:java.net.URI):void</text>
                     <text x='5.000'
-                          y='157.000'
+                          y='146.000'
                           class='abstract'>+ setXMLId(id:java.lang.String):void</text>
                     <text x='5.000'
-                          y='168.000'
+                          y='157.000'
                           class='abstract'>+ setXMLLang(value:java.util.Locale):void</text>
                 </g>
             </g>
@@ -1132,8 +1130,8 @@
                           x2='580.000'
                           y2='45.000'
                           class='separator'/>
-                    <text y='41.000'
-                          class='static final'>+ EMPTY_Element_ARRAY:org.tquadrat.foundation.xml.builder.spi.Element[]</text>
+                    <text x='5.000'
+                          y='41.000'/>
                     <text x='5.000'
                           y='58.000'>&#x2A22; getAttribute(arg0:java.lang.String):java.util.Optional&lt;java.lang.String&gt;</text>
                     <text x='5.000'
@@ -1162,7 +1160,7 @@
         </symbol>
         <clipPath id='ID000012'>
             <rect class='otherClass'
-                  height='172.000'
+                  height='161.000'
                   width='604.000'
                   x='0.000'
                   y='0.000'/>
@@ -1380,37 +1378,37 @@
         </clipPath>
     </defs>
     <path class='inheritance'
-          d='M1277.000,4462.000 c0.000,-85.000,-626.000,0.000,-626.000,-85.000 v-15'
+          d='M1277.000,4451.000 c0.000,-85.000,-626.000,0.000,-626.000,-85.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='implementation'
-          d='M1327.000,4462.000 c0.000,-1834.000,626.000,0.000,626.000,-1834.000 v-15'
+          d='M1327.000,4451.000 c0.000,-1834.000,626.000,0.000,626.000,-1834.000 v-15'
           marker-end='url(#implementation)'/>
     <path class='inheritance'
-          d='M626.000,2529.000 c0.000,-85.000,25.000,0.000,25.000,-85.000 v-15'
+          d='M626.000,2518.000 c0.000,-85.000,25.000,0.000,25.000,-85.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='implementation'
-          d='M676.000,2529.000 c0.000,-258.000,611.000,0.000,611.000,-258.000 v-15'
+          d='M676.000,2518.000 c0.000,-258.000,611.000,0.000,611.000,-258.000 v-15'
           marker-end='url(#implementation)'/>
     <path class='inheritance'
-          d='M2028.000,2529.000 c0.000,-85.000,-75.000,0.000,-75.000,-85.000 v-15'
+          d='M2028.000,2518.000 c0.000,-85.000,-75.000,0.000,-75.000,-85.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='inheritance'
-          d='M1878.000,2529.000 c0.000,-2405.000,-1668.000,0.000,-1668.000,-2405.000 v-15'
+          d='M1878.000,2518.000 c0.000,-2394.000,-1668.000,0.000,-1668.000,-2394.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='inheritance'
-          d='M1928.000,2529.000 c0.000,-1767.000,-1214.000,0.000,-1214.000,-1767.000 v-15'
+          d='M1928.000,2518.000 c0.000,-1756.000,-1214.000,0.000,-1214.000,-1756.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='inheritance'
-          d='M1978.000,2529.000 c0.000,-2416.000,-787.000,0.000,-787.000,-2416.000 v-15'
+          d='M1978.000,2518.000 c0.000,-2405.000,-787.000,0.000,-787.000,-2405.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='inheritance'
-          d='M651.000,2356.000 c0.000,-357.000,651.000,0.000,651.000,-357.000 v-15'
+          d='M651.000,2345.000 c0.000,-346.000,651.000,0.000,651.000,-346.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='inheritance'
           d='M1302.000,2084.000 c0.000,-1883.000,402.000,0.000,402.000,-1883.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='inheritance'
-          d='M1953.000,2356.000 c0.000,-85.000,-636.000,0.000,-636.000,-85.000 v-15'
+          d='M1953.000,2345.000 c0.000,-85.000,-636.000,0.000,-636.000,-85.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='inheritance'
           d='M1327.000,1603.000 c0.000,-1391.000,824.000,0.000,824.000,-1391.000 v-15'
@@ -1446,18 +1444,18 @@
          y='2084.000'
          xlink:href='#org.tquadrat.foundation.svg.SVGElement'/>
     <use x='301.000'
-         y='2356.000'
+         y='2345.000'
          xlink:href='#org.tquadrat.foundation.xml.builder.spi.XMLElementAdapter'/>
     <use x='1777.000'
-         y='2356.000'
+         y='2345.000'
          xlink:href='#org.tquadrat.foundation.svg.SVGElementWithChildren'/>
     <use x='25.000'
-         y='2529.000'
+         y='2518.000'
          xlink:href='#org.tquadrat.foundation.svg.internal.SVGElementImpl'/>
     <use x='1327.000'
-         y='2529.000'
+         y='2518.000'
          xlink:href='#org.tquadrat.foundation.svg.SVGSymbol'/>
     <use x='1189.000'
-         y='4462.000'
+         y='4451.000'
          xlink:href='#org.tquadrat.foundation.svg.internal.SVGSymbolImpl'/>
 </svg>

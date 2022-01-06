@@ -36,14 +36,6 @@ import org.tquadrat.foundation.annotation.ClassVersion;
 public sealed interface SVGClipPath extends AllowsConditionalProcessingAttributes, AllowsPresentationAttributes, SVGElementWithChildren
     permits SVGElementAdapter, org.tquadrat.foundation.svg.internal.SVGClipPathImpl
 {
-        /*-----------*\
-    ====** Constants **========================================================
-        \*-----------*/
-    /**
-     *  An empty array of {@code SVGClipPath} objects.
-     */
-    public static final SVGClipPath [] EMPTY_SVGClipPath_ARRAY = new SVGClipPath [0];
-
         /*---------*\
     ====** Methods **==========================================================
         \*---------*/

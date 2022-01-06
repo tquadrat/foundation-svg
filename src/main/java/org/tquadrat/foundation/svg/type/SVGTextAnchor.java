@@ -65,14 +65,6 @@ public enum SVGTextAnchor
     @API( status = STABLE, since = "0.0.5" )
     START( "start" );
 
-        /*-----------*\
-    ====** Constants **========================================================
-        \*-----------*/
-    /**
-     *  An empty array of {@code SVGTextAnchor} objects.
-     */
-    public static final SVGTextAnchor [] EMPTY_SVGTextAnchor_ARRAY = new SVGTextAnchor [0];
-
         /*------------*\
     ====** Attributes **=======================================================
         \*------------*/

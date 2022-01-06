@@ -17,7 +17,12 @@
  *  The internal implementations for the SVG elements.
  */
 
+@API( status = INTERNAL, since = "0.0.1" )
 package org.tquadrat.foundation.svg.internal;
+
+import static org.apiguardian.api.API.Status.INTERNAL;
+
+import org.apiguardian.api.API;
 
 /*
  *  End of File

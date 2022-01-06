@@ -39,14 +39,6 @@ import org.tquadrat.foundation.svg.type.SVGNumber.SVGUserUnitValue;
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVGLine extends SVGElementWithChildren, AllowsConditionalProcessingAttributes, AllowsGlobalEventAttributes, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes permits SVGElementAdapter, org.tquadrat.foundation.svg.internal.SVGLineImpl
 {
-        /*-----------*\
-    ====** Constants **========================================================
-        \*-----------*/
-    /**
-     *  An empty array of {@code SVGLine} objects.
-     */
-    public static final SVGLine [] EMPTY_SVGLine_ARRAY = new SVGLine [0];
-
         /*---------*\
     ====** Methods **==========================================================
         \*---------*/

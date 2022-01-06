@@ -132,49 +132,41 @@
 <span class="source-line-no">119</span><span id="line-119">    @API( status = STABLE, since = "0.0.5" )</span>
 <span class="source-line-no">120</span><span id="line-120">    TEXT_BEFORE_EDGE( "text-before-edge" );</span>
 <span class="source-line-no">121</span><span id="line-121"></span>
-<span class="source-line-no">122</span><span id="line-122">        /*-----------*\</span>
-<span class="source-line-no">123</span><span id="line-123">    ====** Constants **========================================================</span>
-<span class="source-line-no">124</span><span id="line-124">        \*-----------*/</span>
+<span class="source-line-no">122</span><span id="line-122">        /*------------*\</span>
+<span class="source-line-no">123</span><span id="line-123">    ====** Attributes **=======================================================</span>
+<span class="source-line-no">124</span><span id="line-124">        \*------------*/</span>
 <span class="source-line-no">125</span><span id="line-125">    /**</span>
-<span class="source-line-no">126</span><span id="line-126">     *  An empty array of {@code SVGAlignmentBaseLine} objects.</span>
+<span class="source-line-no">126</span><span id="line-126">     *  The attribute type.</span>
 <span class="source-line-no">127</span><span id="line-127">     */</span>
-<span class="source-line-no">128</span><span id="line-128">    public static final SVGAlignmentBaseLine [] EMPTY_SVGAlignmentBaseLine_ARRAY = new SVGAlignmentBaseLine [0];</span>
+<span class="source-line-no">128</span><span id="line-128">    private final String m_AttributeValue;</span>
 <span class="source-line-no">129</span><span id="line-129"></span>
-<span class="source-line-no">130</span><span id="line-130">        /*------------*\</span>
-<span class="source-line-no">131</span><span id="line-131">    ====** Attributes **=======================================================</span>
-<span class="source-line-no">132</span><span id="line-132">        \*------------*/</span>
+<span class="source-line-no">130</span><span id="line-130">        /*--------------*\</span>
+<span class="source-line-no">131</span><span id="line-131">    ====** Constructors **=====================================================</span>
+<span class="source-line-no">132</span><span id="line-132">        \*--------------*/</span>
 <span class="source-line-no">133</span><span id="line-133">    /**</span>
-<span class="source-line-no">134</span><span id="line-134">     *  The attribute type.</span>
-<span class="source-line-no">135</span><span id="line-135">     */</span>
-<span class="source-line-no">136</span><span id="line-136">    private final String m_AttributeValue;</span>
-<span class="source-line-no">137</span><span id="line-137"></span>
-<span class="source-line-no">138</span><span id="line-138">        /*--------------*\</span>
-<span class="source-line-no">139</span><span id="line-139">    ====** Constructors **=====================================================</span>
-<span class="source-line-no">140</span><span id="line-140">        \*--------------*/</span>
-<span class="source-line-no">141</span><span id="line-141">    /**</span>
-<span class="source-line-no">142</span><span id="line-142">     *  Creates a new {@code SVGAlignmentBaseLine} instance.</span>
-<span class="source-line-no">143</span><span id="line-143">     *</span>
-<span class="source-line-no">144</span><span id="line-144">     *  @param  attributeValue  The attribute type.</span>
-<span class="source-line-no">145</span><span id="line-145">     */</span>
-<span class="source-line-no">146</span><span id="line-146">    private SVGAlignmentBaseLine( final String attributeValue )</span>
-<span class="source-line-no">147</span><span id="line-147">    {</span>
-<span class="source-line-no">148</span><span id="line-148">        m_AttributeValue = attributeValue;</span>
-<span class="source-line-no">149</span><span id="line-149">    }   //  SVGAlignmentBaseLine()</span>
-<span class="source-line-no">150</span><span id="line-150"></span>
-<span class="source-line-no">151</span><span id="line-151">        /*---------*\</span>
-<span class="source-line-no">152</span><span id="line-152">    ====** Methods **==========================================================</span>
-<span class="source-line-no">153</span><span id="line-153">        \*---------*/</span>
-<span class="source-line-no">154</span><span id="line-154">    /**</span>
-<span class="source-line-no">155</span><span id="line-155">     *  {@inheritDoc}</span>
-<span class="source-line-no">156</span><span id="line-156">     */</span>
-<span class="source-line-no">157</span><span id="line-157">    @Override</span>
-<span class="source-line-no">158</span><span id="line-158">    public final String toString() { return m_AttributeValue; }</span>
-<span class="source-line-no">159</span><span id="line-159">}</span>
-<span class="source-line-no">160</span><span id="line-160">//  enum SVGAlignmentBaseLine</span>
-<span class="source-line-no">161</span><span id="line-161"></span>
-<span class="source-line-no">162</span><span id="line-162">/*</span>
-<span class="source-line-no">163</span><span id="line-163"> *  End of File</span>
-<span class="source-line-no">164</span><span id="line-164"> */</span>
+<span class="source-line-no">134</span><span id="line-134">     *  Creates a new {@code SVGAlignmentBaseLine} instance.</span>
+<span class="source-line-no">135</span><span id="line-135">     *</span>
+<span class="source-line-no">136</span><span id="line-136">     *  @param  attributeValue  The attribute type.</span>
+<span class="source-line-no">137</span><span id="line-137">     */</span>
+<span class="source-line-no">138</span><span id="line-138">    private SVGAlignmentBaseLine( final String attributeValue )</span>
+<span class="source-line-no">139</span><span id="line-139">    {</span>
+<span class="source-line-no">140</span><span id="line-140">        m_AttributeValue = attributeValue;</span>
+<span class="source-line-no">141</span><span id="line-141">    }   //  SVGAlignmentBaseLine()</span>
+<span class="source-line-no">142</span><span id="line-142"></span>
+<span class="source-line-no">143</span><span id="line-143">        /*---------*\</span>
+<span class="source-line-no">144</span><span id="line-144">    ====** Methods **==========================================================</span>
+<span class="source-line-no">145</span><span id="line-145">        \*---------*/</span>
+<span class="source-line-no">146</span><span id="line-146">    /**</span>
+<span class="source-line-no">147</span><span id="line-147">     *  {@inheritDoc}</span>
+<span class="source-line-no">148</span><span id="line-148">     */</span>
+<span class="source-line-no">149</span><span id="line-149">    @Override</span>
+<span class="source-line-no">150</span><span id="line-150">    public final String toString() { return m_AttributeValue; }</span>
+<span class="source-line-no">151</span><span id="line-151">}</span>
+<span class="source-line-no">152</span><span id="line-152">//  enum SVGAlignmentBaseLine</span>
+<span class="source-line-no">153</span><span id="line-153"></span>
+<span class="source-line-no">154</span><span id="line-154">/*</span>
+<span class="source-line-no">155</span><span id="line-155"> *  End of File</span>
+<span class="source-line-no">156</span><span id="line-156"> */</span>
 
 
 

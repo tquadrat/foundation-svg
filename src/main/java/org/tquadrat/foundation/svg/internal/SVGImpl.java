@@ -307,6 +307,7 @@ public final class SVGImpl extends SVGElementImpl implements SVG
      *
      *  @return The {@code <defs>} element.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     private final  SVGElementImpl createDefinitionsElement()
     {
         final var retValue = new SVGElementImpl( SVGELEMENT_Defs, ALLOWS_CHILDREN );
@@ -380,7 +381,7 @@ public final class SVGImpl extends SVGElementImpl implements SVG
     public final SVGStyle setStyleSheet( final CharSequence... styles )
     {
         /*
-         * After this call, m_StyleSheet is definitely not longer empty; it
+         * After this call, m_StyleSheet is definitely no longer empty; it
          * will be set as a side effect of SVG.addStyle(). Not nice, but
          * efficient.
          */

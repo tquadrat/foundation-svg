@@ -62,122 +62,117 @@
 <span class="source-line-no">049</span><span id="line-49">     */</span>
 <span class="source-line-no">050</span><span id="line-50">    private static final int m_Divisor = 0x100;</span>
 <span class="source-line-no">051</span><span id="line-51"></span>
-<span class="source-line-no">052</span><span id="line-52">    /**</span>
-<span class="source-line-no">053</span><span id="line-53">     *  An empty array of {@code SVGColor} objects.</span>
-<span class="source-line-no">054</span><span id="line-54">     */</span>
-<span class="source-line-no">055</span><span id="line-55">    public static final SVGColor [] EMPTY_SVGColor_ARRAY = new SVGColor [0];</span>
-<span class="source-line-no">056</span><span id="line-56"></span>
-<span class="source-line-no">057</span><span id="line-57">        /*------------------------*\</span>
-<span class="source-line-no">058</span><span id="line-58">    ====** Static Initialisations **===========================================</span>
-<span class="source-line-no">059</span><span id="line-59">        \*------------------------*/</span>
-<span class="source-line-no">060</span><span id="line-60">    /**</span>
-<span class="source-line-no">061</span><span id="line-61">     *  The type 'inherit'.</span>
-<span class="source-line-no">062</span><span id="line-62">     */</span>
-<span class="source-line-no">063</span><span id="line-63">    public static final SVGColor COLOR_INHERIT;</span>
+<span class="source-line-no">052</span><span id="line-52">        /*------------------------*\</span>
+<span class="source-line-no">053</span><span id="line-53">    ====** Static Initialisations **===========================================</span>
+<span class="source-line-no">054</span><span id="line-54">        \*------------------------*/</span>
+<span class="source-line-no">055</span><span id="line-55">    /**</span>
+<span class="source-line-no">056</span><span id="line-56">     *  The type 'inherit'.</span>
+<span class="source-line-no">057</span><span id="line-57">     */</span>
+<span class="source-line-no">058</span><span id="line-58">    public static final SVGColor COLOR_INHERIT;</span>
+<span class="source-line-no">059</span><span id="line-59"></span>
+<span class="source-line-no">060</span><span id="line-60">    static</span>
+<span class="source-line-no">061</span><span id="line-61">    {</span>
+<span class="source-line-no">062</span><span id="line-62">        COLOR_INHERIT = new SVGColor();</span>
+<span class="source-line-no">063</span><span id="line-63">    }</span>
 <span class="source-line-no">064</span><span id="line-64"></span>
-<span class="source-line-no">065</span><span id="line-65">    static</span>
-<span class="source-line-no">066</span><span id="line-66">    {</span>
-<span class="source-line-no">067</span><span id="line-67">        COLOR_INHERIT = new SVGColor();</span>
-<span class="source-line-no">068</span><span id="line-68">    }</span>
-<span class="source-line-no">069</span><span id="line-69"></span>
-<span class="source-line-no">070</span><span id="line-70">        /*--------------*\</span>
-<span class="source-line-no">071</span><span id="line-71">    ====** Constructors **=====================================================</span>
-<span class="source-line-no">072</span><span id="line-72">        \*--------------*/</span>
-<span class="source-line-no">073</span><span id="line-73">    /**</span>
-<span class="source-line-no">074</span><span id="line-74">     *  Creates a new {@code SVGColor} instance with the type</span>
-<span class="source-line-no">075</span><span id="line-75">     *  &amp;quot;inherit&amp;quot;.</span>
-<span class="source-line-no">076</span><span id="line-76">     */</span>
-<span class="source-line-no">077</span><span id="line-77">    private SVGColor() { super( "inherit" ); }</span>
-<span class="source-line-no">078</span><span id="line-78"></span>
-<span class="source-line-no">079</span><span id="line-79">    /**</span>
-<span class="source-line-no">080</span><span id="line-80">     *  Creates a new {@code SVGColor} instance from the given colour</span>
-<span class="source-line-no">081</span><span id="line-81">     *  values.&lt;br&gt;</span>
-<span class="source-line-no">082</span><span id="line-82">     *  &lt;br&gt;Allowed are the values from 0 to 255, other values will be</span>
-<span class="source-line-no">083</span><span id="line-83">     *  normalised accordingly.</span>
-<span class="source-line-no">084</span><span id="line-84">     *</span>
-<span class="source-line-no">085</span><span id="line-85">     *  @param  red The red component for the colour.</span>
-<span class="source-line-no">086</span><span id="line-86">     *  @param  green   The green component for the colour.</span>
-<span class="source-line-no">087</span><span id="line-87">     *  @param  blue    The blue component for the colour.</span>
-<span class="source-line-no">088</span><span id="line-88">     */</span>
-<span class="source-line-no">089</span><span id="line-89">    public SVGColor( final int red, final int green, final int blue )</span>
-<span class="source-line-no">090</span><span id="line-90">    {</span>
-<span class="source-line-no">091</span><span id="line-91">        super( format( "#%02x%02x%02x", abs( red ) % m_Divisor, abs( green ) % m_Divisor, abs( blue ) % m_Divisor ) );</span>
-<span class="source-line-no">092</span><span id="line-92">    }   //  SVGColor()</span>
-<span class="source-line-no">093</span><span id="line-93"></span>
-<span class="source-line-no">094</span><span id="line-94">    /**</span>
-<span class="source-line-no">095</span><span id="line-95">     *  Creates a new {@code SVGColor} instance from the given colour</span>
-<span class="source-line-no">096</span><span id="line-96">     *  values.&lt;br&gt;</span>
-<span class="source-line-no">097</span><span id="line-97">     *  &lt;br&gt;Allowed are the values from 0 to 255, or 0% to 100% respectively,</span>
-<span class="source-line-no">098</span><span id="line-98">     *  other values will be normalised accordingly.</span>
-<span class="source-line-no">099</span><span id="line-99">     *</span>
-<span class="source-line-no">100</span><span id="line-100">     *  @param  flag    {@code true} if the given values are percentages,</span>
-<span class="source-line-no">101</span><span id="line-101">     *      {@code false} if they are absolute values.</span>
-<span class="source-line-no">102</span><span id="line-102">     *  @param  red The red component for the colour.</span>
-<span class="source-line-no">103</span><span id="line-103">     *  @param  green   The green component for the colour.</span>
-<span class="source-line-no">104</span><span id="line-104">     *  @param  blue    The blue component for the colour.</span>
-<span class="source-line-no">105</span><span id="line-105">     */</span>
-<span class="source-line-no">106</span><span id="line-106">    public SVGColor( final boolean flag, final int red, final int green, final int blue )</span>
-<span class="source-line-no">107</span><span id="line-107">    {</span>
-<span class="source-line-no">108</span><span id="line-108">        super( composeColorValue( flag, red, green, blue ) );</span>
-<span class="source-line-no">109</span><span id="line-109">    }   //  SVGColor()</span>
-<span class="source-line-no">110</span><span id="line-110"></span>
-<span class="source-line-no">111</span><span id="line-111">    /**</span>
-<span class="source-line-no">112</span><span id="line-112">     *  Creates a new {@code SVGColor} instance, using the given argument as a</span>
-<span class="source-line-no">113</span><span id="line-113">     *  CSS colour name.&lt;br&gt;</span>
-<span class="source-line-no">114</span><span id="line-114">     *  &lt;br&gt;The given argument may not be {@code null} nor the empty String,</span>
-<span class="source-line-no">115</span><span id="line-115">     *  but it will not undergo any further validation.</span>
-<span class="source-line-no">116</span><span id="line-116">     *</span>
-<span class="source-line-no">117</span><span id="line-117">     *  @param  color   The CSS colour name.</span>
-<span class="source-line-no">118</span><span id="line-118">     */</span>
-<span class="source-line-no">119</span><span id="line-119">    public SVGColor( final String color ) { super( requireNotEmptyArgument( color, "color" ) ); }</span>
-<span class="source-line-no">120</span><span id="line-120"></span>
-<span class="source-line-no">121</span><span id="line-121">        /*---------*\</span>
-<span class="source-line-no">122</span><span id="line-122">    ====** Methods **==========================================================</span>
-<span class="source-line-no">123</span><span id="line-123">        \*---------*/</span>
-<span class="source-line-no">124</span><span id="line-124">    /**</span>
-<span class="source-line-no">125</span><span id="line-125">     *  Composes the colour type String from the given colour values.&lt;br&gt;</span>
-<span class="source-line-no">126</span><span id="line-126">     *  &lt;br&gt;Allowed are the values from 0 to 255, or 0% to 100% respectively,</span>
-<span class="source-line-no">127</span><span id="line-127">     *  other values will be normalised accordingly.</span>
-<span class="source-line-no">128</span><span id="line-128">     *</span>
-<span class="source-line-no">129</span><span id="line-129">     *  @param  flag    {@code true} if the given values are percentages,</span>
-<span class="source-line-no">130</span><span id="line-130">     *      {@code false} if they are absolute values.</span>
-<span class="source-line-no">131</span><span id="line-131">     *  @param  red The red component for the colour.</span>
-<span class="source-line-no">132</span><span id="line-132">     *  @param  green   The green component for the colour.</span>
-<span class="source-line-no">133</span><span id="line-133">     *  @param  blue    The blue component for the colour.</span>
-<span class="source-line-no">134</span><span id="line-134">     *  @return The colour type String.</span>
-<span class="source-line-no">135</span><span id="line-135">     */</span>
-<span class="source-line-no">136</span><span id="line-136">    private static final String composeColorValue( final boolean flag, final int red, final int green, final int blue )</span>
-<span class="source-line-no">137</span><span id="line-137">    {</span>
-<span class="source-line-no">138</span><span id="line-138">        final IntUnaryOperator n = v -&gt; abs( v ) &gt; 100 ? abs( v ) % 101 : abs( v );</span>
-<span class="source-line-no">139</span><span id="line-139">        final var retValue = flag</span>
-<span class="source-line-no">140</span><span id="line-140">            ? format( "rgb(%d%%,%d%%,%d%%)", n.applyAsInt( red ), n.applyAsInt( green ), n.applyAsInt( blue ) )</span>
-<span class="source-line-no">141</span><span id="line-141">            : format( "rgb(%d,%d,%d)", abs( red ) % m_Divisor, abs( green ) % m_Divisor, abs( blue ) % m_Divisor );</span>
-<span class="source-line-no">142</span><span id="line-142"></span>
-<span class="source-line-no">143</span><span id="line-143">        //---* Done *----------------------------------------------------------</span>
-<span class="source-line-no">144</span><span id="line-144">        return retValue;</span>
-<span class="source-line-no">145</span><span id="line-145">    }   //  composeColorValue()</span>
-<span class="source-line-no">146</span><span id="line-146"></span>
-<span class="source-line-no">147</span><span id="line-147">    /**</span>
-<span class="source-line-no">148</span><span id="line-148">     *  {@inheritDoc}</span>
-<span class="source-line-no">149</span><span id="line-149">     */</span>
-<span class="source-line-no">150</span><span id="line-150">    @Override</span>
-<span class="source-line-no">151</span><span id="line-151">    public final boolean equals( final Object obj )</span>
-<span class="source-line-no">152</span><span id="line-152">    {</span>
-<span class="source-line-no">153</span><span id="line-153">        var retValue = this == obj;</span>
-<span class="source-line-no">154</span><span id="line-154">        if( !retValue &amp;&amp; (obj instanceof SVGColor other) )</span>
-<span class="source-line-no">155</span><span id="line-155">        {</span>
-<span class="source-line-no">156</span><span id="line-156">            retValue = value().equals( other.value() );</span>
-<span class="source-line-no">157</span><span id="line-157">        }</span>
-<span class="source-line-no">158</span><span id="line-158"></span>
-<span class="source-line-no">159</span><span id="line-159">        //---* Done *----------------------------------------------------------</span>
-<span class="source-line-no">160</span><span id="line-160">        return retValue;</span>
-<span class="source-line-no">161</span><span id="line-161">    }   //  equals()</span>
-<span class="source-line-no">162</span><span id="line-162">}</span>
-<span class="source-line-no">163</span><span id="line-163">//  class SVGColor</span>
-<span class="source-line-no">164</span><span id="line-164"></span>
-<span class="source-line-no">165</span><span id="line-165">/*</span>
-<span class="source-line-no">166</span><span id="line-166"> *  End of File</span>
-<span class="source-line-no">167</span><span id="line-167"> */</span>
+<span class="source-line-no">065</span><span id="line-65">        /*--------------*\</span>
+<span class="source-line-no">066</span><span id="line-66">    ====** Constructors **=====================================================</span>
+<span class="source-line-no">067</span><span id="line-67">        \*--------------*/</span>
+<span class="source-line-no">068</span><span id="line-68">    /**</span>
+<span class="source-line-no">069</span><span id="line-69">     *  Creates a new {@code SVGColor} instance with the type</span>
+<span class="source-line-no">070</span><span id="line-70">     *  &amp;quot;inherit&amp;quot;.</span>
+<span class="source-line-no">071</span><span id="line-71">     */</span>
+<span class="source-line-no">072</span><span id="line-72">    private SVGColor() { super( "inherit" ); }</span>
+<span class="source-line-no">073</span><span id="line-73"></span>
+<span class="source-line-no">074</span><span id="line-74">    /**</span>
+<span class="source-line-no">075</span><span id="line-75">     *  Creates a new {@code SVGColor} instance from the given colour</span>
+<span class="source-line-no">076</span><span id="line-76">     *  values.&lt;br&gt;</span>
+<span class="source-line-no">077</span><span id="line-77">     *  &lt;br&gt;Allowed are the values from 0 to 255, other values will be</span>
+<span class="source-line-no">078</span><span id="line-78">     *  normalised accordingly.</span>
+<span class="source-line-no">079</span><span id="line-79">     *</span>
+<span class="source-line-no">080</span><span id="line-80">     *  @param  red The red component for the colour.</span>
+<span class="source-line-no">081</span><span id="line-81">     *  @param  green   The green component for the colour.</span>
+<span class="source-line-no">082</span><span id="line-82">     *  @param  blue    The blue component for the colour.</span>
+<span class="source-line-no">083</span><span id="line-83">     */</span>
+<span class="source-line-no">084</span><span id="line-84">    public SVGColor( final int red, final int green, final int blue )</span>
+<span class="source-line-no">085</span><span id="line-85">    {</span>
+<span class="source-line-no">086</span><span id="line-86">        super( format( "#%02x%02x%02x", abs( red ) % m_Divisor, abs( green ) % m_Divisor, abs( blue ) % m_Divisor ) );</span>
+<span class="source-line-no">087</span><span id="line-87">    }   //  SVGColor()</span>
+<span class="source-line-no">088</span><span id="line-88"></span>
+<span class="source-line-no">089</span><span id="line-89">    /**</span>
+<span class="source-line-no">090</span><span id="line-90">     *  Creates a new {@code SVGColor} instance from the given colour</span>
+<span class="source-line-no">091</span><span id="line-91">     *  values.&lt;br&gt;</span>
+<span class="source-line-no">092</span><span id="line-92">     *  &lt;br&gt;Allowed are the values from 0 to 255, or 0% to 100% respectively,</span>
+<span class="source-line-no">093</span><span id="line-93">     *  other values will be normalised accordingly.</span>
+<span class="source-line-no">094</span><span id="line-94">     *</span>
+<span class="source-line-no">095</span><span id="line-95">     *  @param  flag    {@code true} if the given values are percentages,</span>
+<span class="source-line-no">096</span><span id="line-96">     *      {@code false} if they are absolute values.</span>
+<span class="source-line-no">097</span><span id="line-97">     *  @param  red The red component for the colour.</span>
+<span class="source-line-no">098</span><span id="line-98">     *  @param  green   The green component for the colour.</span>
+<span class="source-line-no">099</span><span id="line-99">     *  @param  blue    The blue component for the colour.</span>
+<span class="source-line-no">100</span><span id="line-100">     */</span>
+<span class="source-line-no">101</span><span id="line-101">    public SVGColor( final boolean flag, final int red, final int green, final int blue )</span>
+<span class="source-line-no">102</span><span id="line-102">    {</span>
+<span class="source-line-no">103</span><span id="line-103">        super( composeColorValue( flag, red, green, blue ) );</span>
+<span class="source-line-no">104</span><span id="line-104">    }   //  SVGColor()</span>
+<span class="source-line-no">105</span><span id="line-105"></span>
+<span class="source-line-no">106</span><span id="line-106">    /**</span>
+<span class="source-line-no">107</span><span id="line-107">     *  Creates a new {@code SVGColor} instance, using the given argument as a</span>
+<span class="source-line-no">108</span><span id="line-108">     *  CSS colour name.&lt;br&gt;</span>
+<span class="source-line-no">109</span><span id="line-109">     *  &lt;br&gt;The given argument may not be {@code null} nor the empty String,</span>
+<span class="source-line-no">110</span><span id="line-110">     *  but it will not undergo any further validation.</span>
+<span class="source-line-no">111</span><span id="line-111">     *</span>
+<span class="source-line-no">112</span><span id="line-112">     *  @param  color   The CSS colour name.</span>
+<span class="source-line-no">113</span><span id="line-113">     */</span>
+<span class="source-line-no">114</span><span id="line-114">    public SVGColor( final String color ) { super( requireNotEmptyArgument( color, "color" ) ); }</span>
+<span class="source-line-no">115</span><span id="line-115"></span>
+<span class="source-line-no">116</span><span id="line-116">        /*---------*\</span>
+<span class="source-line-no">117</span><span id="line-117">    ====** Methods **==========================================================</span>
+<span class="source-line-no">118</span><span id="line-118">        \*---------*/</span>
+<span class="source-line-no">119</span><span id="line-119">    /**</span>
+<span class="source-line-no">120</span><span id="line-120">     *  Composes the colour type String from the given colour values.&lt;br&gt;</span>
+<span class="source-line-no">121</span><span id="line-121">     *  &lt;br&gt;Allowed are the values from 0 to 255, or 0% to 100% respectively,</span>
+<span class="source-line-no">122</span><span id="line-122">     *  other values will be normalised accordingly.</span>
+<span class="source-line-no">123</span><span id="line-123">     *</span>
+<span class="source-line-no">124</span><span id="line-124">     *  @param  flag    {@code true} if the given values are percentages,</span>
+<span class="source-line-no">125</span><span id="line-125">     *      {@code false} if they are absolute values.</span>
+<span class="source-line-no">126</span><span id="line-126">     *  @param  red The red component for the colour.</span>
+<span class="source-line-no">127</span><span id="line-127">     *  @param  green   The green component for the colour.</span>
+<span class="source-line-no">128</span><span id="line-128">     *  @param  blue    The blue component for the colour.</span>
+<span class="source-line-no">129</span><span id="line-129">     *  @return The colour type String.</span>
+<span class="source-line-no">130</span><span id="line-130">     */</span>
+<span class="source-line-no">131</span><span id="line-131">    private static final String composeColorValue( final boolean flag, final int red, final int green, final int blue )</span>
+<span class="source-line-no">132</span><span id="line-132">    {</span>
+<span class="source-line-no">133</span><span id="line-133">        final var n = (IntUnaryOperator) v -&gt; abs( v ) &gt; 100 ? abs( v ) % 101 : abs( v );</span>
+<span class="source-line-no">134</span><span id="line-134">        final var retValue = flag</span>
+<span class="source-line-no">135</span><span id="line-135">            ? format( "rgb(%d%%,%d%%,%d%%)", n.applyAsInt( red ), n.applyAsInt( green ), n.applyAsInt( blue ) )</span>
+<span class="source-line-no">136</span><span id="line-136">            : format( "rgb(%d,%d,%d)", abs( red ) % m_Divisor, abs( green ) % m_Divisor, abs( blue ) % m_Divisor );</span>
+<span class="source-line-no">137</span><span id="line-137"></span>
+<span class="source-line-no">138</span><span id="line-138">        //---* Done *----------------------------------------------------------</span>
+<span class="source-line-no">139</span><span id="line-139">        return retValue;</span>
+<span class="source-line-no">140</span><span id="line-140">    }   //  composeColorValue()</span>
+<span class="source-line-no">141</span><span id="line-141"></span>
+<span class="source-line-no">142</span><span id="line-142">    /**</span>
+<span class="source-line-no">143</span><span id="line-143">     *  {@inheritDoc}</span>
+<span class="source-line-no">144</span><span id="line-144">     */</span>
+<span class="source-line-no">145</span><span id="line-145">    @Override</span>
+<span class="source-line-no">146</span><span id="line-146">    public final boolean equals( final Object obj )</span>
+<span class="source-line-no">147</span><span id="line-147">    {</span>
+<span class="source-line-no">148</span><span id="line-148">        var retValue = this == obj;</span>
+<span class="source-line-no">149</span><span id="line-149">        if( !retValue &amp;&amp; (obj instanceof SVGColor other) )</span>
+<span class="source-line-no">150</span><span id="line-150">        {</span>
+<span class="source-line-no">151</span><span id="line-151">            retValue = value().equals( other.value() );</span>
+<span class="source-line-no">152</span><span id="line-152">        }</span>
+<span class="source-line-no">153</span><span id="line-153"></span>
+<span class="source-line-no">154</span><span id="line-154">        //---* Done *----------------------------------------------------------</span>
+<span class="source-line-no">155</span><span id="line-155">        return retValue;</span>
+<span class="source-line-no">156</span><span id="line-156">    }   //  equals()</span>
+<span class="source-line-no">157</span><span id="line-157">}</span>
+<span class="source-line-no">158</span><span id="line-158">//  class SVGColor</span>
+<span class="source-line-no">159</span><span id="line-159"></span>
+<span class="source-line-no">160</span><span id="line-160">/*</span>
+<span class="source-line-no">161</span><span id="line-161"> *  End of File</span>
+<span class="source-line-no">162</span><span id="line-162"> */</span>
 
 
 

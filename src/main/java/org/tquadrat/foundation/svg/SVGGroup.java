@@ -35,15 +35,7 @@ import org.tquadrat.foundation.annotation.ClassVersion;
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVGGroup extends SVGElementWithChildren, AllowsStyleAttributes, AllowsGlobalEventAttributes, AllowsPresentationAttributes, AllowsGraphicalEventAttributes, AllowsConditionalProcessingAttributes
     permits SVGElementAdapter, org.tquadrat.foundation.svg.internal.SVGGroupImpl
-{
-        /*-----------*\
-    ====** Constants **========================================================
-        \*-----------*/
-    /**
-     *  An empty array of {@code SVGGroup} objects.
-     */
-    public static final SVGGroup [] EMPTY_SVGGroup_ARRAY = new SVGGroup [0];
-}
+{ /* No Methods */ }
 //  interface SVGGroup
 
 /*

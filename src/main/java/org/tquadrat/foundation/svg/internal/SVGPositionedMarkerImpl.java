@@ -24,6 +24,7 @@ import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
 import org.tquadrat.foundation.svg.SVGPositionedMarker;
 import org.tquadrat.foundation.svg.type.SVGNumber;
+
 /**
  *  The implementation of the interface
  *  {@link SVGPositionedMarker}
@@ -55,6 +56,7 @@ public final class SVGPositionedMarkerImpl extends SVGMarkerImpl implements SVGP
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     public final void setPosition( final SVGNumber value )
     {

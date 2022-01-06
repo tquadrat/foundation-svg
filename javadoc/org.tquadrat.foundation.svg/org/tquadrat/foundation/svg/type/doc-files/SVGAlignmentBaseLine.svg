@@ -7,7 +7,7 @@
      version='1.1'
      baseProfile='full'
      width='1207.000'
-     height='819.000'>
+     height='808.000'>
     <defs>
         <style><![CDATA[
             line
@@ -118,8 +118,8 @@
         </marker>
         <clipPath id='ID000001'>
             <rect class='focusClass'
-                  height='106.000'
-                  width='550.000'
+                  height='95.000'
+                  width='526.000'
                   x='0.000'
                   y='0.000'/>
         </clipPath>
@@ -129,38 +129,36 @@
                    clip-path='url(#ID000001)'>
                     <rect x='0.000'
                           y='0.000'
-                          width='550.000'
-                          height='106.000'
+                          width='526.000'
+                          height='95.000'
                           class='focusClass'/>
                     <line x1='0.000'
                           y1='28.000'
-                          x2='550.000'
+                          x2='526.000'
                           y2='28.000'
                           class='separator'/>
-                    <text x='260.600'
+                    <text x='248.600'
                           y='13.000'
                           class='stereotype'>&#xAB;Enum&#xBB;</text>
-                    <text x='215.000'
+                    <text x='203.000'
                           y='24.000'>SVGAlignmentBaseLine</text>
                     <line x1='0.000'
-                          y1='56.000'
-                          x2='550.000'
-                          y2='56.000'
+                          y1='45.000'
+                          x2='526.000'
+                          y2='45.000'
                           class='separator'/>
                     <text y='41.000'
-                          class='static final'>+ EMPTY_SVGAlignmentBaseLine_ARRAY:org.tquadrat.foundation.svg.type.SVGAlignmentBaseLine[]</text>
-                    <text y='52.000'
                           class='final'>- m_AttributeValue:java.lang.String</text>
                     <text x='5.000'
-                          y='69.000'>- SVGAlignmentBaseLine(attributeValue:java.lang.String)</text>
+                          y='58.000'>- SVGAlignmentBaseLine(attributeValue:java.lang.String)</text>
                     <text x='5.000'
-                          y='80.000'
+                          y='69.000'
                           class='static'>+ values():org.tquadrat.foundation.svg.type.SVGAlignmentBaseLine[]</text>
                     <text x='5.000'
-                          y='91.000'
+                          y='80.000'
                           class='static'>+ valueOf(name:java.lang.String):org.tquadrat.foundation.svg.type.SVGAlignmentBaseLine</text>
                     <text x='5.000'
-                          y='102.000'>+ toString():java.lang.String</text>
+                          y='91.000'>+ toString():java.lang.String</text>
                 </g>
             </g>
         </symbol>
@@ -460,7 +458,7 @@
     <use x='382.000'
          y='297.000'
          xlink:href='#java.lang.Enum'/>
-    <use x='328.500'
+    <use x='340.500'
          y='588.000'
          xlink:href='#org.tquadrat.foundation.svg.type.SVGAlignmentBaseLine'/>
 </svg>

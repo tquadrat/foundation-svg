@@ -287,14 +287,6 @@ public enum SVGElementCategory
             SVGELEMENT_MeshPatch, SVGELEMENT_MeshRow, SVGELEMENT_Script,
             SVGELEMENT_Style, SVGELEMENT_View );
 
-        /*-----------*\
-    ====** Constants **========================================================
-        \*-----------*/
-    /**
-     *  An empty array of {@code SVGElementCategory} objects.
-     */
-    public static final SVGElementCategory [] EMPTY_SVGElementCategory_ARRAY = new SVGElementCategory [0];
-
         /*------------*\
     ====** Attributes **=======================================================
         \*------------*/

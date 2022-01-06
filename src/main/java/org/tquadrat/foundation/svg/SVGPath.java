@@ -38,14 +38,6 @@ import org.tquadrat.foundation.svg.type.SVGPathElement;
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVGPath extends SVGElementWithChildren, AllowsConditionalProcessingAttributes, AllowsGlobalEventAttributes, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes permits SVGElementAdapter, org.tquadrat.foundation.svg.internal.SVGPathImpl
 {
-        /*-----------*\
-    ====** Constants **========================================================
-        \*-----------*/
-    /**
-     *  An empty array of {@code SVGPath} objects.
-     */
-    public static final SVGPath [] EMPTY_SVGPath_ARRAY = new SVGPath [0];
-
         /*---------*\
     ====** Methods **==========================================================
         \*---------*/

@@ -25,7 +25,6 @@ import static org.tquadrat.foundation.svg.SVGUtils.createPath;
 import static org.tquadrat.foundation.svg.SVGUtils.hLineTo;
 import static org.tquadrat.foundation.svg.SVGUtils.lineTo;
 import static org.tquadrat.foundation.svg.SVGUtils.moveToAbs;
-import static org.tquadrat.foundation.svg.type.SVGPathElement.EMPTY_SVGPathElement_ARRAY;
 import static org.tquadrat.foundation.util.StringUtils.format;
 
 import org.junit.jupiter.api.DisplayName;
@@ -52,7 +51,7 @@ import org.tquadrat.foundation.svg.type.SVGPathElement;
  *  @version $Id: TestCreatePath.java 820 2020-12-29 20:34:22Z tquadrat $
  *  @since 0.0.5
  */
-@SuppressWarnings( {"MisorderedAssertEqualsArguments", "CommentedOutCode"} )
+@SuppressWarnings( "CommentedOutCode" )
 @ClassVersion( sourceVersion = "$Id: TestCreatePath.java 820 2020-12-29 20:34:22Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.svg.svgutils.TestCreatePath" )
 public class TestCreatePath extends SVGTestBase
@@ -106,7 +105,7 @@ public class TestCreatePath extends SVGTestBase
         actual = candidate.toString();
         assertEquals( expected, actual );
 
-        path = EMPTY_SVGPathElement_ARRAY;
+        path = new SVGPathElement [0];
 
         candidate = createPath( path );
         expected = "\n<path d=''/>";
@@ -141,7 +140,6 @@ public class TestCreatePath extends SVGTestBase
         final Class<? extends Throwable> expectedException = NullArgumentException.class;
         try
         {
-            //noinspection CastToConcreteClass
             createPath( (SVGPathElement []) null );
             fail( () -> format( MSG_ExceptionNotThrown, expectedException.getName() ) );
         }
@@ -164,7 +162,6 @@ public class TestCreatePath extends SVGTestBase
         }
         try
         {
-            //noinspection CastToConcreteClass
             createPath( parent, (SVGPathElement []) null );
             fail( () -> format( MSG_ExceptionNotThrown, expectedException.getName() ) );
         }

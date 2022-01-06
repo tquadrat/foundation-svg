@@ -38,14 +38,6 @@ import org.tquadrat.foundation.xml.builder.XMLElement;
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVGText extends SVGElementWithChildren, AllowsConditionalProcessingAttributes, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes permits SVGElementAdapter, org.tquadrat.foundation.svg.internal.SVGTextImpl
 {
-        /*-----------*\
-    ====** Constants **========================================================
-        \*-----------*/
-    /**
-     *  An empty array of {@code SVGText} objects.
-     */
-    public static final SVGText [] EMPTY_SVGText_ARRAY = new SVGText [0];
-
         /*---------*\
     ====** Methods **==========================================================
         \*---------*/

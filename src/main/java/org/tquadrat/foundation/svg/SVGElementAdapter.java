@@ -62,10 +62,11 @@ import org.tquadrat.foundation.svg.type.SVGNumber.SVGDegree;
 import org.tquadrat.foundation.svg.type.SVGPathElement;
 
 /**
- *  This is the base class for a custom type that wants to extend an SVG
- *  element with additional features. <br>
- *  <br>Basically, an implementation may look like this (in this example, for
- *  an SVG {@code <symbol>} extension:<pre><code>  &hellip;
+ *  <p>{@summary This is the base class for a custom type that wants to extend
+ *  an SVG element with additional features.}</p>
+ *  <p>Basically, an implementation may look like this (in this example, for
+ *  an SVG {@code <symbol>} extension:</p>
+ *  <pre><code>  &hellip;
  *  public class MySymbol extends SVGElementBase
  *  {
  *      &hellip;
@@ -78,7 +79,7 @@ import org.tquadrat.foundation.svg.type.SVGPathElement;
  *  }</code></pre>
  *
  *  @note   Such a custom element implements all the other interfaces; it is
- *      all the other element type <i>at the same type</i>! But that does not
+ *      all the other element type <i>at the same time</i>! But that does not
  *      mean that it will inherit their features automatically! Especially it
  *      will not validate children or attributes!
  *
@@ -88,7 +89,7 @@ import org.tquadrat.foundation.svg.type.SVGPathElement;
  *
  *  @UMLGraph.link
  */
-@SuppressWarnings( {"AbstractClassExtendsConcreteClass", "ClassWithTooManyMethods", "OverlyCoupledClass"} )
+@SuppressWarnings( {"AbstractClassExtendsConcreteClass", "OverlyCoupledClass"} )
 @ClassVersion( sourceVersion = "$Id: SVGElementAdapter.java 840 2021-01-10 21:37:03Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public abstract non-sealed class SVGElementAdapter extends SVGElementImpl
@@ -143,6 +144,7 @@ public abstract non-sealed class SVGElementAdapter extends SVGElementImpl
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @MountPoint
     @Override
     public void defineLine( final SVGNumber x1, final SVGNumber y1, final SVGNumber x2, final SVGNumber y2 )
@@ -207,6 +209,7 @@ public abstract non-sealed class SVGElementAdapter extends SVGElementImpl
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @MountPoint
     @Override
     public void setDx( final SVGNumber... values )
@@ -222,6 +225,7 @@ public abstract non-sealed class SVGElementAdapter extends SVGElementImpl
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @MountPoint
     @Override
     public void setDy( final SVGNumber... values )
@@ -248,6 +252,7 @@ public abstract non-sealed class SVGElementAdapter extends SVGElementImpl
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @MountPoint
     @Override
     public void setMarkerHeight( final SVGNumber value )
@@ -268,6 +273,7 @@ public abstract non-sealed class SVGElementAdapter extends SVGElementImpl
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @MountPoint
     @Override
     public void setMarkerWidth( final SVGNumber value )
@@ -288,6 +294,7 @@ public abstract non-sealed class SVGElementAdapter extends SVGElementImpl
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @MountPoint
     @Override
     public void setOrientation( final SVGNumber.SVGDegree value )
@@ -309,6 +316,7 @@ public abstract non-sealed class SVGElementAdapter extends SVGElementImpl
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @MountPoint
     @Override
     public void setPosition( final SVGNumber value )
@@ -319,6 +327,7 @@ public abstract non-sealed class SVGElementAdapter extends SVGElementImpl
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @MountPoint
     @Override
     public void setReferenceX( final SVGNumber value )
@@ -329,6 +338,7 @@ public abstract non-sealed class SVGElementAdapter extends SVGElementImpl
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @MountPoint
     @Override
     public void setReferenceY( final SVGNumber value )
@@ -339,6 +349,7 @@ public abstract non-sealed class SVGElementAdapter extends SVGElementImpl
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @MountPoint
     @Override
     public void setRotate( final SVGNumber.SVGDegree... values )
@@ -354,6 +365,7 @@ public abstract non-sealed class SVGElementAdapter extends SVGElementImpl
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @MountPoint
     @Override
     public void setTextLength( final SVGNumber value )
@@ -364,6 +376,7 @@ public abstract non-sealed class SVGElementAdapter extends SVGElementImpl
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @MountPoint
     @Override
     public void setX( final SVGNumber... values )
@@ -379,6 +392,7 @@ public abstract non-sealed class SVGElementAdapter extends SVGElementImpl
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @MountPoint
     @Override
     public void setX1( final SVGNumber value )
@@ -389,6 +403,7 @@ public abstract non-sealed class SVGElementAdapter extends SVGElementImpl
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @MountPoint
     @Override
     public void setX2( final SVGNumber value )
@@ -399,6 +414,7 @@ public abstract non-sealed class SVGElementAdapter extends SVGElementImpl
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @MountPoint
     @Override
     public void setY( final SVGNumber... values )
@@ -414,6 +430,7 @@ public abstract non-sealed class SVGElementAdapter extends SVGElementImpl
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @MountPoint
     @Override
     public void setY1( final SVGNumber value )
@@ -424,6 +441,7 @@ public abstract non-sealed class SVGElementAdapter extends SVGElementImpl
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @MountPoint
     @Override
     public void setY2( final SVGNumber value )

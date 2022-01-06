@@ -40,14 +40,6 @@ import org.tquadrat.foundation.annotation.ClassVersion;
 public sealed class SVGPaint extends ValueBase
     permits SVGColor
 {
-        /*-----------*\
-    ====** Constants **========================================================
-        \*-----------*/
-    /**
-     *  An empty array of {@code SVGPaint} objects.
-     */
-    public static final SVGPaint [] EMPTY_SVGPaint_ARRAY = new SVGPaint [0];
-
         /*------------*\
     ====** Attributes **=======================================================
         \*------------*/
@@ -114,7 +106,6 @@ public sealed class SVGPaint extends ValueBase
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( "AccessingNonPublicFieldOfAnotherObject" )
     @Override
     public boolean equals( final Object obj )
     {

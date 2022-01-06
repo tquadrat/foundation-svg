@@ -44,14 +44,6 @@ import org.tquadrat.foundation.svg.type.SVGNumber;
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVGUse extends SVGElement, AllowsConditionalProcessingAttributes, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsXLinkAttributes permits SVGElementAdapter, org.tquadrat.foundation.svg.internal.SVGUseImpl
 {
-        /*-----------*\
-    ====** Constants **========================================================
-        \*-----------*/
-    /**
-     *  An empty array of {@code SVGUse} objects.
-     */
-    public static final SVGUse [] EMPTY_SVGUse_ARRAY = new SVGUse [0];
-
         /*---------*\
     ====** Methods **==========================================================
         \*---------*/
@@ -61,6 +53,7 @@ public sealed interface SVGUse extends SVGElement, AllowsConditionalProcessingAt
      *  @param  value   The type; if {@code null} the
      *      attribute will be removed.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setHeight( final SVGNumber value );
 
     /**
@@ -69,6 +62,7 @@ public sealed interface SVGUse extends SVGElement, AllowsConditionalProcessingAt
      *  @param  value   The type; if {@code null} the
      *      attribute will be removed.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setWidth( final SVGNumber value );
 
     /**
@@ -77,6 +71,7 @@ public sealed interface SVGUse extends SVGElement, AllowsConditionalProcessingAt
      *  @param  value   The type; if {@code null} the
      *      attribute will be removed.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setX( final SVGNumber value );
 
     /**
@@ -85,6 +80,7 @@ public sealed interface SVGUse extends SVGElement, AllowsConditionalProcessingAt
      *  @param  value   The type; if {@code null} the
      *      attribute will be removed.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setY( final SVGNumber value );
 }
 //  interface SVGUse

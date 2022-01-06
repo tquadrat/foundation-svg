@@ -35,14 +35,6 @@ import org.tquadrat.foundation.annotation.ClassVersion;
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVGStyle extends SVGElement permits SVGElementAdapter, org.tquadrat.foundation.svg.internal.SVGStyleImpl
 {
-        /*-----------*\
-    ====** Constants **========================================================
-        \*-----------*/
-    /**
-     *  An empty array of {@code SVGStyle} objects.
-     */
-    public static final SVGStyle [] EMPTY_SVGStyle_ARRAY = new SVGStyle [0];
-
         /*---------*\
     ====** Methods **==========================================================
         \*---------*/

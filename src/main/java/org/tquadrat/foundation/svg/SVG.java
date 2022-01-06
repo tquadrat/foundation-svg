@@ -100,14 +100,6 @@ public sealed interface SVG extends SVGElementWithChildren, AllowsConditionalPro
     }
     //  enum Usage
 
-        /*-----------*\
-    ====** Constants **========================================================
-        \*-----------*/
-    /**
-     *  An empty array of {@code SVG} objects.
-     */
-    public static final SVG [] EMPTY_SVG_ARRAY = new SVG [0];
-
         /*---------*\
     ====** Methods **==========================================================
         \*---------*/
@@ -152,6 +144,7 @@ public sealed interface SVG extends SVGElementWithChildren, AllowsConditionalPro
      *  @param  width   The width of the element.
      *  @param  height  The height of the element.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public default void setDimension( final SVGNumber width, final SVGNumber height )
     {
         setHeight( requireNonNullArgument( height, "height" ) );
@@ -164,10 +157,11 @@ public sealed interface SVG extends SVGElementWithChildren, AllowsConditionalPro
      *  @param  value   The type; if {@code null} the
      *      attribute will be removed.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setHeight( final SVGNumber value );
 
     /**
-     *  Sets the mode for the aspect ration preservation for this {@code <svg>}
+     *  Sets the mode for the aspect ratio preservation for this {@code <svg>}
      *  element.
      *
      *  @param  value   The type; if {@code null} the
@@ -199,6 +193,7 @@ public sealed interface SVG extends SVGElementWithChildren, AllowsConditionalPro
      *  @param  width   The width of the area.
      *  @param  height  The height of the area.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setViewBox( final SVGNumber x, final SVGNumber y, final SVGNumber width, final SVGNumber height );
 
     /**
@@ -207,6 +202,7 @@ public sealed interface SVG extends SVGElementWithChildren, AllowsConditionalPro
      *  @param  value   The type; if {@code null} the
      *      attribute will be removed.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setWidth( final SVGNumber value );
 
     /**
@@ -216,6 +212,7 @@ public sealed interface SVG extends SVGElementWithChildren, AllowsConditionalPro
      *  @param  value   The type; if {@code null} the
      *      attribute will be removed.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setX( final SVGNumber value );
 
     /**
@@ -225,11 +222,12 @@ public sealed interface SVG extends SVGElementWithChildren, AllowsConditionalPro
      *  @param  value   The type; if {@code null} the
      *      attribute will be removed.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setY( final SVGNumber value );
 
     /**
      *  Sets the 'Zoom-and-Pan' flag; if enabled on a stand-alone instance of
-     *  the {@code <svg>} element, it allows to pan and zoom the image.
+     *  the {@code <svg>} element, it allows panning and zooming the image.
      *
      *  @param  flag    {@code true} enables the feature by setting
      *      &quot;{@code magnify}&quot; to the attribute

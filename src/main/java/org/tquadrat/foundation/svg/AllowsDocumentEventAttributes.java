@@ -103,7 +103,7 @@ public sealed interface AllowsDocumentEventAttributes permits SVG, SVGElementAda
     public void setScrollHandler( final String value );
 
     /**
-     *  Sets the unload handler for this SVG element.
+     *  Sets the &quot;unload&quot; handler for this SVG element.
      *
      *  @param  value   The unload handler.
      *

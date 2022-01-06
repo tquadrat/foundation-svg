@@ -20,14 +20,11 @@ package org.tquadrat.foundation.svg;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
-import static org.tquadrat.foundation.svg.SVGSymbol.EMPTY_SVGSymbol_ARRAY;
 import static org.tquadrat.foundation.svg.SVGUtils.createSymbol;
 import static org.tquadrat.foundation.svg.SVGUtils.number;
 import static org.tquadrat.foundation.svg.SVGUtils.percent;
 import static org.tquadrat.foundation.svg.type.SVGPreserveAspectRatio.XMID_YMID;
 import static org.tquadrat.foundation.util.StringUtils.format;
-
-import java.util.List;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -43,7 +40,6 @@ import org.tquadrat.foundation.svg.helper.SVGTestBase;
  *  @version $Id: TestAutoSVGSymbol.java 820 2020-12-29 20:34:22Z tquadrat $
  *  @since 0.0.5
  */
-@SuppressWarnings( "MisorderedAssertEqualsArguments" )
 @ClassVersion( sourceVersion = "$Id: TestAutoSVGSymbol.java 820 2020-12-29 20:34:22Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.svg.TestAutoSVGSymbol" )
 public class TestAutoSVGSymbol extends SVGTestBase
@@ -51,18 +47,6 @@ public class TestAutoSVGSymbol extends SVGTestBase
         /*---------*\
     ====** Methods **==========================================================
         \*---------*/
-    /**
-     *  Satisfies the test coverage ratio.
-     */
-    @Test
-    final void cover()
-    {
-        skipThreadTest();
-
-        final List<SVGSymbol> list = List.of();
-        assertEquals( 0, list.toArray( EMPTY_SVGSymbol_ARRAY ).length );
-    }   //  cover()
-
     /**
      * Create the candidate object.
      *

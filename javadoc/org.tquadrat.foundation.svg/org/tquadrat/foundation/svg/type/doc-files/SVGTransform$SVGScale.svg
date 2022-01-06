@@ -6,8 +6,8 @@
      xmlns:xlink="http://www.w3.org/1999/xlink"
      version='1.1'
      baseProfile='full'
-     width='504.000'
-     height='1017.000'>
+     width='450.000'
+     height='1006.000'>
     <defs>
         <style><![CDATA[
             line
@@ -159,8 +159,8 @@
         </symbol>
         <clipPath id='ID000002'>
             <rect class='otherClass'
-                  height='183.000'
-                  width='454.000'
+                  height='172.000'
+                  width='400.000'
                   x='0.000'
                   y='0.000'/>
         </clipPath>
@@ -169,51 +169,49 @@
                 <g clip-path='url(#ID000002)'>
                     <rect x='0.000'
                           y='0.000'
-                          width='454.000'
-                          height='183.000'
+                          width='400.000'
+                          height='172.000'
                           class='otherClass'/>
                     <line x1='0.000'
                           y1='28.000'
-                          x2='454.000'
+                          x2='400.000'
                           y2='28.000'
                           class='separator'/>
-                    <text x='212.600'
+                    <text x='185.600'
                           y='13.000'
                           class='stereotype'>&#xAB;Type&#xBB;</text>
-                    <text x='191.000'
+                    <text x='164.000'
                           y='24.000'
                           class='abstract'>SVGTransform</text>
                     <line x1='0.000'
-                          y1='133.000'
-                          x2='454.000'
-                          y2='133.000'
+                          y1='122.000'
+                          x2='400.000'
+                          y2='122.000'
                           class='separator'/>
                     <text y='41.000'
-                          class='static final'>+ EMPTY_SVGTransform_ARRAY:org.tquadrat.foundation.svg.type.SVGTransform[]</text>
-                    <text y='52.000'
                           class='static final'>+ SVGTRANSFORM_Matrix:java.lang.String</text>
-                    <text y='63.000'
+                    <text y='52.000'
                           class='static final'>+ SVGTRANSFORM_Rotate:java.lang.String</text>
-                    <text y='74.000'
+                    <text y='63.000'
                           class='static final'>+ SVGTRANSFORM_Scale:java.lang.String</text>
-                    <text y='85.000'
+                    <text y='74.000'
                           class='static final'>+ SVGTRANSFORM_SkewX:java.lang.String</text>
-                    <text y='96.000'
+                    <text y='85.000'
                           class='static final'>+ SVGTRANSFORM_SkewY:java.lang.String</text>
-                    <text y='107.000'
+                    <text y='96.000'
                           class='static final'>+ SVGTRANSFORM_Translate:java.lang.String</text>
-                    <text y='118.000'
+                    <text y='107.000'
                           class='final'>- m_Name:java.lang.String</text>
-                    <text y='129.000'
+                    <text y='118.000'
                           class='final'>- m_Parameters:java.lang.String</text>
                     <text x='5.000'
-                          y='146.000'># SVGTransform(name:java.lang.String,parameters:java.lang.String)</text>
+                          y='135.000'># SVGTransform(name:java.lang.String,parameters:java.lang.String)</text>
                     <text x='5.000'
-                          y='157.000'>+ equals(obj:java.lang.Object):boolean</text>
+                          y='146.000'>+ equals(obj:java.lang.Object):boolean</text>
                     <text x='5.000'
-                          y='168.000'>+ hashCode():int</text>
+                          y='157.000'>+ hashCode():int</text>
                     <text x='5.000'
-                          y='179.000'>+ toString():java.lang.String</text>
+                          y='168.000'>+ toString():java.lang.String</text>
                 </g>
             </g>
         </symbol>
@@ -331,24 +329,24 @@
         </symbol>
     </defs>
     <path class='inheritance'
-          d='M252.000,808.000 L252.000,708.000'
+          d='M225.000,797.000 L225.000,697.000'
           marker-end='url(#inheritance)'/>
     <path class='inheritance'
-          d='M252.000,525.000 L252.000,425.000'
+          d='M225.000,525.000 L225.000,425.000'
           marker-end='url(#inheritance)'/>
     <path class='inheritance'
-          d='M252.000,297.000 L252.000,197.000'
+          d='M225.000,297.000 L225.000,197.000'
           marker-end='url(#inheritance)'/>
-    <use x='130.000'
+    <use x='103.000'
          y='25.000'
          xlink:href='#java.lang.Object'/>
-    <use x='55.000'
+    <use x='28.000'
          y='297.000'
          xlink:href='#org.tquadrat.foundation.svg.type.ValueBase'/>
     <use x='25.000'
          y='525.000'
          xlink:href='#org.tquadrat.foundation.svg.type.SVGTransform'/>
-    <use x='160.000'
-         y='808.000'
+    <use x='133.000'
+         y='797.000'
          xlink:href='#org.tquadrat.foundation.svg.type.SVGTransform.SVGScale'/>
 </svg>

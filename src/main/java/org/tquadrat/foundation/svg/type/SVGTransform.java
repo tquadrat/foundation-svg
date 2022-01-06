@@ -109,12 +109,12 @@ public abstract sealed class SVGTransform extends ValueBase
      *  The SVG {@code rotate} transformation. <br>
      *  <br>This transformation definition specifies a rotation by {@code a}
      *  degrees about a given point. If the optional parameters {@code x} and
-     *  {@code y} are not supplied, the rotate is about the origin of the
+     *  {@code y} are not supplied, the rotation is about the origin of the
      *  current user coordinate system. The operation corresponds to the matrix
      *  <pre><code>    cos <i>a</i>  -sin <i>a</i>  0
      *  ( sin <i>a</i>   cos <i>a</i>  0 )
      *      0       0    1</code></pre>If the optional parameters {@code x} and
-     *  {@code y} are supplied, the rotate is about the point {@code (x,y)}.
+     *  {@code y} are supplied, the rotation is about the point {@code (x,y)}.
      *  Then the operation represents the equivalent of the following transform
      *  definition list:<ol>
      *  <li><code>translate( <i>x</i>, <i>y</i> )</code></li>
@@ -252,7 +252,7 @@ public abstract sealed class SVGTransform extends ValueBase
     /**
      *  The SVG {@code skewX} transformation. <br>
      *  <br>This transformation definition specifies a skew transformation
-     *  along the x axis by {@code a} degrees. The operation corresponds to the
+     *  along the x-axis by {@code a} degrees. The operation corresponds to the
      *  matrix<pre><code>    1  tan <i>a</i>  0
      *  ( 0    1    0 )
      *    0    0    1</code></pre>
@@ -289,7 +289,7 @@ public abstract sealed class SVGTransform extends ValueBase
     /**
      *  The SVG {@code skewY} transformation. <br>
      *  <br>This transformation definition specifies a skew transformation
-     *  along the y axis by {@code a} degrees. The operation corresponds to the
+     *  along the y-axis by {@code a} degrees. The operation corresponds to the
      *  matrix<pre><code>      1    0  0
      *  ( tan <i>a</i>  1  0 )
      *      0    0  1</code></pre>
@@ -381,11 +381,6 @@ public abstract sealed class SVGTransform extends ValueBase
     ====** Constants **========================================================
         \*-----------*/
     /**
-     *  An empty array of {@code SVGTransform} objects.
-     */
-    public static final SVGTransform [] EMPTY_SVGTransform_ARRAY = new SVGTransform [0];
-
-    /**
      *  The name for the {@code matrix} transformation: {@value}.
      */
     public static final String SVGTRANSFORM_Matrix = "matrix";
@@ -449,7 +444,6 @@ public abstract sealed class SVGTransform extends ValueBase
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( "AccessingNonPublicFieldOfAnotherObject" )
     @Override
     public final boolean equals( final Object obj )
     {

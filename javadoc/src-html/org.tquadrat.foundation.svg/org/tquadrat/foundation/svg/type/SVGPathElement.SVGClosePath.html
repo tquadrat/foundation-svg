@@ -672,112 +672,102 @@
 <span class="source-line-no">659</span><span id="line-659">    }</span>
 <span class="source-line-no">660</span><span id="line-660">    //  class SVGVLineTo</span>
 <span class="source-line-no">661</span><span id="line-661"></span>
-<span class="source-line-no">662</span><span id="line-662">        /*-----------*\</span>
-<span class="source-line-no">663</span><span id="line-663">    ====** Constants **========================================================</span>
-<span class="source-line-no">664</span><span id="line-664">        \*-----------*/</span>
+<span class="source-line-no">662</span><span id="line-662">        /*------------*\</span>
+<span class="source-line-no">663</span><span id="line-663">    ====** Attributes **=======================================================</span>
+<span class="source-line-no">664</span><span id="line-664">        \*------------*/</span>
 <span class="source-line-no">665</span><span id="line-665">    /**</span>
-<span class="source-line-no">666</span><span id="line-666">     *  An empty array of {@code SVGPathElement} objects.</span>
+<span class="source-line-no">666</span><span id="line-666">     *  The name of the path element.</span>
 <span class="source-line-no">667</span><span id="line-667">     */</span>
-<span class="source-line-no">668</span><span id="line-668">    public static final SVGPathElement [] EMPTY_SVGPathElement_ARRAY = new SVGPathElement [0];</span>
+<span class="source-line-no">668</span><span id="line-668">    private final char m_Name;</span>
 <span class="source-line-no">669</span><span id="line-669"></span>
-<span class="source-line-no">670</span><span id="line-670">        /*------------*\</span>
-<span class="source-line-no">671</span><span id="line-671">    ====** Attributes **=======================================================</span>
-<span class="source-line-no">672</span><span id="line-672">        \*------------*/</span>
-<span class="source-line-no">673</span><span id="line-673">    /**</span>
-<span class="source-line-no">674</span><span id="line-674">     *  The name of the path element.</span>
-<span class="source-line-no">675</span><span id="line-675">     */</span>
-<span class="source-line-no">676</span><span id="line-676">    private final char m_Name;</span>
-<span class="source-line-no">677</span><span id="line-677"></span>
+<span class="source-line-no">670</span><span id="line-670">    /**</span>
+<span class="source-line-no">671</span><span id="line-671">     *  The parameters for the transformation.</span>
+<span class="source-line-no">672</span><span id="line-672">     */</span>
+<span class="source-line-no">673</span><span id="line-673">    private final String m_Parameters;</span>
+<span class="source-line-no">674</span><span id="line-674"></span>
+<span class="source-line-no">675</span><span id="line-675">        /*--------------*\</span>
+<span class="source-line-no">676</span><span id="line-676">    ====** Constructors **=====================================================</span>
+<span class="source-line-no">677</span><span id="line-677">        \*--------------*/</span>
 <span class="source-line-no">678</span><span id="line-678">    /**</span>
-<span class="source-line-no">679</span><span id="line-679">     *  The parameters for the transformation.</span>
-<span class="source-line-no">680</span><span id="line-680">     */</span>
-<span class="source-line-no">681</span><span id="line-681">    private final String m_Parameters;</span>
-<span class="source-line-no">682</span><span id="line-682"></span>
-<span class="source-line-no">683</span><span id="line-683">        /*--------------*\</span>
-<span class="source-line-no">684</span><span id="line-684">    ====** Constructors **=====================================================</span>
-<span class="source-line-no">685</span><span id="line-685">        \*--------------*/</span>
-<span class="source-line-no">686</span><span id="line-686">    /**</span>
-<span class="source-line-no">687</span><span id="line-687">     *  Creates a new {@code SVGPathElement} instance.</span>
-<span class="source-line-no">688</span><span id="line-688">     *</span>
-<span class="source-line-no">689</span><span id="line-689">     *  @param  name    The name of the path element.</span>
-<span class="source-line-no">690</span><span id="line-690">     *  @param  parameters  The parameters for the path element.</span>
-<span class="source-line-no">691</span><span id="line-691">     */</span>
-<span class="source-line-no">692</span><span id="line-692">    protected SVGPathElement( final char name, final String parameters )</span>
-<span class="source-line-no">693</span><span id="line-693">    {</span>
-<span class="source-line-no">694</span><span id="line-694">        m_Name = name;</span>
-<span class="source-line-no">695</span><span id="line-695">        m_Parameters = requireNonNullArgument( parameters, "parameters" );</span>
-<span class="source-line-no">696</span><span id="line-696">    }   //  SVGPathElement()</span>
-<span class="source-line-no">697</span><span id="line-697"></span>
-<span class="source-line-no">698</span><span id="line-698">        /*---------*\</span>
-<span class="source-line-no">699</span><span id="line-699">    ====** Methods **==========================================================</span>
-<span class="source-line-no">700</span><span id="line-700">        \*---------*/</span>
-<span class="source-line-no">701</span><span id="line-701">    /**</span>
-<span class="source-line-no">702</span><span id="line-702">     *  {@inheritDoc}</span>
-<span class="source-line-no">703</span><span id="line-703">     */</span>
-<span class="source-line-no">704</span><span id="line-704">    @SuppressWarnings( "AccessingNonPublicFieldOfAnotherObject" )</span>
-<span class="source-line-no">705</span><span id="line-705">    @Override</span>
-<span class="source-line-no">706</span><span id="line-706">    public final boolean equals( final Object obj )</span>
-<span class="source-line-no">707</span><span id="line-707">    {</span>
-<span class="source-line-no">708</span><span id="line-708">        var retValue = this == obj;</span>
-<span class="source-line-no">709</span><span id="line-709">        if( !retValue &amp;&amp; (obj instanceof SVGPathElement other) &amp;&amp; (getClass() == other.getClass()) )</span>
-<span class="source-line-no">710</span><span id="line-710">        {</span>
-<span class="source-line-no">711</span><span id="line-711">            retValue = (m_Name == other.m_Name) &amp;&amp; m_Parameters.equals( other.m_Parameters );</span>
-<span class="source-line-no">712</span><span id="line-712">        }</span>
-<span class="source-line-no">713</span><span id="line-713"></span>
-<span class="source-line-no">714</span><span id="line-714">        //---* Done *----------------------------------------------------------</span>
-<span class="source-line-no">715</span><span id="line-715">        return retValue;</span>
-<span class="source-line-no">716</span><span id="line-716">    }   //  equals()</span>
-<span class="source-line-no">717</span><span id="line-717"></span>
-<span class="source-line-no">718</span><span id="line-718">    /**</span>
-<span class="source-line-no">719</span><span id="line-719">     *  {@inheritDoc}</span>
-<span class="source-line-no">720</span><span id="line-720">     */</span>
-<span class="source-line-no">721</span><span id="line-721">    @Override</span>
-<span class="source-line-no">722</span><span id="line-722">    public final int hashCode() { return hash( Character.valueOf( m_Name ), m_Parameters ); }</span>
-<span class="source-line-no">723</span><span id="line-723"></span>
-<span class="source-line-no">724</span><span id="line-724">    /**</span>
-<span class="source-line-no">725</span><span id="line-725">     *  {@inheritDoc}</span>
-<span class="source-line-no">726</span><span id="line-726">     */</span>
-<span class="source-line-no">727</span><span id="line-727">    @Override</span>
-<span class="source-line-no">728</span><span id="line-728">    public final String toString() { return format( "%c%s", m_Name, m_Parameters ); }</span>
-<span class="source-line-no">729</span><span id="line-729"></span>
-<span class="source-line-no">730</span><span id="line-730">    /**</span>
-<span class="source-line-no">731</span><span id="line-731">     *  Converts the given array of {@code SVGPathElement} instances into a</span>
-<span class="source-line-no">732</span><span id="line-732">     *  String that can be used with the SVG</span>
-<span class="source-line-no">733</span><span id="line-733">     *  {@value org.tquadrat.foundation.svg.SVGUtils#SVGATTRIBUTE_PathDefinition}</span>
-<span class="source-line-no">734</span><span id="line-734">     *  attribute.</span>
-<span class="source-line-no">735</span><span id="line-735">     *</span>
-<span class="source-line-no">736</span><span id="line-736">     *  @param  elements    The path elements.</span>
-<span class="source-line-no">737</span><span id="line-737">     *  @return The resulting String.</span>
-<span class="source-line-no">738</span><span id="line-738">     */</span>
-<span class="source-line-no">739</span><span id="line-739">    @SuppressWarnings( "AccessingNonPublicFieldOfAnotherObject" )</span>
-<span class="source-line-no">740</span><span id="line-740">    public static final String toString( final SVGPathElement... elements )</span>
-<span class="source-line-no">741</span><span id="line-741">    {</span>
-<span class="source-line-no">742</span><span id="line-742">        final var buffer = new StringBuilder();</span>
-<span class="source-line-no">743</span><span id="line-743">        var lastCommand = NULL_CHAR;</span>
-<span class="source-line-no">744</span><span id="line-744"></span>
-<span class="source-line-no">745</span><span id="line-745">        for( final var element : requireNonNullArgument( elements, "elements" ) )</span>
-<span class="source-line-no">746</span><span id="line-746">        {</span>
-<span class="source-line-no">747</span><span id="line-747">            if( Character.toUpperCase( element.m_Name ) == 'Z' ) lastCommand = NULL_CHAR;</span>
-<span class="source-line-no">748</span><span id="line-748">            if( !buffer.isEmpty() ) buffer.append( ' ' );</span>
-<span class="source-line-no">749</span><span id="line-749">            if( lastCommand != element.m_Name )</span>
-<span class="source-line-no">750</span><span id="line-750">            {</span>
-<span class="source-line-no">751</span><span id="line-751">                lastCommand = element.m_Name;</span>
-<span class="source-line-no">752</span><span id="line-752">                buffer.append( lastCommand );</span>
-<span class="source-line-no">753</span><span id="line-753">            }</span>
-<span class="source-line-no">754</span><span id="line-754">            buffer.append( element.m_Parameters );</span>
-<span class="source-line-no">755</span><span id="line-755">        }</span>
-<span class="source-line-no">756</span><span id="line-756"></span>
-<span class="source-line-no">757</span><span id="line-757">        final var retValue = buffer.toString();</span>
-<span class="source-line-no">758</span><span id="line-758"></span>
-<span class="source-line-no">759</span><span id="line-759">        //---* Done *----------------------------------------------------------</span>
-<span class="source-line-no">760</span><span id="line-760">        return retValue;</span>
-<span class="source-line-no">761</span><span id="line-761">    }   //  toString()</span>
-<span class="source-line-no">762</span><span id="line-762">}</span>
-<span class="source-line-no">763</span><span id="line-763">//  class SVGPathElement</span>
-<span class="source-line-no">764</span><span id="line-764"></span>
-<span class="source-line-no">765</span><span id="line-765">/*</span>
-<span class="source-line-no">766</span><span id="line-766"> *  End of File</span>
-<span class="source-line-no">767</span><span id="line-767"> */</span>
+<span class="source-line-no">679</span><span id="line-679">     *  Creates a new {@code SVGPathElement} instance.</span>
+<span class="source-line-no">680</span><span id="line-680">     *</span>
+<span class="source-line-no">681</span><span id="line-681">     *  @param  name    The name of the path element.</span>
+<span class="source-line-no">682</span><span id="line-682">     *  @param  parameters  The parameters for the path element.</span>
+<span class="source-line-no">683</span><span id="line-683">     */</span>
+<span class="source-line-no">684</span><span id="line-684">    protected SVGPathElement( final char name, final String parameters )</span>
+<span class="source-line-no">685</span><span id="line-685">    {</span>
+<span class="source-line-no">686</span><span id="line-686">        m_Name = name;</span>
+<span class="source-line-no">687</span><span id="line-687">        m_Parameters = requireNonNullArgument( parameters, "parameters" );</span>
+<span class="source-line-no">688</span><span id="line-688">    }   //  SVGPathElement()</span>
+<span class="source-line-no">689</span><span id="line-689"></span>
+<span class="source-line-no">690</span><span id="line-690">        /*---------*\</span>
+<span class="source-line-no">691</span><span id="line-691">    ====** Methods **==========================================================</span>
+<span class="source-line-no">692</span><span id="line-692">        \*---------*/</span>
+<span class="source-line-no">693</span><span id="line-693">    /**</span>
+<span class="source-line-no">694</span><span id="line-694">     *  {@inheritDoc}</span>
+<span class="source-line-no">695</span><span id="line-695">     */</span>
+<span class="source-line-no">696</span><span id="line-696">    @Override</span>
+<span class="source-line-no">697</span><span id="line-697">    public final boolean equals( final Object obj )</span>
+<span class="source-line-no">698</span><span id="line-698">    {</span>
+<span class="source-line-no">699</span><span id="line-699">        var retValue = this == obj;</span>
+<span class="source-line-no">700</span><span id="line-700">        if( !retValue &amp;&amp; (obj instanceof SVGPathElement other) &amp;&amp; (getClass() == other.getClass()) )</span>
+<span class="source-line-no">701</span><span id="line-701">        {</span>
+<span class="source-line-no">702</span><span id="line-702">            retValue = (m_Name == other.m_Name) &amp;&amp; m_Parameters.equals( other.m_Parameters );</span>
+<span class="source-line-no">703</span><span id="line-703">        }</span>
+<span class="source-line-no">704</span><span id="line-704"></span>
+<span class="source-line-no">705</span><span id="line-705">        //---* Done *----------------------------------------------------------</span>
+<span class="source-line-no">706</span><span id="line-706">        return retValue;</span>
+<span class="source-line-no">707</span><span id="line-707">    }   //  equals()</span>
+<span class="source-line-no">708</span><span id="line-708"></span>
+<span class="source-line-no">709</span><span id="line-709">    /**</span>
+<span class="source-line-no">710</span><span id="line-710">     *  {@inheritDoc}</span>
+<span class="source-line-no">711</span><span id="line-711">     */</span>
+<span class="source-line-no">712</span><span id="line-712">    @Override</span>
+<span class="source-line-no">713</span><span id="line-713">    public final int hashCode() { return hash( Character.valueOf( m_Name ), m_Parameters ); }</span>
+<span class="source-line-no">714</span><span id="line-714"></span>
+<span class="source-line-no">715</span><span id="line-715">    /**</span>
+<span class="source-line-no">716</span><span id="line-716">     *  {@inheritDoc}</span>
+<span class="source-line-no">717</span><span id="line-717">     */</span>
+<span class="source-line-no">718</span><span id="line-718">    @Override</span>
+<span class="source-line-no">719</span><span id="line-719">    public final String toString() { return format( "%c%s", m_Name, m_Parameters ); }</span>
+<span class="source-line-no">720</span><span id="line-720"></span>
+<span class="source-line-no">721</span><span id="line-721">    /**</span>
+<span class="source-line-no">722</span><span id="line-722">     *  Converts the given array of {@code SVGPathElement} instances into a</span>
+<span class="source-line-no">723</span><span id="line-723">     *  String that can be used with the SVG</span>
+<span class="source-line-no">724</span><span id="line-724">     *  {@value org.tquadrat.foundation.svg.SVGUtils#SVGATTRIBUTE_PathDefinition}</span>
+<span class="source-line-no">725</span><span id="line-725">     *  attribute.</span>
+<span class="source-line-no">726</span><span id="line-726">     *</span>
+<span class="source-line-no">727</span><span id="line-727">     *  @param  elements    The path elements.</span>
+<span class="source-line-no">728</span><span id="line-728">     *  @return The resulting String.</span>
+<span class="source-line-no">729</span><span id="line-729">     */</span>
+<span class="source-line-no">730</span><span id="line-730">    public static final String toString( final SVGPathElement... elements )</span>
+<span class="source-line-no">731</span><span id="line-731">    {</span>
+<span class="source-line-no">732</span><span id="line-732">        final var buffer = new StringBuilder();</span>
+<span class="source-line-no">733</span><span id="line-733">        var lastCommand = NULL_CHAR;</span>
+<span class="source-line-no">734</span><span id="line-734"></span>
+<span class="source-line-no">735</span><span id="line-735">        for( final var element : requireNonNullArgument( elements, "elements" ) )</span>
+<span class="source-line-no">736</span><span id="line-736">        {</span>
+<span class="source-line-no">737</span><span id="line-737">            if( Character.toUpperCase( element.m_Name ) == 'Z' ) lastCommand = NULL_CHAR;</span>
+<span class="source-line-no">738</span><span id="line-738">            if( !buffer.isEmpty() ) buffer.append( ' ' );</span>
+<span class="source-line-no">739</span><span id="line-739">            if( lastCommand != element.m_Name )</span>
+<span class="source-line-no">740</span><span id="line-740">            {</span>
+<span class="source-line-no">741</span><span id="line-741">                lastCommand = element.m_Name;</span>
+<span class="source-line-no">742</span><span id="line-742">                buffer.append( lastCommand );</span>
+<span class="source-line-no">743</span><span id="line-743">            }</span>
+<span class="source-line-no">744</span><span id="line-744">            buffer.append( element.m_Parameters );</span>
+<span class="source-line-no">745</span><span id="line-745">        }</span>
+<span class="source-line-no">746</span><span id="line-746"></span>
+<span class="source-line-no">747</span><span id="line-747">        final var retValue = buffer.toString();</span>
+<span class="source-line-no">748</span><span id="line-748"></span>
+<span class="source-line-no">749</span><span id="line-749">        //---* Done *----------------------------------------------------------</span>
+<span class="source-line-no">750</span><span id="line-750">        return retValue;</span>
+<span class="source-line-no">751</span><span id="line-751">    }   //  toString()</span>
+<span class="source-line-no">752</span><span id="line-752">}</span>
+<span class="source-line-no">753</span><span id="line-753">//  class SVGPathElement</span>
+<span class="source-line-no">754</span><span id="line-754"></span>
+<span class="source-line-no">755</span><span id="line-755">/*</span>
+<span class="source-line-no">756</span><span id="line-756"> *  End of File</span>
+<span class="source-line-no">757</span><span id="line-757"> */</span>
 
 
 

@@ -18,11 +18,8 @@
 package org.tquadrat.foundation.svg;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.tquadrat.foundation.svg.SVGPositionedMarker.EMPTY_SVGPositionedMarker_ARRAY;
 import static org.tquadrat.foundation.svg.SVGUtils.createPositionedMarker;
 import static org.tquadrat.foundation.svg.SVGUtils.ex;
-
-import java.util.List;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -37,7 +34,6 @@ import org.tquadrat.foundation.svg.helper.SVGTestBase;
  *  @version $Id: TestAutoSVGPositionedMarker.java 820 2020-12-29 20:34:22Z tquadrat $
  *  @since 0.0.5
  */
-@SuppressWarnings( "MisorderedAssertEqualsArguments" )
 @ClassVersion( sourceVersion = "$Id: TestAutoSVGPositionedMarker.java 820 2020-12-29 20:34:22Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.svg.TestAutoSVGPositionedMarker" )
 public class TestAutoSVGPositionedMarker extends SVGTestBase
@@ -45,18 +41,6 @@ public class TestAutoSVGPositionedMarker extends SVGTestBase
         /*---------*\
     ====** Methods **==========================================================
         \*---------*/
-    /**
-     *  Satisfies the test coverage ratio.
-     */
-    @Test
-    final void cover()
-    {
-        skipThreadTest();
-
-        final List<SVGPositionedMarker> list = List.of();
-        assertEquals( 0, list.toArray( EMPTY_SVGPositionedMarker_ARRAY ).length );
-    }   //  cover()
-
     /**
      * Create the candidate object.
      *

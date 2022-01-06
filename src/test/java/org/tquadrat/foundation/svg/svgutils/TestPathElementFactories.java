@@ -34,7 +34,6 @@ import static org.tquadrat.foundation.svg.SVGUtils.quadraticCurveTo;
 import static org.tquadrat.foundation.svg.SVGUtils.quadraticCurveToAbs;
 import static org.tquadrat.foundation.svg.SVGUtils.vLineTo;
 import static org.tquadrat.foundation.svg.SVGUtils.vLineToAbs;
-import static org.tquadrat.foundation.svg.type.SVGPathElement.EMPTY_SVGPathElement_ARRAY;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -97,7 +96,6 @@ import org.tquadrat.foundation.svg.type.SVGPathElement;
  *  @version $Id: TestPathElementFactories.java 820 2020-12-29 20:34:22Z tquadrat $
  *  @since 0.0.5
  */
-@SuppressWarnings( "MisorderedAssertEqualsArguments" )
 @ClassVersion( sourceVersion = "$Id: TestPathElementFactories.java 820 2020-12-29 20:34:22Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.svg.svgutils.TestPathElementFactories" )
 public class TestPathElementFactories extends SVGTestBase
@@ -378,7 +376,7 @@ public class TestPathElementFactories extends SVGTestBase
         assertEquals( expected, actual );
 
         //---* Test the Stringer for the path element array *------------------
-        final var candidatesArray = candidates.toArray( EMPTY_SVGPathElement_ARRAY );
+        final var candidatesArray = candidates.toArray( SVGPathElement[]::new );
         expected = "A5,5,45,1,1,0,0 5.000,5.000,45.000,0,0,1.000,1.000 "
             + "a5,5,45,1,1,0,0 5.000,5.000,45.000,0,0,1.000,1.000 Z "
             + "C5,5,7,7,9,9 5.000,5.000,7.000,7.000,9.000,9.000 S7,7,9,9 "

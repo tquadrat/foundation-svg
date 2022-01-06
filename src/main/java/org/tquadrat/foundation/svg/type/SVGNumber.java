@@ -219,20 +219,6 @@ public sealed class SVGNumber
     }
     //  class SVGUserUnitValue
 
-        /*-----------*\
-    ====** Constants **========================================================
-        \*-----------*/
-    /**
-     *  An empty array of {@code SVGNumber} objects.
-     */
-    public static final SVGNumber [] EMPTY_SVGNumber_ARRAY = new SVGNumber [0];
-
-    /**
-     *  An empty array of {@code SVGDegree} objects.
-     */
-    @SuppressWarnings( "ClassReferencesSubclass" )
-    public static final SVGDegree [] EMPTY_SVGDegree_ARRAY = new SVGDegree [0];
-
         /*------------*\
     ====** Attributes **=======================================================
         \*------------*/
@@ -295,7 +281,6 @@ public sealed class SVGNumber
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( "AccessingNonPublicFieldOfAnotherObject" )
     @Override
     public final boolean equals( final Object obj )
     {

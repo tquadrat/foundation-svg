@@ -29,7 +29,6 @@ import static org.tquadrat.foundation.svg.SVGUtils.createUse;
 import static org.tquadrat.foundation.svg.SVGUtils.degree;
 import static org.tquadrat.foundation.svg.SVGUtils.em;
 import static org.tquadrat.foundation.svg.SVGUtils.pixel;
-import static org.tquadrat.foundation.svg.type.SVGNumber.EMPTY_SVGDegree_ARRAY;
 import static org.tquadrat.foundation.util.StringUtils.format;
 
 import java.io.File;
@@ -135,7 +134,7 @@ public final class SVGTester
                 }
             }
             if( description.length() != rotations.size() ) throw new Error( format( "Rotations: %d - Description: %d\n", rotations.size(), description.length() ) );
-            text.setRotate( rotations.toArray( EMPTY_SVGDegree_ARRAY ) );
+            text.setRotate( rotations.toArray( SVGDegree[]::new ) );
             text.setX( pixel( 20 ) );
             text.setY( pixel( 20 ) );
 

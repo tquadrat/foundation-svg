@@ -122,12 +122,12 @@
 <span class="source-line-no">109</span><span id="line-109">     *  The SVG {@code rotate} transformation. &lt;br&gt;</span>
 <span class="source-line-no">110</span><span id="line-110">     *  &lt;br&gt;This transformation definition specifies a rotation by {@code a}</span>
 <span class="source-line-no">111</span><span id="line-111">     *  degrees about a given point. If the optional parameters {@code x} and</span>
-<span class="source-line-no">112</span><span id="line-112">     *  {@code y} are not supplied, the rotate is about the origin of the</span>
+<span class="source-line-no">112</span><span id="line-112">     *  {@code y} are not supplied, the rotation is about the origin of the</span>
 <span class="source-line-no">113</span><span id="line-113">     *  current user coordinate system. The operation corresponds to the matrix</span>
 <span class="source-line-no">114</span><span id="line-114">     *  &lt;pre&gt;&lt;code&gt;    cos &lt;i&gt;a&lt;/i&gt;  -sin &lt;i&gt;a&lt;/i&gt;  0</span>
 <span class="source-line-no">115</span><span id="line-115">     *  ( sin &lt;i&gt;a&lt;/i&gt;   cos &lt;i&gt;a&lt;/i&gt;  0 )</span>
 <span class="source-line-no">116</span><span id="line-116">     *      0       0    1&lt;/code&gt;&lt;/pre&gt;If the optional parameters {@code x} and</span>
-<span class="source-line-no">117</span><span id="line-117">     *  {@code y} are supplied, the rotate is about the point {@code (x,y)}.</span>
+<span class="source-line-no">117</span><span id="line-117">     *  {@code y} are supplied, the rotation is about the point {@code (x,y)}.</span>
 <span class="source-line-no">118</span><span id="line-118">     *  Then the operation represents the equivalent of the following transform</span>
 <span class="source-line-no">119</span><span id="line-119">     *  definition list:&lt;ol&gt;</span>
 <span class="source-line-no">120</span><span id="line-120">     *  &lt;li&gt;&lt;code&gt;translate( &lt;i&gt;x&lt;/i&gt;, &lt;i&gt;y&lt;/i&gt; )&lt;/code&gt;&lt;/li&gt;</span>
@@ -265,7 +265,7 @@
 <span class="source-line-no">252</span><span id="line-252">    /**</span>
 <span class="source-line-no">253</span><span id="line-253">     *  The SVG {@code skewX} transformation. &lt;br&gt;</span>
 <span class="source-line-no">254</span><span id="line-254">     *  &lt;br&gt;This transformation definition specifies a skew transformation</span>
-<span class="source-line-no">255</span><span id="line-255">     *  along the x axis by {@code a} degrees. The operation corresponds to the</span>
+<span class="source-line-no">255</span><span id="line-255">     *  along the x-axis by {@code a} degrees. The operation corresponds to the</span>
 <span class="source-line-no">256</span><span id="line-256">     *  matrix&lt;pre&gt;&lt;code&gt;    1  tan &lt;i&gt;a&lt;/i&gt;  0</span>
 <span class="source-line-no">257</span><span id="line-257">     *  ( 0    1    0 )</span>
 <span class="source-line-no">258</span><span id="line-258">     *    0    0    1&lt;/code&gt;&lt;/pre&gt;</span>
@@ -302,7 +302,7 @@
 <span class="source-line-no">289</span><span id="line-289">    /**</span>
 <span class="source-line-no">290</span><span id="line-290">     *  The SVG {@code skewY} transformation. &lt;br&gt;</span>
 <span class="source-line-no">291</span><span id="line-291">     *  &lt;br&gt;This transformation definition specifies a skew transformation</span>
-<span class="source-line-no">292</span><span id="line-292">     *  along the y axis by {@code a} degrees. The operation corresponds to the</span>
+<span class="source-line-no">292</span><span id="line-292">     *  along the y-axis by {@code a} degrees. The operation corresponds to the</span>
 <span class="source-line-no">293</span><span id="line-293">     *  matrix&lt;pre&gt;&lt;code&gt;      1    0  0</span>
 <span class="source-line-no">294</span><span id="line-294">     *  ( tan &lt;i&gt;a&lt;/i&gt;  1  0 )</span>
 <span class="source-line-no">295</span><span id="line-295">     *      0    0  1&lt;/code&gt;&lt;/pre&gt;</span>
@@ -394,105 +394,99 @@
 <span class="source-line-no">381</span><span id="line-381">    ====** Constants **========================================================</span>
 <span class="source-line-no">382</span><span id="line-382">        \*-----------*/</span>
 <span class="source-line-no">383</span><span id="line-383">    /**</span>
-<span class="source-line-no">384</span><span id="line-384">     *  An empty array of {@code SVGTransform} objects.</span>
+<span class="source-line-no">384</span><span id="line-384">     *  The name for the {@code matrix} transformation: {@value}.</span>
 <span class="source-line-no">385</span><span id="line-385">     */</span>
-<span class="source-line-no">386</span><span id="line-386">    public static final SVGTransform [] EMPTY_SVGTransform_ARRAY = new SVGTransform [0];</span>
+<span class="source-line-no">386</span><span id="line-386">    public static final String SVGTRANSFORM_Matrix = "matrix";</span>
 <span class="source-line-no">387</span><span id="line-387"></span>
 <span class="source-line-no">388</span><span id="line-388">    /**</span>
-<span class="source-line-no">389</span><span id="line-389">     *  The name for the {@code matrix} transformation: {@value}.</span>
+<span class="source-line-no">389</span><span id="line-389">     *  The name for the {@code rotate} transformation: {@value}.</span>
 <span class="source-line-no">390</span><span id="line-390">     */</span>
-<span class="source-line-no">391</span><span id="line-391">    public static final String SVGTRANSFORM_Matrix = "matrix";</span>
+<span class="source-line-no">391</span><span id="line-391">    public static final String SVGTRANSFORM_Rotate = "rotate";</span>
 <span class="source-line-no">392</span><span id="line-392"></span>
 <span class="source-line-no">393</span><span id="line-393">    /**</span>
-<span class="source-line-no">394</span><span id="line-394">     *  The name for the {@code rotate} transformation: {@value}.</span>
+<span class="source-line-no">394</span><span id="line-394">     *  The name for the {@code scale} transformation: {@value}.</span>
 <span class="source-line-no">395</span><span id="line-395">     */</span>
-<span class="source-line-no">396</span><span id="line-396">    public static final String SVGTRANSFORM_Rotate = "rotate";</span>
+<span class="source-line-no">396</span><span id="line-396">    public static final String SVGTRANSFORM_Scale = "scale";</span>
 <span class="source-line-no">397</span><span id="line-397"></span>
 <span class="source-line-no">398</span><span id="line-398">    /**</span>
-<span class="source-line-no">399</span><span id="line-399">     *  The name for the {@code scale} transformation: {@value}.</span>
+<span class="source-line-no">399</span><span id="line-399">     *  The name for the {@code skewX} transformation: {@value}.</span>
 <span class="source-line-no">400</span><span id="line-400">     */</span>
-<span class="source-line-no">401</span><span id="line-401">    public static final String SVGTRANSFORM_Scale = "scale";</span>
+<span class="source-line-no">401</span><span id="line-401">    public static final String SVGTRANSFORM_SkewX = "skewX";</span>
 <span class="source-line-no">402</span><span id="line-402"></span>
 <span class="source-line-no">403</span><span id="line-403">    /**</span>
-<span class="source-line-no">404</span><span id="line-404">     *  The name for the {@code skewX} transformation: {@value}.</span>
+<span class="source-line-no">404</span><span id="line-404">     *  The name for the {@code skewY} transformation: {@value}.</span>
 <span class="source-line-no">405</span><span id="line-405">     */</span>
-<span class="source-line-no">406</span><span id="line-406">    public static final String SVGTRANSFORM_SkewX = "skewX";</span>
+<span class="source-line-no">406</span><span id="line-406">    public static final String SVGTRANSFORM_SkewY = "skewY";</span>
 <span class="source-line-no">407</span><span id="line-407"></span>
 <span class="source-line-no">408</span><span id="line-408">    /**</span>
-<span class="source-line-no">409</span><span id="line-409">     *  The name for the {@code skewY} transformation: {@value}.</span>
+<span class="source-line-no">409</span><span id="line-409">     *  The name for the {@code translate} transformation: {@value}.</span>
 <span class="source-line-no">410</span><span id="line-410">     */</span>
-<span class="source-line-no">411</span><span id="line-411">    public static final String SVGTRANSFORM_SkewY = "skewY";</span>
+<span class="source-line-no">411</span><span id="line-411">    public static final String SVGTRANSFORM_Translate = "translate";</span>
 <span class="source-line-no">412</span><span id="line-412"></span>
-<span class="source-line-no">413</span><span id="line-413">    /**</span>
-<span class="source-line-no">414</span><span id="line-414">     *  The name for the {@code translate} transformation: {@value}.</span>
-<span class="source-line-no">415</span><span id="line-415">     */</span>
-<span class="source-line-no">416</span><span id="line-416">    public static final String SVGTRANSFORM_Translate = "translate";</span>
-<span class="source-line-no">417</span><span id="line-417"></span>
-<span class="source-line-no">418</span><span id="line-418">        /*------------*\</span>
-<span class="source-line-no">419</span><span id="line-419">    ====** Attributes **=======================================================</span>
-<span class="source-line-no">420</span><span id="line-420">        \*------------*/</span>
+<span class="source-line-no">413</span><span id="line-413">        /*------------*\</span>
+<span class="source-line-no">414</span><span id="line-414">    ====** Attributes **=======================================================</span>
+<span class="source-line-no">415</span><span id="line-415">        \*------------*/</span>
+<span class="source-line-no">416</span><span id="line-416">    /**</span>
+<span class="source-line-no">417</span><span id="line-417">     *  The name of the transformation.</span>
+<span class="source-line-no">418</span><span id="line-418">     */</span>
+<span class="source-line-no">419</span><span id="line-419">    private final String m_Name;</span>
+<span class="source-line-no">420</span><span id="line-420"></span>
 <span class="source-line-no">421</span><span id="line-421">    /**</span>
-<span class="source-line-no">422</span><span id="line-422">     *  The name of the transformation.</span>
+<span class="source-line-no">422</span><span id="line-422">     *  The parameters for the transformation.</span>
 <span class="source-line-no">423</span><span id="line-423">     */</span>
-<span class="source-line-no">424</span><span id="line-424">    private final String m_Name;</span>
+<span class="source-line-no">424</span><span id="line-424">    private final String m_Parameters;</span>
 <span class="source-line-no">425</span><span id="line-425"></span>
-<span class="source-line-no">426</span><span id="line-426">    /**</span>
-<span class="source-line-no">427</span><span id="line-427">     *  The parameters for the transformation.</span>
-<span class="source-line-no">428</span><span id="line-428">     */</span>
-<span class="source-line-no">429</span><span id="line-429">    private final String m_Parameters;</span>
-<span class="source-line-no">430</span><span id="line-430"></span>
-<span class="source-line-no">431</span><span id="line-431">        /*--------------*\</span>
-<span class="source-line-no">432</span><span id="line-432">    ====** Constructors **=====================================================</span>
-<span class="source-line-no">433</span><span id="line-433">        \*--------------*/</span>
-<span class="source-line-no">434</span><span id="line-434">    /**</span>
-<span class="source-line-no">435</span><span id="line-435">     *  Creates a new {@code SVGTransform} instance.</span>
-<span class="source-line-no">436</span><span id="line-436">     *</span>
-<span class="source-line-no">437</span><span id="line-437">     *  @param  name    The name of the transformation.</span>
-<span class="source-line-no">438</span><span id="line-438">     *  @param  parameters  The parameters for the transformation.</span>
-<span class="source-line-no">439</span><span id="line-439">     */</span>
-<span class="source-line-no">440</span><span id="line-440">    protected SVGTransform( final String name, final String parameters )</span>
-<span class="source-line-no">441</span><span id="line-441">    {</span>
-<span class="source-line-no">442</span><span id="line-442">        m_Name = requireNotEmptyArgument( name, "name" );</span>
-<span class="source-line-no">443</span><span id="line-443">        m_Parameters = requireNotEmptyArgument( parameters, "parameters" );</span>
-<span class="source-line-no">444</span><span id="line-444">    }   //  SVGTransform()</span>
-<span class="source-line-no">445</span><span id="line-445"></span>
-<span class="source-line-no">446</span><span id="line-446">        /*---------*\</span>
-<span class="source-line-no">447</span><span id="line-447">    ====** Methods **==========================================================</span>
-<span class="source-line-no">448</span><span id="line-448">        \*---------*/</span>
-<span class="source-line-no">449</span><span id="line-449">    /**</span>
-<span class="source-line-no">450</span><span id="line-450">     *  {@inheritDoc}</span>
-<span class="source-line-no">451</span><span id="line-451">     */</span>
-<span class="source-line-no">452</span><span id="line-452">    @SuppressWarnings( "AccessingNonPublicFieldOfAnotherObject" )</span>
-<span class="source-line-no">453</span><span id="line-453">    @Override</span>
-<span class="source-line-no">454</span><span id="line-454">    public final boolean equals( final Object obj )</span>
-<span class="source-line-no">455</span><span id="line-455">    {</span>
-<span class="source-line-no">456</span><span id="line-456">        var retValue = this == obj;</span>
-<span class="source-line-no">457</span><span id="line-457">        if( !retValue &amp;&amp; (obj instanceof SVGTransform other) &amp;&amp; (getClass() == other.getClass()) )</span>
-<span class="source-line-no">458</span><span id="line-458">        {</span>
-<span class="source-line-no">459</span><span id="line-459">            retValue = m_Name.equals( other.m_Name ) &amp;&amp; m_Parameters.equals( other.m_Parameters );</span>
-<span class="source-line-no">460</span><span id="line-460">        }</span>
-<span class="source-line-no">461</span><span id="line-461"></span>
-<span class="source-line-no">462</span><span id="line-462">        //---* Done *----------------------------------------------------------</span>
-<span class="source-line-no">463</span><span id="line-463">        return retValue;</span>
-<span class="source-line-no">464</span><span id="line-464">    }   //  equals()</span>
+<span class="source-line-no">426</span><span id="line-426">        /*--------------*\</span>
+<span class="source-line-no">427</span><span id="line-427">    ====** Constructors **=====================================================</span>
+<span class="source-line-no">428</span><span id="line-428">        \*--------------*/</span>
+<span class="source-line-no">429</span><span id="line-429">    /**</span>
+<span class="source-line-no">430</span><span id="line-430">     *  Creates a new {@code SVGTransform} instance.</span>
+<span class="source-line-no">431</span><span id="line-431">     *</span>
+<span class="source-line-no">432</span><span id="line-432">     *  @param  name    The name of the transformation.</span>
+<span class="source-line-no">433</span><span id="line-433">     *  @param  parameters  The parameters for the transformation.</span>
+<span class="source-line-no">434</span><span id="line-434">     */</span>
+<span class="source-line-no">435</span><span id="line-435">    protected SVGTransform( final String name, final String parameters )</span>
+<span class="source-line-no">436</span><span id="line-436">    {</span>
+<span class="source-line-no">437</span><span id="line-437">        m_Name = requireNotEmptyArgument( name, "name" );</span>
+<span class="source-line-no">438</span><span id="line-438">        m_Parameters = requireNotEmptyArgument( parameters, "parameters" );</span>
+<span class="source-line-no">439</span><span id="line-439">    }   //  SVGTransform()</span>
+<span class="source-line-no">440</span><span id="line-440"></span>
+<span class="source-line-no">441</span><span id="line-441">        /*---------*\</span>
+<span class="source-line-no">442</span><span id="line-442">    ====** Methods **==========================================================</span>
+<span class="source-line-no">443</span><span id="line-443">        \*---------*/</span>
+<span class="source-line-no">444</span><span id="line-444">    /**</span>
+<span class="source-line-no">445</span><span id="line-445">     *  {@inheritDoc}</span>
+<span class="source-line-no">446</span><span id="line-446">     */</span>
+<span class="source-line-no">447</span><span id="line-447">    @Override</span>
+<span class="source-line-no">448</span><span id="line-448">    public final boolean equals( final Object obj )</span>
+<span class="source-line-no">449</span><span id="line-449">    {</span>
+<span class="source-line-no">450</span><span id="line-450">        var retValue = this == obj;</span>
+<span class="source-line-no">451</span><span id="line-451">        if( !retValue &amp;&amp; (obj instanceof SVGTransform other) &amp;&amp; (getClass() == other.getClass()) )</span>
+<span class="source-line-no">452</span><span id="line-452">        {</span>
+<span class="source-line-no">453</span><span id="line-453">            retValue = m_Name.equals( other.m_Name ) &amp;&amp; m_Parameters.equals( other.m_Parameters );</span>
+<span class="source-line-no">454</span><span id="line-454">        }</span>
+<span class="source-line-no">455</span><span id="line-455"></span>
+<span class="source-line-no">456</span><span id="line-456">        //---* Done *----------------------------------------------------------</span>
+<span class="source-line-no">457</span><span id="line-457">        return retValue;</span>
+<span class="source-line-no">458</span><span id="line-458">    }   //  equals()</span>
+<span class="source-line-no">459</span><span id="line-459"></span>
+<span class="source-line-no">460</span><span id="line-460">    /**</span>
+<span class="source-line-no">461</span><span id="line-461">     *  {@inheritDoc}</span>
+<span class="source-line-no">462</span><span id="line-462">     */</span>
+<span class="source-line-no">463</span><span id="line-463">    @Override</span>
+<span class="source-line-no">464</span><span id="line-464">    public final int hashCode() { return hash( m_Name, m_Parameters ); }</span>
 <span class="source-line-no">465</span><span id="line-465"></span>
 <span class="source-line-no">466</span><span id="line-466">    /**</span>
 <span class="source-line-no">467</span><span id="line-467">     *  {@inheritDoc}</span>
 <span class="source-line-no">468</span><span id="line-468">     */</span>
 <span class="source-line-no">469</span><span id="line-469">    @Override</span>
-<span class="source-line-no">470</span><span id="line-470">    public final int hashCode() { return hash( m_Name, m_Parameters ); }</span>
-<span class="source-line-no">471</span><span id="line-471"></span>
-<span class="source-line-no">472</span><span id="line-472">    /**</span>
-<span class="source-line-no">473</span><span id="line-473">     *  {@inheritDoc}</span>
-<span class="source-line-no">474</span><span id="line-474">     */</span>
-<span class="source-line-no">475</span><span id="line-475">    @Override</span>
-<span class="source-line-no">476</span><span id="line-476">    public final String toString() { return format( "%s(%s)", m_Name, m_Parameters ); }</span>
-<span class="source-line-no">477</span><span id="line-477">}</span>
-<span class="source-line-no">478</span><span id="line-478">//  class SVGTransform</span>
-<span class="source-line-no">479</span><span id="line-479"></span>
-<span class="source-line-no">480</span><span id="line-480">/*</span>
-<span class="source-line-no">481</span><span id="line-481"> *  End of File</span>
-<span class="source-line-no">482</span><span id="line-482"> */</span>
+<span class="source-line-no">470</span><span id="line-470">    public final String toString() { return format( "%s(%s)", m_Name, m_Parameters ); }</span>
+<span class="source-line-no">471</span><span id="line-471">}</span>
+<span class="source-line-no">472</span><span id="line-472">//  class SVGTransform</span>
+<span class="source-line-no">473</span><span id="line-473"></span>
+<span class="source-line-no">474</span><span id="line-474">/*</span>
+<span class="source-line-no">475</span><span id="line-475"> *  End of File</span>
+<span class="source-line-no">476</span><span id="line-476"> */</span>
 
 
 

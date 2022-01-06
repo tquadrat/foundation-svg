@@ -119,14 +119,6 @@ public enum SVGAlignmentBaseLine
     @API( status = STABLE, since = "0.0.5" )
     TEXT_BEFORE_EDGE( "text-before-edge" );
 
-        /*-----------*\
-    ====** Constants **========================================================
-        \*-----------*/
-    /**
-     *  An empty array of {@code SVGAlignmentBaseLine} objects.
-     */
-    public static final SVGAlignmentBaseLine [] EMPTY_SVGAlignmentBaseLine_ARRAY = new SVGAlignmentBaseLine [0];
-
         /*------------*\
     ====** Attributes **=======================================================
         \*------------*/

@@ -7,7 +7,7 @@
      version='1.1'
      baseProfile='full'
      width='1207.000'
-     height='874.000'>
+     height='863.000'>
     <defs>
         <style><![CDATA[
             line
@@ -118,7 +118,7 @@
         </marker>
         <clipPath id='ID000001'>
             <rect class='focusClass'
-                  height='161.000'
+                  height='150.000'
                   width='478.000'
                   x='0.000'
                   y='0.000'/>
@@ -130,7 +130,7 @@
                     <rect x='0.000'
                           y='0.000'
                           width='478.000'
-                          height='161.000'
+                          height='150.000'
                           class='focusClass'/>
                     <line x1='0.000'
                           y1='28.000'
@@ -143,35 +143,33 @@
                     <text x='218.000'
                           y='24.000'>SVGUnit</text>
                     <line x1='0.000'
-                          y1='78.000'
+                          y1='67.000'
                           x2='478.000'
-                          y2='78.000'
+                          y2='67.000'
                           class='separator'/>
                     <text y='41.000'
-                          class='static final'>+ EMPTY_SVGUnit_ARRAY:org.tquadrat.foundation.svg.type.SVGUnit[]</text>
-                    <text y='52.000'
                           class='final'>- m_FloatingPointFormat:java.lang.String</text>
-                    <text y='63.000'
+                    <text y='52.000'
                           class='final'>- m_IntegerFormat:java.lang.String</text>
-                    <text y='74.000'
+                    <text y='63.000'
                           class='final'>- m_Unit:java.lang.String</text>
                     <text x='5.000'
-                          y='91.000'>- SVGUnit(identifier:java.lang.String)</text>
+                          y='80.000'>- SVGUnit(identifier:java.lang.String)</text>
                     <text x='5.000'
-                          y='102.000'
+                          y='91.000'
                           class='static'>+ values():org.tquadrat.foundation.svg.type.SVGUnit[]</text>
                     <text x='5.000'
-                          y='113.000'
+                          y='102.000'
                           class='static'>+ valueOf(name:java.lang.String):org.tquadrat.foundation.svg.type.SVGUnit</text>
                     <text x='5.000'
-                          y='124.000'>+ format(value:long):java.lang.String</text>
+                          y='113.000'>+ format(value:long):java.lang.String</text>
                     <text x='5.000'
-                          y='135.000'>+ format(value:double):java.lang.String</text>
+                          y='124.000'>+ format(value:double):java.lang.String</text>
                     <text x='5.000'
-                          y='146.000'
+                          y='135.000'
                           class='static'>+ valueForUnit(unit:java.lang.String):org.tquadrat.foundation.svg.type.SVGUnit</text>
                     <text x='5.000'
-                          y='157.000'>+ toString():java.lang.String</text>
+                          y='146.000'>+ toString():java.lang.String</text>
                 </g>
             </g>
         </symbol>

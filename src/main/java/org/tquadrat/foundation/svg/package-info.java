@@ -14,17 +14,23 @@
  */
 
 /**
- *  Classes for the handling of SVG.<br>
- *  <br>The builder components had been created primarily based on the
- *  information from the
+ *  <p>{@summary Classes for the handling of SVG.}</p>
+ *  <p>The builder components had been created primarily based on the
+ *  information from the document
  *  <a href="https://developer.mozilla.org/en-US/docs/Web/SVG">Mozilla
  *  Developer Network about SVG</a>, but the standards are defined by the W3C:
  *  <a href="https://www.w3.org/TR/SVG/"><i>Scalable Vector Graphics (SVG) 1.1
- *  (Second Edition)</i></a>.
+ *  (Second Edition)</i></a>.</p>
  *
  *  @todo task.list
  */
+
+@API( status = STABLE, since = "0.0.1" )
 package org.tquadrat.foundation.svg;
+
+import static org.apiguardian.api.API.Status.STABLE;
+
+import org.apiguardian.api.API;
 
 /*
  *  End of File

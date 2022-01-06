@@ -58,14 +58,6 @@ public enum SVGMarkerOrientation
     @API( status = STABLE, since = "0.0.5" )
     AUTO_START_REVERSE( "auto-start-reverse" );
 
-        /*-----------*\
-    ====** Constants **========================================================
-        \*-----------*/
-    /**
-     *  An empty array of {@code SVGMarkerOrientation} objects.
-     */
-    public static final SVGMarkerOrientation [] EMPTY_SVGMarkerOrientation_ARRAY = new SVGMarkerOrientation [0];
-
         /*------------*\
     ====** Attributes **=======================================================
         \*------------*/

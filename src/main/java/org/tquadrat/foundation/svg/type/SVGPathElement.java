@@ -659,14 +659,6 @@ public abstract sealed class SVGPathElement extends ValueBase
     }
     //  class SVGVLineTo
 
-        /*-----------*\
-    ====** Constants **========================================================
-        \*-----------*/
-    /**
-     *  An empty array of {@code SVGPathElement} objects.
-     */
-    public static final SVGPathElement [] EMPTY_SVGPathElement_ARRAY = new SVGPathElement [0];
-
         /*------------*\
     ====** Attributes **=======================================================
         \*------------*/
@@ -701,7 +693,6 @@ public abstract sealed class SVGPathElement extends ValueBase
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( "AccessingNonPublicFieldOfAnotherObject" )
     @Override
     public final boolean equals( final Object obj )
     {
@@ -736,7 +727,6 @@ public abstract sealed class SVGPathElement extends ValueBase
      *  @param  elements    The path elements.
      *  @return The resulting String.
      */
-    @SuppressWarnings( "AccessingNonPublicFieldOfAnotherObject" )
     public static final String toString( final SVGPathElement... elements )
     {
         final var buffer = new StringBuilder();

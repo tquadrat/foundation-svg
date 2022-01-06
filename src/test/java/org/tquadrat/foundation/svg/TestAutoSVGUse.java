@@ -18,12 +18,10 @@
 package org.tquadrat.foundation.svg;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.tquadrat.foundation.svg.SVGUse.EMPTY_SVGUse_ARRAY;
 import static org.tquadrat.foundation.svg.SVGUtils.createUse;
 import static org.tquadrat.foundation.svg.SVGUtils.pixel;
 
 import java.net.URI;
-import java.util.List;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -39,7 +37,6 @@ import org.tquadrat.foundation.svg.type.SVGNumber;
  *  @version $Id: TestAutoSVGUse.java 820 2020-12-29 20:34:22Z tquadrat $
  *  @since 0.0.5
  */
-@SuppressWarnings( "MisorderedAssertEqualsArguments" )
 @ClassVersion( sourceVersion = "$Id: TestAutoSVGUse.java 820 2020-12-29 20:34:22Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.svg.TestAutoSVGUse" )
 public class TestAutoSVGUse extends SVGTestBase
@@ -47,18 +44,6 @@ public class TestAutoSVGUse extends SVGTestBase
         /*---------*\
     ====** Methods **==========================================================
         \*---------*/
-    /**
-     *  Satisfies the test coverage ratio.
-     */
-    @Test
-    final void cover()
-    {
-        skipThreadTest();
-
-        final List<SVGUse> list = List.of();
-        assertEquals( 0, list.toArray( EMPTY_SVGUse_ARRAY ).length );
-    }   //  cover()
-
     /**
      * Create the candidate object.
      *

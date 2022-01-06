@@ -42,14 +42,6 @@ import org.tquadrat.foundation.svg.type.SVGTransform;
 public sealed interface SVGMarker extends SVGElementWithChildren, AllowsPresentationAttributes
     permits SVGPositionedMarker, org.tquadrat.foundation.svg.internal.SVGMarkerImpl
 {
-        /*-----------*\
-    ====** Constants **========================================================
-        \*-----------*/
-    /**
-     *  An empty array of {@code SVGMarker} objects.
-     */
-    public static final SVGMarker [] EMPTY_SVGMarker_ARRAY = new SVGMarker [0];
-
         /*---------*\
     ====** Methods **==========================================================
         \*---------*/
@@ -73,6 +65,7 @@ public sealed interface SVGMarker extends SVGElementWithChildren, AllowsPresenta
      *  @see org.tquadrat.foundation.svg.SVGUtils#SVGATTRIBUTE_MarkerHeight
      *  @see org.tquadrat.foundation.svg.SVGUtils#SVGATTRIBUTE_MarkerWidth
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public default void setMarkerDimensions( final SVGNumber width, final SVGNumber height )
     {
         setMarkerHeight( requireNonNullArgument( height, "height" ) );
@@ -87,6 +80,7 @@ public sealed interface SVGMarker extends SVGElementWithChildren, AllowsPresenta
      *
      *  @see org.tquadrat.foundation.svg.SVGUtils#SVGATTRIBUTE_MarkerHeight
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setMarkerHeight( final SVGNumber value );
 
     /**
@@ -109,6 +103,7 @@ public sealed interface SVGMarker extends SVGElementWithChildren, AllowsPresenta
      *
      *  @see org.tquadrat.foundation.svg.SVGUtils#SVGATTRIBUTE_MarkerWidth
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setMarkerWidth( final SVGNumber value );
 
     /**
@@ -125,10 +120,11 @@ public sealed interface SVGMarker extends SVGElementWithChildren, AllowsPresenta
      *
      *  @param  value   The orientation.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setOrientation( final SVGDegree value );
 
     /**
-     *  Sets the mode for the aspect ration preservation for this
+     *  Sets the mode for the aspect ratio preservation for this
      *  {@code <marker>} element.
      *
      *  @param  value   The type; if {@code null} the
@@ -147,6 +143,7 @@ public sealed interface SVGMarker extends SVGElementWithChildren, AllowsPresenta
      *
      *  @see #setMarkerUnits(boolean)
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public default void setReferencePoint( final SVGNumber x, final SVGNumber y )
     {
         setReferenceX( requireNonNullArgument( x, "x" ) );
@@ -158,8 +155,9 @@ public sealed interface SVGMarker extends SVGElementWithChildren, AllowsPresenta
      *
      *  @param  value   The coordinate type.
      *
-     *  @see #setReferencePoint(SVGNumber,SVGNumber)
+     *  @see #setReferencePoint(SVGNumber, SVGNumber)
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setReferenceX( final SVGNumber value );
 
     /**
@@ -167,8 +165,9 @@ public sealed interface SVGMarker extends SVGElementWithChildren, AllowsPresenta
      *
      *  @param  value   The coordinate type.
      *
-     *  @see #setReferencePoint(SVGNumber,SVGNumber)
+     *  @see #setReferencePoint(SVGNumber, SVGNumber)
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setReferenceY( final SVGNumber value );
 
     /**
@@ -189,6 +188,7 @@ public sealed interface SVGMarker extends SVGElementWithChildren, AllowsPresenta
      *  @param  width   The width of the area.
      *  @param  height  The height of the area.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setViewBox( final SVGNumber x, final SVGNumber y, final SVGNumber width, final SVGNumber height );
 }
 //  interface SVGMarker

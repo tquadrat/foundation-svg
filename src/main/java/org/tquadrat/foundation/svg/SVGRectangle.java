@@ -39,14 +39,6 @@ import org.tquadrat.foundation.svg.type.SVGNumber.SVGUserUnitValue;
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVGRectangle extends SVGElementWithChildren, AllowsConditionalProcessingAttributes, AllowsGlobalEventAttributes, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes permits SVGElementAdapter, org.tquadrat.foundation.svg.internal.SVGRectangleImpl
 {
-        /*-----------*\
-    ====** Constants **========================================================
-        \*-----------*/
-    /**
-     *  An empty array of {@code SVGRectangle} objects.
-     */
-    public static final SVGRectangle [] EMPTY_SVGRectangle_ARRAY = new SVGRectangle [0];
-
         /*---------*\
     ====** Methods **==========================================================
         \*---------*/

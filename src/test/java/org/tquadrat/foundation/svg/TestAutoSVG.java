@@ -21,7 +21,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
-import static org.tquadrat.foundation.svg.SVG.EMPTY_SVG_ARRAY;
 import static org.tquadrat.foundation.svg.SVG.Usage.EMBED_HTML;
 import static org.tquadrat.foundation.svg.SVG.Usage.EMBED_SVG;
 import static org.tquadrat.foundation.svg.SVG.Usage.STANDALONE_DOCUMENT;
@@ -33,8 +32,6 @@ import static org.tquadrat.foundation.svg.SVGUtils.percent;
 import static org.tquadrat.foundation.svg.SVGUtils.pixel;
 import static org.tquadrat.foundation.svg.type.SVGPreserveAspectRatio.XMID_YMID;
 import static org.tquadrat.foundation.util.StringUtils.format;
-
-import java.util.List;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -52,7 +49,6 @@ import jakarta.activation.MimeType;
  *  @version $Id: TestAutoSVG.java 820 2020-12-29 20:34:22Z tquadrat $
  *  @since 0.0.5
  */
-@SuppressWarnings( "MisorderedAssertEqualsArguments" )
 @ClassVersion( sourceVersion = "$Id: TestAutoSVG.java 820 2020-12-29 20:34:22Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.svg.TestAutoSVG" )
 public class TestAutoSVG extends SVGTestBase
@@ -67,9 +63,6 @@ public class TestAutoSVG extends SVGTestBase
     final void cover()
     {
         skipThreadTest();
-
-        final List<SVG> list = List.of();
-        assertEquals( 0, list.toArray( EMPTY_SVG_ARRAY ).length );
 
         final var candidate = createCandidate();
         assertFalse( candidate.hasChildren() );
@@ -233,10 +226,11 @@ public class TestAutoSVG extends SVGTestBase
 
         final var candidate = createCandidate();
 
+        final SVGElement element = null;
         final Class<? extends Throwable> expectedException = NullArgumentException.class;
         try
         {
-            candidate.addDefinition( (SVGElement) null );
+            candidate.addDefinition( element );
             fail( () -> format( MSG_ExceptionNotThrown, expectedException.getName() ) );
         }
         catch( final AssertionError e )

@@ -38,14 +38,6 @@ import org.tquadrat.foundation.xml.builder.XMLElement;
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVGTSpan extends SVGElementWithChildren, AllowsConditionalProcessingAttributes, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes permits SVGElementAdapter, org.tquadrat.foundation.svg.internal.SVGTSpanImpl
 {
-        /*-----------*\
-    ====** Constants **========================================================
-        \*-----------*/
-    /**
-     *  An empty array of {@code SVGTSpan} objects.
-     */
-    public static final SVGTSpan [] EMPTY_SVGTSpan_ARRAY = new SVGTSpan [0];
-
         /*---------*\
     ====** Methods **==========================================================
         \*---------*/

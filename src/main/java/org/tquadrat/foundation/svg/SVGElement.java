@@ -52,14 +52,6 @@ import org.tquadrat.foundation.xml.builder.spi.Element;
 public sealed interface SVGElement extends Element
     permits SVGElementWithChildren, SVGStyle, SVGUse, org.tquadrat.foundation.svg.internal.SVGElementImpl
 {
-        /*-----------*\
-    ====** Constants **========================================================
-        \*-----------*/
-    /**
-     *  An empty array of {@code SVGElement} objects.
-     */
-    public static final SVGElement [] EMPTY_SVGElement_ARRAY = new SVGElement [0];
-
         /*------------------------*\
     ====** Static Initialisations **===========================================
         \*------------------------*/

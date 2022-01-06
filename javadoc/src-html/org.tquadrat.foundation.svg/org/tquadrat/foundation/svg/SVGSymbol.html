@@ -59,51 +59,44 @@
 <span class="source-line-no">046</span><span id="line-46">public sealed interface SVGSymbol extends SVGElementWithChildren, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes</span>
 <span class="source-line-no">047</span><span id="line-47">    permits SVGElementAdapter, org.tquadrat.foundation.svg.internal.SVGSymbolImpl</span>
 <span class="source-line-no">048</span><span id="line-48">{</span>
-<span class="source-line-no">049</span><span id="line-49">        /*-----------*\</span>
-<span class="source-line-no">050</span><span id="line-50">    ====** Constants **========================================================</span>
-<span class="source-line-no">051</span><span id="line-51">        \*-----------*/</span>
+<span class="source-line-no">049</span><span id="line-49">        /*---------*\</span>
+<span class="source-line-no">050</span><span id="line-50">    ====** Methods **==========================================================</span>
+<span class="source-line-no">051</span><span id="line-51">        \*---------*/</span>
 <span class="source-line-no">052</span><span id="line-52">    /**</span>
-<span class="source-line-no">053</span><span id="line-53">     *  An empty array of {@code SVGSymbol} objects.</span>
-<span class="source-line-no">054</span><span id="line-54">     */</span>
-<span class="source-line-no">055</span><span id="line-55">    public static final SVGSymbol [] EMPTY_SVGSymbol_ARRAY = new SVGSymbol [0];</span>
-<span class="source-line-no">056</span><span id="line-56"></span>
-<span class="source-line-no">057</span><span id="line-57">        /*---------*\</span>
-<span class="source-line-no">058</span><span id="line-58">    ====** Methods **==========================================================</span>
-<span class="source-line-no">059</span><span id="line-59">        \*---------*/</span>
-<span class="source-line-no">060</span><span id="line-60">    /**</span>
-<span class="source-line-no">061</span><span id="line-61">     *  Sets the attribute that indicates whether external resources are</span>
-<span class="source-line-no">062</span><span id="line-62">     *  required to render this {@code &lt;symbol&gt;} element.</span>
-<span class="source-line-no">063</span><span id="line-63">     *</span>
-<span class="source-line-no">064</span><span id="line-64">     *  @param  flag    {@code true} if external resources are needed,</span>
-<span class="source-line-no">065</span><span id="line-65">     *      {@code false} if all required resources are local to the current</span>
-<span class="source-line-no">066</span><span id="line-66">     *      context.</span>
-<span class="source-line-no">067</span><span id="line-67">     */</span>
-<span class="source-line-no">068</span><span id="line-68">    public void setExternalResourcesRequired( final boolean flag );</span>
-<span class="source-line-no">069</span><span id="line-69"></span>
-<span class="source-line-no">070</span><span id="line-70">    /**</span>
-<span class="source-line-no">071</span><span id="line-71">     *  Sets the mode for the aspect ration preservation for this</span>
-<span class="source-line-no">072</span><span id="line-72">     *  {@code &lt;symbol&gt;} element.</span>
+<span class="source-line-no">053</span><span id="line-53">     *  Sets the attribute that indicates whether external resources are</span>
+<span class="source-line-no">054</span><span id="line-54">     *  required to render this {@code &lt;symbol&gt;} element.</span>
+<span class="source-line-no">055</span><span id="line-55">     *</span>
+<span class="source-line-no">056</span><span id="line-56">     *  @param  flag    {@code true} if external resources are needed,</span>
+<span class="source-line-no">057</span><span id="line-57">     *      {@code false} if all required resources are local to the current</span>
+<span class="source-line-no">058</span><span id="line-58">     *      context.</span>
+<span class="source-line-no">059</span><span id="line-59">     */</span>
+<span class="source-line-no">060</span><span id="line-60">    public void setExternalResourcesRequired( final boolean flag );</span>
+<span class="source-line-no">061</span><span id="line-61"></span>
+<span class="source-line-no">062</span><span id="line-62">    /**</span>
+<span class="source-line-no">063</span><span id="line-63">     *  Sets the mode for the aspect ratio preservation for this</span>
+<span class="source-line-no">064</span><span id="line-64">     *  {@code &lt;symbol&gt;} element.</span>
+<span class="source-line-no">065</span><span id="line-65">     *</span>
+<span class="source-line-no">066</span><span id="line-66">     *  @param  value   The type; if {@code null} the</span>
+<span class="source-line-no">067</span><span id="line-67">     *      attribute will be removed.</span>
+<span class="source-line-no">068</span><span id="line-68">     */</span>
+<span class="source-line-no">069</span><span id="line-69">    public void setPreserveAspectRatio( final SVGPreserveAspectRatio value );</span>
+<span class="source-line-no">070</span><span id="line-70"></span>
+<span class="source-line-no">071</span><span id="line-71">    /**</span>
+<span class="source-line-no">072</span><span id="line-72">     *  Defines the visible area for this {@code &lt;symbol&gt;} element.</span>
 <span class="source-line-no">073</span><span id="line-73">     *</span>
-<span class="source-line-no">074</span><span id="line-74">     *  @param  value   The type; if {@code null} the</span>
-<span class="source-line-no">075</span><span id="line-75">     *      attribute will be removed.</span>
-<span class="source-line-no">076</span><span id="line-76">     */</span>
-<span class="source-line-no">077</span><span id="line-77">    public void setPreserveAspectRatio( final SVGPreserveAspectRatio value );</span>
-<span class="source-line-no">078</span><span id="line-78"></span>
-<span class="source-line-no">079</span><span id="line-79">    /**</span>
-<span class="source-line-no">080</span><span id="line-80">     *  Defines the visible area for this {@code &lt;symbol&gt;} element.</span>
-<span class="source-line-no">081</span><span id="line-81">     *</span>
-<span class="source-line-no">082</span><span id="line-82">     *  @param  x   The x coordinate of top left corner of the area.</span>
-<span class="source-line-no">083</span><span id="line-83">     *  @param  y   The y coordinate of top left corner of the area.</span>
-<span class="source-line-no">084</span><span id="line-84">     *  @param  width   The width of the area.</span>
-<span class="source-line-no">085</span><span id="line-85">     *  @param  height  The height of the area.</span>
-<span class="source-line-no">086</span><span id="line-86">     */</span>
-<span class="source-line-no">087</span><span id="line-87">    public void setViewBox( final SVGNumber x, final SVGNumber y, final SVGNumber width, final SVGNumber height );</span>
-<span class="source-line-no">088</span><span id="line-88">}</span>
-<span class="source-line-no">089</span><span id="line-89">//  interface SVGSymbol</span>
-<span class="source-line-no">090</span><span id="line-90"></span>
-<span class="source-line-no">091</span><span id="line-91">/*</span>
-<span class="source-line-no">092</span><span id="line-92"> *  End of File</span>
-<span class="source-line-no">093</span><span id="line-93"> */</span>
+<span class="source-line-no">074</span><span id="line-74">     *  @param  x   The x coordinate of top left corner of the area.</span>
+<span class="source-line-no">075</span><span id="line-75">     *  @param  y   The y coordinate of top left corner of the area.</span>
+<span class="source-line-no">076</span><span id="line-76">     *  @param  width   The width of the area.</span>
+<span class="source-line-no">077</span><span id="line-77">     *  @param  height  The height of the area.</span>
+<span class="source-line-no">078</span><span id="line-78">     */</span>
+<span class="source-line-no">079</span><span id="line-79">    @SuppressWarnings( "UseOfConcreteClass" )</span>
+<span class="source-line-no">080</span><span id="line-80">    public void setViewBox( final SVGNumber x, final SVGNumber y, final SVGNumber width, final SVGNumber height );</span>
+<span class="source-line-no">081</span><span id="line-81">}</span>
+<span class="source-line-no">082</span><span id="line-82">//  interface SVGSymbol</span>
+<span class="source-line-no">083</span><span id="line-83"></span>
+<span class="source-line-no">084</span><span id="line-84">/*</span>
+<span class="source-line-no">085</span><span id="line-85"> *  End of File</span>
+<span class="source-line-no">086</span><span id="line-86"> */</span>
 
 
 

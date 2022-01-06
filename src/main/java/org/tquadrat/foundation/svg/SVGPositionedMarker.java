@@ -37,14 +37,6 @@ import org.tquadrat.foundation.svg.type.SVGNumber;
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVGPositionedMarker extends SVGMarker permits SVGElementAdapter, org.tquadrat.foundation.svg.internal.SVGPositionedMarkerImpl
 {
-        /*-----------*\
-    ====** Constants **========================================================
-        \*-----------*/
-    /**
-     *  An empty array of {@code SVGPositionedMarker} objects.
-     */
-    public static final SVGPositionedMarker [] EMPTY_SVGPositionedMarker_ARRAY = new SVGPositionedMarker [0];
-
         /*---------*\
     ====** Methods **==========================================================
         \*---------*/

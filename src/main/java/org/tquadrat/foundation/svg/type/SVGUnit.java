@@ -106,14 +106,6 @@ public enum SVGUnit
     @API( status = STABLE, since = "0.0.5" )
     POINT( "pt" );
 
-        /*-----------*\
-    ====** Constants **========================================================
-        \*-----------*/
-    /**
-     *  An empty array of {@code SVGUnit} objects.
-     */
-    public static final SVGUnit [] EMPTY_SVGUnit_ARRAY = new SVGUnit [0];
-
         /*------------*\
     ====** Attributes **=======================================================
         \*------------*/

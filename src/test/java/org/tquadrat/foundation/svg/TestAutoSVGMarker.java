@@ -21,7 +21,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 import static org.tquadrat.foundation.svg.SVG.Usage.STANDALONE_DOCUMENT;
-import static org.tquadrat.foundation.svg.SVGMarker.EMPTY_SVGMarker_ARRAY;
 import static org.tquadrat.foundation.svg.SVGUtils.createMarker;
 import static org.tquadrat.foundation.svg.SVGUtils.createSVG;
 import static org.tquadrat.foundation.svg.SVGUtils.degree;
@@ -37,8 +36,6 @@ import static org.tquadrat.foundation.svg.type.SVGMarkerOrientation.AUTO;
 import static org.tquadrat.foundation.svg.type.SVGMarkerOrientation.AUTO_START_REVERSE;
 import static org.tquadrat.foundation.svg.type.SVGPreserveAspectRatio.XMID_YMID;
 import static org.tquadrat.foundation.util.StringUtils.format;
-
-import java.util.List;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -57,7 +54,6 @@ import org.tquadrat.foundation.svg.type.SVGTransform;
  *  @version $Id: TestAutoSVGMarker.java 820 2020-12-29 20:34:22Z tquadrat $
  *  @since 0.0.5
  */
-@SuppressWarnings( "MisorderedAssertEqualsArguments" )
 @ClassVersion( sourceVersion = "$Id: TestAutoSVGMarker.java 820 2020-12-29 20:34:22Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.svg.TestAutoSVGMarker" )
 public class TestAutoSVGMarker extends SVGTestBase
@@ -65,18 +61,6 @@ public class TestAutoSVGMarker extends SVGTestBase
         /*---------*\
     ====** Methods **==========================================================
         \*---------*/
-    /**
-     *  Satisfies the test coverage ratio.
-     */
-    @Test
-    final void cover()
-    {
-        skipThreadTest();
-
-        final List<SVGMarker> list = List.of();
-        assertEquals( 0, list.toArray( EMPTY_SVGMarker_ARRAY ).length );
-    }   //  cover()
-
     /**
      * Create the candidate object.
      *
@@ -241,7 +225,6 @@ public class TestAutoSVGMarker extends SVGTestBase
         actual = candidate.toString();
         assertEquals( expected, actual );
 
-        //noinspection CastToConcreteClass
         candidate.setOrientation( (SVGDegree) null );
         expected = "\n<marker id='id'/>";
         actual = candidate.toString();
@@ -470,7 +453,6 @@ public class TestAutoSVGMarker extends SVGTestBase
         actual = candidate.toString();
         assertEquals( expected, actual );
 
-        //noinspection CastToConcreteClass
         candidate.setTransform( (SVGTransform []) null );
         expected = "\n<marker id='id'/>";
         actual = candidate.toString();

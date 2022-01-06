@@ -21,14 +21,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 import static org.tquadrat.foundation.lang.CommonConstants.EMPTY_STRING;
-import static org.tquadrat.foundation.svg.SVGText.EMPTY_SVGText_ARRAY;
 import static org.tquadrat.foundation.svg.SVGUtils.centimeter;
 import static org.tquadrat.foundation.svg.SVGUtils.createText;
 import static org.tquadrat.foundation.svg.SVGUtils.degree;
 import static org.tquadrat.foundation.svg.SVGUtils.pixel;
 import static org.tquadrat.foundation.util.StringUtils.format;
-
-import java.util.List;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -46,7 +43,6 @@ import org.tquadrat.foundation.svg.type.SVGNumber.SVGDegree;
  *  @version $Id: TestAutoSVGText.java 820 2020-12-29 20:34:22Z tquadrat $
  *  @since 0.0.5
  */
-@SuppressWarnings( "MisorderedAssertEqualsArguments" )
 @ClassVersion( sourceVersion = "$Id: TestAutoSVGText.java 820 2020-12-29 20:34:22Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.svg.TestAutoSVGText" )
 public class TestAutoSVGText extends SVGTestBase
@@ -54,18 +50,6 @@ public class TestAutoSVGText extends SVGTestBase
         /*---------*\
     ====** Methods **==========================================================
         \*---------*/
-    /**
-     *  Satisfies the test coverage ratio.
-     */
-    @Test
-    final void cover()
-    {
-        skipThreadTest();
-
-        final List<SVGText> list = List.of();
-        assertEquals( 0, list.toArray( EMPTY_SVGText_ARRAY ).length );
-   }   //  cover()
-
     /**
      * Create the candidate object.
      *
@@ -223,7 +207,6 @@ public class TestAutoSVGText extends SVGTestBase
         actual = candidate.toString();
         assertEquals( expected, actual );
 
-        //noinspection CastToConcreteClass
         candidate.setDx( (SVGNumber []) null );
         expected = "\n<text/>";
         actual = candidate.toString();
@@ -259,7 +242,6 @@ public class TestAutoSVGText extends SVGTestBase
         actual = candidate.toString();
         assertEquals( expected, actual );
 
-        //noinspection CastToConcreteClass
         candidate.setDy( (SVGNumber []) null );
         expected = "\n<text/>";
         actual = candidate.toString();
@@ -320,7 +302,6 @@ public class TestAutoSVGText extends SVGTestBase
         actual = candidate.toString();
         assertEquals( expected, actual );
 
-        //noinspection CastToConcreteClass
         candidate.setRotate( (SVGDegree []) null );
         expected = "\n<text/>";
         actual = candidate.toString();
@@ -381,7 +362,6 @@ public class TestAutoSVGText extends SVGTestBase
         actual = candidate.toString();
         assertEquals( expected, actual );
 
-        //noinspection CastToConcreteClass
         candidate.setX( (SVGNumber []) null );
         expected = "\n<text/>";
         actual = candidate.toString();
@@ -417,7 +397,6 @@ public class TestAutoSVGText extends SVGTestBase
         actual = candidate.toString();
         assertEquals( expected, actual );
 
-        //noinspection CastToConcreteClass
         candidate.setY( (SVGNumber []) null );
         expected = "\n<text/>";
         actual = candidate.toString();

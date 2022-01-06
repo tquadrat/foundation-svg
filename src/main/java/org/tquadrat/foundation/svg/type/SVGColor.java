@@ -49,11 +49,6 @@ public final class SVGColor extends SVGPaint
      */
     private static final int m_Divisor = 0x100;
 
-    /**
-     *  An empty array of {@code SVGColor} objects.
-     */
-    public static final SVGColor [] EMPTY_SVGColor_ARRAY = new SVGColor [0];
-
         /*------------------------*\
     ====** Static Initialisations **===========================================
         \*------------------------*/
@@ -135,7 +130,7 @@ public final class SVGColor extends SVGPaint
      */
     private static final String composeColorValue( final boolean flag, final int red, final int green, final int blue )
     {
-        final IntUnaryOperator n = v -> abs( v ) > 100 ? abs( v ) % 101 : abs( v );
+        final var n = (IntUnaryOperator) v -> abs( v ) > 100 ? abs( v ) % 101 : abs( v );
         final var retValue = flag
             ? format( "rgb(%d%%,%d%%,%d%%)", n.applyAsInt( red ), n.applyAsInt( green ), n.applyAsInt( blue ) )
             : format( "rgb(%d,%d,%d)", abs( red ) % m_Divisor, abs( green ) % m_Divisor, abs( blue ) % m_Divisor );

@@ -46,14 +46,6 @@ import org.tquadrat.foundation.svg.type.SVGPreserveAspectRatio;
 public sealed interface SVGSymbol extends SVGElementWithChildren, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes
     permits SVGElementAdapter, org.tquadrat.foundation.svg.internal.SVGSymbolImpl
 {
-        /*-----------*\
-    ====** Constants **========================================================
-        \*-----------*/
-    /**
-     *  An empty array of {@code SVGSymbol} objects.
-     */
-    public static final SVGSymbol [] EMPTY_SVGSymbol_ARRAY = new SVGSymbol [0];
-
         /*---------*\
     ====** Methods **==========================================================
         \*---------*/
@@ -68,7 +60,7 @@ public sealed interface SVGSymbol extends SVGElementWithChildren, AllowsGraphica
     public void setExternalResourcesRequired( final boolean flag );
 
     /**
-     *  Sets the mode for the aspect ration preservation for this
+     *  Sets the mode for the aspect ratio preservation for this
      *  {@code <symbol>} element.
      *
      *  @param  value   The type; if {@code null} the
@@ -84,6 +76,7 @@ public sealed interface SVGSymbol extends SVGElementWithChildren, AllowsGraphica
      *  @param  width   The width of the area.
      *  @param  height  The height of the area.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public void setViewBox( final SVGNumber x, final SVGNumber y, final SVGNumber width, final SVGNumber height );
 }
 //  interface SVGSymbol

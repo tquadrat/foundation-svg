@@ -17,7 +17,12 @@
  *  The data types for the SVG attributes.
  */
 
+@API( status = STABLE, since = "0.0.1" )
 package org.tquadrat.foundation.svg.type;
+
+import static org.apiguardian.api.API.Status.STABLE;
+
+import org.apiguardian.api.API;
 
 /*
  *  End of File
