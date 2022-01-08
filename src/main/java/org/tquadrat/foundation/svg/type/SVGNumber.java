@@ -31,12 +31,12 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  A numeric type with a unit as used by various SVG attributes.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGNumber.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: SVGNumber.java 980 2022-01-06 15:29:19Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGNumber.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGNumber.java 980 2022-01-06 15:29:19Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed class SVGNumber
     permits SVGNumber.SVGDegree, SVGNumber.SVGMillimeter, SVGNumber.SVGPercent,
@@ -49,13 +49,13 @@ public sealed class SVGNumber
      *  An SVG degrees type.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGNumber.java 820 2020-12-29 20:34:22Z tquadrat $
+     *  @version $Id: SVGNumber.java 980 2022-01-06 15:29:19Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
     @SuppressWarnings( {"PublicInnerClass", "MagicNumber"} )
-    @ClassVersion( sourceVersion = "$Id: SVGNumber.java 820 2020-12-29 20:34:22Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGNumber.java 980 2022-01-06 15:29:19Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGDegree extends SVGNumber
     {
@@ -82,7 +82,7 @@ public sealed class SVGNumber
      *  An SVG millimeter type.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGNumber.java 820 2020-12-29 20:34:22Z tquadrat $
+     *  @version $Id: SVGNumber.java 980 2022-01-06 15:29:19Z tquadrat $
      *  @since 0.0.5
      *
      *  @see SVGUnit#MILLIMETER
@@ -90,7 +90,7 @@ public sealed class SVGNumber
      *  @UMLGraph.link
      */
     @SuppressWarnings( "PublicInnerClass" )
-    @ClassVersion( sourceVersion = "$Id: SVGNumber.java 820 2020-12-29 20:34:22Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGNumber.java 980 2022-01-06 15:29:19Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGMillimeter extends SVGNumber
     {
@@ -117,7 +117,7 @@ public sealed class SVGNumber
      *  An SVG percent type.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGNumber.java 820 2020-12-29 20:34:22Z tquadrat $
+     *  @version $Id: SVGNumber.java 980 2022-01-06 15:29:19Z tquadrat $
      *  @since 0.0.5
      *
      *  @see SVGUnit#PERCENT
@@ -125,7 +125,7 @@ public sealed class SVGNumber
      *  @UMLGraph.link
      */
     @SuppressWarnings( "PublicInnerClass" )
-    @ClassVersion( sourceVersion = "$Id: SVGNumber.java 820 2020-12-29 20:34:22Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGNumber.java 980 2022-01-06 15:29:19Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGPercent extends SVGNumber
     {
@@ -152,7 +152,7 @@ public sealed class SVGNumber
      *  An SVG pixel type.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGNumber.java 820 2020-12-29 20:34:22Z tquadrat $
+     *  @version $Id: SVGNumber.java 980 2022-01-06 15:29:19Z tquadrat $
      *  @since 0.0.5
      *
      *  @see SVGUnit#PIXEL
@@ -160,7 +160,7 @@ public sealed class SVGNumber
      *  @UMLGraph.link
      */
     @SuppressWarnings( "PublicInnerClass" )
-    @ClassVersion( sourceVersion = "$Id: SVGNumber.java 820 2020-12-29 20:34:22Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGNumber.java 980 2022-01-06 15:29:19Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGPixel extends SVGNumber
     {
@@ -188,7 +188,7 @@ public sealed class SVGNumber
      *  {@link SVGNumber.SVGPixel}, but without a unit specifier.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGNumber.java 820 2020-12-29 20:34:22Z tquadrat $
+     *  @version $Id: SVGNumber.java 980 2022-01-06 15:29:19Z tquadrat $
      *  @since 0.0.5
      *
      *  @see SVGUnit#NONE
@@ -196,7 +196,7 @@ public sealed class SVGNumber
      *  @UMLGraph.link
      */
     @SuppressWarnings( "PublicInnerClass" )
-    @ClassVersion( sourceVersion = "$Id: SVGNumber.java 820 2020-12-29 20:34:22Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGNumber.java 980 2022-01-06 15:29:19Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGUserUnitValue extends SVGNumber
     {

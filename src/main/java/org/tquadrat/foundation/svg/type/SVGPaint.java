@@ -29,13 +29,13 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  values.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGPaint.java 935 2021-12-07 07:49:43Z tquadrat $
+ *  @version $Id: SVGPaint.java 980 2022-01-06 15:29:19Z tquadrat $
  *  @since 0.0.5
 *
  *  @UMLGraph.link
  */
 @SuppressWarnings( "ClassReferencesSubclass" )
-@ClassVersion( sourceVersion = "$Id: SVGPaint.java 935 2021-12-07 07:49:43Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGPaint.java 980 2022-01-06 15:29:19Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed class SVGPaint extends ValueBase
     permits SVGColor

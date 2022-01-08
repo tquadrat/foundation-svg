@@ -32,12 +32,12 @@ import org.tquadrat.foundation.svg.type.SVGTransform;
  *  The definition for the SVG {@code <marker>} element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGMarker.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: SVGMarker.java 980 2022-01-06 15:29:19Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGMarker.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGMarker.java 980 2022-01-06 15:29:19Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVGMarker extends SVGElementWithChildren, AllowsPresentationAttributes
     permits SVGPositionedMarker, org.tquadrat.foundation.svg.internal.SVGMarkerImpl

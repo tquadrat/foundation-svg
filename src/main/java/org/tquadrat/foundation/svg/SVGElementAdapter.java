@@ -84,13 +84,13 @@ import org.tquadrat.foundation.svg.type.SVGPathElement;
  *      will not validate children or attributes!
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGElementAdapter.java 840 2021-01-10 21:37:03Z tquadrat $
+ *  @version $Id: SVGElementAdapter.java 980 2022-01-06 15:29:19Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( {"AbstractClassExtendsConcreteClass", "OverlyCoupledClass"} )
-@ClassVersion( sourceVersion = "$Id: SVGElementAdapter.java 840 2021-01-10 21:37:03Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGElementAdapter.java 980 2022-01-06 15:29:19Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public abstract non-sealed class SVGElementAdapter extends SVGElementImpl
     implements AllowsDocumentElementEventAttributes, AllowsDocumentEventAttributes, SVGClipPath, SVGGroup, SVGLine, SVGPath, SVGPositionedMarker, SVGRectangle, SVGStyle, SVGSymbol, SVGText, SVGTSpan, SVGUse

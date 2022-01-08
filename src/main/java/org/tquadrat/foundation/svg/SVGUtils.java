@@ -93,14 +93,14 @@ import org.tquadrat.foundation.xml.builder.spi.XMLElementAdapter;
  *  elements.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGUtils.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: SVGUtils.java 980 2022-01-06 15:29:19Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( {"ClassWithTooManyMethods", "OverlyComplexClass", "OverlyCoupledClass"} )
 @UtilityClass
-@ClassVersion( sourceVersion = "$Id: SVGUtils.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGUtils.java 980 2022-01-06 15:29:19Z tquadrat $" )
 public final class SVGUtils
 {
         /*-----------*\

@@ -46,13 +46,13 @@ import org.tquadrat.foundation.svg.type.SVGNumber.SVGDegree;
  *  to create an SVG document in a file.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGTester.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: SVGTester.java 980 2022-01-06 15:29:19Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
 @PlaygroundClass
-@ClassVersion( sourceVersion = "$Id: SVGTester.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGTester.java 980 2022-01-06 15:29:19Z tquadrat $" )
 public final class SVGTester
 {
         /*-----------*\

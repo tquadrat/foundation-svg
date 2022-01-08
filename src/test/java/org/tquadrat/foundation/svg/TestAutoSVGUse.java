@@ -34,10 +34,10 @@ import org.tquadrat.foundation.svg.type.SVGNumber;
  *  {@link org.tquadrat.foundation.svg.SVGUse}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TestAutoSVGUse.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: TestAutoSVGUse.java 980 2022-01-06 15:29:19Z tquadrat $
  *  @since 0.0.5
  */
-@ClassVersion( sourceVersion = "$Id: TestAutoSVGUse.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestAutoSVGUse.java 980 2022-01-06 15:29:19Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.svg.TestAutoSVGUse" )
 public class TestAutoSVGUse extends SVGTestBase
 {

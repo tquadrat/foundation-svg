@@ -29,12 +29,12 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  @see org.tquadrat.foundation.svg.SVGUtils#SVGATTRIBUTE_TextAnchor
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGTextAnchor.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: SVGTextAnchor.java 980 2022-01-06 15:29:19Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGTextAnchor.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGTextAnchor.java 980 2022-01-06 15:29:19Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public enum SVGTextAnchor
 {

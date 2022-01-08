@@ -42,12 +42,12 @@ import org.tquadrat.foundation.xml.builder.spi.Element;
  *  The definition of an SVG element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGElement.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: SVGElement.java 980 2022-01-06 15:29:19Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGElement.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGElement.java 980 2022-01-06 15:29:19Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVGElement extends Element
     permits SVGElementWithChildren, SVGStyle, SVGUse, org.tquadrat.foundation.svg.internal.SVGElementImpl

@@ -93,10 +93,10 @@ import org.tquadrat.foundation.svg.type.SVGPathElement;
  *  {@link SVGUtils}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TestPathElementFactories.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: TestPathElementFactories.java 980 2022-01-06 15:29:19Z tquadrat $
  *  @since 0.0.5
  */
-@ClassVersion( sourceVersion = "$Id: TestPathElementFactories.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestPathElementFactories.java 980 2022-01-06 15:29:19Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.svg.svgutils.TestPathElementFactories" )
 public class TestPathElementFactories extends SVGTestBase
 {

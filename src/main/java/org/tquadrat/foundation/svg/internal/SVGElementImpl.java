@@ -215,13 +215,13 @@ import org.tquadrat.foundation.xml.builder.spi.XMLElementAdapter;
  *  why it is not abstract).</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGElementImpl.java 840 2021-01-10 21:37:03Z tquadrat $
+ *  @version $Id: SVGElementImpl.java 980 2022-01-06 15:29:19Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( {"ClassWithTooManyMethods", "OverlyComplexClass"} )
-@ClassVersion( sourceVersion = "$Id: SVGElementImpl.java 840 2021-01-10 21:37:03Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGElementImpl.java 980 2022-01-06 15:29:19Z tquadrat $" )
 @API( status = INTERNAL, since = "0.0.5" )
 public sealed class SVGElementImpl extends XMLElementAdapter implements SVGElement
     permits SVGElementAdapter, SVGClipPathImpl,

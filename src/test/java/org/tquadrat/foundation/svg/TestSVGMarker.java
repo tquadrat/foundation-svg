@@ -37,10 +37,10 @@ import org.tquadrat.foundation.svg.helper.SVGTestBase;
  *  {@link org.tquadrat.foundation.svg.SVGMarker}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TestSVGMarker.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: TestSVGMarker.java 980 2022-01-06 15:29:19Z tquadrat $
  *  @since 0.0.5
  */
-@ClassVersion( sourceVersion = "$Id: TestSVGMarker.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestSVGMarker.java 980 2022-01-06 15:29:19Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.svg.TestSVGMarker" )
 public class TestSVGMarker extends SVGTestBase
 {

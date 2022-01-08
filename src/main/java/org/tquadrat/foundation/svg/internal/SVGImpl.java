@@ -166,12 +166,12 @@ import jakarta.activation.MimeType;
  *  for the {@code <svg>} element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGImpl.java 840 2021-01-10 21:37:03Z tquadrat $
+ *  @version $Id: SVGImpl.java 980 2022-01-06 15:29:19Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGImpl.java 840 2021-01-10 21:37:03Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGImpl.java 980 2022-01-06 15:29:19Z tquadrat $" )
 @API( status = INTERNAL, since = "0.0.5" )
 public final class SVGImpl extends SVGElementImpl implements SVG
 {

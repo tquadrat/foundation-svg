@@ -37,14 +37,14 @@ import jakarta.activation.MimeType;
  *  {@link SVG.Usage}.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVG.java 827 2021-01-04 17:01:34Z tquadrat $
+ *  @version $Id: SVG.java 980 2022-01-06 15:29:19Z tquadrat $
  *  @since 0.0.5
  *
  *  @see "https://www.w3.org/TR/SVG/single-page.html#struct-SVGElement"
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVG.java 827 2021-01-04 17:01:34Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVG.java 980 2022-01-06 15:29:19Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVG extends SVGElementWithChildren, AllowsConditionalProcessingAttributes, AllowsDocumentEventAttributes, AllowsDocumentElementEventAttributes, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes
     permits org.tquadrat.foundation.svg.internal.SVGImpl
@@ -56,12 +56,12 @@ public sealed interface SVG extends SVGElementWithChildren, AllowsConditionalPro
      *  The different usages for an {@code <svg>} element.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVG.java 827 2021-01-04 17:01:34Z tquadrat $
+     *  @version $Id: SVG.java 980 2022-01-06 15:29:19Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVG.java 827 2021-01-04 17:01:34Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVG.java 980 2022-01-06 15:29:19Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static enum Usage
     {

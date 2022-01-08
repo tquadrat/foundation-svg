@@ -46,10 +46,10 @@ import jakarta.activation.MimeType;
  *  {@link org.tquadrat.foundation.svg.SVG}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TestAutoSVG.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: TestAutoSVG.java 980 2022-01-06 15:29:19Z tquadrat $
  *  @since 0.0.5
  */
-@ClassVersion( sourceVersion = "$Id: TestAutoSVG.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestAutoSVG.java 980 2022-01-06 15:29:19Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.svg.TestAutoSVG" )
 public class TestAutoSVG extends SVGTestBase
 {

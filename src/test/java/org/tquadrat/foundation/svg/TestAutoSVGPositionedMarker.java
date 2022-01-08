@@ -31,10 +31,10 @@ import org.tquadrat.foundation.svg.helper.SVGTestBase;
  *  {@link org.tquadrat.foundation.svg.SVGPositionedMarker}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TestAutoSVGPositionedMarker.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: TestAutoSVGPositionedMarker.java 980 2022-01-06 15:29:19Z tquadrat $
  *  @since 0.0.5
  */
-@ClassVersion( sourceVersion = "$Id: TestAutoSVGPositionedMarker.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestAutoSVGPositionedMarker.java 980 2022-01-06 15:29:19Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.svg.TestAutoSVGPositionedMarker" )
 public class TestAutoSVGPositionedMarker extends SVGTestBase
 {

@@ -26,12 +26,12 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  The definition for the SVG {@code <style>} element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGStyle.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: SVGStyle.java 980 2022-01-06 15:29:19Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGStyle.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGStyle.java 980 2022-01-06 15:29:19Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVGStyle extends SVGElement permits SVGElementAdapter, org.tquadrat.foundation.svg.internal.SVGStyleImpl
 {

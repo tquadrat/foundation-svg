@@ -48,11 +48,11 @@ import org.tquadrat.foundation.svg.type.SVGPathElement;
  *  {@link SVGUtils}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TestCreatePath.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: TestCreatePath.java 980 2022-01-06 15:29:19Z tquadrat $
  *  @since 0.0.5
  */
 @SuppressWarnings( "CommentedOutCode" )
-@ClassVersion( sourceVersion = "$Id: TestCreatePath.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestCreatePath.java 980 2022-01-06 15:29:19Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.svg.svgutils.TestCreatePath" )
 public class TestCreatePath extends SVGTestBase
 {

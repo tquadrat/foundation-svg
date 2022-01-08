@@ -34,14 +34,14 @@ import org.tquadrat.foundation.svg.type.SVGPreserveAspectRatio;
  *  @see SVGUtils#createSymbol(String,SVG)
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGSymbol.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: SVGSymbol.java 980 2022-01-06 15:29:19Z tquadrat $
  *  @since 0.0.5
  *
  *  @see "https://www.w3.org/TR/SVG/single-page.html#struct-SVGElement"
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGSymbol.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGSymbol.java 980 2022-01-06 15:29:19Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVGSymbol extends SVGElementWithChildren, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes
     permits SVGElementAdapter, org.tquadrat.foundation.svg.internal.SVGSymbolImpl
