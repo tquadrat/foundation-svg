@@ -27,8 +27,6 @@ module org.tquadrat.foundation.svg
     requires transitive jakarta.activation;
 
     //---* The foundation modules *--------------------------------------------
-    requires transitive org.tquadrat.foundation.base;
-    requires transitive org.tquadrat.foundation.util;
     requires transitive org.tquadrat.foundation.xml;
 
     //---* The exports *-------------------------------------------------------
