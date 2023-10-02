@@ -166,12 +166,12 @@ import jakarta.activation.MimeType;
  *  for the {@code <svg>} element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGImpl.java 980 2022-01-06 15:29:19Z tquadrat $
+ *  @version $Id: SVGImpl.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGImpl.java 980 2022-01-06 15:29:19Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGImpl.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 @API( status = INTERNAL, since = "0.0.5" )
 public final class SVGImpl extends SVGElementImpl implements SVG
 {
@@ -268,7 +268,7 @@ public final class SVGImpl extends SVGElementImpl implements SVG
          * everything (including an SVGStyle), therefore we need to check the
          * element name, too.
          */
-        if( requireNonNullArgument( child, "child" ) instanceof SVGStyle style && child.getElementName().equals( SVGELEMENT_Style ) )
+        if( requireNonNullArgument( child, "child" ) instanceof final SVGStyle style && child.getElementName().equals( SVGELEMENT_Style ) )
         {
             addStyle( style );
         }
@@ -307,7 +307,6 @@ public final class SVGImpl extends SVGElementImpl implements SVG
      *
      *  @return The {@code <defs>} element.
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     private final  SVGElementImpl createDefinitionsElement()
     {
         final var retValue = new SVGElementImpl( SVGELEMENT_Defs, ALLOWS_CHILDREN );
@@ -385,7 +384,7 @@ public final class SVGImpl extends SVGElementImpl implements SVG
          * will be set as a side effect of SVG.addStyle(). Not nice, but
          * efficient.
          */
-        m_StyleSheet.ifPresentOrElse( s -> s.addStyle( styles ), () -> addStyle( createStyle( styles ) ) );
+        m_StyleSheet.ifPresentOrElse( style -> style.addStyle( styles ), () -> addStyle( createStyle( styles ) ) );
 
         //---* Done *----------------------------------------------------------
         return m_StyleSheet.get();

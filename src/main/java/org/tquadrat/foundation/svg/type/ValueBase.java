@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -17,12 +17,12 @@
 
 package org.tquadrat.foundation.svg.type;
 
+import static java.lang.String.format;
 import static java.util.Arrays.stream;
 import static java.util.Locale.ROOT;
 import static java.util.stream.Collectors.joining;
 import static org.apiguardian.api.API.Status.INTERNAL;
 import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
-import static org.tquadrat.foundation.util.StringUtils.format;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
@@ -31,12 +31,12 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  The abstract base class for SVG type class, providing some helper methods.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: ValueBase.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: ValueBase.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: ValueBase.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: ValueBase.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 @API( status = INTERNAL, since = "0.0.5" )
 abstract sealed class ValueBase
     permits SVGPaint, SVGPathElement, SVGTransform

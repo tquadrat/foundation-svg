@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -22,6 +22,7 @@ import static org.tquadrat.foundation.svg.SVGUtils.number;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.svg.internal.SVGPathImpl;
 import org.tquadrat.foundation.svg.type.SVGNumber.SVGUserUnitValue;
 import org.tquadrat.foundation.svg.type.SVGPathElement;
 
@@ -29,14 +30,15 @@ import org.tquadrat.foundation.svg.type.SVGPathElement;
  *  The definition of the SVG {@code <path>} element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGPath.java 980 2022-01-06 15:29:19Z tquadrat $
+ *  @version $Id: SVGPath.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGPath.java 980 2022-01-06 15:29:19Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGPath.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
-public sealed interface SVGPath extends SVGElementWithChildren, AllowsConditionalProcessingAttributes, AllowsGlobalEventAttributes, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes permits SVGElementAdapter, org.tquadrat.foundation.svg.internal.SVGPathImpl
+public sealed interface SVGPath extends SVGElementWithChildren, AllowsConditionalProcessingAttributes, AllowsGlobalEventAttributes, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes
+    permits SVGElementAdapter, SVGPathImpl
 {
         /*---------*\
     ====** Methods **==========================================================
@@ -62,7 +64,7 @@ public sealed interface SVGPath extends SVGElementWithChildren, AllowsConditiona
      *
      *  @throws IllegalArgumentException    The type is less than 0.
      */
-    public void setPathLength( final SVGUserUnitValue length );
+    public void setPathLength( @SuppressWarnings( "UseOfConcreteClass" ) final SVGUserUnitValue length );
 
     /**
      *  Sets the length of the path represented by this SVG {@code <path>}

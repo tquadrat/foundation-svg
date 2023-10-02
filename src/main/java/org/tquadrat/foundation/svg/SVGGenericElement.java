@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -19,7 +19,6 @@ package org.tquadrat.foundation.svg;
 
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
-import static org.tquadrat.foundation.util.StringUtils.format;
 import static org.tquadrat.foundation.xml.builder.XMLElement.Flags.ALLOWS_CHILDREN;
 
 import org.apiguardian.api.API;
@@ -35,12 +34,12 @@ import org.tquadrat.foundation.svg.internal.SVGElementImpl;
  *  must be registered to it first, before it could be added.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGGenericElement.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: SVGGenericElement.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGGenericElement.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGGenericElement.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public final class SVGGenericElement extends SVGElementAdapter
 {
@@ -73,20 +72,19 @@ public final class SVGGenericElement extends SVGElementAdapter
      *
      *  @param  parent  The parent element.
      */
-    @SuppressWarnings( {"PublicMethodNotExposedInInterface", "InstanceofConcreteClass"} )
     public final void registerWithParent( final SVGElement parent)
     {
-        if( (requireNonNullArgument( parent, "parent" ) instanceof SVGElementImpl parentElement) )
+        if( (requireNonNullArgument( parent, "parent" ) instanceof final SVGElementImpl parentElement) )
         {
             if( !parentElement.getFlags().contains( ALLOWS_CHILDREN ))
             {
-                throw new IllegalArgumentException( format( "Element '%s' does not allow children", parent.getElementName() ) );
+                throw new IllegalArgumentException( "Element '%s' does not allow children".formatted( parent.getElementName() ) );
             }
             parentElement.registerValidChildren( getElementName() );
         }
         else
         {
-            throw new IllegalArgumentException( format( "Element class '%2$s' does not extend '%1$s'", SVGElementImpl.class.getName(), parent.getClass().getName() ) );
+            throw new IllegalArgumentException( "Element class '%2$s' does not extend '%1$s'".formatted( SVGElementImpl.class.getName(), parent.getClass().getName() ) );
         }
     }   //  registerWithParent()
 }

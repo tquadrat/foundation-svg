@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -21,6 +21,7 @@ import static org.apiguardian.api.API.Status.STABLE;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.svg.internal.SVGTSpanImpl;
 import org.tquadrat.foundation.svg.type.SVGNumber;
 import org.tquadrat.foundation.svg.type.SVGNumber.SVGDegree;
 import org.tquadrat.foundation.xml.builder.XMLElement;
@@ -29,14 +30,15 @@ import org.tquadrat.foundation.xml.builder.XMLElement;
  *  The definition of the SVG {@code <tspan>} element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGTSpan.java 980 2022-01-06 15:29:19Z tquadrat $
+ *  @version $Id: SVGTSpan.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGTSpan.java 980 2022-01-06 15:29:19Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGTSpan.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
-public sealed interface SVGTSpan extends SVGElementWithChildren, AllowsConditionalProcessingAttributes, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes permits SVGElementAdapter, org.tquadrat.foundation.svg.internal.SVGTSpanImpl
+public sealed interface SVGTSpan extends SVGElementWithChildren, AllowsConditionalProcessingAttributes, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes
+    permits SVGElementAdapter, SVGTSpanImpl
 {
         /*---------*\
     ====** Methods **==========================================================
@@ -68,7 +70,7 @@ public sealed interface SVGTSpan extends SVGElementWithChildren, AllowsCondition
      *
      *  @param  values  The lengths.
      */
-    public void setDx( final SVGNumber... values );
+    public void setDx( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber... values );
 
     /**
      *  Sets a list of heights which move the characters relative to the
@@ -79,7 +81,7 @@ public sealed interface SVGTSpan extends SVGElementWithChildren, AllowsCondition
      *
      *  @param  values  The heights.
      */
-    public void setDy( final SVGNumber... values );
+    public void setDy( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber... values );
 
     /**
      *  Sets the way the text length will be adjusted in order to meet the
@@ -100,7 +102,7 @@ public sealed interface SVGTSpan extends SVGElementWithChildren, AllowsCondition
      *
      *  @param  values  The rotations.
      */
-    public void setRotate( final SVGDegree... values );
+    public void setRotate( @SuppressWarnings( "UseOfConcreteClass" ) final SVGDegree... values );
 
     /**
      *  Sets the target length for the text that an SVG viewer will attempt to
@@ -108,7 +110,7 @@ public sealed interface SVGTSpan extends SVGElementWithChildren, AllowsCondition
      *
      *  @param  value   The intended text length.
      */
-    public void setTextLength( final SVGNumber value );
+    public void setTextLength( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value );
 
     /**
      *  Sets a list of x-axis position. The n<sup>th</sup> x-axis position is
@@ -118,7 +120,7 @@ public sealed interface SVGTSpan extends SVGElementWithChildren, AllowsCondition
      *
      *  @param  values  The x-axis positions.
      */
-    public void setX( final SVGNumber... values );
+    public void setX( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber... values );
 
     /**
      *  Sets a list of y-axis position. The n<sup>th</sup> y-axis position is
@@ -128,7 +130,7 @@ public sealed interface SVGTSpan extends SVGElementWithChildren, AllowsCondition
      *
      *  @param  values  The y-axis positions.
      */
-    public void setY( final SVGNumber... values );
+    public void setY( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber... values );
 }
 //  interface SVGTSpan
 

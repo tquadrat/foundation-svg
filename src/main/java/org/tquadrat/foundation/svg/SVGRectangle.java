@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -23,6 +23,7 @@ import static org.tquadrat.foundation.svg.SVGUtils.number;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.svg.internal.SVGRectangleImpl;
 import org.tquadrat.foundation.svg.type.SVGNumber;
 import org.tquadrat.foundation.svg.type.SVGNumber.SVGUserUnitValue;
 
@@ -30,14 +31,15 @@ import org.tquadrat.foundation.svg.type.SVGNumber.SVGUserUnitValue;
  *  The definition for the SVG {@code <rect>} element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGRectangle.java 980 2022-01-06 15:29:19Z tquadrat $
+ *  @version $Id: SVGRectangle.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGRectangle.java 980 2022-01-06 15:29:19Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGRectangle.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
-public sealed interface SVGRectangle extends SVGElementWithChildren, AllowsConditionalProcessingAttributes, AllowsGlobalEventAttributes, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes permits SVGElementAdapter, org.tquadrat.foundation.svg.internal.SVGRectangleImpl
+public sealed interface SVGRectangle extends SVGElementWithChildren, AllowsConditionalProcessingAttributes, AllowsGlobalEventAttributes, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes
+    permits SVGElementAdapter, SVGRectangleImpl
 {
         /*---------*\
     ====** Methods **==========================================================
@@ -52,6 +54,7 @@ public sealed interface SVGRectangle extends SVGElementWithChildren, AllowsCondi
      *  @param  width   The width of the rectangle.
      *  @param  height  The height of the rectangle.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public default void defineRectangle( final SVGNumber x, final SVGNumber y, final SVGNumber width, final SVGNumber height )
     {
         setX( requireNonNullArgument( x, "x" ) );
@@ -65,7 +68,7 @@ public sealed interface SVGRectangle extends SVGElementWithChildren, AllowsCondi
      *
      *  @param  value   The height.
      */
-    public void setHeight( final SVGNumber value );
+    public void setHeight( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value );
 
     /**
      *  Sets the length of the path represented by this SVG {@code <rect>}
@@ -81,7 +84,7 @@ public sealed interface SVGRectangle extends SVGElementWithChildren, AllowsCondi
      *
      *  @throws IllegalArgumentException    The type is less than 0.
      */
-    public void setPathLength( final SVGUserUnitValue length );
+    public void setPathLength( @SuppressWarnings( "UseOfConcreteClass" ) final SVGUserUnitValue length );
 
     /**
      *  Sets the length of the path represented by this SVG {@code <rect>}
@@ -120,35 +123,35 @@ public sealed interface SVGRectangle extends SVGElementWithChildren, AllowsCondi
      *
      *  @param  value   The horizontal corner radius.
      */
-    public void setRx( final SVGNumber value );
+    public void setRx( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value );
 
     /**
      *  Sets the vertical corner radius for this SVG {@code <rect>} element.
      *
      *  @param  value   The vertical corner radius.
      */
-    public void setRy( final SVGNumber value );
+    public void setRy( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value );
 
     /**
      *  Sets the width for this SVG {@code <rect>} element.
      *
      *  @param  value   The width.
      */
-    public void setWidth( final SVGNumber value );
+    public void setWidth( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value );
 
     /**
      *  Sets the x coordinate for the upper left corner of the rectangle.
      *
      *  @param  value   The x coordinate.
      */
-    public void setX( final SVGNumber value );
+    public void setX( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value );
 
     /**
      *  Sets the y coordinate for the upper left corner of the rectangle.
      *
      *  @param  value   The y coordinate.
      */
-    public void setY( final SVGNumber value );
+    public void setY( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value );
 }
 //  interface SVGRectangle
 

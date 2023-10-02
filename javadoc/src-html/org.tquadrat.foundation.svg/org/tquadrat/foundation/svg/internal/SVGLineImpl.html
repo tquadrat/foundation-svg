@@ -13,7 +13,7 @@
 <div class="source-container">
 <pre><span class="source-line-no">001</span><span id="line-1">/*</span>
 <span class="source-line-no">002</span><span id="line-2"> * ============================================================================</span>
-<span class="source-line-no">003</span><span id="line-3"> * Copyright © 2002-2020 by Thomas Thrien.</span>
+<span class="source-line-no">003</span><span id="line-3"> * Copyright © 2002-2023 by Thomas Thrien.</span>
 <span class="source-line-no">004</span><span id="line-4"> * All Rights Reserved.</span>
 <span class="source-line-no">005</span><span id="line-5"> * ============================================================================</span>
 <span class="source-line-no">006</span><span id="line-6"> * Licensed to the public under the agreements of the GNU Lesser General Public</span>
@@ -67,12 +67,12 @@
 <span class="source-line-no">054</span><span id="line-54"> *  interface for the SVG {@code &lt;line&gt;} element.</span>
 <span class="source-line-no">055</span><span id="line-55"> *</span>
 <span class="source-line-no">056</span><span id="line-56"> *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org</span>
-<span class="source-line-no">057</span><span id="line-57"> *  @version $Id: SVGLineImpl.java 820 2020-12-29 20:34:22Z tquadrat $</span>
+<span class="source-line-no">057</span><span id="line-57"> *  @version $Id: SVGLineImpl.java 1074 2023-10-02 12:05:06Z tquadrat $</span>
 <span class="source-line-no">058</span><span id="line-58"> *  @since 0.0.5</span>
 <span class="source-line-no">059</span><span id="line-59"> *</span>
 <span class="source-line-no">060</span><span id="line-60"> *  @UMLGraph.link</span>
 <span class="source-line-no">061</span><span id="line-61"> */</span>
-<span class="source-line-no">062</span><span id="line-62">@ClassVersion( sourceVersion = "$Id: SVGLineImpl.java 820 2020-12-29 20:34:22Z tquadrat $" )</span>
+<span class="source-line-no">062</span><span id="line-62">@ClassVersion( sourceVersion = "$Id: SVGLineImpl.java 1074 2023-10-02 12:05:06Z tquadrat $" )</span>
 <span class="source-line-no">063</span><span id="line-63">@API( status = INTERNAL, since = "0.0.5" )</span>
 <span class="source-line-no">064</span><span id="line-64">public final class SVGLineImpl extends SVGElementImpl implements SVGLine</span>
 <span class="source-line-no">065</span><span id="line-65">{</span>
@@ -112,7 +112,7 @@
 <span class="source-line-no">099</span><span id="line-99">     *  {@inheritDoc}</span>
 <span class="source-line-no">100</span><span id="line-100">     */</span>
 <span class="source-line-no">101</span><span id="line-101">    @Override</span>
-<span class="source-line-no">102</span><span id="line-102">    public final void setX1( final SVGNumber value )</span>
+<span class="source-line-no">102</span><span id="line-102">    public final void setX1( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value )</span>
 <span class="source-line-no">103</span><span id="line-103">    {</span>
 <span class="source-line-no">104</span><span id="line-104">        setAttribute( SVGATTRIBUTE_x1, value );</span>
 <span class="source-line-no">105</span><span id="line-105">    }   //  setX1()</span>
@@ -121,7 +121,7 @@
 <span class="source-line-no">108</span><span id="line-108">     *  {@inheritDoc}</span>
 <span class="source-line-no">109</span><span id="line-109">     */</span>
 <span class="source-line-no">110</span><span id="line-110">    @Override</span>
-<span class="source-line-no">111</span><span id="line-111">    public void setX2( final SVGNumber value )</span>
+<span class="source-line-no">111</span><span id="line-111">    public void setX2( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value )</span>
 <span class="source-line-no">112</span><span id="line-112">    {</span>
 <span class="source-line-no">113</span><span id="line-113">        setAttribute( SVGATTRIBUTE_x2, value );</span>
 <span class="source-line-no">114</span><span id="line-114">    }   //  setX2()</span>
@@ -130,7 +130,7 @@
 <span class="source-line-no">117</span><span id="line-117">     *  {@inheritDoc}</span>
 <span class="source-line-no">118</span><span id="line-118">     */</span>
 <span class="source-line-no">119</span><span id="line-119">    @Override</span>
-<span class="source-line-no">120</span><span id="line-120">    public void setY1( final SVGNumber value )</span>
+<span class="source-line-no">120</span><span id="line-120">    public void setY1( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value )</span>
 <span class="source-line-no">121</span><span id="line-121">    {</span>
 <span class="source-line-no">122</span><span id="line-122">        setAttribute( SVGATTRIBUTE_y1, value );</span>
 <span class="source-line-no">123</span><span id="line-123">    }   //  setY1()</span>
@@ -139,7 +139,7 @@
 <span class="source-line-no">126</span><span id="line-126">     *  {@inheritDoc}</span>
 <span class="source-line-no">127</span><span id="line-127">     */</span>
 <span class="source-line-no">128</span><span id="line-128">    @Override</span>
-<span class="source-line-no">129</span><span id="line-129">    public void setY2( final SVGNumber value )</span>
+<span class="source-line-no">129</span><span id="line-129">    public void setY2( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value )</span>
 <span class="source-line-no">130</span><span id="line-130">    {</span>
 <span class="source-line-no">131</span><span id="line-131">        setAttribute( SVGATTRIBUTE_y2, value );</span>
 <span class="source-line-no">132</span><span id="line-132">    }   //  setY2()</span>

@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -21,6 +21,7 @@ import static org.apiguardian.api.API.Status.STABLE;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.svg.internal.SVGSymbolImpl;
 import org.tquadrat.foundation.svg.type.SVGNumber;
 import org.tquadrat.foundation.svg.type.SVGPreserveAspectRatio;
 
@@ -34,17 +35,17 @@ import org.tquadrat.foundation.svg.type.SVGPreserveAspectRatio;
  *  @see SVGUtils#createSymbol(String,SVG)
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGSymbol.java 980 2022-01-06 15:29:19Z tquadrat $
+ *  @version $Id: SVGSymbol.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @see "https://www.w3.org/TR/SVG/single-page.html#struct-SVGElement"
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGSymbol.java 980 2022-01-06 15:29:19Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGSymbol.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVGSymbol extends SVGElementWithChildren, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes
-    permits SVGElementAdapter, org.tquadrat.foundation.svg.internal.SVGSymbolImpl
+    permits SVGElementAdapter, SVGSymbolImpl
 {
         /*---------*\
     ====** Methods **==========================================================

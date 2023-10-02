@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -54,12 +54,12 @@ import org.tquadrat.foundation.svg.type.SVGNumber;
  *  interface for the SVG {@code <line>} element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGLineImpl.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: SVGLineImpl.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGLineImpl.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGLineImpl.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 @API( status = INTERNAL, since = "0.0.5" )
 public final class SVGLineImpl extends SVGElementImpl implements SVGLine
 {
@@ -99,7 +99,7 @@ public final class SVGLineImpl extends SVGElementImpl implements SVGLine
      *  {@inheritDoc}
      */
     @Override
-    public final void setX1( final SVGNumber value )
+    public final void setX1( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value )
     {
         setAttribute( SVGATTRIBUTE_x1, value );
     }   //  setX1()
@@ -108,7 +108,7 @@ public final class SVGLineImpl extends SVGElementImpl implements SVGLine
      *  {@inheritDoc}
      */
     @Override
-    public void setX2( final SVGNumber value )
+    public void setX2( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value )
     {
         setAttribute( SVGATTRIBUTE_x2, value );
     }   //  setX2()
@@ -117,7 +117,7 @@ public final class SVGLineImpl extends SVGElementImpl implements SVGLine
      *  {@inheritDoc}
      */
     @Override
-    public void setY1( final SVGNumber value )
+    public void setY1( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value )
     {
         setAttribute( SVGATTRIBUTE_y1, value );
     }   //  setY1()
@@ -126,7 +126,7 @@ public final class SVGLineImpl extends SVGElementImpl implements SVGLine
      *  {@inheritDoc}
      */
     @Override
-    public void setY2( final SVGNumber value )
+    public void setY2( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value )
     {
         setAttribute( SVGATTRIBUTE_y2, value );
     }   //  setY2()

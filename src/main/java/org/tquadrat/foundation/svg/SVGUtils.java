@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -93,14 +93,14 @@ import org.tquadrat.foundation.xml.builder.spi.XMLElementAdapter;
  *  elements.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGUtils.java 980 2022-01-06 15:29:19Z tquadrat $
+ *  @version $Id: SVGUtils.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( {"ClassWithTooManyMethods", "OverlyComplexClass", "OverlyCoupledClass"} )
 @UtilityClass
-@ClassVersion( sourceVersion = "$Id: SVGUtils.java 980 2022-01-06 15:29:19Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGUtils.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 public final class SVGUtils
 {
         /*-----------*\
@@ -1918,7 +1918,7 @@ public final class SVGUtils
      *  @param  y   The y coordinate for the end point of the line.
      *  @return The new path element.
      */
-    @SuppressWarnings( "BooleanParameter" )
+    @SuppressWarnings( {"BooleanParameter", "MethodWithTooManyParameters"} )
     @API( status = STABLE, since = "0.0.5" )
     public static final SVGPathElement arcTo( final double rx, final double ry, final double rotation, final boolean largeArc, final boolean sweep, final double x, final double y )
     {
@@ -1946,7 +1946,7 @@ public final class SVGUtils
      *  @param  y   The y coordinate for the end point of the line.
      *  @return The new path element.
      */
-    @SuppressWarnings( "BooleanParameter" )
+    @SuppressWarnings( {"BooleanParameter", "MethodWithTooManyParameters"} )
     @API( status = STABLE, since = "0.0.5" )
     public static final SVGPathElement arcTo( final long rx, final long ry, final long rotation, final boolean largeArc, final boolean sweep, final long x, final long y )
     {
@@ -1974,7 +1974,7 @@ public final class SVGUtils
      *  @param  y   The y coordinate for the end point of the line.
      *  @return The new path element.
      */
-    @SuppressWarnings( "BooleanParameter" )
+    @SuppressWarnings( {"BooleanParameter", "MethodWithTooManyParameters"} )
     @API( status = STABLE, since = "0.0.5" )
     public static final SVGPathElement arcToAbs( final double rx, final double ry, final double rotation, final boolean largeArc, final boolean sweep, final double x, final double y )
     {
@@ -2002,7 +2002,7 @@ public final class SVGUtils
      *  @param  y   The y coordinate for the end point of the line.
      *  @return The new path element.
      */
-    @SuppressWarnings( "BooleanParameter" )
+    @SuppressWarnings( {"BooleanParameter", "MethodWithTooManyParameters"} )
     @API( status = STABLE, since = "0.0.5" )
     public static final SVGPathElement arcToAbs( final long rx, final long ry, final long rotation, final boolean largeArc, final boolean sweep, final long x, final long y )
     {
@@ -2021,7 +2021,6 @@ public final class SVGUtils
      *  @param  value   The type.
      *  @return The new {@code SVGNumber} instance.
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @API( status = STABLE, since = "0.0.5" )
     public static final SVGNumber centimeter( final double value ) { return new SVGNumber( value, CENTIMETER ); }
 
@@ -2034,7 +2033,6 @@ public final class SVGUtils
      *  @param  value   The type.
      *  @return The new {@code SVGNumber} instance.
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @API( status = STABLE, since = "0.0.5" )
     public static final SVGNumber centimeter( final long value ) { return new SVGNumber( value, CENTIMETER ); }
 
@@ -2059,7 +2057,7 @@ public final class SVGUtils
         retValue.registerValidChildren( xmlElement.retrieveValidChildren().toArray( String []::new ) );
 
         element.getAttributes().forEach( retValue::setAttribute );
-        element.getChildren().forEach( c -> retValue.addChild( cloneElement( (SVGElement) c ) ) );
+        element.getChildren().forEach( currentElement -> retValue.addChild( cloneElement( (SVGElement) currentElement ) ) );
         element.getNamespaces().forEach( retValue::setNamespace );
 
         //---* Done *----------------------------------------------------------
@@ -2092,7 +2090,6 @@ public final class SVGUtils
      *
      *  @see SVGColor#COLOR_INHERIT
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @API( status = STABLE, since = "0.0.5" )
     public static final SVGColor color() { return COLOR_INHERIT; }
 
@@ -2108,7 +2105,6 @@ public final class SVGUtils
      *  @param  blue    The blue component for the colour.
      *  @return The new instance of {@code SVGColor}.
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @API( status = STABLE, since = "0.0.5" )
     public static final SVGColor color( final int red, final int green, final int blue )
     {
@@ -2132,7 +2128,6 @@ public final class SVGUtils
      *  @param  blue    The blue component for the colour.
      *  @return The new instance of {@code SVGColor}.
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @API( status = STABLE, since = "0.0.5" )
     public static final SVGColor color( final boolean flag, final int red, final int green, final int blue )
     {
@@ -2152,7 +2147,6 @@ public final class SVGUtils
      *  @param  color   The CSS colour name.
      *  @return The new instance of {@code SVGColor}.
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @API( status = STABLE, since = "0.0.5" )
     public static final SVGColor color( final String color ) { return new SVGColor( color ); }
 
@@ -2162,7 +2156,6 @@ public final class SVGUtils
      *
      *  @return The new namespace instance.
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     private static final Namespace createCCNamespace()
     {
         final var identifier = URI.create( "http://creativecommons.org/ns#" );
@@ -2220,7 +2213,6 @@ public final class SVGUtils
      *  @throws IllegalArgumentException    The given element name does not
      *      denote a define SVG element.
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @API( status = STABLE, since = "0.0.5" )
     public static final SVGGenericElement createGenericElement( final String elementName )
     {
@@ -2452,7 +2444,6 @@ public final class SVGUtils
      *
      *  @return The new namespace instance.
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     private static final Namespace createRDFNamespace()
     {
         final var identifier = URI.create( "http://www.w3.org/1999/02/22-rdf-syntax-ns#" );
@@ -2625,7 +2616,6 @@ public final class SVGUtils
      *  @param  prefix  The prefix; can be empty or {@code null}.
      *  @return The new namespace instance.
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     private static final Namespace createSVGNamespace( final String prefix )
     {
         final var identifier = URI.create( "http://www.w3.org/2000/svg" );
@@ -2908,7 +2898,6 @@ public final class SVGUtils
      *
      *  @return The new namespace instance.
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     private static final Namespace createXLINKNamespace()
     {
         final var identifier = URI.create( "http://www.w3.org/1999/xlink" );
@@ -2953,6 +2942,7 @@ public final class SVGUtils
      *  @param  y   The y coordinate for the end point of the line.
      *  @return The new path element.
      */
+    @SuppressWarnings( "MethodWithTooManyParameters" )
     @API( status = STABLE, since = "0.0.5" )
     public static final SVGPathElement cubicCurveTo( final double x1, final double y1, final double x2, final double y2, final double x, final double y )
     {
@@ -2997,6 +2987,7 @@ public final class SVGUtils
      *  @param  y   The y coordinate for the end point of the line.
      *  @return The new path element.
      */
+    @SuppressWarnings( "MethodWithTooManyParameters" )
     @API( status = STABLE, since = "0.0.5" )
     public static final SVGPathElement cubicCurveTo( final long x1, final long y1, final long x2, final long y2, final long x, final long y )
     {
@@ -3041,6 +3032,7 @@ public final class SVGUtils
      *  @param  y   The y coordinate for the end point of the line.
      *  @return The new path element.
      */
+    @SuppressWarnings( "MethodWithTooManyParameters" )
     @API( status = STABLE, since = "0.0.5" )
     public static final SVGPathElement cubicCurveToAbs( final double x1, final double y1, final double x2, final double y2, final double x, final double y )
     {
@@ -3085,6 +3077,7 @@ public final class SVGUtils
      *  @param  y   The y coordinate for the end point of the line.
      *  @return The new path element.
      */
+    @SuppressWarnings( "MethodWithTooManyParameters" )
     @API( status = STABLE, since = "0.0.5" )
     public static final SVGPathElement cubicCurveToAbs( final long x1, final long y1, final long x2, final long y2, final long x, final long y )
     {
@@ -3103,7 +3096,6 @@ public final class SVGUtils
      *  @return The new {@code SVGNumber} instance.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGDegree degree( final double value ) { return new SVGDegree( value ); }
 
     /**
@@ -3115,7 +3107,6 @@ public final class SVGUtils
      *  @return The new {@code SVGNumber} instance.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGDegree degree( final long value ) { return new SVGDegree( value ); }
 
     /**
@@ -3128,7 +3119,6 @@ public final class SVGUtils
      *  @return The new {@code SVGNumber} instance.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGNumber em( final double value ) { return new SVGNumber( value, EM ); }
 
     /**
@@ -3141,7 +3131,6 @@ public final class SVGUtils
      *  @return The new {@code SVGNumber} instance.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGNumber em( final long value ) { return new SVGNumber( value, EM ); }
 
     /**
@@ -3154,7 +3143,6 @@ public final class SVGUtils
      *  @return The new {@code SVGNumber} instance.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGNumber ex( final double value ) { return new SVGNumber( value, EX ); }
 
     /**
@@ -3167,7 +3155,6 @@ public final class SVGUtils
      *  @return The new {@code SVGNumber} instance.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGNumber ex( final long value ) { return new SVGNumber( value, EX ); }
 
     /**
@@ -3252,7 +3239,6 @@ public final class SVGUtils
      *  @return The new {@code SVGNumber} instance.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGNumber inch( final double value ) { return new SVGNumber( value, INCH ); }
 
     /**
@@ -3265,7 +3251,6 @@ public final class SVGUtils
      *  @return The new {@code SVGNumber} instance.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGNumber inch( final long value ) { return new SVGNumber( value, INCH ); }
 
     /**
@@ -3356,8 +3341,8 @@ public final class SVGUtils
      *  @param  f   Parameter {@code f}.
      *  @return The {@code matrix} transform.
      */
+    @SuppressWarnings( {"MethodWithTooManyParameters", "StandardVariableNames"} )
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGMatrix matrix( final long a, final long b, final long c, final long d, final long e, final long f )
     {
         return new SVGMatrix( a, b, c, d, e, f );
@@ -3375,8 +3360,8 @@ public final class SVGUtils
      *  @param  f   Parameter {@code f}.
      *  @return The {@code matrix} transform.
      */
+    @SuppressWarnings( {"MethodWithTooManyParameters", "StandardVariableNames"} )
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGMatrix matrix( final double a, final double b, final double c, final double d, final double e, final double f )
     {
         return new SVGMatrix( a, b, c, d, e, f );
@@ -3391,7 +3376,6 @@ public final class SVGUtils
      *  @return The new {@code SVGNumber} instance.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGMillimeter millimeter( final double value ) { return new SVGMillimeter( value ); }
 
     /**
@@ -3403,7 +3387,6 @@ public final class SVGUtils
      *  @return The new {@code SVGNumber} instance.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGMillimeter millimeter( final long value ) { return new SVGMillimeter( value ); }
 
     /**
@@ -3491,7 +3474,6 @@ public final class SVGUtils
      *  @return The new {@code SVGNumber} instance.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGUserUnitValue number( final double value ) { return new SVGUserUnitValue( value ); }
 
     /**
@@ -3503,7 +3485,6 @@ public final class SVGUtils
      *  @return The new {@code SVGNumber} instance.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGUserUnitValue number( final long value ) { return new SVGUserUnitValue( value ); }
 
     /**
@@ -3542,7 +3523,6 @@ public final class SVGUtils
      *  @return The new {@code SVGNumber} instance.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGPercent percent( final double value ) { return new SVGPercent( value ); }
 
     /**
@@ -3554,7 +3534,6 @@ public final class SVGUtils
      *  @return The new {@code SVGNumber} instance.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGPercent percent( final long value ) { return new SVGPercent( value ); }
 
     /**
@@ -3567,7 +3546,6 @@ public final class SVGUtils
      *  @return The new {@code SVGNumber} instance.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGNumber pica( final double value ) { return new SVGNumber( value, PICA ); }
 
     /**
@@ -3580,7 +3558,6 @@ public final class SVGUtils
      *  @return The new {@code SVGNumber} instance.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGNumber pica( final long value ) { return new SVGNumber( value, PICA ); }
 
     /**
@@ -3592,7 +3569,6 @@ public final class SVGUtils
      *  @return The new {@code SVGNumber} instance.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGPixel pixel( final double value ) { return new SVGPixel( value ); }
 
     /**
@@ -3604,7 +3580,6 @@ public final class SVGUtils
      *  @return The new {@code SVGNumber} instance.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGPixel pixel( final long value ) { return new SVGPixel( value ); }
 
     /**
@@ -3617,7 +3592,6 @@ public final class SVGUtils
      *  @return The new {@code SVGNumber} instance.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGNumber point( final double value ) { return new SVGNumber( value, POINT ); }
 
     /**
@@ -3630,7 +3604,6 @@ public final class SVGUtils
      *  @return The new {@code SVGNumber} instance.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGNumber point( final long value ) { return new SVGNumber( value, POINT ); }
 
     /**
@@ -3801,7 +3774,6 @@ public final class SVGUtils
      *  @return The {@code rotate} transformation.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGRotate rotate( final long a ) { return new SVGRotate( a ); }
 
     /**
@@ -3812,7 +3784,6 @@ public final class SVGUtils
      *  @return The {@code rotate} transformation.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGRotate rotate( final double a ) { return new SVGRotate( a ); }
 
     /**
@@ -3825,7 +3796,6 @@ public final class SVGUtils
      *  @return The {@code rotate} transformation.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGRotate rotate( final long a, final long x, final long y ) { return new SVGRotate( a, x, y ); }
 
     /**
@@ -3838,7 +3808,6 @@ public final class SVGUtils
      *  @return The {@code rotate} transformation.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGRotate rotate( final double a, final double x, final double y ) { return new SVGRotate( a, x, y ); }
 
     /**
@@ -3851,7 +3820,6 @@ public final class SVGUtils
      *  @return The {@code scale} transformation.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGScale scale( final long x ) { return new SVGScale( x ); }
 
     /**
@@ -3864,7 +3832,6 @@ public final class SVGUtils
      *  @return The {@code scale} transformation.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGScale scale( final double x ) { return new SVGScale( x ); }
 
     /**
@@ -3876,7 +3843,6 @@ public final class SVGUtils
      *  @return The {@code scale} transformation.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGScale scale( final long x, final long y ) { return new SVGScale( x, y ); }
 
     /**
@@ -3888,7 +3854,6 @@ public final class SVGUtils
      *  @return The {@code scale} transformation.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGScale scale( final double x, final double y ) { return new SVGScale( x, y ); }
 
     /**
@@ -3899,7 +3864,6 @@ public final class SVGUtils
      *  @return The {@code skewX} transformation.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGSkewX skewX( final long a ) { return new SVGSkewX( a ); }
 
     /**
@@ -3910,7 +3874,6 @@ public final class SVGUtils
      *  @return The {@code skewX} transformation.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGSkewX skewX( final double a ) { return new SVGSkewX( a ); }
 
     /**
@@ -3921,7 +3884,6 @@ public final class SVGUtils
      *  @return The {@code skewY} transformation.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGSkewY skewY( final long a ) { return new SVGSkewY( a ); }
 
     /**
@@ -3932,7 +3894,6 @@ public final class SVGUtils
      *  @return The {@code skewY} transformation.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGSkewY skewY( final double a ) { return new SVGSkewY( a ); }
 
     /**
@@ -3943,7 +3904,6 @@ public final class SVGUtils
      *  @return The {@code translate} transformation.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGTranslate translate( final long x ) { return new SVGTranslate( x ); }
 
     /**
@@ -3954,7 +3914,6 @@ public final class SVGUtils
      *  @return The {@code translate} transformation.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGTranslate translate( final double x ) { return new SVGTranslate( x ); }
 
     /**
@@ -3966,7 +3925,6 @@ public final class SVGUtils
      *  @return The {@code translate} transformation.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGTranslate translate( final long x, final long y ) { return new SVGTranslate( x, y ); }
 
     /**
@@ -3978,7 +3936,6 @@ public final class SVGUtils
      *  @return The {@code translate} transformation.
      */
     @API( status = STABLE, since = "0.0.5" )
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SVGTranslate translate( final double x, final double y ) { return new SVGTranslate( x, y ); }
 
     /**

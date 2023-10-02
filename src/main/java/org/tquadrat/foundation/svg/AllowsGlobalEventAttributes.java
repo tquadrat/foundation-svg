@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -144,13 +144,13 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  will implement this interface.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: AllowsGlobalEventAttributes.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: AllowsGlobalEventAttributes.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( "ClassWithTooManyMethods" )
-@ClassVersion( sourceVersion = "$Id: AllowsGlobalEventAttributes.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: AllowsGlobalEventAttributes.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface AllowsGlobalEventAttributes
     permits SVGGroup, SVGLine, SVGPath, SVGRectangle
@@ -161,6 +161,7 @@ public sealed interface AllowsGlobalEventAttributes
     /**
      *  The global event attributes.
      */
+    @SuppressWarnings( "StaticCollection" )
     public static final List<String> GLOBALEVENT_ATTRIBUTES = List.of(
         SVGATTRIBUTE_OnCanPlay,
         SVGATTRIBUTE_OnCanPlayThrough,

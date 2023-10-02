@@ -13,7 +13,7 @@
 <div class="source-container">
 <pre><span class="source-line-no">001</span><span id="line-1">/*</span>
 <span class="source-line-no">002</span><span id="line-2"> * ============================================================================</span>
-<span class="source-line-no">003</span><span id="line-3"> * Copyright © 2002-2020 by Thomas Thrien.</span>
+<span class="source-line-no">003</span><span id="line-3"> * Copyright © 2002-2023 by Thomas Thrien.</span>
 <span class="source-line-no">004</span><span id="line-4"> * All Rights Reserved.</span>
 <span class="source-line-no">005</span><span id="line-5"> * ============================================================================</span>
 <span class="source-line-no">006</span><span id="line-6"> * Licensed to the public under the agreements of the GNU Lesser General Public</span>
@@ -36,144 +36,149 @@
 <span class="source-line-no">023</span><span id="line-23"></span>
 <span class="source-line-no">024</span><span id="line-24">import org.apiguardian.api.API;</span>
 <span class="source-line-no">025</span><span id="line-25">import org.tquadrat.foundation.annotation.ClassVersion;</span>
-<span class="source-line-no">026</span><span id="line-26">import org.tquadrat.foundation.svg.type.SVGNumber;</span>
-<span class="source-line-no">027</span><span id="line-27">import org.tquadrat.foundation.svg.type.SVGNumber.SVGUserUnitValue;</span>
-<span class="source-line-no">028</span><span id="line-28"></span>
-<span class="source-line-no">029</span><span id="line-29">/**</span>
-<span class="source-line-no">030</span><span id="line-30"> *  The definition of an SVG {@code &lt;line&gt;} element.</span>
-<span class="source-line-no">031</span><span id="line-31"> *</span>
-<span class="source-line-no">032</span><span id="line-32"> *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org</span>
-<span class="source-line-no">033</span><span id="line-33"> *  @version $Id: SVGLine.java 980 2022-01-06 15:29:19Z tquadrat $</span>
-<span class="source-line-no">034</span><span id="line-34"> *  @since 0.0.5</span>
-<span class="source-line-no">035</span><span id="line-35"> *</span>
-<span class="source-line-no">036</span><span id="line-36"> *  @UMLGraph.link</span>
-<span class="source-line-no">037</span><span id="line-37"> */</span>
-<span class="source-line-no">038</span><span id="line-38">@ClassVersion( sourceVersion = "$Id: SVGLine.java 980 2022-01-06 15:29:19Z tquadrat $" )</span>
-<span class="source-line-no">039</span><span id="line-39">@API( status = STABLE, since = "0.0.5" )</span>
-<span class="source-line-no">040</span><span id="line-40">public sealed interface SVGLine extends SVGElementWithChildren, AllowsConditionalProcessingAttributes, AllowsGlobalEventAttributes, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes permits SVGElementAdapter, org.tquadrat.foundation.svg.internal.SVGLineImpl</span>
-<span class="source-line-no">041</span><span id="line-41">{</span>
-<span class="source-line-no">042</span><span id="line-42">        /*---------*\</span>
-<span class="source-line-no">043</span><span id="line-43">    ====** Methods **==========================================================</span>
-<span class="source-line-no">044</span><span id="line-44">        \*---------*/</span>
-<span class="source-line-no">045</span><span id="line-45">    /**</span>
-<span class="source-line-no">046</span><span id="line-46">     *  Sets the start and end points for this line.</span>
-<span class="source-line-no">047</span><span id="line-47">     *</span>
-<span class="source-line-no">048</span><span id="line-48">     *  @param  x1  The x coordinate for the starting point of the line.</span>
-<span class="source-line-no">049</span><span id="line-49">     *  @param  y1  The y coordinate for the starting point of the line.</span>
-<span class="source-line-no">050</span><span id="line-50">     *  @param  x2  The x coordinate for the ending point of the line.</span>
-<span class="source-line-no">051</span><span id="line-51">     *  @param  y2  The y coordinate for the ending point of the line.</span>
-<span class="source-line-no">052</span><span id="line-52">     */</span>
-<span class="source-line-no">053</span><span id="line-53">    public default void defineLine( final SVGNumber x1, final SVGNumber y1, final SVGNumber x2, final SVGNumber y2 )</span>
-<span class="source-line-no">054</span><span id="line-54">    {</span>
-<span class="source-line-no">055</span><span id="line-55">        setStartPoint( x1, y1 );</span>
-<span class="source-line-no">056</span><span id="line-56">        setEndPoint( x2, y2 );</span>
-<span class="source-line-no">057</span><span id="line-57">    }   //  defineLine()</span>
-<span class="source-line-no">058</span><span id="line-58"></span>
-<span class="source-line-no">059</span><span id="line-59">    /**</span>
-<span class="source-line-no">060</span><span id="line-60">     *  Sets the end point for this line.</span>
-<span class="source-line-no">061</span><span id="line-61">     *</span>
-<span class="source-line-no">062</span><span id="line-62">     *  @param  x  The x coordinate for the ending point of the line.</span>
-<span class="source-line-no">063</span><span id="line-63">     *  @param  y  The y coordinate for the ending point of the line.</span>
-<span class="source-line-no">064</span><span id="line-64">     */</span>
-<span class="source-line-no">065</span><span id="line-65">    public default void setEndPoint( final SVGNumber x, final SVGNumber y )</span>
-<span class="source-line-no">066</span><span id="line-66">    {</span>
-<span class="source-line-no">067</span><span id="line-67">        setX2( requireNonNullArgument( x, "x" ) );</span>
-<span class="source-line-no">068</span><span id="line-68">        setY2( requireNonNullArgument( y, "y" ) );</span>
-<span class="source-line-no">069</span><span id="line-69">    }   //  setEndPoint()</span>
-<span class="source-line-no">070</span><span id="line-70"></span>
-<span class="source-line-no">071</span><span id="line-71">    /**</span>
-<span class="source-line-no">072</span><span id="line-72">     *  Sets the length of the path represented by this SVG {@code &lt;line&gt;}</span>
-<span class="source-line-no">073</span><span id="line-73">     *  element.</span>
-<span class="source-line-no">074</span><span id="line-74">     *</span>
-<span class="source-line-no">075</span><span id="line-75">     *  @param  length  The author's computation of the total length of the</span>
-<span class="source-line-no">076</span><span id="line-76">     *      path, in user units. This type is used to calibrate the user</span>
-<span class="source-line-no">077</span><span id="line-77">     *      agent's own distance-along-a-path calculations with that of the</span>
-<span class="source-line-no">078</span><span id="line-78">     *      author. The user agent will scale all distance-along-a-path</span>
-<span class="source-line-no">079</span><span id="line-79">     *      computations by the ratio of this type to the user agent's own</span>
-<span class="source-line-no">080</span><span id="line-80">     *      computed type for total path length.&lt;br&gt;</span>
-<span class="source-line-no">081</span><span id="line-81">     *      &lt;br&gt;A type of zero is valid, but a negative type is an error.</span>
-<span class="source-line-no">082</span><span id="line-82">     *</span>
-<span class="source-line-no">083</span><span id="line-83">     *  @throws IllegalArgumentException    The type is less than 0.</span>
-<span class="source-line-no">084</span><span id="line-84">     */</span>
-<span class="source-line-no">085</span><span id="line-85">    public void setPathLength( final SVGUserUnitValue length );</span>
-<span class="source-line-no">086</span><span id="line-86"></span>
-<span class="source-line-no">087</span><span id="line-87">    /**</span>
-<span class="source-line-no">088</span><span id="line-88">     *  Sets the length of the path represented by this SVG {@code &lt;line&gt;}</span>
-<span class="source-line-no">089</span><span id="line-89">     *  element.</span>
-<span class="source-line-no">090</span><span id="line-90">     *</span>
-<span class="source-line-no">091</span><span id="line-91">     *  @param  length  The author's computation of the total length of the</span>
-<span class="source-line-no">092</span><span id="line-92">     *      path, in user units. This type is used to calibrate the user</span>
-<span class="source-line-no">093</span><span id="line-93">     *      agent's own distance-along-a-path calculations with that of the</span>
-<span class="source-line-no">094</span><span id="line-94">     *      author. The user agent will scale all distance-along-a-path</span>
-<span class="source-line-no">095</span><span id="line-95">     *      computations by the ratio of this type to the user agent's own</span>
-<span class="source-line-no">096</span><span id="line-96">     *      computed type for total path length.&lt;br&gt;</span>
-<span class="source-line-no">097</span><span id="line-97">     *      &lt;br&gt;A type of zero is valid, but a negative type is an error.</span>
-<span class="source-line-no">098</span><span id="line-98">     *</span>
-<span class="source-line-no">099</span><span id="line-99">     *  @throws IllegalArgumentException    The type is less than 0.</span>
-<span class="source-line-no">100</span><span id="line-100">     */</span>
-<span class="source-line-no">101</span><span id="line-101">    public default void setPathLength( final double length ) { setPathLength( number( length ) ); }</span>
-<span class="source-line-no">102</span><span id="line-102"></span>
-<span class="source-line-no">103</span><span id="line-103">    /**</span>
-<span class="source-line-no">104</span><span id="line-104">     *  Sets the length of the path represented by this SVG {@code &lt;line&gt;}</span>
-<span class="source-line-no">105</span><span id="line-105">     *  element.</span>
-<span class="source-line-no">106</span><span id="line-106">     *</span>
-<span class="source-line-no">107</span><span id="line-107">     *  @param  length  The author's computation of the total length of the</span>
-<span class="source-line-no">108</span><span id="line-108">     *      path, in user units. This type is used to calibrate the user</span>
-<span class="source-line-no">109</span><span id="line-109">     *      agent's own distance-along-a-path calculations with that of the</span>
-<span class="source-line-no">110</span><span id="line-110">     *      author. The user agent will scale all distance-along-a-path</span>
-<span class="source-line-no">111</span><span id="line-111">     *      computations by the ratio of this type to the user agent's own</span>
-<span class="source-line-no">112</span><span id="line-112">     *      computed type for total path length.&lt;br&gt;</span>
-<span class="source-line-no">113</span><span id="line-113">     *      &lt;br&gt;A type of zero is valid, but a negative type is an error.</span>
-<span class="source-line-no">114</span><span id="line-114">     *</span>
-<span class="source-line-no">115</span><span id="line-115">     *  @throws IllegalArgumentException    The type is less than 0.</span>
-<span class="source-line-no">116</span><span id="line-116">     */</span>
-<span class="source-line-no">117</span><span id="line-117">    public default void setPathLength( final long length ) { setPathLength( number( length ) ); }</span>
-<span class="source-line-no">118</span><span id="line-118"></span>
-<span class="source-line-no">119</span><span id="line-119">    /**</span>
-<span class="source-line-no">120</span><span id="line-120">     *  Sets the start point for this line.</span>
-<span class="source-line-no">121</span><span id="line-121">     *</span>
-<span class="source-line-no">122</span><span id="line-122">     *  @param  x   The x coordinate for the starting point of the line.</span>
-<span class="source-line-no">123</span><span id="line-123">     *  @param  y   The y coordinate for the starting point of the line.</span>
-<span class="source-line-no">124</span><span id="line-124">     */</span>
-<span class="source-line-no">125</span><span id="line-125">    public default void setStartPoint( final SVGNumber x, final SVGNumber y )</span>
-<span class="source-line-no">126</span><span id="line-126">    {</span>
-<span class="source-line-no">127</span><span id="line-127">        setX1( requireNonNullArgument( x, "x" ) );</span>
-<span class="source-line-no">128</span><span id="line-128">        setY1( requireNonNullArgument( y, "y" ) );</span>
-<span class="source-line-no">129</span><span id="line-129">    }   //  setStartPoint()</span>
-<span class="source-line-no">130</span><span id="line-130"></span>
-<span class="source-line-no">131</span><span id="line-131">    /**</span>
-<span class="source-line-no">132</span><span id="line-132">     *  Sets the x coordinate of the starting point for this line.</span>
-<span class="source-line-no">133</span><span id="line-133">     *</span>
-<span class="source-line-no">134</span><span id="line-134">     *  @param  value   The x coordinate.</span>
-<span class="source-line-no">135</span><span id="line-135">     */</span>
-<span class="source-line-no">136</span><span id="line-136">    public void setX1( final SVGNumber value );</span>
-<span class="source-line-no">137</span><span id="line-137"></span>
-<span class="source-line-no">138</span><span id="line-138">    /**</span>
-<span class="source-line-no">139</span><span id="line-139">     *  Sets the x coordinate of the ending point for this line.</span>
-<span class="source-line-no">140</span><span id="line-140">     *</span>
-<span class="source-line-no">141</span><span id="line-141">     *  @param  value   The x coordinate.</span>
-<span class="source-line-no">142</span><span id="line-142">     */</span>
-<span class="source-line-no">143</span><span id="line-143">    public void setX2( final SVGNumber value );</span>
-<span class="source-line-no">144</span><span id="line-144"></span>
-<span class="source-line-no">145</span><span id="line-145">    /**</span>
-<span class="source-line-no">146</span><span id="line-146">     *  Sets the y coordinate of the starting point for this line.</span>
-<span class="source-line-no">147</span><span id="line-147">     *</span>
-<span class="source-line-no">148</span><span id="line-148">     *  @param  value   The y coordinate.</span>
-<span class="source-line-no">149</span><span id="line-149">     */</span>
-<span class="source-line-no">150</span><span id="line-150">    public void setY1( final SVGNumber value );</span>
-<span class="source-line-no">151</span><span id="line-151"></span>
-<span class="source-line-no">152</span><span id="line-152">    /**</span>
-<span class="source-line-no">153</span><span id="line-153">     *  Sets the y coordinate of the ending point for this line.</span>
-<span class="source-line-no">154</span><span id="line-154">     *</span>
-<span class="source-line-no">155</span><span id="line-155">     *  @param  value   The y coordinate.</span>
-<span class="source-line-no">156</span><span id="line-156">     */</span>
-<span class="source-line-no">157</span><span id="line-157">    public void setY2( final SVGNumber value );</span>
-<span class="source-line-no">158</span><span id="line-158">}</span>
-<span class="source-line-no">159</span><span id="line-159">//  interface SVGLine</span>
-<span class="source-line-no">160</span><span id="line-160"></span>
-<span class="source-line-no">161</span><span id="line-161">/*</span>
-<span class="source-line-no">162</span><span id="line-162"> *  End of File</span>
-<span class="source-line-no">163</span><span id="line-163"> */</span>
+<span class="source-line-no">026</span><span id="line-26">import org.tquadrat.foundation.svg.internal.SVGLineImpl;</span>
+<span class="source-line-no">027</span><span id="line-27">import org.tquadrat.foundation.svg.type.SVGNumber;</span>
+<span class="source-line-no">028</span><span id="line-28">import org.tquadrat.foundation.svg.type.SVGNumber.SVGUserUnitValue;</span>
+<span class="source-line-no">029</span><span id="line-29"></span>
+<span class="source-line-no">030</span><span id="line-30">/**</span>
+<span class="source-line-no">031</span><span id="line-31"> *  The definition of an SVG {@code &lt;line&gt;} element.</span>
+<span class="source-line-no">032</span><span id="line-32"> *</span>
+<span class="source-line-no">033</span><span id="line-33"> *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org</span>
+<span class="source-line-no">034</span><span id="line-34"> *  @version $Id: SVGLine.java 1074 2023-10-02 12:05:06Z tquadrat $</span>
+<span class="source-line-no">035</span><span id="line-35"> *  @since 0.0.5</span>
+<span class="source-line-no">036</span><span id="line-36"> *</span>
+<span class="source-line-no">037</span><span id="line-37"> *  @UMLGraph.link</span>
+<span class="source-line-no">038</span><span id="line-38"> */</span>
+<span class="source-line-no">039</span><span id="line-39">@ClassVersion( sourceVersion = "$Id: SVGLine.java 1074 2023-10-02 12:05:06Z tquadrat $" )</span>
+<span class="source-line-no">040</span><span id="line-40">@API( status = STABLE, since = "0.0.5" )</span>
+<span class="source-line-no">041</span><span id="line-41">public sealed interface SVGLine extends SVGElementWithChildren, AllowsConditionalProcessingAttributes, AllowsGlobalEventAttributes, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes</span>
+<span class="source-line-no">042</span><span id="line-42">    permits SVGElementAdapter, SVGLineImpl</span>
+<span class="source-line-no">043</span><span id="line-43">{</span>
+<span class="source-line-no">044</span><span id="line-44">        /*---------*\</span>
+<span class="source-line-no">045</span><span id="line-45">    ====** Methods **==========================================================</span>
+<span class="source-line-no">046</span><span id="line-46">        \*---------*/</span>
+<span class="source-line-no">047</span><span id="line-47">    /**</span>
+<span class="source-line-no">048</span><span id="line-48">     *  Sets the start and end points for this line.</span>
+<span class="source-line-no">049</span><span id="line-49">     *</span>
+<span class="source-line-no">050</span><span id="line-50">     *  @param  x1  The x coordinate for the starting point of the line.</span>
+<span class="source-line-no">051</span><span id="line-51">     *  @param  y1  The y coordinate for the starting point of the line.</span>
+<span class="source-line-no">052</span><span id="line-52">     *  @param  x2  The x coordinate for the ending point of the line.</span>
+<span class="source-line-no">053</span><span id="line-53">     *  @param  y2  The y coordinate for the ending point of the line.</span>
+<span class="source-line-no">054</span><span id="line-54">     */</span>
+<span class="source-line-no">055</span><span id="line-55">    @SuppressWarnings( "UseOfConcreteClass" )</span>
+<span class="source-line-no">056</span><span id="line-56">    public default void defineLine( final SVGNumber x1, final SVGNumber y1, final SVGNumber x2, final SVGNumber y2 )</span>
+<span class="source-line-no">057</span><span id="line-57">    {</span>
+<span class="source-line-no">058</span><span id="line-58">        setStartPoint( x1, y1 );</span>
+<span class="source-line-no">059</span><span id="line-59">        setEndPoint( x2, y2 );</span>
+<span class="source-line-no">060</span><span id="line-60">    }   //  defineLine()</span>
+<span class="source-line-no">061</span><span id="line-61"></span>
+<span class="source-line-no">062</span><span id="line-62">    /**</span>
+<span class="source-line-no">063</span><span id="line-63">     *  Sets the end point for this line.</span>
+<span class="source-line-no">064</span><span id="line-64">     *</span>
+<span class="source-line-no">065</span><span id="line-65">     *  @param  x  The x coordinate for the ending point of the line.</span>
+<span class="source-line-no">066</span><span id="line-66">     *  @param  y  The y coordinate for the ending point of the line.</span>
+<span class="source-line-no">067</span><span id="line-67">     */</span>
+<span class="source-line-no">068</span><span id="line-68">    @SuppressWarnings( "UseOfConcreteClass" )</span>
+<span class="source-line-no">069</span><span id="line-69">    public default void setEndPoint( final SVGNumber x, final SVGNumber y )</span>
+<span class="source-line-no">070</span><span id="line-70">    {</span>
+<span class="source-line-no">071</span><span id="line-71">        setX2( requireNonNullArgument( x, "x" ) );</span>
+<span class="source-line-no">072</span><span id="line-72">        setY2( requireNonNullArgument( y, "y" ) );</span>
+<span class="source-line-no">073</span><span id="line-73">    }   //  setEndPoint()</span>
+<span class="source-line-no">074</span><span id="line-74"></span>
+<span class="source-line-no">075</span><span id="line-75">    /**</span>
+<span class="source-line-no">076</span><span id="line-76">     *  Sets the length of the path represented by this SVG {@code &lt;line&gt;}</span>
+<span class="source-line-no">077</span><span id="line-77">     *  element.</span>
+<span class="source-line-no">078</span><span id="line-78">     *</span>
+<span class="source-line-no">079</span><span id="line-79">     *  @param  length  The author's computation of the total length of the</span>
+<span class="source-line-no">080</span><span id="line-80">     *      path, in user units. This type is used to calibrate the user</span>
+<span class="source-line-no">081</span><span id="line-81">     *      agent's own distance-along-a-path calculations with that of the</span>
+<span class="source-line-no">082</span><span id="line-82">     *      author. The user agent will scale all distance-along-a-path</span>
+<span class="source-line-no">083</span><span id="line-83">     *      computations by the ratio of this type to the user agent's own</span>
+<span class="source-line-no">084</span><span id="line-84">     *      computed type for total path length.&lt;br&gt;</span>
+<span class="source-line-no">085</span><span id="line-85">     *      &lt;br&gt;A type of zero is valid, but a negative type is an error.</span>
+<span class="source-line-no">086</span><span id="line-86">     *</span>
+<span class="source-line-no">087</span><span id="line-87">     *  @throws IllegalArgumentException    The type is less than 0.</span>
+<span class="source-line-no">088</span><span id="line-88">     */</span>
+<span class="source-line-no">089</span><span id="line-89">    public void setPathLength( @SuppressWarnings( "UseOfConcreteClass" ) final SVGUserUnitValue length );</span>
+<span class="source-line-no">090</span><span id="line-90"></span>
+<span class="source-line-no">091</span><span id="line-91">    /**</span>
+<span class="source-line-no">092</span><span id="line-92">     *  Sets the length of the path represented by this SVG {@code &lt;line&gt;}</span>
+<span class="source-line-no">093</span><span id="line-93">     *  element.</span>
+<span class="source-line-no">094</span><span id="line-94">     *</span>
+<span class="source-line-no">095</span><span id="line-95">     *  @param  length  The author's computation of the total length of the</span>
+<span class="source-line-no">096</span><span id="line-96">     *      path, in user units. This type is used to calibrate the user</span>
+<span class="source-line-no">097</span><span id="line-97">     *      agent's own distance-along-a-path calculations with that of the</span>
+<span class="source-line-no">098</span><span id="line-98">     *      author. The user agent will scale all distance-along-a-path</span>
+<span class="source-line-no">099</span><span id="line-99">     *      computations by the ratio of this type to the user agent's own</span>
+<span class="source-line-no">100</span><span id="line-100">     *      computed type for total path length.&lt;br&gt;</span>
+<span class="source-line-no">101</span><span id="line-101">     *      &lt;br&gt;A type of zero is valid, but a negative type is an error.</span>
+<span class="source-line-no">102</span><span id="line-102">     *</span>
+<span class="source-line-no">103</span><span id="line-103">     *  @throws IllegalArgumentException    The type is less than 0.</span>
+<span class="source-line-no">104</span><span id="line-104">     */</span>
+<span class="source-line-no">105</span><span id="line-105">    public default void setPathLength( final double length ) { setPathLength( number( length ) ); }</span>
+<span class="source-line-no">106</span><span id="line-106"></span>
+<span class="source-line-no">107</span><span id="line-107">    /**</span>
+<span class="source-line-no">108</span><span id="line-108">     *  Sets the length of the path represented by this SVG {@code &lt;line&gt;}</span>
+<span class="source-line-no">109</span><span id="line-109">     *  element.</span>
+<span class="source-line-no">110</span><span id="line-110">     *</span>
+<span class="source-line-no">111</span><span id="line-111">     *  @param  length  The author's computation of the total length of the</span>
+<span class="source-line-no">112</span><span id="line-112">     *      path, in user units. This type is used to calibrate the user</span>
+<span class="source-line-no">113</span><span id="line-113">     *      agent's own distance-along-a-path calculations with that of the</span>
+<span class="source-line-no">114</span><span id="line-114">     *      author. The user agent will scale all distance-along-a-path</span>
+<span class="source-line-no">115</span><span id="line-115">     *      computations by the ratio of this type to the user agent's own</span>
+<span class="source-line-no">116</span><span id="line-116">     *      computed type for total path length.&lt;br&gt;</span>
+<span class="source-line-no">117</span><span id="line-117">     *      &lt;br&gt;A type of zero is valid, but a negative type is an error.</span>
+<span class="source-line-no">118</span><span id="line-118">     *</span>
+<span class="source-line-no">119</span><span id="line-119">     *  @throws IllegalArgumentException    The type is less than 0.</span>
+<span class="source-line-no">120</span><span id="line-120">     */</span>
+<span class="source-line-no">121</span><span id="line-121">    public default void setPathLength( final long length ) { setPathLength( number( length ) ); }</span>
+<span class="source-line-no">122</span><span id="line-122"></span>
+<span class="source-line-no">123</span><span id="line-123">    /**</span>
+<span class="source-line-no">124</span><span id="line-124">     *  Sets the start point for this line.</span>
+<span class="source-line-no">125</span><span id="line-125">     *</span>
+<span class="source-line-no">126</span><span id="line-126">     *  @param  x   The x coordinate for the starting point of the line.</span>
+<span class="source-line-no">127</span><span id="line-127">     *  @param  y   The y coordinate for the starting point of the line.</span>
+<span class="source-line-no">128</span><span id="line-128">     */</span>
+<span class="source-line-no">129</span><span id="line-129">    @SuppressWarnings( "UseOfConcreteClass" )</span>
+<span class="source-line-no">130</span><span id="line-130">    public default void setStartPoint( final SVGNumber x, final SVGNumber y )</span>
+<span class="source-line-no">131</span><span id="line-131">    {</span>
+<span class="source-line-no">132</span><span id="line-132">        setX1( requireNonNullArgument( x, "x" ) );</span>
+<span class="source-line-no">133</span><span id="line-133">        setY1( requireNonNullArgument( y, "y" ) );</span>
+<span class="source-line-no">134</span><span id="line-134">    }   //  setStartPoint()</span>
+<span class="source-line-no">135</span><span id="line-135"></span>
+<span class="source-line-no">136</span><span id="line-136">    /**</span>
+<span class="source-line-no">137</span><span id="line-137">     *  Sets the x coordinate of the starting point for this line.</span>
+<span class="source-line-no">138</span><span id="line-138">     *</span>
+<span class="source-line-no">139</span><span id="line-139">     *  @param  value   The x coordinate.</span>
+<span class="source-line-no">140</span><span id="line-140">     */</span>
+<span class="source-line-no">141</span><span id="line-141">    public void setX1( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value );</span>
+<span class="source-line-no">142</span><span id="line-142"></span>
+<span class="source-line-no">143</span><span id="line-143">    /**</span>
+<span class="source-line-no">144</span><span id="line-144">     *  Sets the x coordinate of the ending point for this line.</span>
+<span class="source-line-no">145</span><span id="line-145">     *</span>
+<span class="source-line-no">146</span><span id="line-146">     *  @param  value   The x coordinate.</span>
+<span class="source-line-no">147</span><span id="line-147">     */</span>
+<span class="source-line-no">148</span><span id="line-148">    public void setX2( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value );</span>
+<span class="source-line-no">149</span><span id="line-149"></span>
+<span class="source-line-no">150</span><span id="line-150">    /**</span>
+<span class="source-line-no">151</span><span id="line-151">     *  Sets the y coordinate of the starting point for this line.</span>
+<span class="source-line-no">152</span><span id="line-152">     *</span>
+<span class="source-line-no">153</span><span id="line-153">     *  @param  value   The y coordinate.</span>
+<span class="source-line-no">154</span><span id="line-154">     */</span>
+<span class="source-line-no">155</span><span id="line-155">    public void setY1( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value );</span>
+<span class="source-line-no">156</span><span id="line-156"></span>
+<span class="source-line-no">157</span><span id="line-157">    /**</span>
+<span class="source-line-no">158</span><span id="line-158">     *  Sets the y coordinate of the ending point for this line.</span>
+<span class="source-line-no">159</span><span id="line-159">     *</span>
+<span class="source-line-no">160</span><span id="line-160">     *  @param  value   The y coordinate.</span>
+<span class="source-line-no">161</span><span id="line-161">     */</span>
+<span class="source-line-no">162</span><span id="line-162">    public void setY2( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value );</span>
+<span class="source-line-no">163</span><span id="line-163">}</span>
+<span class="source-line-no">164</span><span id="line-164">//  interface SVGLine</span>
+<span class="source-line-no">165</span><span id="line-165"></span>
+<span class="source-line-no">166</span><span id="line-166">/*</span>
+<span class="source-line-no">167</span><span id="line-167"> *  End of File</span>
+<span class="source-line-no">168</span><span id="line-168"> */</span>
 
 
 

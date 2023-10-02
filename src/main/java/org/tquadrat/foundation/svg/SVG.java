@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -22,6 +22,7 @@ import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.svg.internal.SVGImpl;
 import org.tquadrat.foundation.svg.type.SVGNumber;
 import org.tquadrat.foundation.svg.type.SVGPreserveAspectRatio;
 import jakarta.activation.MimeType;
@@ -37,17 +38,18 @@ import jakarta.activation.MimeType;
  *  {@link SVG.Usage}.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVG.java 980 2022-01-06 15:29:19Z tquadrat $
+ *  @version $Id: SVG.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @see "https://www.w3.org/TR/SVG/single-page.html#struct-SVGElement"
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVG.java 980 2022-01-06 15:29:19Z tquadrat $" )
+@SuppressWarnings( "NewClassNamingConvention" )
+@ClassVersion( sourceVersion = "$Id: SVG.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVG extends SVGElementWithChildren, AllowsConditionalProcessingAttributes, AllowsDocumentEventAttributes, AllowsDocumentElementEventAttributes, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes
-    permits org.tquadrat.foundation.svg.internal.SVGImpl
+    permits SVGImpl
 {
         /*---------------*\
     ====** Inner Classes **====================================================
@@ -56,12 +58,12 @@ public sealed interface SVG extends SVGElementWithChildren, AllowsConditionalPro
      *  The different usages for an {@code <svg>} element.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVG.java 980 2022-01-06 15:29:19Z tquadrat $
+     *  @version $Id: SVG.java 1074 2023-10-02 12:05:06Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVG.java 980 2022-01-06 15:29:19Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVG.java 1074 2023-10-02 12:05:06Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static enum Usage
     {

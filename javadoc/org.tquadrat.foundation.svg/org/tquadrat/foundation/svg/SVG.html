@@ -97,10 +97,10 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="internal/SVGImpl.html" title="class in org.tquadrat.foundation.svg.internal">SVGImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="annotations"><a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/annotation/ClassVersion.html" title="class or interface in org.tquadrat.foundation.annotation" class="external-link">@ClassVersion</a>(<a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/annotation/ClassVersion.html#sourceVersion()" title="class or interface in org.tquadrat.foundation.annotation" class="external-link">sourceVersion</a>="$Id: SVG.java 980 2022-01-06 15:29:19Z tquadrat $")
+<div class="type-signature"><span class="annotations"><a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/annotation/ClassVersion.html" title="class or interface in org.tquadrat.foundation.annotation" class="external-link">@ClassVersion</a>(<a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/annotation/ClassVersion.html#sourceVersion()" title="class or interface in org.tquadrat.foundation.annotation" class="external-link">sourceVersion</a>="$Id: SVG.java 1074 2023-10-02 12:05:06Z tquadrat $")
 <a href="https://apiguardian-team.github.io/apiguardian/docs/current/api/org/apiguardian/api/API.html" title="class or interface in org.apiguardian.api" class="external-link">@API</a>(<a href="https://apiguardian-team.github.io/apiguardian/docs/current/api/org/apiguardian/api/API.html#status()" title="class or interface in org.apiguardian.api" class="external-link">status</a>=<a href="https://apiguardian-team.github.io/apiguardian/docs/current/api/org/apiguardian/api/API.Status.html#STABLE" title="class or interface in org.apiguardian.api" class="external-link">STABLE</a>,
      <a href="https://apiguardian-team.github.io/apiguardian/docs/current/api/org/apiguardian/api/API.html#since()" title="class or interface in org.apiguardian.api" class="external-link">since</a>="0.0.5")
-</span><span class="modifiers">public sealed interface </span><span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-47">SVG</a></span><span class="extends-implements">
+</span><span class="modifiers">public sealed interface </span><span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-48">SVG</a></span><span class="extends-implements">
 extends <a href="SVGElementWithChildren.html" title="interface in org.tquadrat.foundation.svg">SVGElementWithChildren</a>, <a href="AllowsConditionalProcessingAttributes.html" title="interface in org.tquadrat.foundation.svg">AllowsConditionalProcessingAttributes</a>, <a href="AllowsDocumentEventAttributes.html" title="interface in org.tquadrat.foundation.svg">AllowsDocumentEventAttributes</a>, <a href="AllowsDocumentElementEventAttributes.html" title="interface in org.tquadrat.foundation.svg">AllowsDocumentElementEventAttributes</a>, <a href="AllowsGraphicalEventAttributes.html" title="interface in org.tquadrat.foundation.svg">AllowsGraphicalEventAttributes</a>, <a href="AllowsPresentationAttributes.html" title="interface in org.tquadrat.foundation.svg">AllowsPresentationAttributes</a>, <a href="AllowsStyleAttributes.html" title="interface in org.tquadrat.foundation.svg">AllowsStyleAttributes</a></span>
 <span class="permits">permits <a href="internal/SVGImpl.html" title="class in org.tquadrat.foundation.svg.internal">SVGImpl</a></span></div>
 <div class="block"><p>The definition of the SVG element
@@ -115,7 +115,7 @@ extends <a href="SVGElementWithChildren.html" title="interface in org.tquadrat.f
 <dt><span class="simpleTagLabel">Author:</span></dt>
   <dd>Thomas Thrien (<a href="mailto:thomas.thrien@tquadrat.org">thomas.thrien@tquadrat.org</a>)</dd>
 <dt>Version:</dt>
-<dd>$Id: SVG.java 980 2022-01-06 15:29:19Z tquadrat $</dd>
+<dd>$Id: SVG.java 1074 2023-10-02 12:05:06Z tquadrat $</dd>
 <dt>Since:</dt>
 <dd>0.0.5</dd>
 <dt>See Also:</dt>
@@ -317,7 +317,7 @@ extends <a href="SVGElementWithChildren.html" title="interface in org.tquadrat.f
 <li>
 <section class="detail" id="addDefinition(E)">
 <h3 id="addDefinition(org.tquadrat.foundation.svg.SVGElement)">addDefinition</h3>
-<div class="member-signature"><span class="type-parameters">&lt;E extends <a href="SVGElement.html" title="interface in org.tquadrat.foundation.svg">SVGElement</a>&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-116">addDefinition</a></span><wbr><span class="parameters">(E&nbsp;child)</span>
+<div class="member-signature"><span class="type-parameters">&lt;E extends <a href="SVGElement.html" title="interface in org.tquadrat.foundation.svg">SVGElement</a>&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-118">addDefinition</a></span><wbr><span class="parameters">(E&nbsp;child)</span>
                                    throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a>,
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></span></div>
 <div class="block">Adds a child to the definitions of this <code>&lt;svg&gt;</code> element.</div>
@@ -337,7 +337,7 @@ extends <a href="SVGElementWithChildren.html" title="interface in org.tquadrat.f
 <li>
 <section class="detail" id="addStyle(org.tquadrat.foundation.svg.SVGStyle)">
 <h3>addStyle</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-127">addStyle</a></span><wbr><span class="parameters">(<a href="SVGStyle.html" title="interface in org.tquadrat.foundation.svg">SVGStyle</a>&nbsp;style)</span>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-129">addStyle</a></span><wbr><span class="parameters">(<a href="SVGStyle.html" title="interface in org.tquadrat.foundation.svg">SVGStyle</a>&nbsp;style)</span>
        throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></span></div>
 <div class="block">Adds an SVG <code>&lt;style&gt;</code> element to the definitions of this
   <code>&lt;svg&gt;</code> element. If there exists already a <code>&lt;style&gt;</code>
@@ -354,7 +354,7 @@ extends <a href="SVGElementWithChildren.html" title="interface in org.tquadrat.f
 <li>
 <section class="detail" id="setContentScriptType(jakarta.activation.MimeType)">
 <h3>setContentScriptType</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-139">setContentScriptType</a></span><wbr><span class="parameters">(<a href="https://eclipse-ee4j.github.io/angus-activation/api/jakarta.activation/jakarta/activation/MimeType.html" title="class or interface in jakarta.activation" class="external-link">MimeType</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-141">setContentScriptType</a></span><wbr><span class="parameters">(<a href="https://eclipse-ee4j.github.io/angus-activation/api/jakarta.activation/jakarta/activation/MimeType.html" title="class or interface in jakarta.activation" class="external-link">MimeType</a>&nbsp;value)</span></div>
 <div class="block">Sets the default scripting language used to process the type strings
   in event attributes. This language must be used for all instances of
   script that do not specify their own scripting language.<br>
@@ -370,7 +370,7 @@ extends <a href="SVGElementWithChildren.html" title="interface in org.tquadrat.f
 <li>
 <section class="detail" id="setDimension(org.tquadrat.foundation.svg.type.SVGNumber,org.tquadrat.foundation.svg.type.SVGNumber)">
 <h3>setDimension</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-147">setDimension</a></span><wbr><span class="parameters">(<a href="type/SVGNumber.html" title="class in org.tquadrat.foundation.svg.type">SVGNumber</a>&nbsp;width,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-149">setDimension</a></span><wbr><span class="parameters">(<a href="type/SVGNumber.html" title="class in org.tquadrat.foundation.svg.type">SVGNumber</a>&nbsp;width,
  <a href="type/SVGNumber.html" title="class in org.tquadrat.foundation.svg.type">SVGNumber</a>&nbsp;height)</span></div>
 <div class="block">Sets the dimension for this <code>&lt;svg&gt;</code> element.</div>
 <dl class="notes">
@@ -383,7 +383,7 @@ extends <a href="SVGElementWithChildren.html" title="interface in org.tquadrat.f
 <li>
 <section class="detail" id="setHeight(org.tquadrat.foundation.svg.type.SVGNumber)">
 <h3>setHeight</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-160">setHeight</a></span><wbr><span class="parameters">(<a href="type/SVGNumber.html" title="class in org.tquadrat.foundation.svg.type">SVGNumber</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-162">setHeight</a></span><wbr><span class="parameters">(<a href="type/SVGNumber.html" title="class in org.tquadrat.foundation.svg.type">SVGNumber</a>&nbsp;value)</span></div>
 <div class="block">Sets the height of the embedded <code>&lt;svg&gt;</code> element.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -395,7 +395,7 @@ extends <a href="SVGElementWithChildren.html" title="interface in org.tquadrat.f
 <li>
 <section class="detail" id="setPreserveAspectRatio(org.tquadrat.foundation.svg.type.SVGPreserveAspectRatio)">
 <h3>setPreserveAspectRatio</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-170">setPreserveAspectRatio</a></span><wbr><span class="parameters">(<a href="type/SVGPreserveAspectRatio.html" title="enum class in org.tquadrat.foundation.svg.type">SVGPreserveAspectRatio</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-172">setPreserveAspectRatio</a></span><wbr><span class="parameters">(<a href="type/SVGPreserveAspectRatio.html" title="enum class in org.tquadrat.foundation.svg.type">SVGPreserveAspectRatio</a>&nbsp;value)</span></div>
 <div class="block">Sets the mode for the aspect ratio preservation for this <code>&lt;svg&gt;</code>
   element.</div>
 <dl class="notes">
@@ -408,7 +408,7 @@ extends <a href="SVGElementWithChildren.html" title="interface in org.tquadrat.f
 <li>
 <section class="detail" id="setStyleSheet(java.lang.CharSequence...)">
 <h3>setStyleSheet</h3>
-<div class="member-signature"><span class="return-type"><a href="SVGStyle.html" title="interface in org.tquadrat.foundation.svg">SVGStyle</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-186">setStyleSheet</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>...&nbsp;styles)</span></div>
+<div class="member-signature"><span class="return-type"><a href="SVGStyle.html" title="interface in org.tquadrat.foundation.svg">SVGStyle</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-188">setStyleSheet</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>...&nbsp;styles)</span></div>
 <div class="block"><p>Sets the given CSS style definitions as a style sheet in
   an SVG <code>style</code> element to the <code>&lt;defs&gt;</code> element
   of this <code>&lt;svg&gt;</code> element.</p>
@@ -429,7 +429,7 @@ extends <a href="SVGElementWithChildren.html" title="interface in org.tquadrat.f
 <li>
 <section class="detail" id="setViewBox(org.tquadrat.foundation.svg.type.SVGNumber,org.tquadrat.foundation.svg.type.SVGNumber,org.tquadrat.foundation.svg.type.SVGNumber,org.tquadrat.foundation.svg.type.SVGNumber)">
 <h3>setViewBox</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-196">setViewBox</a></span><wbr><span class="parameters">(<a href="type/SVGNumber.html" title="class in org.tquadrat.foundation.svg.type">SVGNumber</a>&nbsp;x,
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-198">setViewBox</a></span><wbr><span class="parameters">(<a href="type/SVGNumber.html" title="class in org.tquadrat.foundation.svg.type">SVGNumber</a>&nbsp;x,
  <a href="type/SVGNumber.html" title="class in org.tquadrat.foundation.svg.type">SVGNumber</a>&nbsp;y,
  <a href="type/SVGNumber.html" title="class in org.tquadrat.foundation.svg.type">SVGNumber</a>&nbsp;width,
  <a href="type/SVGNumber.html" title="class in org.tquadrat.foundation.svg.type">SVGNumber</a>&nbsp;height)</span></div>
@@ -446,7 +446,7 @@ extends <a href="SVGElementWithChildren.html" title="interface in org.tquadrat.f
 <li>
 <section class="detail" id="setWidth(org.tquadrat.foundation.svg.type.SVGNumber)">
 <h3>setWidth</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-205">setWidth</a></span><wbr><span class="parameters">(<a href="type/SVGNumber.html" title="class in org.tquadrat.foundation.svg.type">SVGNumber</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-207">setWidth</a></span><wbr><span class="parameters">(<a href="type/SVGNumber.html" title="class in org.tquadrat.foundation.svg.type">SVGNumber</a>&nbsp;value)</span></div>
 <div class="block">Sets the width of the embedded <code>&lt;svg&gt;</code> element.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -458,7 +458,7 @@ extends <a href="SVGElementWithChildren.html" title="interface in org.tquadrat.f
 <li>
 <section class="detail" id="setX(org.tquadrat.foundation.svg.type.SVGNumber)">
 <h3>setX</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-215">setX</a></span><wbr><span class="parameters">(<a href="type/SVGNumber.html" title="class in org.tquadrat.foundation.svg.type">SVGNumber</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-217">setX</a></span><wbr><span class="parameters">(<a href="type/SVGNumber.html" title="class in org.tquadrat.foundation.svg.type">SVGNumber</a>&nbsp;value)</span></div>
 <div class="block">Sets the x coordinate for the top left corner of the embedded
   <code>&lt;svg&gt;</code> element.</div>
 <dl class="notes">
@@ -471,7 +471,7 @@ extends <a href="SVGElementWithChildren.html" title="interface in org.tquadrat.f
 <li>
 <section class="detail" id="setY(org.tquadrat.foundation.svg.type.SVGNumber)">
 <h3>setY</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-225">setY</a></span><wbr><span class="parameters">(<a href="type/SVGNumber.html" title="class in org.tquadrat.foundation.svg.type">SVGNumber</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-227">setY</a></span><wbr><span class="parameters">(<a href="type/SVGNumber.html" title="class in org.tquadrat.foundation.svg.type">SVGNumber</a>&nbsp;value)</span></div>
 <div class="block">Sets the y coordinate for the top left corner of the embedded
   <code>&lt;svg&gt;</code> element.</div>
 <dl class="notes">
@@ -484,7 +484,7 @@ extends <a href="SVGElementWithChildren.html" title="interface in org.tquadrat.f
 <li>
 <section class="detail" id="setZoomAndPan(boolean)">
 <h3>setZoomAndPan</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-237">setZoomAndPan</a></span><wbr><span class="parameters">(boolean&nbsp;flag)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVG.html#line-239">setZoomAndPan</a></span><wbr><span class="parameters">(boolean&nbsp;flag)</span></div>
 <div class="block">Sets the 'Zoom-and-Pan' flag; if enabled on a stand-alone instance of
   the <code>&lt;svg&gt;</code> element, it allows panning and zooming the image.</div>
 <dl class="notes">

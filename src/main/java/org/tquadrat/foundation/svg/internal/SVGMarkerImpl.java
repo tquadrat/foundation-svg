@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -80,12 +80,12 @@ import org.tquadrat.foundation.svg.type.SVGNumber.SVGDegree;
  *  for the SVG {@code <marker>}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGMarkerImpl.java 840 2021-01-10 21:37:03Z tquadrat $
+ *  @version $Id: SVGMarkerImpl.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGMarkerImpl.java 840 2021-01-10 21:37:03Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGMarkerImpl.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 @API( status = INTERNAL, since = "0.0.5" )
 public sealed class SVGMarkerImpl extends SVGElementImpl implements SVGMarker
     permits SVGPositionedMarkerImpl
@@ -137,6 +137,7 @@ public sealed class SVGMarkerImpl extends SVGElementImpl implements SVGMarker
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     public final void setMarkerHeight( final SVGNumber value )
     {
@@ -156,7 +157,7 @@ public sealed class SVGMarkerImpl extends SVGElementImpl implements SVGMarker
      *  {@inheritDoc}
      */
     @Override
-    public final void setMarkerWidth( final SVGNumber value )
+    public final void setMarkerWidth( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value )
     {
         setAttribute( SVGATTRIBUTE_MarkerWidth, value );
     }   //  setMarkerWidth()
@@ -174,7 +175,7 @@ public sealed class SVGMarkerImpl extends SVGElementImpl implements SVGMarker
      *  {@inheritDoc}
      */
     @Override
-    public final void setOrientation( final SVGDegree value )
+    public final void setOrientation( @SuppressWarnings( "UseOfConcreteClass" ) final SVGDegree value )
     {
         setAttribute( SVGATTRIBUTE_Orientation, nonNull( value ) ? value.toString() : null );
     }   //  setOrientation()
@@ -183,7 +184,7 @@ public sealed class SVGMarkerImpl extends SVGElementImpl implements SVGMarker
      *  {@inheritDoc}
      */
     @Override
-    public final void setReferenceX( final SVGNumber value )
+    public final void setReferenceX( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value )
     {
         setAttribute( SVGATTRIBUTE_ReferenceX, value );
     }   //  setReferenceX()
@@ -192,7 +193,7 @@ public sealed class SVGMarkerImpl extends SVGElementImpl implements SVGMarker
      *  {@inheritDoc}
      */
     @Override
-    public final void setReferenceY( final SVGNumber value )
+    public final void setReferenceY( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value )
     {
         setAttribute( SVGATTRIBUTE_ReferenceY, value );
     }   //  setReferenceY()

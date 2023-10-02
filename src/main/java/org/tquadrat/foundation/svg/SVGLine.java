@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -23,6 +23,7 @@ import static org.tquadrat.foundation.svg.SVGUtils.number;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.svg.internal.SVGLineImpl;
 import org.tquadrat.foundation.svg.type.SVGNumber;
 import org.tquadrat.foundation.svg.type.SVGNumber.SVGUserUnitValue;
 
@@ -30,14 +31,15 @@ import org.tquadrat.foundation.svg.type.SVGNumber.SVGUserUnitValue;
  *  The definition of an SVG {@code <line>} element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGLine.java 980 2022-01-06 15:29:19Z tquadrat $
+ *  @version $Id: SVGLine.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGLine.java 980 2022-01-06 15:29:19Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGLine.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
-public sealed interface SVGLine extends SVGElementWithChildren, AllowsConditionalProcessingAttributes, AllowsGlobalEventAttributes, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes permits SVGElementAdapter, org.tquadrat.foundation.svg.internal.SVGLineImpl
+public sealed interface SVGLine extends SVGElementWithChildren, AllowsConditionalProcessingAttributes, AllowsGlobalEventAttributes, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes
+    permits SVGElementAdapter, SVGLineImpl
 {
         /*---------*\
     ====** Methods **==========================================================
@@ -50,6 +52,7 @@ public sealed interface SVGLine extends SVGElementWithChildren, AllowsConditiona
      *  @param  x2  The x coordinate for the ending point of the line.
      *  @param  y2  The y coordinate for the ending point of the line.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public default void defineLine( final SVGNumber x1, final SVGNumber y1, final SVGNumber x2, final SVGNumber y2 )
     {
         setStartPoint( x1, y1 );
@@ -62,6 +65,7 @@ public sealed interface SVGLine extends SVGElementWithChildren, AllowsConditiona
      *  @param  x  The x coordinate for the ending point of the line.
      *  @param  y  The y coordinate for the ending point of the line.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public default void setEndPoint( final SVGNumber x, final SVGNumber y )
     {
         setX2( requireNonNullArgument( x, "x" ) );
@@ -82,7 +86,7 @@ public sealed interface SVGLine extends SVGElementWithChildren, AllowsConditiona
      *
      *  @throws IllegalArgumentException    The type is less than 0.
      */
-    public void setPathLength( final SVGUserUnitValue length );
+    public void setPathLength( @SuppressWarnings( "UseOfConcreteClass" ) final SVGUserUnitValue length );
 
     /**
      *  Sets the length of the path represented by this SVG {@code <line>}
@@ -122,6 +126,7 @@ public sealed interface SVGLine extends SVGElementWithChildren, AllowsConditiona
      *  @param  x   The x coordinate for the starting point of the line.
      *  @param  y   The y coordinate for the starting point of the line.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public default void setStartPoint( final SVGNumber x, final SVGNumber y )
     {
         setX1( requireNonNullArgument( x, "x" ) );
@@ -133,28 +138,28 @@ public sealed interface SVGLine extends SVGElementWithChildren, AllowsConditiona
      *
      *  @param  value   The x coordinate.
      */
-    public void setX1( final SVGNumber value );
+    public void setX1( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value );
 
     /**
      *  Sets the x coordinate of the ending point for this line.
      *
      *  @param  value   The x coordinate.
      */
-    public void setX2( final SVGNumber value );
+    public void setX2( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value );
 
     /**
      *  Sets the y coordinate of the starting point for this line.
      *
      *  @param  value   The y coordinate.
      */
-    public void setY1( final SVGNumber value );
+    public void setY1( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value );
 
     /**
      *  Sets the y coordinate of the ending point for this line.
      *
      *  @param  value   The y coordinate.
      */
-    public void setY2( final SVGNumber value );
+    public void setY2( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value );
 }
 //  interface SVGLine
 

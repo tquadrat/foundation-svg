@@ -89,10 +89,10 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="SVGElementAdapter.html" title="class in org.tquadrat.foundation.svg">SVGElementAdapter</a></code>, <code><a href="SVGGenericElement.html" title="class in org.tquadrat.foundation.svg">SVGGenericElement</a></code>, <code><a href="internal/SVGStyleImpl.html" title="class in org.tquadrat.foundation.svg.internal">SVGStyleImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="annotations"><a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/annotation/ClassVersion.html" title="class or interface in org.tquadrat.foundation.annotation" class="external-link">@ClassVersion</a>(<a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/annotation/ClassVersion.html#sourceVersion()" title="class or interface in org.tquadrat.foundation.annotation" class="external-link">sourceVersion</a>="$Id: SVGStyle.java 980 2022-01-06 15:29:19Z tquadrat $")
+<div class="type-signature"><span class="annotations"><a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/annotation/ClassVersion.html" title="class or interface in org.tquadrat.foundation.annotation" class="external-link">@ClassVersion</a>(<a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/annotation/ClassVersion.html#sourceVersion()" title="class or interface in org.tquadrat.foundation.annotation" class="external-link">sourceVersion</a>="$Id: SVGStyle.java 1074 2023-10-02 12:05:06Z tquadrat $")
 <a href="https://apiguardian-team.github.io/apiguardian/docs/current/api/org/apiguardian/api/API.html" title="class or interface in org.apiguardian.api" class="external-link">@API</a>(<a href="https://apiguardian-team.github.io/apiguardian/docs/current/api/org/apiguardian/api/API.html#status()" title="class or interface in org.apiguardian.api" class="external-link">status</a>=<a href="https://apiguardian-team.github.io/apiguardian/docs/current/api/org/apiguardian/api/API.Status.html#STABLE" title="class or interface in org.apiguardian.api" class="external-link">STABLE</a>,
      <a href="https://apiguardian-team.github.io/apiguardian/docs/current/api/org/apiguardian/api/API.html#since()" title="class or interface in org.apiguardian.api" class="external-link">since</a>="0.0.5")
-</span><span class="modifiers">public sealed interface </span><span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVGStyle.html#line-34">SVGStyle</a></span><span class="extends-implements">
+</span><span class="modifiers">public sealed interface </span><span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVGStyle.html#line-35">SVGStyle</a></span><span class="extends-implements">
 extends <a href="SVGElement.html" title="interface in org.tquadrat.foundation.svg">SVGElement</a></span>
 <span class="permits">permits <a href="SVGElementAdapter.html" title="class in org.tquadrat.foundation.svg">SVGElementAdapter</a>, <a href="internal/SVGStyleImpl.html" title="class in org.tquadrat.foundation.svg.internal">SVGStyleImpl</a></span></div>
 <div class="block">The definition for the SVG <code>&lt;style&gt;</code> element.</div>
@@ -100,7 +100,7 @@ extends <a href="SVGElement.html" title="interface in org.tquadrat.foundation.sv
 <dt><span class="simpleTagLabel">Author:</span></dt>
   <dd>Thomas Thrien (<a href="mailto:thomas.thrien@tquadrat.org">thomas.thrien@tquadrat.org</a>)</dd>
 <dt>Version:</dt>
-<dd>$Id: SVGStyle.java 980 2022-01-06 15:29:19Z tquadrat $</dd>
+<dd>$Id: SVGStyle.java 1074 2023-10-02 12:05:06Z tquadrat $</dd>
 <dt>Since:</dt>
 <dd>0.0.5</dd>
 
@@ -189,7 +189,7 @@ extends <a href="SVGElement.html" title="interface in org.tquadrat.foundation.sv
 <li>
 <section class="detail" id="addStyle(java.lang.CharSequence...)">
 <h3>addStyle</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVGStyle.html#line-46">addStyle</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>...&nbsp;styles)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVGStyle.html#line-48">addStyle</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>...&nbsp;styles)</span></div>
 <div class="block">Adds a CSS style definition to this style.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -200,7 +200,7 @@ extends <a href="SVGElement.html" title="interface in org.tquadrat.foundation.sv
 <li>
 <section class="detail" id="getStyleSheet()">
 <h3>getStyleSheet</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVGStyle.html#line-53">getStyleSheet</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVGStyle.html#line-55">getStyleSheet</a></span>()</div>
 <div class="block">Returns the style sheet.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -211,7 +211,7 @@ extends <a href="SVGElement.html" title="interface in org.tquadrat.foundation.sv
 <li>
 <section class="detail" id="merge(org.tquadrat.foundation.svg.SVGStyle)">
 <h3>merge</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVGStyle.html#line-62">merge</a></span><wbr><span class="parameters">(<a href="SVGStyle.html" title="interface in org.tquadrat.foundation.svg">SVGStyle</a>&nbsp;other)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVGStyle.html#line-64">merge</a></span><wbr><span class="parameters">(<a href="SVGStyle.html" title="interface in org.tquadrat.foundation.svg">SVGStyle</a>&nbsp;other)</span></div>
 <div class="block">Merges the given SVG <code>&lt;style&gt;</code> element into this one.<br>
   <br>Only the CSS style definitions are taken from the other element,
   no attributes or comments.</div>
@@ -224,7 +224,7 @@ extends <a href="SVGElement.html" title="interface in org.tquadrat.foundation.sv
 <li>
 <section class="detail" id="toString(int,boolean)">
 <h3>toString</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVGStyle.html#line-67">toString</a></span><wbr><span class="parameters">(int&nbsp;indentationLevel,
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.svg/org/tquadrat/foundation/svg/SVGStyle.html#line-69">toString</a></span><wbr><span class="parameters">(int&nbsp;indentationLevel,
  boolean&nbsp;prettyPrint)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>

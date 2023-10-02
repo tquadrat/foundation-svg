@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -34,6 +34,7 @@ import java.util.Locale;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.svg.internal.SVGElementImpl;
 import org.tquadrat.foundation.svg.type.SVGElementCategory;
 import org.tquadrat.foundation.xml.builder.XMLElement;
 import org.tquadrat.foundation.xml.builder.spi.Element;
@@ -42,15 +43,15 @@ import org.tquadrat.foundation.xml.builder.spi.Element;
  *  The definition of an SVG element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGElement.java 980 2022-01-06 15:29:19Z tquadrat $
+ *  @version $Id: SVGElement.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGElement.java 980 2022-01-06 15:29:19Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGElement.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVGElement extends Element
-    permits SVGElementWithChildren, SVGStyle, SVGUse, org.tquadrat.foundation.svg.internal.SVGElementImpl
+    permits SVGElementWithChildren, SVGStyle, SVGUse, SVGElementImpl
 {
         /*------------------------*\
     ====** Static Initialisations **===========================================
@@ -58,6 +59,7 @@ public sealed interface SVGElement extends Element
     /**
      *  The core attributes.
      */
+    @SuppressWarnings( "StaticCollection" )
     public static final List<String> CORE_ATTRIBUTES = List.copyOf( asList(
         SVGATTRIBUTE_Id,
         SVGATTRIBUTE_Lang,

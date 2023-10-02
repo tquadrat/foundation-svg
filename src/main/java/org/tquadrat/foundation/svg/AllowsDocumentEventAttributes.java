@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -40,14 +40,15 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  will implement this interface.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: AllowsDocumentEventAttributes.java 980 2022-01-06 15:29:19Z tquadrat $
+ *  @version $Id: AllowsDocumentEventAttributes.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: AllowsDocumentEventAttributes.java 980 2022-01-06 15:29:19Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: AllowsDocumentEventAttributes.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
-public sealed interface AllowsDocumentEventAttributes permits SVG, SVGElementAdapter
+public sealed interface AllowsDocumentEventAttributes
+    permits SVG, SVGElementAdapter
 {
         /*------------------------*\
     ====** Static Initialisations **===========================================
@@ -55,6 +56,7 @@ public sealed interface AllowsDocumentEventAttributes permits SVG, SVGElementAda
     /**
      *  The document event attributes.
      */
+    @SuppressWarnings( "StaticCollection" )
     public static final List<String> DOCUMENTEVENT_ATTRIBUTES = List.of(
         SVGATTRIBUTE_OnAbort,
         SVGATTRIBUTE_OnError,

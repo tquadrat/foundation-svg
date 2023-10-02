@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -47,12 +47,12 @@ import org.tquadrat.foundation.xml.builder.spi.Element;
  *  for the SVG {@code <style>} element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGStyleImpl.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: SVGStyleImpl.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGStyleImpl.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGStyleImpl.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 @API( status = INTERNAL, since = "0.0.5" )
 public final class SVGStyleImpl extends SVGElementImpl implements SVGStyle
 {
@@ -158,11 +158,10 @@ public final class SVGStyleImpl extends SVGElementImpl implements SVGStyle
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( {"InstanceofConcreteClass", "AccessingNonPublicFieldOfAnotherObject"} )
     @Override
     public final void merge( final SVGStyle other )
     {
-        if( requireNonNullArgument( other, "other" ) instanceof SVGStyleImpl styleImpl )
+        if( requireNonNullArgument( other, "other" ) instanceof final SVGStyleImpl styleImpl )
         {
             m_StyleDefinitions.addAll( styleImpl.m_StyleDefinitions );
         }

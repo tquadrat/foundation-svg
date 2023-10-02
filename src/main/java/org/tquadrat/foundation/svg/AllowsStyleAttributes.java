@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -33,12 +33,12 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  will implement this interface.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: AllowsStyleAttributes.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: AllowsStyleAttributes.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: AllowsStyleAttributes.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: AllowsStyleAttributes.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface AllowsStyleAttributes
     permits SVG, SVGGroup, SVGLine, SVGPath, SVGRectangle, SVGSymbol, SVGTSpan, SVGText
@@ -49,6 +49,7 @@ public sealed interface AllowsStyleAttributes
     /**
      *  The core attributes.
      */
+    @SuppressWarnings( "StaticCollection" )
     public static final List<String> STYLE_ATTRIBUTES = List.of( SVGATTRIBUTE_Class, SVGATTRIBUTE_Style );
 
         /*---------*\

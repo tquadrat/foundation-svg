@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -21,19 +21,21 @@ import static org.apiguardian.api.API.Status.STABLE;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.svg.internal.SVGStyleImpl;
 
 /**
  *  The definition for the SVG {@code <style>} element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGStyle.java 980 2022-01-06 15:29:19Z tquadrat $
+ *  @version $Id: SVGStyle.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGStyle.java 980 2022-01-06 15:29:19Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGStyle.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
-public sealed interface SVGStyle extends SVGElement permits SVGElementAdapter, org.tquadrat.foundation.svg.internal.SVGStyleImpl
+public sealed interface SVGStyle extends SVGElement
+    permits SVGElementAdapter, SVGStyleImpl
 {
         /*---------*\
     ====** Methods **==========================================================

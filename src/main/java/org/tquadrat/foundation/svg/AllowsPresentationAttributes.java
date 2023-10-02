@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -158,13 +158,13 @@ import org.tquadrat.foundation.svg.type.SVGTransform;
  *  will implement this interface.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: AllowsPresentationAttributes.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: AllowsPresentationAttributes.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( "ClassWithTooManyMethods" )
-@ClassVersion( sourceVersion = "$Id: AllowsPresentationAttributes.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: AllowsPresentationAttributes.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface AllowsPresentationAttributes
     permits SVG, SVGClipPath, SVGGroup, SVGLine, SVGMarker, SVGPath, SVGRectangle, SVGSymbol, SVGTSpan, SVGText, SVGUse
@@ -175,6 +175,7 @@ public sealed interface AllowsPresentationAttributes
     /**
      *  The presentation attributes.
      */
+    @SuppressWarnings( "StaticCollection" )
     public static final List<String> PRESENTATION_ATTRIBUTES = List.of(
         SVGATTRIBUTE_AlignmentBaseline,
         SVGATTRIBUTE_BaselineShift,
@@ -294,7 +295,7 @@ public sealed interface AllowsPresentationAttributes
      *
      *  @see SVGUtils#SVGATTRIBUTE_Color
      */
-    public void setColor( final SVGColor value );
+    public void setColor( @SuppressWarnings( "UseOfConcreteClass" ) final SVGColor value );
 
     /**
      *  Sets the presentation attribute {@code color-interpolation} for this SVG element.
@@ -384,7 +385,7 @@ public sealed interface AllowsPresentationAttributes
      *
      *  @see SVGUtils#SVGATTRIBUTE_Fill
      */
-    public void setFill( final SVGPaint value );
+    public void setFill( @SuppressWarnings( "UseOfConcreteClass" ) final SVGPaint value );
 
     /**
      *  Sets the presentation attribute {@code fill-opacity} for this SVG element.
@@ -645,7 +646,7 @@ public sealed interface AllowsPresentationAttributes
      *
      *  @see SVGUtils#SVGATTRIBUTE_Stroke
      */
-    public void setStroke( final SVGPaint value );
+    public void setStroke( @SuppressWarnings( "UseOfConcreteClass" ) final SVGPaint value );
 
     /**
      *  Sets the presentation attribute {@code stroke-dasharray} for this SVG element.
@@ -711,7 +712,7 @@ public sealed interface AllowsPresentationAttributes
      *
      *  @see SVGUtils#SVGATTRIBUTE_StrokeWidth
      */
-    public void setStrokeWidth( final SVGNumber value );
+    public void setStrokeWidth( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value );
 
     /**
      *  Sets the presentation attribute {@code text-anchor} for this SVG element.

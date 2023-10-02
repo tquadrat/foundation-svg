@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -18,6 +18,7 @@
 package org.tquadrat.foundation.svg.internal;
 
 import static java.lang.Double.min;
+import static java.lang.String.format;
 import static java.util.Arrays.stream;
 import static java.util.Collections.emptyList;
 import static java.util.stream.Collectors.joining;
@@ -183,7 +184,6 @@ import static org.tquadrat.foundation.svg.SVGUtils.SVGATTRIBUTE_y;
 import static org.tquadrat.foundation.svg.SVGUtils.SVGELEMENT_Description;
 import static org.tquadrat.foundation.svg.SVGUtils.SVGELEMENT_Title;
 import static org.tquadrat.foundation.svg.SVGUtils.XMLATTRIBUTE_Base;
-import static org.tquadrat.foundation.util.StringUtils.format;
 import static org.tquadrat.foundation.util.StringUtils.isNotEmptyOrBlank;
 import static org.tquadrat.foundation.xml.builder.XMLBuilderUtils.getNMTokenValidator;
 import static org.tquadrat.foundation.xml.builder.XMLElement.Flags.ALLOWS_TEXT;
@@ -215,13 +215,13 @@ import org.tquadrat.foundation.xml.builder.spi.XMLElementAdapter;
  *  why it is not abstract).</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGElementImpl.java 980 2022-01-06 15:29:19Z tquadrat $
+ *  @version $Id: SVGElementImpl.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( {"ClassWithTooManyMethods", "OverlyComplexClass"} )
-@ClassVersion( sourceVersion = "$Id: SVGElementImpl.java 980 2022-01-06 15:29:19Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGElementImpl.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 @API( status = INTERNAL, since = "0.0.5" )
 public sealed class SVGElementImpl extends XMLElementAdapter implements SVGElement
     permits SVGElementAdapter, SVGClipPathImpl,
@@ -884,7 +884,7 @@ public sealed class SVGElementImpl extends XMLElementAdapter implements SVGEleme
     @Override
     public XMLElement setId( final String id ) throws IllegalArgumentException
     {
-        if( !getNMTokenValidator().test( requireNotEmptyArgument( id, "id" ) ) ) throw new IllegalArgumentException( format( "Invalid id: %s", id ) );
+        if( !getNMTokenValidator().test( requireNotEmptyArgument( id, "id" ) ) ) throw new IllegalArgumentException( "Invalid id: %s".formatted( id ) );
         final var retValue = setAttribute( SVGATTRIBUTE_Id, id );
 
         //---* Done *----------------------------------------------------------
@@ -1192,7 +1192,7 @@ public sealed class SVGElementImpl extends XMLElementAdapter implements SVGEleme
     @SuppressWarnings( "UseOfConcreteClass" )
     public void setPathLength( final SVGUserUnitValue length )
     {
-        if( nonNull( length ) && length.isNegative() ) throw new IllegalArgumentException( format( "length is negative: %s", length.value() ) );
+        if( nonNull( length ) && length.isNegative() ) throw new IllegalArgumentException( "length is negative: %s".formatted( length.value() ) );
 
         setAttribute( SVGATTRIBUTE_PathLength, nonNull( length ) ? length.toString() : null );
     }   //  setPathLength()

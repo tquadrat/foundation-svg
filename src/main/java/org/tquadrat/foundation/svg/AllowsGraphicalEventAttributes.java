@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -36,12 +36,12 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  will implement this interface.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: AllowsGraphicalEventAttributes.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: AllowsGraphicalEventAttributes.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: AllowsGraphicalEventAttributes.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: AllowsGraphicalEventAttributes.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface AllowsGraphicalEventAttributes
     permits SVG, SVGGroup, SVGLine, SVGPath, SVGRectangle, SVGSymbol, SVGTSpan, SVGText, SVGUse
@@ -52,6 +52,7 @@ public sealed interface AllowsGraphicalEventAttributes
     /**
      *  The graphical event attributes.
      */
+    @SuppressWarnings( "StaticCollection" )
     public static final List<String> GRAPHICALEVENT_ATTRIBUTES = List.of( SVGATTRIBUTE_OnActivate, SVGATTRIBUTE_OnFocusIn, SVGATTRIBUTE_OnFocusOut );
 
         /*---------*\

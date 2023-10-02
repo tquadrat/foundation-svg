@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -44,13 +44,13 @@ import org.tquadrat.foundation.svg.type.SVGNumber.SVGDegree;
  *  {@link org.tquadrat.foundation.svg.SVGTSpan}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGTextBase.java 840 2021-01-10 21:37:03Z tquadrat $
+ *  @version $Id: SVGTextBase.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( "AbstractClassExtendsConcreteClass" )
-@ClassVersion( sourceVersion = "$Id: SVGTextBase.java 840 2021-01-10 21:37:03Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGTextBase.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 @API( status = INTERNAL, since = "0.0.5" )
 public abstract sealed class SVGTextBase extends SVGElementImpl
     permits SVGTSpanImpl, SVGTextImpl
@@ -80,7 +80,7 @@ public abstract sealed class SVGTextBase extends SVGElementImpl
      *
      *  @param  values  The lengths.
      */
-    public final void setDx( final SVGNumber... values )
+    public final void setDx( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber... values )
     {
         final var value = nonNull( values ) && (values.length != 0) ? stream( values ).map( SVGNumber::toString ).collect( joining( "," ) ) : null;
         setAttribute( SVGATTRIBUTE_dx, value );
@@ -95,7 +95,7 @@ public abstract sealed class SVGTextBase extends SVGElementImpl
      *
      *  @param  values  The heights.
      */
-    public final void setDy( final SVGNumber... values )
+    public final void setDy( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber... values )
     {
         final var value = nonNull( values ) && (values.length != 0) ? stream( values ).map( SVGNumber::toString ).collect( joining( "," ) ) : null;
         setAttribute( SVGATTRIBUTE_dy, value );
@@ -124,7 +124,7 @@ public abstract sealed class SVGTextBase extends SVGElementImpl
      *
      *  @param  values  The rotations.
      */
-    public final void setRotate( final SVGDegree... values )
+    public final void setRotate( @SuppressWarnings( "UseOfConcreteClass" ) final SVGDegree... values )
     {
         final var value = nonNull( values ) && (values.length != 0) ? stream( values ).map( SVGDegree::toString ).collect( joining( "," ) ) : null;
         setAttribute( SVGATTRIBUTE_Rotate, value );
@@ -136,7 +136,7 @@ public abstract sealed class SVGTextBase extends SVGElementImpl
      *
      *  @param  value   The intended text length.
      */
-    public final void setTextLength( final SVGNumber value ) { setAttribute( SVGATTRIBUTE_TextLength, value ); }
+    public final void setTextLength( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber value ) { setAttribute( SVGATTRIBUTE_TextLength, value ); }
 
     /**
      *  Sets a list of x-axis position. The n<sup>th</sup> x-axis position is
@@ -146,7 +146,7 @@ public abstract sealed class SVGTextBase extends SVGElementImpl
      *
      *  @param  values  The x-axis positions.
      */
-    public final void setX( final SVGNumber... values )
+    public final void setX( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber... values )
     {
         final var value = nonNull( values ) && (values.length != 0) ? stream( values ).map( SVGNumber::toString ).collect( joining( "," ) ) : null;
         setAttribute( SVGATTRIBUTE_x, value );
@@ -160,7 +160,7 @@ public abstract sealed class SVGTextBase extends SVGElementImpl
      *
      *  @param  values  The y-axis positions.
      */
-    public final void setY( final SVGNumber... values )
+    public final void setY( @SuppressWarnings( "UseOfConcreteClass" ) final SVGNumber... values )
     {
         final var value = nonNull( values ) && (values.length != 0) ? stream( values ).map( SVGNumber::toString ).collect( joining( "," ) ) : null;
         setAttribute( SVGATTRIBUTE_y, value );

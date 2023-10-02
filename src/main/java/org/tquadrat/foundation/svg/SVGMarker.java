@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -22,6 +22,7 @@ import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.svg.internal.SVGMarkerImpl;
 import org.tquadrat.foundation.svg.type.SVGMarkerOrientation;
 import org.tquadrat.foundation.svg.type.SVGNumber;
 import org.tquadrat.foundation.svg.type.SVGNumber.SVGDegree;
@@ -32,15 +33,15 @@ import org.tquadrat.foundation.svg.type.SVGTransform;
  *  The definition for the SVG {@code <marker>} element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGMarker.java 980 2022-01-06 15:29:19Z tquadrat $
+ *  @version $Id: SVGMarker.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGMarker.java 980 2022-01-06 15:29:19Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGMarker.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVGMarker extends SVGElementWithChildren, AllowsPresentationAttributes
-    permits SVGPositionedMarker, org.tquadrat.foundation.svg.internal.SVGMarkerImpl
+    permits SVGPositionedMarker, SVGMarkerImpl
 {
         /*---------*\
     ====** Methods **==========================================================
@@ -176,7 +177,6 @@ public sealed interface SVGMarker extends SVGElementWithChildren, AllowsPresenta
      *  @param  values  The transformations; if {@code null} or empty, the
      *      attribute will be removed.
      */
-    @SuppressWarnings( "AbstractMethodOverridesAbstractMethod" )
     @Override
     public void setTransform( final SVGTransform... values );
 

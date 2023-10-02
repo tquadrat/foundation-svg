@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -25,19 +25,18 @@ import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.util.StringUtils;
 
 /**
  *  SVG allows different units for some attributes; this class defines these
  *  units and the transformations into Strings for those units.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGUnit.java 980 2022-01-06 15:29:19Z tquadrat $
+ *  @version $Id: SVGUnit.java 1074 2023-10-02 12:05:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGUnit.java 980 2022-01-06 15:29:19Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGUnit.java 1074 2023-10-02 12:05:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public enum SVGUnit
 {
@@ -156,7 +155,7 @@ public enum SVGUnit
      *  @param  value   The type.
      *  @return The formatted type.
      */
-    public final String format( final long value ) { return StringUtils.format( ROOT, m_IntegerFormat, value ); }
+    public final String format( final long value ) { return String.format( ROOT, m_IntegerFormat, value ); }
 
     /**
      *  Formats the given type for this unit.
@@ -164,7 +163,7 @@ public enum SVGUnit
      *  @param  value   The type.
      *  @return The formatted type.
      */
-    public final String format( final double value ) { return StringUtils.format( ROOT, m_FloatingPointFormat, value ); }
+    public final String format( final double value ) { return String.format( ROOT, m_FloatingPointFormat, value ); }
 
     /**
      *  Returns the {@code SVGUnit} instance for the given unit String.
@@ -172,7 +171,6 @@ public enum SVGUnit
      *  @param  unit    The unit String.
      *  @return The {@code SVGUnit} for the given unit.
      */
-    @SuppressWarnings( "AccessingNonPublicFieldOfAnotherObject" )
     @API( status = STABLE, since = "0.0.5" )
     public static final SVGUnit valueForUnit( final String unit )
     {
