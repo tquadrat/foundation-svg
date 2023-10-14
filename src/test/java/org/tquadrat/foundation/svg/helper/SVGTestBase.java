@@ -44,13 +44,12 @@ import org.tquadrat.foundation.xml.builder.spi.Element;
  *  The base class for all test classes in the SVG project.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGTestBase.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: SVGTestBase.java 1076 2023-10-03 18:36:07Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@SuppressWarnings( "ClassWithTooManyFields" )
-@ClassVersion( sourceVersion = "$Id: SVGTestBase.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGTestBase.java 1076 2023-10-03 18:36:07Z tquadrat $" )
 public class SVGTestBase extends TestBaseClass
 {
         /*------------*\
@@ -148,7 +147,7 @@ public class SVGTestBase extends TestBaseClass
      *  mandatory, in order to arm the mocked instance.
      *
      *  @note Currently (as of December 2020) EasyMock is unable to mock sealed
-     *      classes or interfaces. Therefore this method cannot be used until
+     *      classes or interfaces. Therefore, this method cannot be used until
      *      this bug is fixed (or the feature is added, depending on your
      *      view). Meanwhile, the methods
      *      {@link #createParentElement()}

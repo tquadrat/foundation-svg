@@ -17,6 +17,7 @@
 
 package org.tquadrat.foundation.svg;
 
+import static java.lang.String.format;
 import static java.lang.System.out;
 import static java.util.Collections.unmodifiableMap;
 import static java.util.Comparator.naturalOrder;
@@ -55,7 +56,6 @@ import static org.tquadrat.foundation.svg.type.SVGMarkerOrientation.AUTO;
 import static org.tquadrat.foundation.svg.type.SVGMarkerOrientation.AUTO_START_REVERSE;
 import static org.tquadrat.foundation.svg.type.SVGPreserveAspectRatio.XMID_YMID;
 import static org.tquadrat.foundation.util.Comparators.listBasedComparator;
-import static org.tquadrat.foundation.util.StringUtils.format;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -83,10 +83,9 @@ import org.tquadrat.foundation.util.internal.ListBasedComparator;
  *  but unfortunately did this not work in the beginning.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: BugHunt_20201224_002.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: BugHunt_20201224_002.java 1076 2023-10-03 18:36:07Z tquadrat $
  */
-@SuppressWarnings( "MisorderedAssertEqualsArguments" )
-@ClassVersion( sourceVersion = "$Id: BugHunt_20201224_002.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: BugHunt_20201224_002.java 1076 2023-10-03 18:36:07Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.svg.BugHunt_20201224_002" )
 public class BugHunt_20201224_002 extends SVGTestBase
 {
@@ -707,12 +706,12 @@ public class BugHunt_20201224_002 extends SVGTestBase
         map.putAll( attributesMap );
 
         final var buffer = new StringBuilder();
-        unmodifiableMap( map ).forEach( (k,v) ->
+        unmodifiableMap( map ).forEach( (key,value) ->
         {
             if( !buffer.isEmpty() ) buffer.append( "|" );
-            buffer.append( k )
+            buffer.append( key )
                 .append( "='")
-                .append( v )
+                .append( value )
                 .append( '\'' );
         });
 

@@ -17,6 +17,7 @@
 
 package org.tquadrat.foundation.svg;
 
+import static java.lang.String.format;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
@@ -24,7 +25,6 @@ import static org.tquadrat.foundation.svg.SVG.Usage.STANDALONE_DOCUMENT;
 import static org.tquadrat.foundation.svg.SVGUtils.createMarker;
 import static org.tquadrat.foundation.svg.SVGUtils.createSVG;
 import static org.tquadrat.foundation.svg.SVGUtils.number;
-import static org.tquadrat.foundation.util.StringUtils.format;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -37,10 +37,10 @@ import org.tquadrat.foundation.svg.helper.SVGTestBase;
  *  {@link org.tquadrat.foundation.svg.SVGMarker}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TestSVGMarker.java 980 2022-01-06 15:29:19Z tquadrat $
+ *  @version $Id: TestSVGMarker.java 1076 2023-10-03 18:36:07Z tquadrat $
  *  @since 0.0.5
  */
-@ClassVersion( sourceVersion = "$Id: TestSVGMarker.java 980 2022-01-06 15:29:19Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestSVGMarker.java 1076 2023-10-03 18:36:07Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.svg.TestSVGMarker" )
 public class TestSVGMarker extends SVGTestBase
 {

@@ -17,12 +17,12 @@
 
 package org.tquadrat.foundation.svg.type;
 
+import static java.lang.String.format;
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.lang.CommonConstants.EMPTY_STRING;
 import static org.tquadrat.foundation.lang.CommonConstants.NULL_CHAR;
 import static org.tquadrat.foundation.lang.Objects.hash;
 import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
-import static org.tquadrat.foundation.util.StringUtils.format;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
@@ -146,14 +146,14 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *      (#x20 | #x9 | #xD | #xA)</code></pre>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $
+ *  @version $Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( {"AbstractClassWithoutAbstractMethods", "PublicInnerClass"} )
 
-@ClassVersion( sourceVersion = "$Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public abstract sealed class SVGPathElement extends ValueBase
     permits SVGPathElement.SVGArcTo, SVGPathElement.SVGClosePath,
@@ -214,12 +214,12 @@ public abstract sealed class SVGPathElement extends ValueBase
      *  <img src="doc-files/arcs02.svg" alt="Sample Images">
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $
+     *  @version $Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGArcTo extends SVGPathElement
     {
@@ -278,12 +278,12 @@ public abstract sealed class SVGPathElement extends ValueBase
      *  The implementation of the SVG path {@code ClosePath} element.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $
+     *  @version $Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGClosePath extends SVGPathElement
     {
@@ -307,12 +307,12 @@ public abstract sealed class SVGPathElement extends ValueBase
      *  coincident with the current point.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $
+     *  @version $Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGCubicCurveTo extends SVGPathElement
     {
@@ -396,12 +396,12 @@ public abstract sealed class SVGPathElement extends ValueBase
      *  horizontal line.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $
+     *  @version $Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGHLineTo extends SVGPathElement
     {
@@ -440,12 +440,12 @@ public abstract sealed class SVGPathElement extends ValueBase
      *  The implementation of the SVG path {@code LineTo} element.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $
+     *  @version $Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGLineTo extends SVGPathElement
     {
@@ -486,12 +486,12 @@ public abstract sealed class SVGPathElement extends ValueBase
      *  The implementation of the SVG path {@code MoveTo} element.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $
+     *  @version $Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGMoveTo extends SVGPathElement
     {
@@ -538,12 +538,12 @@ public abstract sealed class SVGPathElement extends ValueBase
      *  coincident with the current point.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $
+     *  @version $Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGQuadraticCurveTo extends SVGPathElement
     {
@@ -619,12 +619,12 @@ public abstract sealed class SVGPathElement extends ValueBase
      *  vertical line.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $
+     *  @version $Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGVLineTo extends SVGPathElement
     {

@@ -17,6 +17,7 @@
 
 package org.tquadrat.foundation.svg.svgutils;
 
+import static java.lang.String.format;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -26,7 +27,6 @@ import static org.tquadrat.foundation.svg.SVG.Usage.EMBED_HTML5;
 import static org.tquadrat.foundation.svg.SVG.Usage.EMBED_SVG;
 import static org.tquadrat.foundation.svg.SVG.Usage.STANDALONE_DOCUMENT;
 import static org.tquadrat.foundation.svg.SVGUtils.createSVG;
-import static org.tquadrat.foundation.util.StringUtils.format;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -45,11 +45,11 @@ import org.tquadrat.foundation.svg.helper.SVGTestBase;
  *  {@link SVGUtils}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TestCreateSVG.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: TestCreateSVG.java 1076 2023-10-03 18:36:07Z tquadrat $
  *  @since 0.0.5
  */
 @SuppressWarnings( {"MisorderedAssertEqualsArguments", "CommentedOutCode"} )
-@ClassVersion( sourceVersion = "$Id: TestCreateSVG.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestCreateSVG.java 1076 2023-10-03 18:36:07Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.svg.svgutils.TestCreateSVG" )
 public class TestCreateSVG extends SVGTestBase
 {

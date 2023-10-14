@@ -17,12 +17,12 @@
 
 package org.tquadrat.foundation.svg.svgutils;
 
+import static java.lang.String.format;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 import static org.tquadrat.foundation.svg.SVGUtils.createUse;
-import static org.tquadrat.foundation.util.StringUtils.format;
 
 import java.net.URI;
 
@@ -44,11 +44,11 @@ import org.tquadrat.foundation.svg.helper.SVGTestBase;
  *  {@link SVGUtils}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TestCreateUse.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: TestCreateUse.java 1076 2023-10-03 18:36:07Z tquadrat $
  *  @since 0.0.5
  */
 @SuppressWarnings( "MisorderedAssertEqualsArguments" )
-@ClassVersion( sourceVersion = "$Id: TestCreateUse.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestCreateUse.java 1076 2023-10-03 18:36:07Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.svg.svgutils.TestCreateUse" )
 public class TestCreateUse extends SVGTestBase
 {

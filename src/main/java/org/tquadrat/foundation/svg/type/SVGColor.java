@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -18,9 +18,9 @@
 package org.tquadrat.foundation.svg.type;
 
 import static java.lang.Math.abs;
+import static java.lang.String.format;
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.lang.Objects.requireNotEmptyArgument;
-import static org.tquadrat.foundation.util.StringUtils.format;
 
 import java.util.function.IntUnaryOperator;
 
@@ -31,12 +31,12 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  The implementation for SVG values representing colors.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGColor.java 980 2022-01-06 15:29:19Z tquadrat $
+ *  @version $Id: SVGColor.java 1076 2023-10-03 18:36:07Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGColor.java 980 2022-01-06 15:29:19Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGColor.java 1076 2023-10-03 18:36:07Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public final class SVGColor extends SVGPaint
 {

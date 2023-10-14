@@ -18,8 +18,10 @@
 package org.tquadrat.foundation.svg;
 
 import static java.lang.Character.isWhitespace;
+import static java.lang.String.format;
 import static java.lang.System.err;
 import static java.lang.System.out;
+import static org.tquadrat.foundation.lang.CommonConstants.UTF8;
 import static org.tquadrat.foundation.svg.SVG.Usage.STANDALONE_DOCUMENT;
 import static org.tquadrat.foundation.svg.SVGUtils.createSVG;
 import static org.tquadrat.foundation.svg.SVGUtils.createSVGDocument;
@@ -29,7 +31,6 @@ import static org.tquadrat.foundation.svg.SVGUtils.createUse;
 import static org.tquadrat.foundation.svg.SVGUtils.degree;
 import static org.tquadrat.foundation.svg.SVGUtils.em;
 import static org.tquadrat.foundation.svg.SVGUtils.pixel;
-import static org.tquadrat.foundation.util.StringUtils.format;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -46,13 +47,13 @@ import org.tquadrat.foundation.svg.type.SVGNumber.SVGDegree;
  *  to create an SVG document in a file.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGTester.java 980 2022-01-06 15:29:19Z tquadrat $
+ *  @version $Id: SVGTester.java 1076 2023-10-03 18:36:07Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
 @PlaygroundClass
-@ClassVersion( sourceVersion = "$Id: SVGTester.java 980 2022-01-06 15:29:19Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGTester.java 1076 2023-10-03 18:36:07Z tquadrat $" )
 public final class SVGTester
 {
         /*-----------*\
@@ -145,7 +146,7 @@ public final class SVGTester
             use.setY( pixel( 100 ) );
 
             //---* Write the document *----------------------------------------
-            try( final var writer = new FileWriter( outputFile ) )
+            try( final var writer = new FileWriter( outputFile, UTF8 ) )
             {
                 writer.write( document.toString( true ) );
             }

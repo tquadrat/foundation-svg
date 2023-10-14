@@ -30,12 +30,12 @@
 <span class="source-line-no">017</span><span id="line-17"></span>
 <span class="source-line-no">018</span><span id="line-18">package org.tquadrat.foundation.svg.type;</span>
 <span class="source-line-no">019</span><span id="line-19"></span>
-<span class="source-line-no">020</span><span id="line-20">import static org.apiguardian.api.API.Status.STABLE;</span>
-<span class="source-line-no">021</span><span id="line-21">import static org.tquadrat.foundation.lang.CommonConstants.EMPTY_STRING;</span>
-<span class="source-line-no">022</span><span id="line-22">import static org.tquadrat.foundation.lang.CommonConstants.NULL_CHAR;</span>
-<span class="source-line-no">023</span><span id="line-23">import static org.tquadrat.foundation.lang.Objects.hash;</span>
-<span class="source-line-no">024</span><span id="line-24">import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;</span>
-<span class="source-line-no">025</span><span id="line-25">import static org.tquadrat.foundation.util.StringUtils.format;</span>
+<span class="source-line-no">020</span><span id="line-20">import static java.lang.String.format;</span>
+<span class="source-line-no">021</span><span id="line-21">import static org.apiguardian.api.API.Status.STABLE;</span>
+<span class="source-line-no">022</span><span id="line-22">import static org.tquadrat.foundation.lang.CommonConstants.EMPTY_STRING;</span>
+<span class="source-line-no">023</span><span id="line-23">import static org.tquadrat.foundation.lang.CommonConstants.NULL_CHAR;</span>
+<span class="source-line-no">024</span><span id="line-24">import static org.tquadrat.foundation.lang.Objects.hash;</span>
+<span class="source-line-no">025</span><span id="line-25">import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;</span>
 <span class="source-line-no">026</span><span id="line-26"></span>
 <span class="source-line-no">027</span><span id="line-27">import org.apiguardian.api.API;</span>
 <span class="source-line-no">028</span><span id="line-28">import org.tquadrat.foundation.annotation.ClassVersion;</span>
@@ -159,14 +159,14 @@
 <span class="source-line-no">146</span><span id="line-146"> *      (#x20 | #x9 | #xD | #xA)&lt;/code&gt;&lt;/pre&gt;</span>
 <span class="source-line-no">147</span><span id="line-147"> *</span>
 <span class="source-line-no">148</span><span id="line-148"> *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org</span>
-<span class="source-line-no">149</span><span id="line-149"> *  @version $Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $</span>
+<span class="source-line-no">149</span><span id="line-149"> *  @version $Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $</span>
 <span class="source-line-no">150</span><span id="line-150"> *  @since 0.0.5</span>
 <span class="source-line-no">151</span><span id="line-151"> *</span>
 <span class="source-line-no">152</span><span id="line-152"> *  @UMLGraph.link</span>
 <span class="source-line-no">153</span><span id="line-153"> */</span>
 <span class="source-line-no">154</span><span id="line-154">@SuppressWarnings( {"AbstractClassWithoutAbstractMethods", "PublicInnerClass"} )</span>
 <span class="source-line-no">155</span><span id="line-155"></span>
-<span class="source-line-no">156</span><span id="line-156">@ClassVersion( sourceVersion = "$Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $" )</span>
+<span class="source-line-no">156</span><span id="line-156">@ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $" )</span>
 <span class="source-line-no">157</span><span id="line-157">@API( status = STABLE, since = "0.0.5" )</span>
 <span class="source-line-no">158</span><span id="line-158">public abstract sealed class SVGPathElement extends ValueBase</span>
 <span class="source-line-no">159</span><span id="line-159">    permits SVGPathElement.SVGArcTo, SVGPathElement.SVGClosePath,</span>
@@ -227,12 +227,12 @@
 <span class="source-line-no">214</span><span id="line-214">     *  &lt;img src="doc-files/arcs02.svg" alt="Sample Images"&gt;</span>
 <span class="source-line-no">215</span><span id="line-215">     *</span>
 <span class="source-line-no">216</span><span id="line-216">     *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org</span>
-<span class="source-line-no">217</span><span id="line-217">     *  @version $Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $</span>
+<span class="source-line-no">217</span><span id="line-217">     *  @version $Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $</span>
 <span class="source-line-no">218</span><span id="line-218">     *  @since 0.0.5</span>
 <span class="source-line-no">219</span><span id="line-219">     *</span>
 <span class="source-line-no">220</span><span id="line-220">     *  @UMLGraph.link</span>
 <span class="source-line-no">221</span><span id="line-221">     */</span>
-<span class="source-line-no">222</span><span id="line-222">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $" )</span>
+<span class="source-line-no">222</span><span id="line-222">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $" )</span>
 <span class="source-line-no">223</span><span id="line-223">    @API( status = STABLE, since = "0.0.5" )</span>
 <span class="source-line-no">224</span><span id="line-224">    public static final class SVGArcTo extends SVGPathElement</span>
 <span class="source-line-no">225</span><span id="line-225">    {</span>
@@ -291,12 +291,12 @@
 <span class="source-line-no">278</span><span id="line-278">     *  The implementation of the SVG path {@code ClosePath} element.</span>
 <span class="source-line-no">279</span><span id="line-279">     *</span>
 <span class="source-line-no">280</span><span id="line-280">     *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org</span>
-<span class="source-line-no">281</span><span id="line-281">     *  @version $Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $</span>
+<span class="source-line-no">281</span><span id="line-281">     *  @version $Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $</span>
 <span class="source-line-no">282</span><span id="line-282">     *  @since 0.0.5</span>
 <span class="source-line-no">283</span><span id="line-283">     *</span>
 <span class="source-line-no">284</span><span id="line-284">     *  @UMLGraph.link</span>
 <span class="source-line-no">285</span><span id="line-285">     */</span>
-<span class="source-line-no">286</span><span id="line-286">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $" )</span>
+<span class="source-line-no">286</span><span id="line-286">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $" )</span>
 <span class="source-line-no">287</span><span id="line-287">    @API( status = STABLE, since = "0.0.5" )</span>
 <span class="source-line-no">288</span><span id="line-288">    public static final class SVGClosePath extends SVGPathElement</span>
 <span class="source-line-no">289</span><span id="line-289">    {</span>
@@ -320,12 +320,12 @@
 <span class="source-line-no">307</span><span id="line-307">     *  coincident with the current point.</span>
 <span class="source-line-no">308</span><span id="line-308">     *</span>
 <span class="source-line-no">309</span><span id="line-309">     *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org</span>
-<span class="source-line-no">310</span><span id="line-310">     *  @version $Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $</span>
+<span class="source-line-no">310</span><span id="line-310">     *  @version $Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $</span>
 <span class="source-line-no">311</span><span id="line-311">     *  @since 0.0.5</span>
 <span class="source-line-no">312</span><span id="line-312">     *</span>
 <span class="source-line-no">313</span><span id="line-313">     *  @UMLGraph.link</span>
 <span class="source-line-no">314</span><span id="line-314">     */</span>
-<span class="source-line-no">315</span><span id="line-315">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $" )</span>
+<span class="source-line-no">315</span><span id="line-315">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $" )</span>
 <span class="source-line-no">316</span><span id="line-316">    @API( status = STABLE, since = "0.0.5" )</span>
 <span class="source-line-no">317</span><span id="line-317">    public static final class SVGCubicCurveTo extends SVGPathElement</span>
 <span class="source-line-no">318</span><span id="line-318">    {</span>
@@ -409,12 +409,12 @@
 <span class="source-line-no">396</span><span id="line-396">     *  horizontal line.</span>
 <span class="source-line-no">397</span><span id="line-397">     *</span>
 <span class="source-line-no">398</span><span id="line-398">     *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org</span>
-<span class="source-line-no">399</span><span id="line-399">     *  @version $Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $</span>
+<span class="source-line-no">399</span><span id="line-399">     *  @version $Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $</span>
 <span class="source-line-no">400</span><span id="line-400">     *  @since 0.0.5</span>
 <span class="source-line-no">401</span><span id="line-401">     *</span>
 <span class="source-line-no">402</span><span id="line-402">     *  @UMLGraph.link</span>
 <span class="source-line-no">403</span><span id="line-403">     */</span>
-<span class="source-line-no">404</span><span id="line-404">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $" )</span>
+<span class="source-line-no">404</span><span id="line-404">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $" )</span>
 <span class="source-line-no">405</span><span id="line-405">    @API( status = STABLE, since = "0.0.5" )</span>
 <span class="source-line-no">406</span><span id="line-406">    public static final class SVGHLineTo extends SVGPathElement</span>
 <span class="source-line-no">407</span><span id="line-407">    {</span>
@@ -453,12 +453,12 @@
 <span class="source-line-no">440</span><span id="line-440">     *  The implementation of the SVG path {@code LineTo} element.</span>
 <span class="source-line-no">441</span><span id="line-441">     *</span>
 <span class="source-line-no">442</span><span id="line-442">     *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org</span>
-<span class="source-line-no">443</span><span id="line-443">     *  @version $Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $</span>
+<span class="source-line-no">443</span><span id="line-443">     *  @version $Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $</span>
 <span class="source-line-no">444</span><span id="line-444">     *  @since 0.0.5</span>
 <span class="source-line-no">445</span><span id="line-445">     *</span>
 <span class="source-line-no">446</span><span id="line-446">     *  @UMLGraph.link</span>
 <span class="source-line-no">447</span><span id="line-447">     */</span>
-<span class="source-line-no">448</span><span id="line-448">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $" )</span>
+<span class="source-line-no">448</span><span id="line-448">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $" )</span>
 <span class="source-line-no">449</span><span id="line-449">    @API( status = STABLE, since = "0.0.5" )</span>
 <span class="source-line-no">450</span><span id="line-450">    public static final class SVGLineTo extends SVGPathElement</span>
 <span class="source-line-no">451</span><span id="line-451">    {</span>
@@ -499,12 +499,12 @@
 <span class="source-line-no">486</span><span id="line-486">     *  The implementation of the SVG path {@code MoveTo} element.</span>
 <span class="source-line-no">487</span><span id="line-487">     *</span>
 <span class="source-line-no">488</span><span id="line-488">     *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org</span>
-<span class="source-line-no">489</span><span id="line-489">     *  @version $Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $</span>
+<span class="source-line-no">489</span><span id="line-489">     *  @version $Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $</span>
 <span class="source-line-no">490</span><span id="line-490">     *  @since 0.0.5</span>
 <span class="source-line-no">491</span><span id="line-491">     *</span>
 <span class="source-line-no">492</span><span id="line-492">     *  @UMLGraph.link</span>
 <span class="source-line-no">493</span><span id="line-493">     */</span>
-<span class="source-line-no">494</span><span id="line-494">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $" )</span>
+<span class="source-line-no">494</span><span id="line-494">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $" )</span>
 <span class="source-line-no">495</span><span id="line-495">    @API( status = STABLE, since = "0.0.5" )</span>
 <span class="source-line-no">496</span><span id="line-496">    public static final class SVGMoveTo extends SVGPathElement</span>
 <span class="source-line-no">497</span><span id="line-497">    {</span>
@@ -551,12 +551,12 @@
 <span class="source-line-no">538</span><span id="line-538">     *  coincident with the current point.</span>
 <span class="source-line-no">539</span><span id="line-539">     *</span>
 <span class="source-line-no">540</span><span id="line-540">     *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org</span>
-<span class="source-line-no">541</span><span id="line-541">     *  @version $Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $</span>
+<span class="source-line-no">541</span><span id="line-541">     *  @version $Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $</span>
 <span class="source-line-no">542</span><span id="line-542">     *  @since 0.0.5</span>
 <span class="source-line-no">543</span><span id="line-543">     *</span>
 <span class="source-line-no">544</span><span id="line-544">     *  @UMLGraph.link</span>
 <span class="source-line-no">545</span><span id="line-545">     */</span>
-<span class="source-line-no">546</span><span id="line-546">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $" )</span>
+<span class="source-line-no">546</span><span id="line-546">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $" )</span>
 <span class="source-line-no">547</span><span id="line-547">    @API( status = STABLE, since = "0.0.5" )</span>
 <span class="source-line-no">548</span><span id="line-548">    public static final class SVGQuadraticCurveTo extends SVGPathElement</span>
 <span class="source-line-no">549</span><span id="line-549">    {</span>
@@ -632,12 +632,12 @@
 <span class="source-line-no">619</span><span id="line-619">     *  vertical line.</span>
 <span class="source-line-no">620</span><span id="line-620">     *</span>
 <span class="source-line-no">621</span><span id="line-621">     *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org</span>
-<span class="source-line-no">622</span><span id="line-622">     *  @version $Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $</span>
+<span class="source-line-no">622</span><span id="line-622">     *  @version $Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $</span>
 <span class="source-line-no">623</span><span id="line-623">     *  @since 0.0.5</span>
 <span class="source-line-no">624</span><span id="line-624">     *</span>
 <span class="source-line-no">625</span><span id="line-625">     *  @UMLGraph.link</span>
 <span class="source-line-no">626</span><span id="line-626">     */</span>
-<span class="source-line-no">627</span><span id="line-627">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 980 2022-01-06 15:29:19Z tquadrat $" )</span>
+<span class="source-line-no">627</span><span id="line-627">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1076 2023-10-03 18:36:07Z tquadrat $" )</span>
 <span class="source-line-no">628</span><span id="line-628">    @API( status = STABLE, since = "0.0.5" )</span>
 <span class="source-line-no">629</span><span id="line-629">    public static final class SVGVLineTo extends SVGPathElement</span>
 <span class="source-line-no">630</span><span id="line-630">    {</span>

@@ -17,12 +17,12 @@
 
 package org.tquadrat.foundation.svg.internal;
 
+import static java.lang.String.format;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 import static org.tquadrat.foundation.svg.SVGUtils.color;
 import static org.tquadrat.foundation.svg.SVGUtils.number;
-import static org.tquadrat.foundation.util.StringUtils.format;
 
 import java.net.URI;
 
@@ -41,11 +41,10 @@ import org.tquadrat.foundation.svg.type.SVGColor;
  *  {@link org.tquadrat.foundation.svg.internal.SVGElementImpl}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TestSVGElementImpl.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: TestSVGElementImpl.java 1076 2023-10-03 18:36:07Z tquadrat $
  *  @since 0.0.5
  */
-@SuppressWarnings( "MisorderedAssertEqualsArguments" )
-@ClassVersion( sourceVersion = "$Id: TestSVGElementImpl.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestSVGElementImpl.java 1076 2023-10-03 18:36:07Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.svg.internal.TestSVGElementImpl" )
 public class TestSVGElementImpl extends SVGTestBase
 {
@@ -56,10 +55,10 @@ public class TestSVGElementImpl extends SVGTestBase
      *  A dummy element just for testing.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: TestSVGElementImpl.java 820 2020-12-29 20:34:22Z tquadrat $
+     *  @version $Id: TestSVGElementImpl.java 1076 2023-10-03 18:36:07Z tquadrat $
      *  @since 0.0.5
      */
-    @ClassVersion( sourceVersion = "$Id: TestSVGElementImpl.java 820 2020-12-29 20:34:22Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: TestSVGElementImpl.java 1076 2023-10-03 18:36:07Z tquadrat $" )
     private static class SVGDummy extends SVGElementAdapter
     {
             /*--------------*\

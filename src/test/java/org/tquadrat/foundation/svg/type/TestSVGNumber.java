@@ -17,6 +17,7 @@
 
 package org.tquadrat.foundation.svg.type;
 
+import static java.lang.String.format;
 import static java.util.Locale.ROOT;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -27,7 +28,6 @@ import static org.junit.jupiter.api.Assertions.fail;
 import static org.tquadrat.foundation.lang.CommonConstants.EMPTY_STRING;
 import static org.tquadrat.foundation.svg.type.SVGUnit.NONE;
 import static org.tquadrat.foundation.svg.type.SVGUnit.PIXEL;
-import static org.tquadrat.foundation.util.StringUtils.format;
 
 import java.util.function.DoubleFunction;
 import java.util.function.LongFunction;
@@ -48,11 +48,10 @@ import org.tquadrat.foundation.svg.helper.SVGTestBase;
  *  {@link SVGNumber}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TestSVGNumber.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: TestSVGNumber.java 1076 2023-10-03 18:36:07Z tquadrat $
  *  @since 0.0.5
  */
-@SuppressWarnings( "MisorderedAssertEqualsArguments" )
-@ClassVersion( sourceVersion = "$Id: TestSVGNumber.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestSVGNumber.java 1076 2023-10-03 18:36:07Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.svg.type.TestSVGNumber" )
 public class TestSVGNumber extends SVGTestBase
 {
@@ -128,7 +127,7 @@ public class TestSVGNumber extends SVGTestBase
         final var intArgs = new int [] { -2, 0, 1, 100, 900 };
         for( final var intArg : intArgs )
         {
-            candidate = new SVGNumber( intArg, unit );
+            candidate = new SVGNumber( (long) intArg, unit );
             assertEquals( format( ROOT, intFormatString, intArg ), candidate.value() );
         }
 
