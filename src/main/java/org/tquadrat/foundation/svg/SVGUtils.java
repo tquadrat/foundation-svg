@@ -19,7 +19,6 @@ package org.tquadrat.foundation.svg;
 
 import static java.lang.String.format;
 import static java.util.Arrays.asList;
-import static org.apiguardian.api.API.Status.DEPRECATED;
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.lang.CommonConstants.EMPTY_STRING;
 import static org.tquadrat.foundation.lang.CommonConstants.XMLATTRIBUTE_Class;
@@ -93,14 +92,14 @@ import org.tquadrat.foundation.xml.builder.spi.XMLElementAdapter;
  *  elements.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGUtils.java 1074 2023-10-02 12:05:06Z tquadrat $
+ *  @version $Id: SVGUtils.java 1086 2024-01-05 23:18:33Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( {"ClassWithTooManyMethods", "OverlyComplexClass", "OverlyCoupledClass"} )
 @UtilityClass
-@ClassVersion( sourceVersion = "$Id: SVGUtils.java 1074 2023-10-02 12:05:06Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGUtils.java 1086 2024-01-05 23:18:33Z tquadrat $" )
 public final class SVGUtils
 {
         /*-----------*\
@@ -1866,28 +1865,6 @@ public final class SVGUtils
      */
     @API( status = STABLE, since = "0.0.5" )
     public static final String XMLATTRIBUTE_Base = "xml:base";
-
-    /**
-     *  The name for the XML {@code lang} attribute: {@value CommonConstants#XMLATTRIBUTE_Language}.
-     *
-     *  @deprecated Use
-     *      {@link CommonConstants#XMLATTRIBUTE_Language}
-     *      instead.
-     */
-    @API( status = DEPRECATED, since = "0.0.5" )
-    @Deprecated( since = "0.1.0", forRemoval = true )
-    public static final String XMLATTRIBUTE_Lang = CommonConstants.XMLATTRIBUTE_Language;
-
-    /**
-     *  The name for the XML {@code space} attribute: {@value CommonConstants#XMLATTRIBUTE_Whitespace}.
-     *
-     *  @deprecated Use
-     *      {@link CommonConstants#XMLATTRIBUTE_Whitespace}
-     *      instead.
-     */
-    @API( status = DEPRECATED, since = "0.0.5" )
-    @Deprecated( since = "0.1.0", forRemoval = true )
-    public static final String XMLATTRIBUTE_Space = CommonConstants.XMLATTRIBUTE_Whitespace;
 
         /*--------------*\
     ====** Constructors **=====================================================
