@@ -74,6 +74,7 @@ public class TestCreateSVGDocument extends SVGTestBase
             <?xml version='1.0'
                   encoding='UTF-8'
                   standalone='no'?>
+            
             <svg xmlns="http://www.w3.org/2000/svg"
                  xmlns:cc="http://creativecommons.org/ns#"
                  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
