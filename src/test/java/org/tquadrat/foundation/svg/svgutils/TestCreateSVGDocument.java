@@ -42,11 +42,11 @@ import org.tquadrat.foundation.xml.builder.XMLDocument;
  *  {@link SVGUtils}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TestCreateSVGDocument.java 1076 2023-10-03 18:36:07Z tquadrat $
+ *  @version $Id: TestCreateSVGDocument.java 1101 2024-02-18 00:18:48Z tquadrat $
  *  @since 0.0.5
  */
 @SuppressWarnings( "MisorderedAssertEqualsArguments" )
-@ClassVersion( sourceVersion = "$Id: TestCreateSVGDocument.java 1076 2023-10-03 18:36:07Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestCreateSVGDocument.java 1101 2024-02-18 00:18:48Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.svg.svgutils.TestCreateSVGDocument" )
 public class TestCreateSVGDocument extends SVGTestBase
 {
