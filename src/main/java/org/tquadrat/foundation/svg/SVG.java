@@ -129,11 +129,12 @@ public sealed interface SVG extends SVGElementWithChildren, AllowsConditionalPro
     public void addStyle( final SVGStyle style ) throws IllegalStateException;
 
     /**
-     *  Sets the default scripting language used to process the type strings
-     *  in event attributes. This language must be used for all instances of
-     *  script that do not specify their own scripting language.<br>
-     *  <br>The type specifies a media type as a MIME document identifier; the
-     *  default type is {@code application/ecmascript}.
+     *  <p>{@summary Sets the default scripting language used to process the
+     *  type strings in event attributes.} This language must be used for all
+     *  instances of script that do not specify their own scripting
+     *  language.</p>
+     *  <p>The type specifies a media type as a MIME document identifier; the
+     *  default type is {@code application/ecmascript}.</p>
      *
      *  @param  value   The default scripting language for this {@code <svg>}
      *      element.
@@ -175,7 +176,7 @@ public sealed interface SVG extends SVGElementWithChildren, AllowsConditionalPro
      *  <p>{@summary Sets the given CSS style definitions as a style sheet in
      *  an SVG {@code style} element to the <code>&lt;defs&gt;</code> element
      *  of this <code>&lt;svg&gt;</code> element.}</p>
-     *  <p>This is <i>not</i> an attribute; instead an SVG {@code <style}
+     *  <p>This is <i>not</i> an attribute; instead an SVG {@code <style>}
      *  element will be created.</p>
      *  <p>Consecutive calls to this method will not create additional
      *  {@code <style>} elements, instead the new styles will be added to the

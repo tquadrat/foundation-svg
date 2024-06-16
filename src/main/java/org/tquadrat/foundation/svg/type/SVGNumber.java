@@ -240,9 +240,14 @@ public sealed class SVGNumber
     private final boolean m_IsZero;
 
     /**
-     *  The type.
+     *  The unit.
      */
-    private final String m_Value;
+    private final SVGUnit m_Unit;
+
+    /**
+     *  The numerical value.
+     */
+    private final Number m_Value;
 
         /*--------------*\
     ====** Constructors **=====================================================
@@ -255,7 +260,8 @@ public sealed class SVGNumber
      */
     public SVGNumber( final double value, final SVGUnit unit )
     {
-        m_Value = requireNonNullArgument( unit, "unit" ).format( value );
+        m_Unit = requireNonNullArgument( unit, "unit" );
+        m_Value = Double.valueOf( value );
         m_IsInteger = false;
         m_IsNegative = value < 0.0;
         m_IsZero = value == 0.0;
@@ -269,7 +275,8 @@ public sealed class SVGNumber
      */
     public SVGNumber( final long value, final SVGUnit unit )
     {
-        m_Value = requireNonNullArgument( unit, "unit" ).format( value );
+        m_Unit = requireNonNullArgument( unit, "unit" );
+        m_Value = Long.valueOf( value );
         m_IsInteger = true;
         m_IsNegative = value < 0;
         m_IsZero = value == 0;
@@ -285,9 +292,9 @@ public sealed class SVGNumber
     public final boolean equals( final Object obj )
     {
         var retValue = this == obj;
-        if( !retValue && (obj instanceof SVGNumber other) && (getClass() == other.getClass()) )
+        if( !retValue && (obj instanceof final SVGNumber other) && (getClass() == other.getClass()) )
         {
-            retValue = m_Value.equals( other.m_Value );
+            retValue = value().equals( other.value() );
         }
 
         //---* Done *----------------------------------------------------------
@@ -328,6 +335,20 @@ public sealed class SVGNumber
     public final boolean isZero() { return m_IsZero; }
 
     /**
+     *  Returns the numerical value.
+     *
+     *  @return The numerical value.
+     */
+    protected Number number() { return m_Value; }
+
+    /**
+     *  Returns the unit for this instance.
+     *
+     *  @return The unit.
+     */
+    public SVGUnit unit() { return m_Unit; }
+
+    /**
      *  {@inheritDoc}
      */
     @Override
@@ -338,7 +359,13 @@ public sealed class SVGNumber
      *
      *  @return The type with unit.
      */
-    public final String value() { return m_Value; }
+    public final String value()
+    {
+        final var retValue = m_IsInteger ? m_Unit.format( m_Value.longValue() ) : m_Unit.format( m_Value.doubleValue() );
+
+        //---* Done *----------------------------------------------------------
+        return retValue;
+    }   //  value()
 }
 //  class SVGNumber
 

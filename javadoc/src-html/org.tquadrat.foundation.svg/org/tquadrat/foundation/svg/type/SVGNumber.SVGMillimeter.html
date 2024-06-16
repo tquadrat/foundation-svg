@@ -253,111 +253,138 @@
 <span class="source-line-no">240</span><span id="line-240">    private final boolean m_IsZero;</span>
 <span class="source-line-no">241</span><span id="line-241"></span>
 <span class="source-line-no">242</span><span id="line-242">    /**</span>
-<span class="source-line-no">243</span><span id="line-243">     *  The type.</span>
+<span class="source-line-no">243</span><span id="line-243">     *  The unit.</span>
 <span class="source-line-no">244</span><span id="line-244">     */</span>
-<span class="source-line-no">245</span><span id="line-245">    private final String m_Value;</span>
+<span class="source-line-no">245</span><span id="line-245">    private final SVGUnit m_Unit;</span>
 <span class="source-line-no">246</span><span id="line-246"></span>
-<span class="source-line-no">247</span><span id="line-247">        /*--------------*\</span>
-<span class="source-line-no">248</span><span id="line-248">    ====** Constructors **=====================================================</span>
-<span class="source-line-no">249</span><span id="line-249">        \*--------------*/</span>
-<span class="source-line-no">250</span><span id="line-250">    /**</span>
-<span class="source-line-no">251</span><span id="line-251">     *  Creates a new {@code SVGNumber} instance.</span>
-<span class="source-line-no">252</span><span id="line-252">     *</span>
-<span class="source-line-no">253</span><span id="line-253">     *  @param  value   The type.</span>
-<span class="source-line-no">254</span><span id="line-254">     *  @param  unit    The unit.</span>
-<span class="source-line-no">255</span><span id="line-255">     */</span>
-<span class="source-line-no">256</span><span id="line-256">    public SVGNumber( final double value, final SVGUnit unit )</span>
-<span class="source-line-no">257</span><span id="line-257">    {</span>
-<span class="source-line-no">258</span><span id="line-258">        m_Value = requireNonNullArgument( unit, "unit" ).format( value );</span>
-<span class="source-line-no">259</span><span id="line-259">        m_IsInteger = false;</span>
-<span class="source-line-no">260</span><span id="line-260">        m_IsNegative = value &lt; 0.0;</span>
-<span class="source-line-no">261</span><span id="line-261">        m_IsZero = value == 0.0;</span>
-<span class="source-line-no">262</span><span id="line-262">    }   //  SVGNumber()</span>
-<span class="source-line-no">263</span><span id="line-263"></span>
-<span class="source-line-no">264</span><span id="line-264">    /**</span>
-<span class="source-line-no">265</span><span id="line-265">     *  Creates a new {@code SVGNumber} instance.</span>
-<span class="source-line-no">266</span><span id="line-266">     *</span>
-<span class="source-line-no">267</span><span id="line-267">     *  @param  value   The type.</span>
-<span class="source-line-no">268</span><span id="line-268">     *  @param  unit    The unit.</span>
-<span class="source-line-no">269</span><span id="line-269">     */</span>
-<span class="source-line-no">270</span><span id="line-270">    public SVGNumber( final long value, final SVGUnit unit )</span>
-<span class="source-line-no">271</span><span id="line-271">    {</span>
-<span class="source-line-no">272</span><span id="line-272">        m_Value = requireNonNullArgument( unit, "unit" ).format( value );</span>
-<span class="source-line-no">273</span><span id="line-273">        m_IsInteger = true;</span>
-<span class="source-line-no">274</span><span id="line-274">        m_IsNegative = value &lt; 0;</span>
-<span class="source-line-no">275</span><span id="line-275">        m_IsZero = value == 0;</span>
-<span class="source-line-no">276</span><span id="line-276">    }   //  SVGNumber()</span>
-<span class="source-line-no">277</span><span id="line-277"></span>
-<span class="source-line-no">278</span><span id="line-278">        /*---------*\</span>
-<span class="source-line-no">279</span><span id="line-279">    ====** Methods **==========================================================</span>
-<span class="source-line-no">280</span><span id="line-280">        \*---------*/</span>
-<span class="source-line-no">281</span><span id="line-281">    /**</span>
-<span class="source-line-no">282</span><span id="line-282">     *  {@inheritDoc}</span>
-<span class="source-line-no">283</span><span id="line-283">     */</span>
-<span class="source-line-no">284</span><span id="line-284">    @Override</span>
-<span class="source-line-no">285</span><span id="line-285">    public final boolean equals( final Object obj )</span>
-<span class="source-line-no">286</span><span id="line-286">    {</span>
-<span class="source-line-no">287</span><span id="line-287">        var retValue = this == obj;</span>
-<span class="source-line-no">288</span><span id="line-288">        if( !retValue &amp;&amp; (obj instanceof SVGNumber other) &amp;&amp; (getClass() == other.getClass()) )</span>
-<span class="source-line-no">289</span><span id="line-289">        {</span>
-<span class="source-line-no">290</span><span id="line-290">            retValue = m_Value.equals( other.m_Value );</span>
-<span class="source-line-no">291</span><span id="line-291">        }</span>
-<span class="source-line-no">292</span><span id="line-292"></span>
-<span class="source-line-no">293</span><span id="line-293">        //---* Done *----------------------------------------------------------</span>
-<span class="source-line-no">294</span><span id="line-294">        return retValue;</span>
-<span class="source-line-no">295</span><span id="line-295">    }   //  equals()</span>
-<span class="source-line-no">296</span><span id="line-296"></span>
-<span class="source-line-no">297</span><span id="line-297">    /**</span>
-<span class="source-line-no">298</span><span id="line-298">     *  {@inheritDoc}</span>
-<span class="source-line-no">299</span><span id="line-299">     */</span>
-<span class="source-line-no">300</span><span id="line-300">    @Override</span>
-<span class="source-line-no">301</span><span id="line-301">    public final int hashCode() { return m_Value.hashCode(); }</span>
-<span class="source-line-no">302</span><span id="line-302"></span>
-<span class="source-line-no">303</span><span id="line-303">    /**</span>
-<span class="source-line-no">304</span><span id="line-304">     *  Returns a flag that indicates whether the type is an integer</span>
-<span class="source-line-no">305</span><span id="line-305">     *  ({@code int}) - as in opposite to a {@code double}). There it does not</span>
-<span class="source-line-no">306</span><span id="line-306">     *  matter that the decimal places of a {@code double} are effectively</span>
-<span class="source-line-no">307</span><span id="line-307">     *  zero.</span>
-<span class="source-line-no">308</span><span id="line-308">     *</span>
-<span class="source-line-no">309</span><span id="line-309">     *  @return {@code true} if the type is an integer, {@code false}</span>
-<span class="source-line-no">310</span><span id="line-310">     *      otherwise.</span>
-<span class="source-line-no">311</span><span id="line-311">     */</span>
-<span class="source-line-no">312</span><span id="line-312">    public final boolean isInteger() { return m_IsInteger; }</span>
-<span class="source-line-no">313</span><span id="line-313"></span>
-<span class="source-line-no">314</span><span id="line-314">    /**</span>
-<span class="source-line-no">315</span><span id="line-315">     *  Returns a flag that indicates whether the type is a negative number.</span>
-<span class="source-line-no">316</span><span id="line-316">     *</span>
-<span class="source-line-no">317</span><span id="line-317">     *  @return {@code true} if the type is less than zero, {@code false}</span>
-<span class="source-line-no">318</span><span id="line-318">     *      otherwise.</span>
-<span class="source-line-no">319</span><span id="line-319">     */</span>
-<span class="source-line-no">320</span><span id="line-320">    public final boolean isNegative() { return m_IsNegative; }</span>
-<span class="source-line-no">321</span><span id="line-321"></span>
-<span class="source-line-no">322</span><span id="line-322">    /**</span>
-<span class="source-line-no">323</span><span id="line-323">     *  Returns a flag that indicates whether the type is zero.</span>
-<span class="source-line-no">324</span><span id="line-324">     *</span>
-<span class="source-line-no">325</span><span id="line-325">     *  @return {@code true} if the type is 0 (or 0.0), {@code false}</span>
-<span class="source-line-no">326</span><span id="line-326">     *      otherwise.</span>
-<span class="source-line-no">327</span><span id="line-327">     */</span>
-<span class="source-line-no">328</span><span id="line-328">    public final boolean isZero() { return m_IsZero; }</span>
-<span class="source-line-no">329</span><span id="line-329"></span>
-<span class="source-line-no">330</span><span id="line-330">    /**</span>
-<span class="source-line-no">331</span><span id="line-331">     *  {@inheritDoc}</span>
-<span class="source-line-no">332</span><span id="line-332">     */</span>
-<span class="source-line-no">333</span><span id="line-333">    @Override</span>
-<span class="source-line-no">334</span><span id="line-334">    public final String toString() { return value(); }</span>
-<span class="source-line-no">335</span><span id="line-335"></span>
-<span class="source-line-no">336</span><span id="line-336">    /**</span>
-<span class="source-line-no">337</span><span id="line-337">     *  Return the type with the unit for this instance.</span>
-<span class="source-line-no">338</span><span id="line-338">     *</span>
-<span class="source-line-no">339</span><span id="line-339">     *  @return The type with unit.</span>
-<span class="source-line-no">340</span><span id="line-340">     */</span>
-<span class="source-line-no">341</span><span id="line-341">    public final String value() { return m_Value; }</span>
-<span class="source-line-no">342</span><span id="line-342">}</span>
-<span class="source-line-no">343</span><span id="line-343">//  class SVGNumber</span>
-<span class="source-line-no">344</span><span id="line-344"></span>
-<span class="source-line-no">345</span><span id="line-345">/*</span>
-<span class="source-line-no">346</span><span id="line-346"> *  End of File</span>
-<span class="source-line-no">347</span><span id="line-347"> */</span>
+<span class="source-line-no">247</span><span id="line-247">    /**</span>
+<span class="source-line-no">248</span><span id="line-248">     *  The numerical value.</span>
+<span class="source-line-no">249</span><span id="line-249">     */</span>
+<span class="source-line-no">250</span><span id="line-250">    private final Number m_Value;</span>
+<span class="source-line-no">251</span><span id="line-251"></span>
+<span class="source-line-no">252</span><span id="line-252">        /*--------------*\</span>
+<span class="source-line-no">253</span><span id="line-253">    ====** Constructors **=====================================================</span>
+<span class="source-line-no">254</span><span id="line-254">        \*--------------*/</span>
+<span class="source-line-no">255</span><span id="line-255">    /**</span>
+<span class="source-line-no">256</span><span id="line-256">     *  Creates a new {@code SVGNumber} instance.</span>
+<span class="source-line-no">257</span><span id="line-257">     *</span>
+<span class="source-line-no">258</span><span id="line-258">     *  @param  value   The type.</span>
+<span class="source-line-no">259</span><span id="line-259">     *  @param  unit    The unit.</span>
+<span class="source-line-no">260</span><span id="line-260">     */</span>
+<span class="source-line-no">261</span><span id="line-261">    public SVGNumber( final double value, final SVGUnit unit )</span>
+<span class="source-line-no">262</span><span id="line-262">    {</span>
+<span class="source-line-no">263</span><span id="line-263">        m_Unit = requireNonNullArgument( unit, "unit" );</span>
+<span class="source-line-no">264</span><span id="line-264">        m_Value = Double.valueOf( value );</span>
+<span class="source-line-no">265</span><span id="line-265">        m_IsInteger = false;</span>
+<span class="source-line-no">266</span><span id="line-266">        m_IsNegative = value &lt; 0.0;</span>
+<span class="source-line-no">267</span><span id="line-267">        m_IsZero = value == 0.0;</span>
+<span class="source-line-no">268</span><span id="line-268">    }   //  SVGNumber()</span>
+<span class="source-line-no">269</span><span id="line-269"></span>
+<span class="source-line-no">270</span><span id="line-270">    /**</span>
+<span class="source-line-no">271</span><span id="line-271">     *  Creates a new {@code SVGNumber} instance.</span>
+<span class="source-line-no">272</span><span id="line-272">     *</span>
+<span class="source-line-no">273</span><span id="line-273">     *  @param  value   The type.</span>
+<span class="source-line-no">274</span><span id="line-274">     *  @param  unit    The unit.</span>
+<span class="source-line-no">275</span><span id="line-275">     */</span>
+<span class="source-line-no">276</span><span id="line-276">    public SVGNumber( final long value, final SVGUnit unit )</span>
+<span class="source-line-no">277</span><span id="line-277">    {</span>
+<span class="source-line-no">278</span><span id="line-278">        m_Unit = requireNonNullArgument( unit, "unit" );</span>
+<span class="source-line-no">279</span><span id="line-279">        m_Value = Long.valueOf( value );</span>
+<span class="source-line-no">280</span><span id="line-280">        m_IsInteger = true;</span>
+<span class="source-line-no">281</span><span id="line-281">        m_IsNegative = value &lt; 0;</span>
+<span class="source-line-no">282</span><span id="line-282">        m_IsZero = value == 0;</span>
+<span class="source-line-no">283</span><span id="line-283">    }   //  SVGNumber()</span>
+<span class="source-line-no">284</span><span id="line-284"></span>
+<span class="source-line-no">285</span><span id="line-285">        /*---------*\</span>
+<span class="source-line-no">286</span><span id="line-286">    ====** Methods **==========================================================</span>
+<span class="source-line-no">287</span><span id="line-287">        \*---------*/</span>
+<span class="source-line-no">288</span><span id="line-288">    /**</span>
+<span class="source-line-no">289</span><span id="line-289">     *  {@inheritDoc}</span>
+<span class="source-line-no">290</span><span id="line-290">     */</span>
+<span class="source-line-no">291</span><span id="line-291">    @Override</span>
+<span class="source-line-no">292</span><span id="line-292">    public final boolean equals( final Object obj )</span>
+<span class="source-line-no">293</span><span id="line-293">    {</span>
+<span class="source-line-no">294</span><span id="line-294">        var retValue = this == obj;</span>
+<span class="source-line-no">295</span><span id="line-295">        if( !retValue &amp;&amp; (obj instanceof final SVGNumber other) &amp;&amp; (getClass() == other.getClass()) )</span>
+<span class="source-line-no">296</span><span id="line-296">        {</span>
+<span class="source-line-no">297</span><span id="line-297">            retValue = value().equals( other.value() );</span>
+<span class="source-line-no">298</span><span id="line-298">        }</span>
+<span class="source-line-no">299</span><span id="line-299"></span>
+<span class="source-line-no">300</span><span id="line-300">        //---* Done *----------------------------------------------------------</span>
+<span class="source-line-no">301</span><span id="line-301">        return retValue;</span>
+<span class="source-line-no">302</span><span id="line-302">    }   //  equals()</span>
+<span class="source-line-no">303</span><span id="line-303"></span>
+<span class="source-line-no">304</span><span id="line-304">    /**</span>
+<span class="source-line-no">305</span><span id="line-305">     *  {@inheritDoc}</span>
+<span class="source-line-no">306</span><span id="line-306">     */</span>
+<span class="source-line-no">307</span><span id="line-307">    @Override</span>
+<span class="source-line-no">308</span><span id="line-308">    public final int hashCode() { return m_Value.hashCode(); }</span>
+<span class="source-line-no">309</span><span id="line-309"></span>
+<span class="source-line-no">310</span><span id="line-310">    /**</span>
+<span class="source-line-no">311</span><span id="line-311">     *  Returns a flag that indicates whether the type is an integer</span>
+<span class="source-line-no">312</span><span id="line-312">     *  ({@code int}) - as in opposite to a {@code double}). There it does not</span>
+<span class="source-line-no">313</span><span id="line-313">     *  matter that the decimal places of a {@code double} are effectively</span>
+<span class="source-line-no">314</span><span id="line-314">     *  zero.</span>
+<span class="source-line-no">315</span><span id="line-315">     *</span>
+<span class="source-line-no">316</span><span id="line-316">     *  @return {@code true} if the type is an integer, {@code false}</span>
+<span class="source-line-no">317</span><span id="line-317">     *      otherwise.</span>
+<span class="source-line-no">318</span><span id="line-318">     */</span>
+<span class="source-line-no">319</span><span id="line-319">    public final boolean isInteger() { return m_IsInteger; }</span>
+<span class="source-line-no">320</span><span id="line-320"></span>
+<span class="source-line-no">321</span><span id="line-321">    /**</span>
+<span class="source-line-no">322</span><span id="line-322">     *  Returns a flag that indicates whether the type is a negative number.</span>
+<span class="source-line-no">323</span><span id="line-323">     *</span>
+<span class="source-line-no">324</span><span id="line-324">     *  @return {@code true} if the type is less than zero, {@code false}</span>
+<span class="source-line-no">325</span><span id="line-325">     *      otherwise.</span>
+<span class="source-line-no">326</span><span id="line-326">     */</span>
+<span class="source-line-no">327</span><span id="line-327">    public final boolean isNegative() { return m_IsNegative; }</span>
+<span class="source-line-no">328</span><span id="line-328"></span>
+<span class="source-line-no">329</span><span id="line-329">    /**</span>
+<span class="source-line-no">330</span><span id="line-330">     *  Returns a flag that indicates whether the type is zero.</span>
+<span class="source-line-no">331</span><span id="line-331">     *</span>
+<span class="source-line-no">332</span><span id="line-332">     *  @return {@code true} if the type is 0 (or 0.0), {@code false}</span>
+<span class="source-line-no">333</span><span id="line-333">     *      otherwise.</span>
+<span class="source-line-no">334</span><span id="line-334">     */</span>
+<span class="source-line-no">335</span><span id="line-335">    public final boolean isZero() { return m_IsZero; }</span>
+<span class="source-line-no">336</span><span id="line-336"></span>
+<span class="source-line-no">337</span><span id="line-337">    /**</span>
+<span class="source-line-no">338</span><span id="line-338">     *  Returns the numerical value.</span>
+<span class="source-line-no">339</span><span id="line-339">     *</span>
+<span class="source-line-no">340</span><span id="line-340">     *  @return The numerical value.</span>
+<span class="source-line-no">341</span><span id="line-341">     */</span>
+<span class="source-line-no">342</span><span id="line-342">    protected Number number() { return m_Value; }</span>
+<span class="source-line-no">343</span><span id="line-343"></span>
+<span class="source-line-no">344</span><span id="line-344">    /**</span>
+<span class="source-line-no">345</span><span id="line-345">     *  Returns the unit for this instance.</span>
+<span class="source-line-no">346</span><span id="line-346">     *</span>
+<span class="source-line-no">347</span><span id="line-347">     *  @return The unit.</span>
+<span class="source-line-no">348</span><span id="line-348">     */</span>
+<span class="source-line-no">349</span><span id="line-349">    public SVGUnit unit() { return m_Unit; }</span>
+<span class="source-line-no">350</span><span id="line-350"></span>
+<span class="source-line-no">351</span><span id="line-351">    /**</span>
+<span class="source-line-no">352</span><span id="line-352">     *  {@inheritDoc}</span>
+<span class="source-line-no">353</span><span id="line-353">     */</span>
+<span class="source-line-no">354</span><span id="line-354">    @Override</span>
+<span class="source-line-no">355</span><span id="line-355">    public final String toString() { return value(); }</span>
+<span class="source-line-no">356</span><span id="line-356"></span>
+<span class="source-line-no">357</span><span id="line-357">    /**</span>
+<span class="source-line-no">358</span><span id="line-358">     *  Return the type with the unit for this instance.</span>
+<span class="source-line-no">359</span><span id="line-359">     *</span>
+<span class="source-line-no">360</span><span id="line-360">     *  @return The type with unit.</span>
+<span class="source-line-no">361</span><span id="line-361">     */</span>
+<span class="source-line-no">362</span><span id="line-362">    public final String value()</span>
+<span class="source-line-no">363</span><span id="line-363">    {</span>
+<span class="source-line-no">364</span><span id="line-364">        final var retValue = m_IsInteger ? m_Unit.format( m_Value.longValue() ) : m_Unit.format( m_Value.doubleValue() );</span>
+<span class="source-line-no">365</span><span id="line-365"></span>
+<span class="source-line-no">366</span><span id="line-366">        //---* Done *----------------------------------------------------------</span>
+<span class="source-line-no">367</span><span id="line-367">        return retValue;</span>
+<span class="source-line-no">368</span><span id="line-368">    }   //  value()</span>
+<span class="source-line-no">369</span><span id="line-369">}</span>
+<span class="source-line-no">370</span><span id="line-370">//  class SVGNumber</span>
+<span class="source-line-no">371</span><span id="line-371"></span>
+<span class="source-line-no">372</span><span id="line-372">/*</span>
+<span class="source-line-no">373</span><span id="line-373"> *  End of File</span>
+<span class="source-line-no">374</span><span id="line-374"> */</span>
 
 
 

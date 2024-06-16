@@ -142,120 +142,121 @@
 <span class="source-line-no">129</span><span id="line-129">    public void addStyle( final SVGStyle style ) throws IllegalStateException;</span>
 <span class="source-line-no">130</span><span id="line-130"></span>
 <span class="source-line-no">131</span><span id="line-131">    /**</span>
-<span class="source-line-no">132</span><span id="line-132">     *  Sets the default scripting language used to process the type strings</span>
-<span class="source-line-no">133</span><span id="line-133">     *  in event attributes. This language must be used for all instances of</span>
-<span class="source-line-no">134</span><span id="line-134">     *  script that do not specify their own scripting language.&lt;br&gt;</span>
-<span class="source-line-no">135</span><span id="line-135">     *  &lt;br&gt;The type specifies a media type as a MIME document identifier; the</span>
-<span class="source-line-no">136</span><span id="line-136">     *  default type is {@code application/ecmascript}.</span>
-<span class="source-line-no">137</span><span id="line-137">     *</span>
-<span class="source-line-no">138</span><span id="line-138">     *  @param  value   The default scripting language for this {@code &lt;svg&gt;}</span>
-<span class="source-line-no">139</span><span id="line-139">     *      element.</span>
-<span class="source-line-no">140</span><span id="line-140">     */</span>
-<span class="source-line-no">141</span><span id="line-141">    public void setContentScriptType( final MimeType value );</span>
-<span class="source-line-no">142</span><span id="line-142"></span>
-<span class="source-line-no">143</span><span id="line-143">    /**</span>
-<span class="source-line-no">144</span><span id="line-144">     *  Sets the dimension for this {@code &lt;svg&gt;} element.</span>
-<span class="source-line-no">145</span><span id="line-145">     *</span>
-<span class="source-line-no">146</span><span id="line-146">     *  @param  width   The width of the element.</span>
-<span class="source-line-no">147</span><span id="line-147">     *  @param  height  The height of the element.</span>
-<span class="source-line-no">148</span><span id="line-148">     */</span>
-<span class="source-line-no">149</span><span id="line-149">    @SuppressWarnings( "UseOfConcreteClass" )</span>
-<span class="source-line-no">150</span><span id="line-150">    public default void setDimension( final SVGNumber width, final SVGNumber height )</span>
-<span class="source-line-no">151</span><span id="line-151">    {</span>
-<span class="source-line-no">152</span><span id="line-152">        setHeight( requireNonNullArgument( height, "height" ) );</span>
-<span class="source-line-no">153</span><span id="line-153">        setWidth( requireNonNullArgument( width, "width" ) );</span>
-<span class="source-line-no">154</span><span id="line-154">    }   //  setDimension()</span>
-<span class="source-line-no">155</span><span id="line-155"></span>
-<span class="source-line-no">156</span><span id="line-156">    /**</span>
-<span class="source-line-no">157</span><span id="line-157">     *  Sets the height of the embedded {@code &lt;svg&gt;} element.</span>
-<span class="source-line-no">158</span><span id="line-158">     *</span>
-<span class="source-line-no">159</span><span id="line-159">     *  @param  value   The type; if {@code null} the</span>
-<span class="source-line-no">160</span><span id="line-160">     *      attribute will be removed.</span>
-<span class="source-line-no">161</span><span id="line-161">     */</span>
-<span class="source-line-no">162</span><span id="line-162">    @SuppressWarnings( "UseOfConcreteClass" )</span>
-<span class="source-line-no">163</span><span id="line-163">    public void setHeight( final SVGNumber value );</span>
-<span class="source-line-no">164</span><span id="line-164"></span>
-<span class="source-line-no">165</span><span id="line-165">    /**</span>
-<span class="source-line-no">166</span><span id="line-166">     *  Sets the mode for the aspect ratio preservation for this {@code &lt;svg&gt;}</span>
-<span class="source-line-no">167</span><span id="line-167">     *  element.</span>
-<span class="source-line-no">168</span><span id="line-168">     *</span>
-<span class="source-line-no">169</span><span id="line-169">     *  @param  value   The type; if {@code null} the</span>
-<span class="source-line-no">170</span><span id="line-170">     *      attribute will be removed.</span>
-<span class="source-line-no">171</span><span id="line-171">     */</span>
-<span class="source-line-no">172</span><span id="line-172">    public void setPreserveAspectRatio( final SVGPreserveAspectRatio value );</span>
-<span class="source-line-no">173</span><span id="line-173"></span>
-<span class="source-line-no">174</span><span id="line-174">    /**</span>
-<span class="source-line-no">175</span><span id="line-175">     *  &lt;p&gt;{@summary Sets the given CSS style definitions as a style sheet in</span>
-<span class="source-line-no">176</span><span id="line-176">     *  an SVG {@code style} element to the &lt;code&gt;&amp;lt;defs&amp;gt;&lt;/code&gt; element</span>
-<span class="source-line-no">177</span><span id="line-177">     *  of this &lt;code&gt;&amp;lt;svg&amp;gt;&lt;/code&gt; element.}&lt;/p&gt;</span>
-<span class="source-line-no">178</span><span id="line-178">     *  &lt;p&gt;This is &lt;i&gt;not&lt;/i&gt; an attribute; instead an SVG {@code &lt;style}</span>
-<span class="source-line-no">179</span><span id="line-179">     *  element will be created.&lt;/p&gt;</span>
-<span class="source-line-no">180</span><span id="line-180">     *  &lt;p&gt;Consecutive calls to this method will not create additional</span>
-<span class="source-line-no">181</span><span id="line-181">     *  {@code &lt;style&gt;} elements, instead the new styles will be added to the</span>
-<span class="source-line-no">182</span><span id="line-182">     *  existing ones.&lt;/p&gt;</span>
-<span class="source-line-no">183</span><span id="line-183">     *</span>
-<span class="source-line-no">184</span><span id="line-184">     *  @param  styles  The CSS style definitions.</span>
-<span class="source-line-no">185</span><span id="line-185">     *  @return The SVG {@code &lt;style&gt;} element with the style sheet</span>
-<span class="source-line-no">186</span><span id="line-186">     *      definitions.</span>
-<span class="source-line-no">187</span><span id="line-187">     */</span>
-<span class="source-line-no">188</span><span id="line-188">    public SVGStyle setStyleSheet( final CharSequence... styles );</span>
-<span class="source-line-no">189</span><span id="line-189"></span>
-<span class="source-line-no">190</span><span id="line-190">    /**</span>
-<span class="source-line-no">191</span><span id="line-191">     *  Defines the visible area in this SVG drawing area.</span>
-<span class="source-line-no">192</span><span id="line-192">     *</span>
-<span class="source-line-no">193</span><span id="line-193">     *  @param  x   The x coordinate of top left corner of the area.</span>
-<span class="source-line-no">194</span><span id="line-194">     *  @param  y   The y coordinate of top left corner of the area.</span>
-<span class="source-line-no">195</span><span id="line-195">     *  @param  width   The width of the area.</span>
-<span class="source-line-no">196</span><span id="line-196">     *  @param  height  The height of the area.</span>
-<span class="source-line-no">197</span><span id="line-197">     */</span>
-<span class="source-line-no">198</span><span id="line-198">    @SuppressWarnings( "UseOfConcreteClass" )</span>
-<span class="source-line-no">199</span><span id="line-199">    public void setViewBox( final SVGNumber x, final SVGNumber y, final SVGNumber width, final SVGNumber height );</span>
-<span class="source-line-no">200</span><span id="line-200"></span>
-<span class="source-line-no">201</span><span id="line-201">    /**</span>
-<span class="source-line-no">202</span><span id="line-202">     *  Sets the width of the embedded {@code &lt;svg&gt;} element.</span>
-<span class="source-line-no">203</span><span id="line-203">     *</span>
-<span class="source-line-no">204</span><span id="line-204">     *  @param  value   The type; if {@code null} the</span>
-<span class="source-line-no">205</span><span id="line-205">     *      attribute will be removed.</span>
-<span class="source-line-no">206</span><span id="line-206">     */</span>
-<span class="source-line-no">207</span><span id="line-207">    @SuppressWarnings( "UseOfConcreteClass" )</span>
-<span class="source-line-no">208</span><span id="line-208">    public void setWidth( final SVGNumber value );</span>
-<span class="source-line-no">209</span><span id="line-209"></span>
-<span class="source-line-no">210</span><span id="line-210">    /**</span>
-<span class="source-line-no">211</span><span id="line-211">     *  Sets the x coordinate for the top left corner of the embedded</span>
-<span class="source-line-no">212</span><span id="line-212">     *  {@code &lt;svg&gt;} element.</span>
-<span class="source-line-no">213</span><span id="line-213">     *</span>
-<span class="source-line-no">214</span><span id="line-214">     *  @param  value   The type; if {@code null} the</span>
-<span class="source-line-no">215</span><span id="line-215">     *      attribute will be removed.</span>
-<span class="source-line-no">216</span><span id="line-216">     */</span>
-<span class="source-line-no">217</span><span id="line-217">    @SuppressWarnings( "UseOfConcreteClass" )</span>
-<span class="source-line-no">218</span><span id="line-218">    public void setX( final SVGNumber value );</span>
-<span class="source-line-no">219</span><span id="line-219"></span>
-<span class="source-line-no">220</span><span id="line-220">    /**</span>
-<span class="source-line-no">221</span><span id="line-221">     *  Sets the y coordinate for the top left corner of the embedded</span>
-<span class="source-line-no">222</span><span id="line-222">     *  {@code &lt;svg&gt;} element.</span>
-<span class="source-line-no">223</span><span id="line-223">     *</span>
-<span class="source-line-no">224</span><span id="line-224">     *  @param  value   The type; if {@code null} the</span>
-<span class="source-line-no">225</span><span id="line-225">     *      attribute will be removed.</span>
-<span class="source-line-no">226</span><span id="line-226">     */</span>
-<span class="source-line-no">227</span><span id="line-227">    @SuppressWarnings( "UseOfConcreteClass" )</span>
-<span class="source-line-no">228</span><span id="line-228">    public void setY( final SVGNumber value );</span>
-<span class="source-line-no">229</span><span id="line-229"></span>
-<span class="source-line-no">230</span><span id="line-230">    /**</span>
-<span class="source-line-no">231</span><span id="line-231">     *  Sets the 'Zoom-and-Pan' flag; if enabled on a stand-alone instance of</span>
-<span class="source-line-no">232</span><span id="line-232">     *  the {@code &lt;svg&gt;} element, it allows panning and zooming the image.</span>
-<span class="source-line-no">233</span><span id="line-233">     *</span>
-<span class="source-line-no">234</span><span id="line-234">     *  @param  flag    {@code true} enables the feature by setting</span>
-<span class="source-line-no">235</span><span id="line-235">     *      &amp;quot;{@code magnify}&amp;quot; to the attribute</span>
-<span class="source-line-no">236</span><span id="line-236">     *      {@value SVGUtils#SVGATTRIBUTE_ZoomAndPan}, {@code false} disables</span>
-<span class="source-line-no">237</span><span id="line-237">     *      it by setting the attribute to &amp;quot;{@code disable}&amp;quot;.</span>
-<span class="source-line-no">238</span><span id="line-238">     */</span>
-<span class="source-line-no">239</span><span id="line-239">    public void setZoomAndPan( final boolean flag );</span>
-<span class="source-line-no">240</span><span id="line-240">}</span>
-<span class="source-line-no">241</span><span id="line-241">//  interface SVG</span>
-<span class="source-line-no">242</span><span id="line-242"></span>
-<span class="source-line-no">243</span><span id="line-243">/*</span>
-<span class="source-line-no">244</span><span id="line-244"> *  End of File</span>
-<span class="source-line-no">245</span><span id="line-245"> */</span>
+<span class="source-line-no">132</span><span id="line-132">     *  &lt;p&gt;{@summary Sets the default scripting language used to process the</span>
+<span class="source-line-no">133</span><span id="line-133">     *  type strings in event attributes.} This language must be used for all</span>
+<span class="source-line-no">134</span><span id="line-134">     *  instances of script that do not specify their own scripting</span>
+<span class="source-line-no">135</span><span id="line-135">     *  language.&lt;/p&gt;</span>
+<span class="source-line-no">136</span><span id="line-136">     *  &lt;p&gt;The type specifies a media type as a MIME document identifier; the</span>
+<span class="source-line-no">137</span><span id="line-137">     *  default type is {@code application/ecmascript}.&lt;/p&gt;</span>
+<span class="source-line-no">138</span><span id="line-138">     *</span>
+<span class="source-line-no">139</span><span id="line-139">     *  @param  value   The default scripting language for this {@code &lt;svg&gt;}</span>
+<span class="source-line-no">140</span><span id="line-140">     *      element.</span>
+<span class="source-line-no">141</span><span id="line-141">     */</span>
+<span class="source-line-no">142</span><span id="line-142">    public void setContentScriptType( final MimeType value );</span>
+<span class="source-line-no">143</span><span id="line-143"></span>
+<span class="source-line-no">144</span><span id="line-144">    /**</span>
+<span class="source-line-no">145</span><span id="line-145">     *  Sets the dimension for this {@code &lt;svg&gt;} element.</span>
+<span class="source-line-no">146</span><span id="line-146">     *</span>
+<span class="source-line-no">147</span><span id="line-147">     *  @param  width   The width of the element.</span>
+<span class="source-line-no">148</span><span id="line-148">     *  @param  height  The height of the element.</span>
+<span class="source-line-no">149</span><span id="line-149">     */</span>
+<span class="source-line-no">150</span><span id="line-150">    @SuppressWarnings( "UseOfConcreteClass" )</span>
+<span class="source-line-no">151</span><span id="line-151">    public default void setDimension( final SVGNumber width, final SVGNumber height )</span>
+<span class="source-line-no">152</span><span id="line-152">    {</span>
+<span class="source-line-no">153</span><span id="line-153">        setHeight( requireNonNullArgument( height, "height" ) );</span>
+<span class="source-line-no">154</span><span id="line-154">        setWidth( requireNonNullArgument( width, "width" ) );</span>
+<span class="source-line-no">155</span><span id="line-155">    }   //  setDimension()</span>
+<span class="source-line-no">156</span><span id="line-156"></span>
+<span class="source-line-no">157</span><span id="line-157">    /**</span>
+<span class="source-line-no">158</span><span id="line-158">     *  Sets the height of the embedded {@code &lt;svg&gt;} element.</span>
+<span class="source-line-no">159</span><span id="line-159">     *</span>
+<span class="source-line-no">160</span><span id="line-160">     *  @param  value   The type; if {@code null} the</span>
+<span class="source-line-no">161</span><span id="line-161">     *      attribute will be removed.</span>
+<span class="source-line-no">162</span><span id="line-162">     */</span>
+<span class="source-line-no">163</span><span id="line-163">    @SuppressWarnings( "UseOfConcreteClass" )</span>
+<span class="source-line-no">164</span><span id="line-164">    public void setHeight( final SVGNumber value );</span>
+<span class="source-line-no">165</span><span id="line-165"></span>
+<span class="source-line-no">166</span><span id="line-166">    /**</span>
+<span class="source-line-no">167</span><span id="line-167">     *  Sets the mode for the aspect ratio preservation for this {@code &lt;svg&gt;}</span>
+<span class="source-line-no">168</span><span id="line-168">     *  element.</span>
+<span class="source-line-no">169</span><span id="line-169">     *</span>
+<span class="source-line-no">170</span><span id="line-170">     *  @param  value   The type; if {@code null} the</span>
+<span class="source-line-no">171</span><span id="line-171">     *      attribute will be removed.</span>
+<span class="source-line-no">172</span><span id="line-172">     */</span>
+<span class="source-line-no">173</span><span id="line-173">    public void setPreserveAspectRatio( final SVGPreserveAspectRatio value );</span>
+<span class="source-line-no">174</span><span id="line-174"></span>
+<span class="source-line-no">175</span><span id="line-175">    /**</span>
+<span class="source-line-no">176</span><span id="line-176">     *  &lt;p&gt;{@summary Sets the given CSS style definitions as a style sheet in</span>
+<span class="source-line-no">177</span><span id="line-177">     *  an SVG {@code style} element to the &lt;code&gt;&amp;lt;defs&amp;gt;&lt;/code&gt; element</span>
+<span class="source-line-no">178</span><span id="line-178">     *  of this &lt;code&gt;&amp;lt;svg&amp;gt;&lt;/code&gt; element.}&lt;/p&gt;</span>
+<span class="source-line-no">179</span><span id="line-179">     *  &lt;p&gt;This is &lt;i&gt;not&lt;/i&gt; an attribute; instead an SVG {@code &lt;style&gt;}</span>
+<span class="source-line-no">180</span><span id="line-180">     *  element will be created.&lt;/p&gt;</span>
+<span class="source-line-no">181</span><span id="line-181">     *  &lt;p&gt;Consecutive calls to this method will not create additional</span>
+<span class="source-line-no">182</span><span id="line-182">     *  {@code &lt;style&gt;} elements, instead the new styles will be added to the</span>
+<span class="source-line-no">183</span><span id="line-183">     *  existing ones.&lt;/p&gt;</span>
+<span class="source-line-no">184</span><span id="line-184">     *</span>
+<span class="source-line-no">185</span><span id="line-185">     *  @param  styles  The CSS style definitions.</span>
+<span class="source-line-no">186</span><span id="line-186">     *  @return The SVG {@code &lt;style&gt;} element with the style sheet</span>
+<span class="source-line-no">187</span><span id="line-187">     *      definitions.</span>
+<span class="source-line-no">188</span><span id="line-188">     */</span>
+<span class="source-line-no">189</span><span id="line-189">    public SVGStyle setStyleSheet( final CharSequence... styles );</span>
+<span class="source-line-no">190</span><span id="line-190"></span>
+<span class="source-line-no">191</span><span id="line-191">    /**</span>
+<span class="source-line-no">192</span><span id="line-192">     *  Defines the visible area in this SVG drawing area.</span>
+<span class="source-line-no">193</span><span id="line-193">     *</span>
+<span class="source-line-no">194</span><span id="line-194">     *  @param  x   The x coordinate of top left corner of the area.</span>
+<span class="source-line-no">195</span><span id="line-195">     *  @param  y   The y coordinate of top left corner of the area.</span>
+<span class="source-line-no">196</span><span id="line-196">     *  @param  width   The width of the area.</span>
+<span class="source-line-no">197</span><span id="line-197">     *  @param  height  The height of the area.</span>
+<span class="source-line-no">198</span><span id="line-198">     */</span>
+<span class="source-line-no">199</span><span id="line-199">    @SuppressWarnings( "UseOfConcreteClass" )</span>
+<span class="source-line-no">200</span><span id="line-200">    public void setViewBox( final SVGNumber x, final SVGNumber y, final SVGNumber width, final SVGNumber height );</span>
+<span class="source-line-no">201</span><span id="line-201"></span>
+<span class="source-line-no">202</span><span id="line-202">    /**</span>
+<span class="source-line-no">203</span><span id="line-203">     *  Sets the width of the embedded {@code &lt;svg&gt;} element.</span>
+<span class="source-line-no">204</span><span id="line-204">     *</span>
+<span class="source-line-no">205</span><span id="line-205">     *  @param  value   The type; if {@code null} the</span>
+<span class="source-line-no">206</span><span id="line-206">     *      attribute will be removed.</span>
+<span class="source-line-no">207</span><span id="line-207">     */</span>
+<span class="source-line-no">208</span><span id="line-208">    @SuppressWarnings( "UseOfConcreteClass" )</span>
+<span class="source-line-no">209</span><span id="line-209">    public void setWidth( final SVGNumber value );</span>
+<span class="source-line-no">210</span><span id="line-210"></span>
+<span class="source-line-no">211</span><span id="line-211">    /**</span>
+<span class="source-line-no">212</span><span id="line-212">     *  Sets the x coordinate for the top left corner of the embedded</span>
+<span class="source-line-no">213</span><span id="line-213">     *  {@code &lt;svg&gt;} element.</span>
+<span class="source-line-no">214</span><span id="line-214">     *</span>
+<span class="source-line-no">215</span><span id="line-215">     *  @param  value   The type; if {@code null} the</span>
+<span class="source-line-no">216</span><span id="line-216">     *      attribute will be removed.</span>
+<span class="source-line-no">217</span><span id="line-217">     */</span>
+<span class="source-line-no">218</span><span id="line-218">    @SuppressWarnings( "UseOfConcreteClass" )</span>
+<span class="source-line-no">219</span><span id="line-219">    public void setX( final SVGNumber value );</span>
+<span class="source-line-no">220</span><span id="line-220"></span>
+<span class="source-line-no">221</span><span id="line-221">    /**</span>
+<span class="source-line-no">222</span><span id="line-222">     *  Sets the y coordinate for the top left corner of the embedded</span>
+<span class="source-line-no">223</span><span id="line-223">     *  {@code &lt;svg&gt;} element.</span>
+<span class="source-line-no">224</span><span id="line-224">     *</span>
+<span class="source-line-no">225</span><span id="line-225">     *  @param  value   The type; if {@code null} the</span>
+<span class="source-line-no">226</span><span id="line-226">     *      attribute will be removed.</span>
+<span class="source-line-no">227</span><span id="line-227">     */</span>
+<span class="source-line-no">228</span><span id="line-228">    @SuppressWarnings( "UseOfConcreteClass" )</span>
+<span class="source-line-no">229</span><span id="line-229">    public void setY( final SVGNumber value );</span>
+<span class="source-line-no">230</span><span id="line-230"></span>
+<span class="source-line-no">231</span><span id="line-231">    /**</span>
+<span class="source-line-no">232</span><span id="line-232">     *  Sets the 'Zoom-and-Pan' flag; if enabled on a stand-alone instance of</span>
+<span class="source-line-no">233</span><span id="line-233">     *  the {@code &lt;svg&gt;} element, it allows panning and zooming the image.</span>
+<span class="source-line-no">234</span><span id="line-234">     *</span>
+<span class="source-line-no">235</span><span id="line-235">     *  @param  flag    {@code true} enables the feature by setting</span>
+<span class="source-line-no">236</span><span id="line-236">     *      &amp;quot;{@code magnify}&amp;quot; to the attribute</span>
+<span class="source-line-no">237</span><span id="line-237">     *      {@value SVGUtils#SVGATTRIBUTE_ZoomAndPan}, {@code false} disables</span>
+<span class="source-line-no">238</span><span id="line-238">     *      it by setting the attribute to &amp;quot;{@code disable}&amp;quot;.</span>
+<span class="source-line-no">239</span><span id="line-239">     */</span>
+<span class="source-line-no">240</span><span id="line-240">    public void setZoomAndPan( final boolean flag );</span>
+<span class="source-line-no">241</span><span id="line-241">}</span>
+<span class="source-line-no">242</span><span id="line-242">//  interface SVG</span>
+<span class="source-line-no">243</span><span id="line-243"></span>
+<span class="source-line-no">244</span><span id="line-244">/*</span>
+<span class="source-line-no">245</span><span id="line-245"> *  End of File</span>
+<span class="source-line-no">246</span><span id="line-246"> */</span>
 
 
 
