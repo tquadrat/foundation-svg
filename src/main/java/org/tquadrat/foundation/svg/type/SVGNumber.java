@@ -17,6 +17,8 @@
 
 package org.tquadrat.foundation.svg.type;
 
+import static java.lang.Double.compare;
+import static java.lang.Integer.signum;
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
 import static org.tquadrat.foundation.svg.type.SVGUnit.MILLIMETER;
@@ -38,7 +40,7 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  */
 @ClassVersion( sourceVersion = "$Id: SVGNumber.java 1139 2024-06-16 19:50:41Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
-public sealed class SVGNumber
+public sealed class SVGNumber implements Comparable<SVGNumber>
     permits SVGNumber.SVGDegree, SVGNumber.SVGMillimeter, SVGNumber.SVGPercent,
         SVGNumber.SVGPixel, SVGNumber.SVGUserUnitValue
 {
@@ -285,6 +287,22 @@ public sealed class SVGNumber
         /*---------*\
     ====** Methods **==========================================================
         \*---------*/
+    /**
+     *  {@inheritDoc}
+     *
+     *  @since 0.4.9
+     */
+    @API( status = STABLE, since = "0.4.9" )
+    @Override
+    public final int compareTo( final SVGNumber o )
+    {
+        if( m_Unit != o.unit() ) throw new IllegalArgumentException( "Unit not compatible" );
+        final var retValue = signum( compare( m_Value.doubleValue(), o.number().doubleValue() ) );
+
+        //---* Done *----------------------------------------------------------
+        return retValue;
+    }   //  compareTo
+
     /**
      *  {@inheritDoc}
      */

@@ -40,12 +40,12 @@ import org.tquadrat.foundation.svg.type.SVGNumber.SVGUserUnitValue;
  *  and its subclasses.}</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGCalculator.java 1139 2024-06-16 19:50:41Z tquadrat $
+ *  @version $Id: SVGCalculator.java 1140 2024-06-23 11:17:41Z tquadrat $
  *  @since 0.4.7
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGCalculator.java 1139 2024-06-16 19:50:41Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGCalculator.java 1140 2024-06-23 11:17:41Z tquadrat $" )
 @API( status = STABLE, since = "0.4.7" )
 @UtilityClass
 public final class SVGCalculator
