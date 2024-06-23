@@ -7,7 +7,7 @@
      version='1.1'
      baseProfile='full'
      width='1188.000'
-     height='594.000'>
+     height='627.000'>
     <defs>
         <style><![CDATA[
             line
@@ -118,7 +118,7 @@
         </marker>
         <clipPath id='ID000001'>
             <rect class='focusClass'
-                  height='172.000'
+                  height='205.000'
                   width='1138.000'
                   x='0.000'
                   y='0.000'/>
@@ -130,7 +130,7 @@
                     <rect x='0.000'
                           y='0.000'
                           width='1138.000'
-                          height='172.000'
+                          height='205.000'
                           class='focusClass'/>
                     <line x1='0.000'
                           y1='17.000'
@@ -168,18 +168,27 @@
                           class='static'>+ increase(value:T,increment:double):T</text>
                     <text x='5.000'
                           y='124.000'
-                          class='static'>+ multiply(value:T,factor:double):T</text>
+                          class='static'>- makeList(v1:T,vOther:T&#x2026;):java.util.List&lt;T&gt;</text>
                     <text x='5.000'
                           y='135.000'
-                          class='static'>- newNumber(value:T,amount:double):T</text>
+                          class='static'>+ max(v1:T,vOther:T&#x2026;):T</text>
                     <text x='5.000'
                           y='146.000'
-                          class='static'>+ reduce(value:T,decrement:double):T</text>
+                          class='static'>+ min(v1:T,vOther:T&#x2026;):T</text>
                     <text x='5.000'
                           y='157.000'
-                          class='static'>+ toMillimeter(input:org.tquadrat.foundation.svg.type.SVGNumber):org.tquadrat.foundation.svg.type.SVGNumber.SVGMillimeter</text>
+                          class='static'>+ multiply(value:T,factor:double):T</text>
                     <text x='5.000'
                           y='168.000'
+                          class='static'>- newNumber(value:T,amount:double):T</text>
+                    <text x='5.000'
+                          y='179.000'
+                          class='static'>+ reduce(value:T,decrement:double):T</text>
+                    <text x='5.000'
+                          y='190.000'
+                          class='static'>+ toMillimeter(input:org.tquadrat.foundation.svg.type.SVGNumber):org.tquadrat.foundation.svg.type.SVGNumber.SVGMillimeter</text>
+                    <text x='5.000'
+                          y='201.000'
                           class='static'>+ toPixel(input:org.tquadrat.foundation.svg.type.SVGNumber):org.tquadrat.foundation.svg.type.SVGNumber.SVGPixel</text>
                 </g>
             </g>

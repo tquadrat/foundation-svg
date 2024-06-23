@@ -20,7 +20,13 @@ package org.tquadrat.foundation.svg.type;
 import static java.util.Arrays.stream;
 import static org.apiguardian.api.API.Status.INTERNAL;
 import static org.apiguardian.api.API.Status.STABLE;
+import static org.tquadrat.foundation.lang.Objects.isNull;
 import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import org.tquadrat.foundation.lang.Objects;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
@@ -107,7 +113,7 @@ public final class SVGCalculator
     @API( status = STABLE, since = "0.4.8" )
     public static final SVGDegree add( final SVGDegree v1, final SVGDegree... vOther )
     {
-        final var sum = requireNonNullArgument( v1, "v1" ).number().doubleValue() + stream( vOther ).mapToDouble( v -> v.number().doubleValue() ).sum();
+        final var sum = requireNonNullArgument( v1, "v1" ).number().doubleValue() + stream( vOther ).filter( Objects::nonNull ).mapToDouble( v -> v.number().doubleValue() ).sum();
         final var retValue = new SVGDegree( sum );
 
         //---* Done *----------------------------------------------------------
@@ -126,7 +132,7 @@ public final class SVGCalculator
     @API( status = STABLE, since = "0.4.8" )
     public static final SVGMillimeter add( final SVGMillimeter v1, final SVGMillimeter... vOther )
     {
-        final var sum = requireNonNullArgument( v1, "v1" ).number().doubleValue() + stream( vOther ).mapToDouble( v -> v.number().doubleValue() ).sum();
+        final var sum = requireNonNullArgument( v1, "v1" ).number().doubleValue() + stream( vOther ).filter( Objects::nonNull ).mapToDouble( v -> v.number().doubleValue() ).sum();
         final var retValue = new SVGMillimeter( sum );
 
         //---* Done *----------------------------------------------------------
@@ -145,7 +151,7 @@ public final class SVGCalculator
     @API( status = STABLE, since = "0.4.8" )
     public static final SVGPixel add( final SVGPixel v1, final SVGPixel... vOther )
     {
-        final var sum = requireNonNullArgument( v1, "v1" ).number().doubleValue() + stream( vOther ).mapToDouble( v -> v.number().doubleValue() ).sum();
+        final var sum = requireNonNullArgument( v1, "v1" ).number().doubleValue() + stream( vOther ).filter( Objects::nonNull ).mapToDouble( v -> v.number().doubleValue() ).sum();
         final var retValue = new SVGPixel( sum );
 
         //---* Done *----------------------------------------------------------
@@ -164,7 +170,7 @@ public final class SVGCalculator
     @API( status = STABLE, since = "0.4.8" )
     public static final SVGPercent add( final SVGPercent v1, final SVGPercent... vOther )
     {
-        final var sum = requireNonNullArgument( v1, "v1" ).number().doubleValue() + stream( vOther ).mapToDouble( v -> v.number().doubleValue() ).sum();
+        final var sum = requireNonNullArgument( v1, "v1" ).number().doubleValue() + stream( vOther ).filter( Objects::nonNull ).mapToDouble( v -> v.number().doubleValue() ).sum();
         final var retValue = new SVGPercent( sum );
 
         //---* Done *----------------------------------------------------------
@@ -190,6 +196,82 @@ public final class SVGCalculator
         //---* Done *----------------------------------------------------------
         return retValue;
     }   //  increase()
+
+    /**
+     *  Returns a list built from the given values.
+     *
+     *  @param  <T> The type of the values.
+     *  @param  v1  The first value.
+     *  @param  vOther  The other values.
+     *  @return The list from the given values.
+     *  @throws IllegalArgumentException    Not all values will have the same
+     *      unit.
+     */
+    @API( status = INTERNAL, since = "0.4.10" )
+    @SafeVarargs
+    private static final <T extends SVGNumber> List<T> makeList( final T v1, final T... vOther ) throws IllegalArgumentException
+    {
+        final List<T> retValue = new ArrayList<>();
+        final var unit = requireNonNullArgument( v1, "v1" ).unit();
+        retValue.add( v1 );
+        for( final var v : requireNonNullArgument( vOther, "vOther" ) )
+        {
+            if( isNull( v ) ) throw new NullArgumentException();
+            if( unit != v.unit() ) throw new IllegalArgumentException( "Invalid unit: %s".formatted( v.unit().name() ) );
+            retValue.add( v );
+        }
+
+        //---* Done *----------------------------------------------------------
+        return retValue;
+    }   //  makeList()
+
+    /**
+     *  Returns the greatest one of the given values.
+     *
+     *  @param  <T> The type of the values.
+     *  @param  v1  The first value.
+     *  @param  vOther  The other values.
+     *  @return The greatest value from the given values.
+     *  @throws IllegalArgumentException    Not all values will have the same
+     *      unit.
+     *
+     *  @since  0.4.10
+     */
+    @SafeVarargs
+    @API( status = STABLE, since = "0.4.10" )
+    public static final <T extends SVGNumber> T max( final T v1, final T... vOther ) throws IllegalArgumentException
+    {
+        final var buffer = makeList( v1, vOther );
+        buffer.sort( Comparator.naturalOrder() );
+        final var retValue = buffer.getLast();
+
+        //---* Done *----------------------------------------------------------
+        return retValue;
+    }   //  max()
+
+    /**
+     *  Returns the smallest one of the given values.
+     *
+     *  @param  <T> The type of the values.
+     *  @param  v1  The first value.
+     *  @param  vOther  The other values.
+     *  @return The smallest value from the given values.
+     *  @throws IllegalArgumentException    Not all values will have the same
+     *      unit.
+     *
+     *  @since  0.4.10
+     */
+    @SafeVarargs
+    @API( status = STABLE, since = "0.4.10" )
+    public static final <T extends SVGNumber> T min( final T v1, final T... vOther ) throws IllegalArgumentException
+    {
+        final var buffer = makeList( v1, vOther );
+        buffer.sort( Comparator.naturalOrder() );
+        final var retValue = buffer.getFirst();
+
+        //---* Done *----------------------------------------------------------
+        return retValue;
+    }   //  min()
 
     /**
      *  Multiplies the given instance of
