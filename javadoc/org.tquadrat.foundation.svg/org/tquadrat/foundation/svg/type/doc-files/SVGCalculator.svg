@@ -6,8 +6,8 @@
      xmlns:xlink="http://www.w3.org/1999/xlink"
      version='1.1'
      baseProfile='full'
-     width='786.000'
-     height='539.000'>
+     width='1188.000'
+     height='594.000'>
     <defs>
         <style><![CDATA[
             line
@@ -118,8 +118,8 @@
         </marker>
         <clipPath id='ID000001'>
             <rect class='focusClass'
-                  height='117.000'
-                  width='736.000'
+                  height='172.000'
+                  width='1138.000'
                   x='0.000'
                   y='0.000'/>
         </clipPath>
@@ -129,19 +129,19 @@
                    clip-path='url(#ID000001)'>
                     <rect x='0.000'
                           y='0.000'
-                          width='736.000'
-                          height='117.000'
+                          width='1138.000'
+                          height='172.000'
                           class='focusClass'/>
                     <line x1='0.000'
                           y1='17.000'
-                          x2='736.000'
+                          x2='1138.000'
                           y2='17.000'
                           class='separator'/>
-                    <text x='329.000'
+                    <text x='530.000'
                           y='13.000'>SVGCalculator</text>
                     <line x1='0.000'
                           y1='34.000'
-                          x2='736.000'
+                          x2='1138.000'
                           y2='34.000'
                           class='separator'/>
                     <text x='5.000'
@@ -150,21 +150,36 @@
                           y='47.000'>- SVGCalculator()</text>
                     <text x='5.000'
                           y='58.000'
-                          class='static'>+ increase(value:T,increment:double):T</text>
+                          class='static'>+ add(v1:T,vOther:T&#x2026;):T</text>
                     <text x='5.000'
                           y='69.000'
-                          class='static'>+ multiply(value:T,factor:double):T</text>
+                          class='static'>+ add(v1:org.tquadrat.foundation.svg.type.SVGNumber.SVGDegree,vOther:org.tquadrat.foundation.svg.type.SVGNumber.SVGDegree&#x2026;):org.tquadrat.foundation.svg.type.SVGNumber.SVGDegree</text>
                     <text x='5.000'
                           y='80.000'
-                          class='static'>- newNumber(value:T,amount:double):T</text>
+                          class='static'>+ add(v1:org.tquadrat.foundation.svg.type.SVGNumber.SVGMillimeter,vOther:org.tquadrat.foundation.svg.type.SVGNumber.SVGMillimeter&#x2026;):org.tquadrat.foundation.svg.type.SVGNumber.SVGMillimeter</text>
                     <text x='5.000'
                           y='91.000'
-                          class='static'>+ reduce(value:T,decrement:double):T</text>
+                          class='static'>+ add(v1:org.tquadrat.foundation.svg.type.SVGNumber.SVGPixel,vOther:org.tquadrat.foundation.svg.type.SVGNumber.SVGPixel&#x2026;):org.tquadrat.foundation.svg.type.SVGNumber.SVGPixel</text>
                     <text x='5.000'
                           y='102.000'
-                          class='static'>+ toMillimeter(input:org.tquadrat.foundation.svg.type.SVGNumber):org.tquadrat.foundation.svg.type.SVGNumber.SVGMillimeter</text>
+                          class='static'>+ add(v1:org.tquadrat.foundation.svg.type.SVGNumber.SVGPercent,vOther:org.tquadrat.foundation.svg.type.SVGNumber.SVGPercent&#x2026;):org.tquadrat.foundation.svg.type.SVGNumber.SVGPercent</text>
                     <text x='5.000'
                           y='113.000'
+                          class='static'>+ increase(value:T,increment:double):T</text>
+                    <text x='5.000'
+                          y='124.000'
+                          class='static'>+ multiply(value:T,factor:double):T</text>
+                    <text x='5.000'
+                          y='135.000'
+                          class='static'>- newNumber(value:T,amount:double):T</text>
+                    <text x='5.000'
+                          y='146.000'
+                          class='static'>+ reduce(value:T,decrement:double):T</text>
+                    <text x='5.000'
+                          y='157.000'
+                          class='static'>+ toMillimeter(input:org.tquadrat.foundation.svg.type.SVGNumber):org.tquadrat.foundation.svg.type.SVGNumber.SVGMillimeter</text>
+                    <text x='5.000'
+                          y='168.000'
                           class='static'>+ toPixel(input:org.tquadrat.foundation.svg.type.SVGNumber):org.tquadrat.foundation.svg.type.SVGNumber.SVGPixel</text>
                 </g>
             </g>
@@ -227,9 +242,9 @@
         </symbol>
     </defs>
     <path class='inheritance'
-          d='M393.000,297.000 L393.000,197.000'
+          d='M594.000,297.000 L594.000,197.000'
           marker-end='url(#inheritance)'/>
-    <use x='271.000'
+    <use x='472.000'
          y='25.000'
          xlink:href='#java.lang.Object'/>
     <use x='25.000'

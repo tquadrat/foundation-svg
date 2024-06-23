@@ -17,6 +17,7 @@
 
 package org.tquadrat.foundation.svg.type;
 
+import static java.util.Arrays.stream;
 import static org.apiguardian.api.API.Status.INTERNAL;
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
@@ -39,12 +40,12 @@ import org.tquadrat.foundation.svg.type.SVGNumber.SVGUserUnitValue;
  *  and its subclasses.}</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: HexUtils.java 747 2020-12-01 12:40:38Z tquadrat $
+ *  @version $Id: SVGCalculator.java 1139 2024-06-16 19:50:41Z tquadrat $
  *  @since 0.4.7
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: HexUtils.java 747 2020-12-01 12:40:38Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGCalculator.java 1139 2024-06-16 19:50:41Z tquadrat $" )
 @API( status = STABLE, since = "0.4.7" )
 @UtilityClass
 public final class SVGCalculator
@@ -60,6 +61,116 @@ public final class SVGCalculator
         /*---------*\
     ====** Methods **==========================================================
         \*---------*/
+    /**
+     *  Adds the given values.
+     *
+     *  @param  <T> The type of the values.
+     *  @param  v1  The first value.
+     *  @param  vOther  The other values.
+     *  @return The sum.
+     *
+     *  @since  0.4.8
+     */
+    @SafeVarargs
+    @API( status = STABLE, since = "0.4.8" )
+    public static final <T extends SVGNumber> T add( final T v1, final T... vOther )
+    {
+        var sum = requireNonNullArgument( v1, "v1" ).number().doubleValue();
+        final var unit = v1.unit();
+        for( final var v : vOther )
+        {
+            if( unit != v.unit() ) throw new IllegalArgumentException( "Invalid unit: %s".formatted( v.unit().name() ) );
+            sum += v.number().doubleValue();
+        }
+        @SuppressWarnings( "unchecked" )
+        final var retValue = (T) switch( unit )
+        {
+            case PIXEL -> new SVGPixel( sum );
+            case MILLIMETER -> new SVGMillimeter( sum );
+            case PERCENT -> new SVGPercent( sum );
+            default -> v1 instanceof SVGDegree ? new SVGDegree( sum ) : new SVGNumber( sum, unit );
+        };
+
+        //---* Done *----------------------------------------------------------
+        return retValue;
+    }   //  add
+
+    /**
+     *  Adds the given values.
+     *
+     *  @param  v1  The first value.
+     *  @param  vOther  The other values.
+     *  @return The sum.
+     *
+     *  @since  0.4.8
+     */
+    @API( status = STABLE, since = "0.4.8" )
+    public static final SVGDegree add( final SVGDegree v1, final SVGDegree... vOther )
+    {
+        final var sum = requireNonNullArgument( v1, "v1" ).number().doubleValue() + stream( vOther ).mapToDouble( v -> v.number().doubleValue() ).sum();
+        final var retValue = new SVGDegree( sum );
+
+        //---* Done *----------------------------------------------------------
+        return retValue;
+    }   //  add
+
+    /**
+     *  Adds the given values.
+     *
+     *  @param  v1  The first value.
+     *  @param  vOther  The other values.
+     *  @return The sum.
+     *
+     *  @since  0.4.8
+     */
+    @API( status = STABLE, since = "0.4.8" )
+    public static final SVGMillimeter add( final SVGMillimeter v1, final SVGMillimeter... vOther )
+    {
+        final var sum = requireNonNullArgument( v1, "v1" ).number().doubleValue() + stream( vOther ).mapToDouble( v -> v.number().doubleValue() ).sum();
+        final var retValue = new SVGMillimeter( sum );
+
+        //---* Done *----------------------------------------------------------
+        return retValue;
+    }   //  add
+
+    /**
+     *  Adds the given values.
+     *
+     *  @param  v1  The first value.
+     *  @param  vOther  The other values.
+     *  @return The sum.
+     *
+     *  @since  0.4.8
+     */
+    @API( status = STABLE, since = "0.4.8" )
+    public static final SVGPixel add( final SVGPixel v1, final SVGPixel... vOther )
+    {
+        final var sum = requireNonNullArgument( v1, "v1" ).number().doubleValue() + stream( vOther ).mapToDouble( v -> v.number().doubleValue() ).sum();
+        final var retValue = new SVGPixel( sum );
+
+        //---* Done *----------------------------------------------------------
+        return retValue;
+    }   //  add
+
+    /**
+     *  Adds the given values.
+     *
+     *  @param  v1  The first value.
+     *  @param  vOther  The other values.
+     *  @return The sum.
+     *
+     *  @since  0.4.8
+     */
+    @API( status = STABLE, since = "0.4.8" )
+    public static final SVGPercent add( final SVGPercent v1, final SVGPercent... vOther )
+    {
+        final var sum = requireNonNullArgument( v1, "v1" ).number().doubleValue() + stream( vOther ).mapToDouble( v -> v.number().doubleValue() ).sum();
+        final var retValue = new SVGPercent( sum );
+
+        //---* Done *----------------------------------------------------------
+        return retValue;
+    }   //  add
+
     /**
      *  Increases the given instance of
      *  {@link SVGNumber}
