@@ -26,13 +26,13 @@ import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import org.tquadrat.foundation.lang.Objects;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
 import org.tquadrat.foundation.annotation.UtilityClass;
 import org.tquadrat.foundation.exception.NullArgumentException;
 import org.tquadrat.foundation.exception.PrivateConstructorForStaticClassCalledError;
+import org.tquadrat.foundation.lang.Objects;
 import org.tquadrat.foundation.svg.type.SVGNumber.SVGDegree;
 import org.tquadrat.foundation.svg.type.SVGNumber.SVGMillimeter;
 import org.tquadrat.foundation.svg.type.SVGNumber.SVGPercent;
@@ -46,12 +46,12 @@ import org.tquadrat.foundation.svg.type.SVGNumber.SVGUserUnitValue;
  *  and its subclasses.}</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGCalculator.java 1140 2024-06-23 11:17:41Z tquadrat $
+ *  @version $Id: SVGCalculator.java 1142 2024-06-23 20:21:35Z tquadrat $
  *  @since 0.4.7
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGCalculator.java 1140 2024-06-23 11:17:41Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGCalculator.java 1142 2024-06-23 20:21:35Z tquadrat $" )
 @API( status = STABLE, since = "0.4.7" )
 @UtilityClass
 public final class SVGCalculator
