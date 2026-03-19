@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2025 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -41,8 +41,6 @@ import java.util.List;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.svg.AllowsConditionalProcessingAttributes;
-import org.tquadrat.foundation.svg.AllowsPresentationAttributes;
 import org.tquadrat.foundation.svg.SVGClipPath;
 
 /**
@@ -51,12 +49,12 @@ import org.tquadrat.foundation.svg.SVGClipPath;
  *  for the SVG {@code <clipPath>} element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGClipPathImpl.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: SVGClipPathImpl.java 1151 2025-10-01 21:32:15Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGClipPathImpl.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGClipPathImpl.java 1151 2025-10-01 21:32:15Z tquadrat $" )
 @API( status = INTERNAL, since = "0.0.5" )
 public final class SVGClipPathImpl extends SVGElementImpl implements SVGClipPath
 {
@@ -85,8 +83,8 @@ public final class SVGClipPathImpl extends SVGElementImpl implements SVGClipPath
             SVGATTRIBUTE_Style, SVGATTRIBUTE_ExternalResourcesRequired,
             SVGATTRIBUTE_Transform, SVGATTRIBUTE_ClipPathUnits ) );
         attributes.addAll( CORE_ATTRIBUTES );
-        attributes.addAll( AllowsConditionalProcessingAttributes.CONDITIONALPROCESSING_ATTRIBUTES );
-        attributes.addAll( AllowsPresentationAttributes.PRESENTATION_ATTRIBUTES );
+        attributes.addAll( CONDITIONALPROCESSING_ATTRIBUTES );
+        attributes.addAll( PRESENTATION_ATTRIBUTES );
 
         updateRegistries( childElements, attributes );
 

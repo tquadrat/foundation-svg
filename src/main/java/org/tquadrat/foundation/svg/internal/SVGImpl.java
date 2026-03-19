@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2025 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -152,8 +152,6 @@ import java.util.Optional;
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
 import org.tquadrat.foundation.lang.Lazy;
-import org.tquadrat.foundation.svg.AllowsDocumentElementEventAttributes;
-import org.tquadrat.foundation.svg.AllowsDocumentEventAttributes;
 import org.tquadrat.foundation.svg.SVG;
 import org.tquadrat.foundation.svg.SVGElement;
 import org.tquadrat.foundation.svg.SVGStyle;
@@ -166,12 +164,12 @@ import jakarta.activation.MimeType;
  *  for the {@code <svg>} element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGImpl.java 1074 2023-10-02 12:05:06Z tquadrat $
+ *  @version $Id: SVGImpl.java 1151 2025-10-01 21:32:15Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGImpl.java 1074 2023-10-02 12:05:06Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGImpl.java 1151 2025-10-01 21:32:15Z tquadrat $" )
 @API( status = INTERNAL, since = "0.0.5" )
 public final class SVGImpl extends SVGElementImpl implements SVG
 {
@@ -247,8 +245,8 @@ public final class SVGImpl extends SVGElementImpl implements SVG
             SVGATTRIBUTE_UnicodeBidi, SVGATTRIBUTE_VectorEffect,
             SVGATTRIBUTE_Visibility, SVGATTRIBUTE_WordSpacing,
             SVGATTRIBUTE_WritingMode ) );
-        attributes.addAll( AllowsDocumentEventAttributes.DOCUMENTEVENT_ATTRIBUTES );
-        attributes.addAll( AllowsDocumentElementEventAttributes.DOCUMENTELEMENTEVENT_ATTRIBUTES );
+        attributes.addAll( DOCUMENTEVENT_ATTRIBUTES );
+        attributes.addAll( DOCUMENTELEMENTEVENT_ATTRIBUTES );
 
         updateRegistries( childElements, attributes );
     }   //  SVGImpl()

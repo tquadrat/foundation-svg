@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2025 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -39,11 +39,6 @@ import java.util.Optional;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.svg.AllowsConditionalProcessingAttributes;
-import org.tquadrat.foundation.svg.AllowsGlobalEventAttributes;
-import org.tquadrat.foundation.svg.AllowsGraphicalEventAttributes;
-import org.tquadrat.foundation.svg.AllowsPresentationAttributes;
-import org.tquadrat.foundation.svg.AllowsStyleAttributes;
 import org.tquadrat.foundation.svg.SVGPath;
 import org.tquadrat.foundation.svg.type.SVGPathElement;
 
@@ -53,12 +48,12 @@ import org.tquadrat.foundation.svg.type.SVGPathElement;
  *  for the SVG {@code <path>} element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGPathImpl.java 840 2021-01-10 21:37:03Z tquadrat $
+ *  @version $Id: SVGPathImpl.java 1151 2025-10-01 21:32:15Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGPathImpl.java 840 2021-01-10 21:37:03Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGPathImpl.java 1151 2025-10-01 21:32:15Z tquadrat $" )
 @API( status = INTERNAL, since = "0.0.5" )
 public final class SVGPathImpl extends SVGElementImpl implements SVGPath
 {
@@ -82,11 +77,11 @@ public final class SVGPathImpl extends SVGElementImpl implements SVGPath
             SVGATTRIBUTE_PathDefinition, SVGATTRIBUTE_PathLength,
             SVGATTRIBUTE_Class, SVGATTRIBUTE_Style ) );
         attributes.addAll( CORE_ATTRIBUTES );
-        attributes.addAll( AllowsStyleAttributes.STYLE_ATTRIBUTES );
-        attributes.addAll( AllowsConditionalProcessingAttributes.CONDITIONALPROCESSING_ATTRIBUTES );
-        attributes.addAll( AllowsGlobalEventAttributes.GLOBALEVENT_ATTRIBUTES );
-        attributes.addAll( AllowsGraphicalEventAttributes.GRAPHICALEVENT_ATTRIBUTES );
-        attributes.addAll( AllowsPresentationAttributes.PRESENTATION_ATTRIBUTES );
+        attributes.addAll( STYLE_ATTRIBUTES );
+        attributes.addAll( CONDITIONALPROCESSING_ATTRIBUTES );
+        attributes.addAll( GLOBALEVENT_ATTRIBUTES );
+        attributes.addAll( GRAPHICALEVENT_ATTRIBUTES );
+        attributes.addAll( PRESENTATION_ATTRIBUTES );
 
         updateRegistries( childElements, attributes );
     }   //  SVGPathImpl()

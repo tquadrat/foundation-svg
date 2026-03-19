@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2023 by Thomas Thrien.
+ * Copyright © 2002-2025 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -41,10 +41,6 @@ import java.util.List;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.svg.AllowsConditionalProcessingAttributes;
-import org.tquadrat.foundation.svg.AllowsGraphicalEventAttributes;
-import org.tquadrat.foundation.svg.AllowsPresentationAttributes;
-import org.tquadrat.foundation.svg.AllowsStyleAttributes;
 import org.tquadrat.foundation.svg.SVGText;
 
 /**
@@ -52,12 +48,12 @@ import org.tquadrat.foundation.svg.SVGText;
  *  {@link SVGText}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGTextImpl.java 1074 2023-10-02 12:05:06Z tquadrat $
+ *  @version $Id: SVGTextImpl.java 1151 2025-10-01 21:32:15Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGTextImpl.java 1074 2023-10-02 12:05:06Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGTextImpl.java 1151 2025-10-01 21:32:15Z tquadrat $" )
 @API( status = INTERNAL, since = "0.0.5" )
 public final class SVGTextImpl extends SVGTextBase implements SVGText
 {
@@ -84,11 +80,11 @@ public final class SVGTextImpl extends SVGTextBase implements SVGText
             SVGATTRIBUTE_TextAnchor, SVGATTRIBUTE_Rotate,
             SVGATTRIBUTE_TextLength, SVGATTRIBUTE_LengthAdjust,
             SVGATTRIBUTE_Transform ) );
-        attributes.addAll( AllowsConditionalProcessingAttributes.CONDITIONALPROCESSING_ATTRIBUTES );
+        attributes.addAll( CONDITIONALPROCESSING_ATTRIBUTES );
         attributes.addAll( CORE_ATTRIBUTES );
-        attributes.addAll( AllowsGraphicalEventAttributes.GRAPHICALEVENT_ATTRIBUTES );
-        attributes.addAll( AllowsStyleAttributes.STYLE_ATTRIBUTES );
-        attributes.addAll( AllowsPresentationAttributes.PRESENTATION_ATTRIBUTES );
+        attributes.addAll( GRAPHICALEVENT_ATTRIBUTES );
+        attributes.addAll( STYLE_ATTRIBUTES );
+        attributes.addAll( PRESENTATION_ATTRIBUTES );
 
         updateRegistries( childElements, attributes );
     }   //  SVGTextImpl()

@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2023 by Thomas Thrien.
+ * Copyright © 2002-2026 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -17,22 +17,22 @@
 
 package org.tquadrat.foundation.svg;
 
-import static org.apiguardian.api.API.Status.STABLE;
-
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
 import org.tquadrat.foundation.svg.internal.SVGStyleImpl;
+
+import static org.apiguardian.api.API.Status.STABLE;
 
 /**
  *  The definition for the SVG {@code <style>} element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGStyle.java 1074 2023-10-02 12:05:06Z tquadrat $
+ *  @version $Id: SVGStyle.java 1158 2026-03-14 16:23:29Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGStyle.java 1074 2023-10-02 12:05:06Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGStyle.java 1158 2026-03-14 16:23:29Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVGStyle extends SVGElement
     permits SVGElementAdapter, SVGStyleImpl
@@ -64,7 +64,15 @@ public sealed interface SVGStyle extends SVGElement
     public void merge( final SVGStyle other );
 
     /**
-     *  {@inheritDoc}
+     *  Returns a String representation for this element instance.
+     *
+     *  @param  indentationLevel    The indentation level.
+     *  @param  prettyPrint The pretty print flag.
+     *  @return The String representation.
+     */
+    /*
+     * The Javadoc comment was repeated here because the Javadoc tool
+     * complained about the use of {@InheritDoc}.
      */
     @Override
     public String toString( final int indentationLevel, final boolean prettyPrint );

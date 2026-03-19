@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- *  Copyright © 2002-2024 by Thomas Thrien.
+ *  Copyright © 2002-2025 by Thomas Thrien.
  *  All Rights Reserved.
  * ============================================================================
  *  Licensed to the public under the agreements of the GNU Lesser General Public
@@ -46,12 +46,12 @@ import org.tquadrat.foundation.svg.type.SVGNumber.SVGUserUnitValue;
  *  and its subclasses.}</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGCalculator.java 1142 2024-06-23 20:21:35Z tquadrat $
+ *  @version $Id: SVGCalculator.java 1151 2025-10-01 21:32:15Z tquadrat $
  *  @since 0.4.7
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGCalculator.java 1142 2024-06-23 20:21:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGCalculator.java 1151 2025-10-01 21:32:15Z tquadrat $" )
 @API( status = STABLE, since = "0.4.7" )
 @UtilityClass
 public final class SVGCalculator
@@ -216,7 +216,7 @@ public final class SVGCalculator
         retValue.add( v1 );
         for( final var v : requireNonNullArgument( vOther, "vOther" ) )
         {
-            if( isNull( v ) ) throw new NullArgumentException();
+            if( isNull( v ) ) throw new NullArgumentException( "An argument is null" );
             if( unit != v.unit() ) throw new IllegalArgumentException( "Invalid unit: %s".formatted( v.unit().name() ) );
             retValue.add( v );
         }
@@ -309,11 +309,11 @@ public final class SVGCalculator
     {
         final var retValue = switch( requireNonNullArgument( value, "value" ) )
         {
-            case final SVGDegree $ -> (T) new SVGDegree( amount );
-            case final SVGMillimeter $ -> (T) new SVGMillimeter( amount );
-            case final SVGPercent $ -> (T) new SVGPercent( amount );
-            case final SVGPixel $ -> (T) new SVGPixel( amount );
-            case final SVGUserUnitValue $ -> (T) new SVGUserUnitValue( amount );
+            case final SVGDegree _ -> (T) new SVGDegree( amount );
+            case final SVGMillimeter _ -> (T) new SVGMillimeter( amount );
+            case final SVGPercent _ -> (T) new SVGPercent( amount );
+            case final SVGPixel _ -> (T) new SVGPixel( amount );
+            case final SVGUserUnitValue _ -> (T) new SVGUserUnitValue( amount );
             default -> (T) new SVGNumber( amount, value.unit() );
         };
 

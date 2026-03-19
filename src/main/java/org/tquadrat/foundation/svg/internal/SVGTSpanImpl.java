@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2025 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -42,10 +42,6 @@ import java.util.List;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.svg.AllowsConditionalProcessingAttributes;
-import org.tquadrat.foundation.svg.AllowsGraphicalEventAttributes;
-import org.tquadrat.foundation.svg.AllowsPresentationAttributes;
-import org.tquadrat.foundation.svg.AllowsStyleAttributes;
 import org.tquadrat.foundation.svg.SVGTSpan;
 
 /**
@@ -53,12 +49,12 @@ import org.tquadrat.foundation.svg.SVGTSpan;
  *  {@link SVGTSpan}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGTSpanImpl.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: SVGTSpanImpl.java 1151 2025-10-01 21:32:15Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGTSpanImpl.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGTSpanImpl.java 1151 2025-10-01 21:32:15Z tquadrat $" )
 @API( status = INTERNAL, since = "0.0.5" )
 public final class SVGTSpanImpl extends SVGTextBase implements SVGTSpan
 {
@@ -84,11 +80,11 @@ public final class SVGTSpanImpl extends SVGTextBase implements SVGTSpan
             SVGATTRIBUTE_y, SVGATTRIBUTE_dx, SVGATTRIBUTE_dy,
             SVGATTRIBUTE_Rotate, SVGATTRIBUTE_TextLength,
             SVGATTRIBUTE_LengthAdjust ) );
-        attributes.addAll( AllowsConditionalProcessingAttributes.CONDITIONALPROCESSING_ATTRIBUTES );
+        attributes.addAll( CONDITIONALPROCESSING_ATTRIBUTES );
         attributes.addAll( CORE_ATTRIBUTES );
-        attributes.addAll( AllowsGraphicalEventAttributes.GRAPHICALEVENT_ATTRIBUTES );
-        attributes.addAll( AllowsStyleAttributes.STYLE_ATTRIBUTES );
-        attributes.addAll( AllowsPresentationAttributes.PRESENTATION_ATTRIBUTES );
+        attributes.addAll( GRAPHICALEVENT_ATTRIBUTES );
+        attributes.addAll( STYLE_ATTRIBUTES );
+        attributes.addAll( PRESENTATION_ATTRIBUTES );
 
         updateRegistries( childElements, attributes );
     }   //  SVGTSpanImpl()

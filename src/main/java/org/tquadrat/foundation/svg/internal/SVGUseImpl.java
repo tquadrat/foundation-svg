@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2025 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -40,11 +40,6 @@ import java.util.List;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.svg.AllowsConditionalProcessingAttributes;
-import org.tquadrat.foundation.svg.AllowsGraphicalEventAttributes;
-import org.tquadrat.foundation.svg.AllowsPresentationAttributes;
-import org.tquadrat.foundation.svg.AllowsXLinkAttributes;
-import org.tquadrat.foundation.svg.SVGElement;
 import org.tquadrat.foundation.svg.SVGUse;
 
 /**
@@ -53,12 +48,12 @@ import org.tquadrat.foundation.svg.SVGUse;
  *  for the {@code <use>} element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGUseImpl.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: SVGUseImpl.java 1151 2025-10-01 21:32:15Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGUseImpl.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGUseImpl.java 1151 2025-10-01 21:32:15Z tquadrat $" )
 @API( status = INTERNAL, since = "0.0.5" )
 public final class SVGUseImpl extends SVGElementImpl implements SVGUse
 {
@@ -83,11 +78,11 @@ public final class SVGUseImpl extends SVGElementImpl implements SVGUse
         attributes.addAll( List.of( SVGATTRIBUTE_Id, SVGATTRIBUTE_x,
             SVGATTRIBUTE_y, SVGATTRIBUTE_Width, SVGATTRIBUTE_Height,
             SVGATTRIBUTE_Reference ) );
-        attributes.addAll( AllowsConditionalProcessingAttributes.CONDITIONALPROCESSING_ATTRIBUTES );
-        attributes.addAll( SVGElement.CORE_ATTRIBUTES );
-        attributes.addAll( AllowsGraphicalEventAttributes.GRAPHICALEVENT_ATTRIBUTES );
-        attributes.addAll( AllowsPresentationAttributes.PRESENTATION_ATTRIBUTES );
-        attributes.addAll( AllowsXLinkAttributes.XLINK_ATTRIBUTES );
+        attributes.addAll( CONDITIONALPROCESSING_ATTRIBUTES );
+        attributes.addAll( CORE_ATTRIBUTES );
+        attributes.addAll( GRAPHICALEVENT_ATTRIBUTES );
+        attributes.addAll( PRESENTATION_ATTRIBUTES );
+        attributes.addAll( XLINK_ATTRIBUTES );
 
         updateRegistries( childElements, attributes );
 

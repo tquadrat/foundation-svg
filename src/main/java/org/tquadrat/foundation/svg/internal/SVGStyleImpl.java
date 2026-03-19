@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2023 by Thomas Thrien.
+ * Copyright © 2002-2025 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -36,7 +36,6 @@ import java.util.List;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.svg.SVGElement;
 import org.tquadrat.foundation.svg.SVGStyle;
 import org.tquadrat.foundation.xml.builder.XMLElement;
 import org.tquadrat.foundation.xml.builder.spi.Element;
@@ -47,12 +46,12 @@ import org.tquadrat.foundation.xml.builder.spi.Element;
  *  for the SVG {@code <style>} element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGStyleImpl.java 1074 2023-10-02 12:05:06Z tquadrat $
+ *  @version $Id: SVGStyleImpl.java 1151 2025-10-01 21:32:15Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGStyleImpl.java 1074 2023-10-02 12:05:06Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGStyleImpl.java 1151 2025-10-01 21:32:15Z tquadrat $" )
 @API( status = INTERNAL, since = "0.0.5" )
 public final class SVGStyleImpl extends SVGElementImpl implements SVGStyle
 {
@@ -75,7 +74,7 @@ public final class SVGStyleImpl extends SVGElementImpl implements SVGStyle
         super( SVGELEMENT_Style, VALIDATES_ATTRIBUTES );
 
         //---* The attributes for the <style> element *------------------------
-        updateRegistries( emptyList(), SVGElement.CORE_ATTRIBUTES );
+        updateRegistries( emptyList(), CORE_ATTRIBUTES );
     }   //  SVGStyleImpl()
 
     /**

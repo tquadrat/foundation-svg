@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2023 by Thomas Thrien.
+ * Copyright © 2002-2025 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -67,7 +67,6 @@ import java.util.List;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.svg.AllowsPresentationAttributes;
 import org.tquadrat.foundation.svg.AllowsStyleAttributes;
 import org.tquadrat.foundation.svg.SVGMarker;
 import org.tquadrat.foundation.svg.type.SVGMarkerOrientation;
@@ -80,12 +79,12 @@ import org.tquadrat.foundation.svg.type.SVGNumber.SVGDegree;
  *  for the SVG {@code <marker>}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGMarkerImpl.java 1074 2023-10-02 12:05:06Z tquadrat $
+ *  @version $Id: SVGMarkerImpl.java 1151 2025-10-01 21:32:15Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGMarkerImpl.java 1074 2023-10-02 12:05:06Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGMarkerImpl.java 1151 2025-10-01 21:32:15Z tquadrat $" )
 @API( status = INTERNAL, since = "0.0.5" )
 public sealed class SVGMarkerImpl extends SVGElementImpl implements SVGMarker
     permits SVGPositionedMarkerImpl
@@ -126,7 +125,7 @@ public sealed class SVGMarkerImpl extends SVGElementImpl implements SVGMarker
             SVGATTRIBUTE_Position ) );
         attributes.addAll( CORE_ATTRIBUTES );
         attributes.addAll( AllowsStyleAttributes.STYLE_ATTRIBUTES );
-        attributes.addAll( AllowsPresentationAttributes.PRESENTATION_ATTRIBUTES );
+        attributes.addAll( PRESENTATION_ATTRIBUTES );
 
         updateRegistries( childElements, attributes );
     }   //  SVGMarkerImpl()

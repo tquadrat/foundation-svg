@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2023 by Thomas Thrien.
+ * Copyright © 2002-2025 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -31,12 +31,13 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  The implementation for SVG values representing colors.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGColor.java 1076 2023-10-03 18:36:07Z tquadrat $
+ *  @version $Id: SVGColor.java 1151 2025-10-01 21:32:15Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGColor.java 1076 2023-10-03 18:36:07Z tquadrat $" )
+@SuppressWarnings( "EqualsAndHashcode" )
+@ClassVersion( sourceVersion = "$Id: SVGColor.java 1151 2025-10-01 21:32:15Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public final class SVGColor extends SVGPaint
 {
@@ -72,10 +73,10 @@ public final class SVGColor extends SVGPaint
     private SVGColor() { super( "inherit" ); }
 
     /**
-     *  Creates a new {@code SVGColor} instance from the given colour
-     *  values.<br>
-     *  <br>Allowed are the values from 0 to 255, other values will be
-     *  normalised accordingly.
+     *  <p>{@summary Creates a new {@code SVGColor} instance from the given
+     *  colour values.}</p>
+     *  <p>Valid values are in the range from 0 to 255, other values will be
+     *  normalised accordingly.</p>
      *
      *  @param  red The red component for the colour.
      *  @param  green   The green component for the colour.
@@ -87,10 +88,10 @@ public final class SVGColor extends SVGPaint
     }   //  SVGColor()
 
     /**
-     *  Creates a new {@code SVGColor} instance from the given colour
-     *  values.<br>
-     *  <br>Allowed are the values from 0 to 255, or 0% to 100% respectively,
-     *  other values will be normalised accordingly.
+     *  <p>{@summary Creates a new {@code SVGColor} instance from the given
+     *  colour values}.</p>
+     *  <p>Valid values are in the range from 0 to 255, or from 0% to 100%
+     *  respectively, other values will be normalised accordingly.</p>
      *
      *  @param  flag    {@code true} if the given values are percentages,
      *      {@code false} if they are absolute values.
@@ -104,10 +105,10 @@ public final class SVGColor extends SVGPaint
     }   //  SVGColor()
 
     /**
-     *  Creates a new {@code SVGColor} instance, using the given argument as a
-     *  CSS colour name.<br>
-     *  <br>The given argument may not be {@code null} nor the empty String,
-     *  but it will not undergo any further validation.
+     *  <p>{@summary Creates a new {@code SVGColor} instance, using the given
+     *  argument as a CSS colour name.}</p>
+     *  <p>The given argument may not be {@code null} nor the empty String,
+     *  but it will not undergo any further validation.</p>
      *
      *  @param  color   The CSS colour name.
      */
@@ -117,9 +118,10 @@ public final class SVGColor extends SVGPaint
     ====** Methods **==========================================================
         \*---------*/
     /**
-     *  Composes the colour type String from the given colour values.<br>
-     *  <br>Allowed are the values from 0 to 255, or 0% to 100% respectively,
-     *  other values will be normalised accordingly.
+     *  <p>{@summary Composes the colour type String from the given colour
+     *  values.}</p>
+     *  <p>Valid values are in the range from 0 to 255, or from 0% to 100%
+     *  respectively, other values will be normalised accordingly.</p>
      *
      *  @param  flag    {@code true} if the given values are percentages,
      *      {@code false} if they are absolute values.
@@ -130,9 +132,9 @@ public final class SVGColor extends SVGPaint
      */
     private static final String composeColorValue( final boolean flag, final int red, final int green, final int blue )
     {
-        final var n = (IntUnaryOperator) v -> abs( v ) > 100 ? abs( v ) % 101 : abs( v );
+        final var convertToPercentage = (IntUnaryOperator) v -> abs( v ) > 100 ? abs( v ) % 101 : abs( v );
         final var retValue = flag
-            ? format( "rgb(%d%%,%d%%,%d%%)", n.applyAsInt( red ), n.applyAsInt( green ), n.applyAsInt( blue ) )
+            ? format( "rgb(%d%%,%d%%,%d%%)", convertToPercentage.applyAsInt( red ), convertToPercentage.applyAsInt( green ), convertToPercentage.applyAsInt( blue ) )
             : format( "rgb(%d,%d,%d)", abs( red ) % m_Divisor, abs( green ) % m_Divisor, abs( blue ) % m_Divisor );
 
         //---* Done *----------------------------------------------------------
@@ -146,7 +148,7 @@ public final class SVGColor extends SVGPaint
     public final boolean equals( final Object obj )
     {
         var retValue = this == obj;
-        if( !retValue && (obj instanceof SVGColor other) )
+        if( !retValue && (obj instanceof final SVGColor other) )
         {
             retValue = value().equals( other.value() );
         }

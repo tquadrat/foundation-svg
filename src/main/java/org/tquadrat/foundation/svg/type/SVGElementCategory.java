@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2025 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -129,12 +129,12 @@ import org.tquadrat.foundation.util.LazyMap;
  *  The categories for the SVG elements.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGElementCategory.java 980 2022-01-06 15:29:19Z tquadrat $
+ *  @version $Id: SVGElementCategory.java 1151 2025-10-01 21:32:15Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGElementCategory.java 980 2022-01-06 15:29:19Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGElementCategory.java 1151 2025-10-01 21:32:15Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public enum SVGElementCategory
 {
@@ -293,13 +293,14 @@ public enum SVGElementCategory
     /**
      *  The element categories by element names.
      */
+    @SuppressWarnings( "StaticCollection" )
     private static final LazyMap<String,Set<SVGElementCategory>> m_CategoriesByElement = LazyMap.use( true, () ->
         stream( values() ).
             flatMap( v ->
             {
                 final var map = v.getElements()
                     .stream()
-                    .collect( toMap( identity(), e -> v, ( a, b ) -> b, HashMap::new ) );
+                    .collect( toMap( identity(), _ -> v, ( _, category ) -> category, HashMap::new ) );
                 return map.entrySet().stream();
             } ).
             collect(
