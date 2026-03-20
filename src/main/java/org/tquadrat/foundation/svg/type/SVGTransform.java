@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2025 by Thomas Thrien.
+ * Copyright © 2002-2026 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -56,7 +56,7 @@ public abstract sealed class SVGTransform extends ValueBase
      *  ( <i>b</i> <i>d</i> <i>f</i> )
      *    0 0 1</code></pre>which maps coordinates from a previous coordinate
      *  system into a new coordinate system by the following matrix equalities:
-     *  <pre><code>      <i>x<sub>newCoordSys</sub></i>       <i>a</i> <i>c</i> <i>e</i>     <i>x<sub>prevCoordSys</sub></i>       <i>ax<sub>prevCoordSys</sub></i> + <i>cy<sub>prevCoordSys</sub></i> + <i>e</i>
+     *  <pre><code>    <i>x<sub>newCoordSys</sub></i>       <i>a</i> <i>c</i> <i>e</i>     <i>x<sub>prevCoordSys</sub></i>       <i>ax<sub>prevCoordSys</sub></i> + <i>cy<sub>prevCoordSys</sub></i> + <i>e</i>
      *    ( <i>y<sub>newCoordSys</sub></i> ) = ( <i>b</i> <i>d</i> <i>f</i> ) ( <i>y<sub>prevCoordSys</sub></i> ) = ( <i>bx<sub>prevCoordSys</sub></i> + <i>dy<sub>prevCoordSys</sub></i> + <i>f</i> )
      *           1           0 0 1           1                           1</code></pre>
      *
@@ -113,7 +113,7 @@ public abstract sealed class SVGTransform extends ValueBase
      *  degrees about a given point. If the optional parameters {@code x} and
      *  {@code y} are not supplied, the rotation is about the origin of the
      *  current user coordinate system. The operation corresponds to the matrix
-     *  <pre><code>    cos <i>a</i>  -sin <i>a</i>  0
+     *  <pre><code>  cos <i>a</i>  -sin <i>a</i>  0
      *  ( sin <i>a</i>   cos <i>a</i>  0 )
      *      0       0    1</code></pre>If the optional parameters {@code x} and
      *  {@code y} are supplied, the rotation is about the point {@code (x,y)}.
@@ -255,7 +255,7 @@ public abstract sealed class SVGTransform extends ValueBase
      *  The SVG {@code skewX} transformation. <br>
      *  <br>This transformation definition specifies a skew transformation
      *  along the x-axis by {@code a} degrees. The operation corresponds to the
-     *  matrix<pre><code>    1  tan <i>a</i>  0
+     *  matrix<pre><code>  1  tan <i>a</i>  0
      *  ( 0    1    0 )
      *    0    0    1</code></pre>
      *
@@ -292,7 +292,7 @@ public abstract sealed class SVGTransform extends ValueBase
      *  The SVG {@code skewY} transformation. <br>
      *  <br>This transformation definition specifies a skew transformation
      *  along the y-axis by {@code a} degrees. The operation corresponds to the
-     *  matrix<pre><code>      1    0  0
+     *  matrix<pre><code>    1    0  0
      *  ( tan <i>a</i>  1  0 )
      *      0    0  1</code></pre>
      *
@@ -326,11 +326,11 @@ public abstract sealed class SVGTransform extends ValueBase
     //  class SVGSkewY
 
     /**
-     *  The SVG {@code translate} transformation. <br>
-     *  <br>This transform definition specifies a translation by {@code x} and
-     *  {@code y}. This is equivalent to
-     *  <pre><code>matrix(1 0 0 1 <i>x</i> <i>y</i>)</code></pre>. If {@code y}
-     *  is not provided, it is assumed to be zero.
+     *  <p>{@summary The SVG {@code translate} transformation.}</p>
+     *  <p>This transform definition specifies a translation by {@code x} and
+     *  {@code y}. This is equivalent to</p>
+     *  <pre><code>matrix(1 0 0 1 <i>x</i> <i>y</i>)</code></pre>
+     *  <p>If {@code y} is not provided, it is assumed to be zero.</p>
      *
      *  @see SVGMatrix
      *
