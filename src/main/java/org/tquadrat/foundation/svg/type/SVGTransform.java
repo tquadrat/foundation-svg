@@ -17,13 +17,13 @@
 
 package org.tquadrat.foundation.svg.type;
 
+import org.apiguardian.api.API;
+import org.tquadrat.foundation.annotation.ClassVersion;
+
 import static java.lang.String.format;
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.lang.Objects.hash;
 import static org.tquadrat.foundation.lang.Objects.requireNotEmptyArgument;
-
-import org.apiguardian.api.API;
-import org.tquadrat.foundation.annotation.ClassVersion;
 
 /**
  *  The abstract base class for the SVG transformations that can be applied to
@@ -31,13 +31,13 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  {@value org.tquadrat.foundation.svg.SVGUtils#SVGATTRIBUTE_Transform}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGTransform.java 1151 2025-10-01 21:32:15Z tquadrat $
+ *  @version $Id: SVGTransform.java 1163 2026-03-20 15:28:33Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( "AbstractClassWithoutAbstractMethods" )
-@ClassVersion( sourceVersion = "$Id: SVGTransform.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGTransform.java 1163 2026-03-20 15:28:33Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public abstract sealed class SVGTransform extends ValueBase
     permits SVGTransform.SVGMatrix, SVGTransform.SVGRotate,
@@ -61,12 +61,12 @@ public abstract sealed class SVGTransform extends ValueBase
      *           1           0 0 1           1                           1</code></pre>
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGTransform.java 1151 2025-10-01 21:32:15Z tquadrat $
+     *  @version $Id: SVGTransform.java 1163 2026-03-20 15:28:33Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVGTransform.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGTransform.java 1163 2026-03-20 15:28:33Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGMatrix extends SVGTransform
     {
@@ -125,12 +125,12 @@ public abstract sealed class SVGTransform extends ValueBase
      *  </ol>
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGTransform.java 1151 2025-10-01 21:32:15Z tquadrat $
+     *  @version $Id: SVGTransform.java 1163 2026-03-20 15:28:33Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVGTransform.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGTransform.java 1163 2026-03-20 15:28:33Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGRotate extends SVGTransform
     {
@@ -193,12 +193,12 @@ public abstract sealed class SVGTransform extends ValueBase
      *  @see SVGMatrix
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGTransform.java 1151 2025-10-01 21:32:15Z tquadrat $
+     *  @version $Id: SVGTransform.java 1163 2026-03-20 15:28:33Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVGTransform.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGTransform.java 1163 2026-03-20 15:28:33Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGScale extends SVGTransform
     {
@@ -260,12 +260,12 @@ public abstract sealed class SVGTransform extends ValueBase
      *    0    0    1</code></pre>
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGTransform.java 1151 2025-10-01 21:32:15Z tquadrat $
+     *  @version $Id: SVGTransform.java 1163 2026-03-20 15:28:33Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVGTransform.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGTransform.java 1163 2026-03-20 15:28:33Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGSkewX extends SVGTransform
     {
@@ -297,12 +297,12 @@ public abstract sealed class SVGTransform extends ValueBase
      *      0    0  1</code></pre>
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGTransform.java 1151 2025-10-01 21:32:15Z tquadrat $
+     *  @version $Id: SVGTransform.java 1163 2026-03-20 15:28:33Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVGTransform.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGTransform.java 1163 2026-03-20 15:28:33Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGSkewY extends SVGTransform
     {
@@ -335,12 +335,12 @@ public abstract sealed class SVGTransform extends ValueBase
      *  @see SVGMatrix
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGTransform.java 1151 2025-10-01 21:32:15Z tquadrat $
+     *  @version $Id: SVGTransform.java 1163 2026-03-20 15:28:33Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVGTransform.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGTransform.java 1163 2026-03-20 15:28:33Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGTranslate extends SVGTransform
     {
