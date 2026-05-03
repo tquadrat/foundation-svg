@@ -8,6 +8,8 @@ Internally, it uses the capabilities provided by the [foundation-xml](https://tq
     <dependency>
       <groupId>org.tquadrat.library</groupId>
       <artifactId>org.tquadrat.foundation.svg</artifactId>
-      <version>0.1.0</version>
+      <version>0.25.5</version>
     </dependency>
     ```
+---  
+Last updated: 2026-05-03T17:32:20.144851904+02:00[Europe/Berlin]
