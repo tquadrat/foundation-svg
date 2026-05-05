@@ -12,4 +12,4 @@ Internally, it uses the capabilities provided by the [foundation-xml](https://tq
     </dependency>
     ```
 ---  
-Last updated: 2026-05-05T10:52:50.985027786+02:00[Europe/Berlin]
+Last updated: 2026-05-05T16:42:10.294285855+02:00[Europe/Berlin]
