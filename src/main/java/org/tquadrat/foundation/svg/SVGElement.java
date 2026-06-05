@@ -43,12 +43,12 @@ import org.tquadrat.foundation.xml.builder.spi.Element;
  *  The definition of an SVG element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGElement.java 1074 2023-10-02 12:05:06Z tquadrat $
+ *  @version $Id: SVGElement.java 1258 2026-06-04 18:33:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGElement.java 1074 2023-10-02 12:05:06Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGElement.java 1258 2026-06-04 18:33:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVGElement extends Element
     permits SVGElementWithChildren, SVGStyle, SVGUse, SVGElementImpl
@@ -84,7 +84,7 @@ public sealed interface SVGElement extends Element
     /**
      *  Returns the element category.
      *
-     *  @return The element categories; will never be {@code null}.
+     *  @return The element categories; will never be {@null}.
      */
     public default Collection<SVGElementCategory> getSVGElementCategory()
     {
@@ -117,8 +117,8 @@ public sealed interface SVGElement extends Element
     /**
      *  Sets attribute that defines how space is handled by this SVG element.
      *
-     *  @param  flag    {@code true} to preserve space in the source,
-     *      {@code false} for the XML default behaviour (ignoring excessive
+     *  @param  flag    {@true} to preserve space in the source,
+     *      {@false} for the XML default behaviour (ignoring excessive
      *      whitespace).
      */
     public void setPreserveSpace( final boolean flag );
@@ -136,9 +136,9 @@ public sealed interface SVGElement extends Element
      *  <code>&lt;{@value org.tquadrat.foundation.svg.SVGUtils#SVGELEMENT_Title}&gt;</code>
      *  element will be added as a child.
      *
-     *  @param  title   The title; nothing happens if {@code null}, empty, or
+     *  @param  title   The title; nothing happens if {@null}, empty, or
      *      blank.
-     *  @throws IllegalStateException   The given title is not {@code null},
+     *  @throws IllegalStateException   The given title is not {@null},
      *      empty, or blank, and a title was applied already earlier.
      */
     public void setTitle( final CharSequence title );

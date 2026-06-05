@@ -92,14 +92,14 @@ import org.tquadrat.foundation.xml.builder.spi.XMLElementAdapter;
  *  elements.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGUtils.java 1086 2024-01-05 23:18:33Z tquadrat $
+ *  @version $Id: SVGUtils.java 1258 2026-06-04 18:33:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( {"ClassWithTooManyMethods", "OverlyComplexClass", "OverlyCoupledClass"} )
 @UtilityClass
-@ClassVersion( sourceVersion = "$Id: SVGUtils.java 1086 2024-01-05 23:18:33Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGUtils.java 1258 2026-06-04 18:33:06Z tquadrat $" )
 public final class SVGUtils
 {
         /*-----------*\
@@ -1886,10 +1886,10 @@ public final class SVGUtils
      *  @param  rx  The x radius for the ellipsis.
      *  @param  ry  The y radius for the ellipsis.
      *  @param  rotation    The rotation of the x-axis.
-     *  @param  largeArc    {@code true} to draw the larger arc,
-     *      {@code false} for the smaller arc.
-     *  @param  sweep   {@code true} to draw the arc in
-     *      &quot;positive-angle&quot; direction, {@code false} for
+     *  @param  largeArc    {@true} to draw the larger arc,
+     *      {@false} for the smaller arc.
+     *  @param  sweep   {@true} to draw the arc in
+     *      &quot;positive-angle&quot; direction, {@false} for
      *      drawing it in a &quot;negative-angle&quot; direction.
      *  @param  x   The x coordinate for the end point of the line.
      *  @param  y   The y coordinate for the end point of the line.
@@ -1914,10 +1914,10 @@ public final class SVGUtils
      *  @param  rx  The x radius for the ellipsis.
      *  @param  ry  The y radius for the ellipsis.
      *  @param  rotation    The rotation of the x-axis.
-     *  @param  largeArc    {@code true} to draw the larger arc,
-     *      {@code false} for the smaller arc.
-     *  @param  sweep   {@code true} to draw the arc in
-     *      &quot;positive-angle&quot; direction, {@code false} for
+     *  @param  largeArc    {@true} to draw the larger arc,
+     *      {@false} for the smaller arc.
+     *  @param  sweep   {@true} to draw the arc in
+     *      &quot;positive-angle&quot; direction, {@false} for
      *      drawing it in a &quot;negative-angle&quot; direction.
      *  @param  x   The x coordinate for the end point of the line.
      *  @param  y   The y coordinate for the end point of the line.
@@ -1942,10 +1942,10 @@ public final class SVGUtils
      *  @param  rx  The x radius for the ellipsis.
      *  @param  ry  The y radius for the ellipsis.
      *  @param  rotation    The rotation of the x-axis.
-     *  @param  largeArc    {@code true} to draw the larger arc,
-     *      {@code false} for the smaller arc.
-     *  @param  sweep   {@code true} to draw the arc in
-     *      &quot;positive-angle&quot; direction, {@code false} for
+     *  @param  largeArc    {@true} to draw the larger arc,
+     *      {@false} for the smaller arc.
+     *  @param  sweep   {@true} to draw the arc in
+     *      &quot;positive-angle&quot; direction, {@false} for
      *      drawing it in a &quot;negative-angle&quot; direction.
      *  @param  x   The x coordinate for the end point of the line.
      *  @param  y   The y coordinate for the end point of the line.
@@ -1970,10 +1970,10 @@ public final class SVGUtils
      *  @param  rx  The x radius for the ellipsis.
      *  @param  ry  The y radius for the ellipsis.
      *  @param  rotation    The rotation of the x-axis.
-     *  @param  largeArc    {@code true} to draw the larger arc,
-     *      {@code false} for the smaller arc.
-     *  @param  sweep   {@code true} to draw the arc in
-     *      &quot;positive-angle&quot; direction, {@code false} for
+     *  @param  largeArc    {@true} to draw the larger arc,
+     *      {@false} for the smaller arc.
+     *  @param  sweep   {@true} to draw the arc in
+     *      &quot;positive-angle&quot; direction, {@false} for
      *      drawing it in a &quot;negative-angle&quot; direction.
      *  @param  x   The x coordinate for the end point of the line.
      *  @param  y   The y coordinate for the end point of the line.
@@ -2098,8 +2098,8 @@ public final class SVGUtils
      *  <br>Allowed are the values from 0 to 255, or 0% to 100% respectively,
      *  other values will be normalised accordingly.
      *
-     *  @param  flag    {@code true} if the given values are percentages,
-     *      {@code false} if they are absolute values.
+     *  @param  flag    {@true} if the given values are percentages,
+     *      {@false} if they are absolute values.
      *  @param  red The red component for the colour.
      *  @param  green   The green component for the colour.
      *  @param  blue    The blue component for the colour.
@@ -2118,7 +2118,7 @@ public final class SVGUtils
      *  Creates a new
      *  {@link SVGColor}
      *  instance, using the given argument as a CSS colour name.<br>
-     *  <br>The given argument may not be {@code null} nor the empty String,
+     *  <br>The given argument may not be {@null} nor the empty String,
      *  but it will not undergo any further validation.
      *
      *  @param  color   The CSS colour name.
@@ -2590,7 +2590,7 @@ public final class SVGUtils
     /**
      *  Creates the namespace instance that is used for all SVG stuff.
      *
-     *  @param  prefix  The prefix; can be empty or {@code null}.
+     *  @param  prefix  The prefix; can be empty or {@null}.
      *  @return The new namespace instance.
      */
     private static final Namespace createSVGNamespace( final String prefix )

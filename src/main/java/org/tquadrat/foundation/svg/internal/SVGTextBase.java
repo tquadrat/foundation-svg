@@ -44,13 +44,13 @@ import org.tquadrat.foundation.svg.type.SVGNumber.SVGDegree;
  *  {@link org.tquadrat.foundation.svg.SVGTSpan}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGTextBase.java 1074 2023-10-02 12:05:06Z tquadrat $
+ *  @version $Id: SVGTextBase.java 1258 2026-06-04 18:33:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( "AbstractClassExtendsConcreteClass" )
-@ClassVersion( sourceVersion = "$Id: SVGTextBase.java 1074 2023-10-02 12:05:06Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGTextBase.java 1258 2026-06-04 18:33:06Z tquadrat $" )
 @API( status = INTERNAL, since = "0.0.5" )
 public abstract sealed class SVGTextBase extends SVGElementImpl
     permits SVGTSpanImpl, SVGTextImpl
@@ -106,8 +106,8 @@ public abstract sealed class SVGTextBase extends SVGElementImpl
      *  target length set by
      *  {@link #setTextLength(SVGNumber)}.
      *
-     *  @param  flag    {@code true} means that both, spacing and glyph size
-     *      will be adjusted to match, {@code false} indicates that only the
+     *  @param  flag    {@true} means that both, spacing and glyph size
+     *      will be adjusted to match, {@false} indicates that only the
      *      spacing will be changed.
      */
     public final void setLengthAdjust( final boolean flag )

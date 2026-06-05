@@ -146,14 +146,14 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *      (#x20 | #x9 | #xD | #xA)</code></pre>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $
+ *  @version $Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( {"AbstractClassWithoutAbstractMethods", "PublicInnerClass"} )
 
-@ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public abstract sealed class SVGPathElement extends ValueBase
     permits SVGPathElement.SVGArcTo, SVGPathElement.SVGClosePath,
@@ -185,17 +185,17 @@ public abstract sealed class SVGPathElement extends ValueBase
      *  of greater than or equal to 180 degrees (the &quot;large-arc&quot;),
      *  and two will represent an arc sweep of less than or equal to 180
      *  degrees (the &quot;small-arc&quot;). If {@code largeArc} is
-     *  {@code true}, then one of the two larger arc sweeps will be chosen;
-     *  otherwise, if {@code largeArc}&nbsp;==&nbsp;{@code false}, one of the
+     *  {@true}, then one of the two larger arc sweeps will be chosen;
+     *  otherwise, if {@code largeArc}&nbsp;==&nbsp;{@false}, one of the
      *  smaller arc sweeps will be chosen</li>
-     *  <li>If {@code sweep}&nbsp;==&nbsp;{@code true}, then the arc will be
+     *  <li>If {@code sweep}&nbsp;==&nbsp;{@true}, then the arc will be
      *  drawn in a &quot;positive-angle&quot; direction (i.e., the ellipse
      *  formula <code>x&nbsp;=&nbsp;<i>cx</i>&nbsp;+&nbsp;<i>rx</i>&nbsp;*&nbsp;cos(&nbsp;theta&nbsp;)</code>
      *  and
      *  <code>y&nbsp;=&nbsp;<i>cy</i>&nbsp;+&nbsp;<i>ry</i>&nbsp;*&nbsp;sin(&nbsp;theta&nbsp;)</code>
      *  is evaluated such that {@code theta} starts at an angle corresponding
      *  to the current point and increases positively until the arc reaches
-     *  (<i>x</i>,<i>y</i>)). A type of {@code false}) causes the arc to be
+     *  (<i>x</i>,<i>y</i>)). A type of {@false}) causes the arc to be
      *  drawn in a &quot;negative-angle&quot; direction (i.e., {@code theta}
      *  starts at an angle type corresponding to the current point and
      *  decreases until the arc reaches (<i>x</i>,<i>y</i>)).</li>
@@ -206,20 +206,20 @@ public abstract sealed class SVGPathElement extends ValueBase
      *  based on the values of these flags. For each case, the following path
      *  data command was used:<pre><code>  &lt;path d=&quot;M 125,75 a100,50 0 ?,? 100,50&quot;
      *        style=&quot;fill:none; stroke:red; stroke-width:6&quot;/&gt;</code></pre>
-     *  In the SVG code, {@code true} is represented as {@code 1} and
-     *  {@code false} as {@code 0}, so &quot;{@code ?,?}&quot; is replaced by
+     *  In the SVG code, {@true} is represented as {@code 1} and
+     *  {@false} as {@code 0}, so &quot;{@code ?,?}&quot; is replaced by
      *  &quot;{@code 0,0}&quot;, &quot;{@code 0,1}&quot;,
      *  &quot;{@code 1,0}&quot; and &quot;{@code 1,1}&quot; to generate the
      *  four possible cases.
      *  <img src="doc-files/arcs02.svg" alt="Sample Images">
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $
+     *  @version $Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGArcTo extends SVGPathElement
     {
@@ -229,16 +229,16 @@ public abstract sealed class SVGPathElement extends ValueBase
         /**
          *  Creates a new {@code SVGArcTo} instance.
          *
-         *  @param  isAbsolute  {@code true} if the given coordinates are
-         *      absolute, {@code false} if they are relative to the last point
+         *  @param  isAbsolute  {@true} if the given coordinates are
+         *      absolute, {@false} if they are relative to the last point
          *      on the path.
          *  @param  rx  The x radius for the ellipsis.
          *  @param  ry  The y radius for the ellipsis.
          *  @param  rotation    The rotation of the x-axis.
-         *  @param  largeArc    {@code true} to draw the larger arc,
-         *      {@code false} for the smaller arc.
-         *  @param  sweep   {@code true} to draw the arc in
-         *      &quot;positive-angle&quot; direction, {@code false} for
+         *  @param  largeArc    {@true} to draw the larger arc,
+         *      {@false} for the smaller arc.
+         *  @param  sweep   {@true} to draw the arc in
+         *      &quot;positive-angle&quot; direction, {@false} for
          *      drawing it in a &quot;negative-angle&quot; direction.
          *  @param  x   The x coordinate for the end point of the line.
          *  @param  y   The y coordinate for the end point of the line.
@@ -252,16 +252,16 @@ public abstract sealed class SVGPathElement extends ValueBase
         /**
          *  Creates a new {@code SVGArcTo} instance.
          *
-         *  @param  isAbsolute  {@code true} if the given coordinates are
-         *      absolute, {@code false} if they are relative to the last point
+         *  @param  isAbsolute  {@true} if the given coordinates are
+         *      absolute, {@false} if they are relative to the last point
          *      on the path.
          *  @param  rx  The x radius for the ellipsis.
          *  @param  ry  The y radius for the ellipsis.
          *  @param  rotation    The rotation of the x-axis.
-         *  @param  largeArc    {@code true} to draw the larger arc,
-         *      {@code false} for the smaller arc.
-         *  @param  sweep   {@code true} to draw the arc in
-         *      &quot;positive-angle&quot; direction, {@code false} for
+         *  @param  largeArc    {@true} to draw the larger arc,
+         *      {@false} for the smaller arc.
+         *  @param  sweep   {@true} to draw the arc in
+         *      &quot;positive-angle&quot; direction, {@false} for
          *      drawing it in a &quot;negative-angle&quot; direction.
          *  @param  x   The x coordinate for the end point of the line.
          *  @param  y   The y coordinate for the end point of the line.
@@ -278,12 +278,12 @@ public abstract sealed class SVGPathElement extends ValueBase
      *  The implementation of the SVG path {@code ClosePath} element.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $
+     *  @version $Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGClosePath extends SVGPathElement
     {
@@ -307,12 +307,12 @@ public abstract sealed class SVGPathElement extends ValueBase
      *  coincident with the current point.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $
+     *  @version $Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGCubicCurveTo extends SVGPathElement
     {
@@ -322,8 +322,8 @@ public abstract sealed class SVGPathElement extends ValueBase
         /**
          *  Creates a new {@code SVGCubicCurveTo} instance.
          *
-         *  @param  isAbsolute  {@code true} if the given coordinates are
-         *      absolute, {@code false} if they are relative to the last point
+         *  @param  isAbsolute  {@true} if the given coordinates are
+         *      absolute, {@false} if they are relative to the last point
          *      on the path.
          *  @param  x1   The x coordinate for the first control point.
          *  @param  y1   The y coordinate for the first control point.
@@ -342,8 +342,8 @@ public abstract sealed class SVGPathElement extends ValueBase
          *  Creates a new {@code SVGCubicCurveTo} instance for the smooth
          *  variant.
          *
-         *  @param  isAbsolute  {@code true} if the given coordinates are
-         *      absolute, {@code false} if they are relative to the last point
+         *  @param  isAbsolute  {@true} if the given coordinates are
+         *      absolute, {@false} if they are relative to the last point
          *      on the path.
          *  @param  x2   The x coordinate for the second control point
          *  @param  y2   The y coordinate for the second control point
@@ -358,8 +358,8 @@ public abstract sealed class SVGPathElement extends ValueBase
         /**
          *  Creates a new {@code SVGCubicCurveTo} instance.
          *
-         *  @param  isAbsolute  {@code true} if the given coordinates are
-         *      absolute, {@code false} if they are relative to the last point
+         *  @param  isAbsolute  {@true} if the given coordinates are
+         *      absolute, {@false} if they are relative to the last point
          *      on the path.
          *  @param  x1   The x coordinate for the first control point.
          *  @param  y1   The y coordinate for the first control point.
@@ -378,8 +378,8 @@ public abstract sealed class SVGPathElement extends ValueBase
          *  Creates a new {@code SVGCubicCurveTo} instance for the smooth
          *  variant.
          *
-         *  @param  isAbsolute  {@code true} if the given coordinates are
-         *      absolute, {@code false} if they are relative to the last point
+         *  @param  isAbsolute  {@true} if the given coordinates are
+         *      absolute, {@false} if they are relative to the last point
          *      on the path.
          *  @param  x2   The x coordinate for the second control point
          *  @param  y2   The y coordinate for the second control point
@@ -398,12 +398,12 @@ public abstract sealed class SVGPathElement extends ValueBase
      *  horizontal line.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $
+     *  @version $Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGHLineTo extends SVGPathElement
     {
@@ -413,8 +413,8 @@ public abstract sealed class SVGPathElement extends ValueBase
         /**
          *  Creates a new {@code SVGHLineTo} instance.
          *
-         *  @param  isAbsolute  {@code true} if the given coordinate is
-         *      absolute, {@code false} if it is relative to the last point
+         *  @param  isAbsolute  {@true} if the given coordinate is
+         *      absolute, {@false} if it is relative to the last point
          *      on the path.
          *  @param  x   The x coordinate for the end point of the line.
          */
@@ -426,8 +426,8 @@ public abstract sealed class SVGPathElement extends ValueBase
         /**
          *  Creates a new {@code SVGHLineTo} instance.
          *
-         *  @param  isAbsolute  {@code true} if the given coordinate is
-         *      absolute, {@code false} if it is relative to the last point
+         *  @param  isAbsolute  {@true} if the given coordinate is
+         *      absolute, {@false} if it is relative to the last point
          *      on the path.
          *  @param  x   The x coordinate for the end point of the line.
          */
@@ -442,12 +442,12 @@ public abstract sealed class SVGPathElement extends ValueBase
      *  The implementation of the SVG path {@code LineTo} element.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $
+     *  @version $Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGLineTo extends SVGPathElement
     {
@@ -457,8 +457,8 @@ public abstract sealed class SVGPathElement extends ValueBase
         /**
          *  Creates a new {@code SVGLineTo} instance.
          *
-         *  @param  isAbsolute  {@code true} if the given coordinates are
-         *      absolute, {@code false} if they are relative to the last point
+         *  @param  isAbsolute  {@true} if the given coordinates are
+         *      absolute, {@false} if they are relative to the last point
          *      on the path.
          *  @param  x   The x coordinate for the end point of the line.
          *  @param  y   The y coordinate for the end point of the line.
@@ -471,8 +471,8 @@ public abstract sealed class SVGPathElement extends ValueBase
         /**
          *  Creates a new {@code SVGLineTo} instance.
          *
-         *  @param  isAbsolute  {@code true} if the given coordinates are
-         *      absolute, {@code false} if they are relative to the last point
+         *  @param  isAbsolute  {@true} if the given coordinates are
+         *      absolute, {@false} if they are relative to the last point
          *      on the path.
          *  @param  x   The x coordinate for the end point of the line.
          *  @param  y   The y coordinate for the end point of the line.
@@ -488,12 +488,12 @@ public abstract sealed class SVGPathElement extends ValueBase
      *  The implementation of the SVG path {@code MoveTo} element.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $
+     *  @version $Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGMoveTo extends SVGPathElement
     {
@@ -503,8 +503,8 @@ public abstract sealed class SVGPathElement extends ValueBase
         /**
          *  Creates a new {@code SVGMoveTo} instance.
          *
-         *  @param  isAbsolute  {@code true} if the given coordinates are
-         *      absolute, {@code false} if they are relative to the last point
+         *  @param  isAbsolute  {@true} if the given coordinates are
+         *      absolute, {@false} if they are relative to the last point
          *      on the path.
          *  @param  x   The x coordinate.
          *  @param  y   The y coordinate.
@@ -517,8 +517,8 @@ public abstract sealed class SVGPathElement extends ValueBase
         /**
          *  Creates a new {@code SVGMoveTo} instance.
          *
-         *  @param  isAbsolute  {@code true} if the given coordinates are
-         *      absolute, {@code false} if they are relative to the last point
+         *  @param  isAbsolute  {@true} if the given coordinates are
+         *      absolute, {@false} if they are relative to the last point
          *      on the path.
          *  @param  x   The x coordinate.
          *  @param  y   The y coordinate.
@@ -540,12 +540,12 @@ public abstract sealed class SVGPathElement extends ValueBase
      *  coincident with the current point.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $
+     *  @version $Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGQuadraticCurveTo extends SVGPathElement
     {
@@ -555,8 +555,8 @@ public abstract sealed class SVGPathElement extends ValueBase
         /**
          *  Creates a new {@code SVGQuadraticCurveTo} instance.
          *
-         *  @param  isAbsolute  {@code true} if the given coordinates are
-         *      absolute, {@code false} if they are relative to the last point
+         *  @param  isAbsolute  {@true} if the given coordinates are
+         *      absolute, {@false} if they are relative to the last point
          *      on the path.
          *  @param  x1   The x coordinate for the control point.
          *  @param  y1   The y coordinate for the control point.
@@ -572,8 +572,8 @@ public abstract sealed class SVGPathElement extends ValueBase
          *  Creates a new {@code SVGQuadraticCurveTo} instance for the smooth
          *  variant.
          *
-         *  @param  isAbsolute  {@code true} if the given coordinates are
-         *      absolute, {@code false} if they are relative to the last point
+         *  @param  isAbsolute  {@true} if the given coordinates are
+         *      absolute, {@false} if they are relative to the last point
          *      on the path.
          *  @param  x   The x coordinate for the end point of the line.
          *  @param  y   The y coordinate for the end point of the line.
@@ -586,8 +586,8 @@ public abstract sealed class SVGPathElement extends ValueBase
         /**
          *  Creates a new {@code SVGQuadraticCurveTo} instance.
          *
-         *  @param  isAbsolute  {@code true} if the given coordinates are
-         *      absolute, {@code false} if they are relative to the last point
+         *  @param  isAbsolute  {@true} if the given coordinates are
+         *      absolute, {@false} if they are relative to the last point
          *      on the path.
          *  @param  x1   The x coordinate for the control point.
          *  @param  y1   The y coordinate for the control point.
@@ -603,8 +603,8 @@ public abstract sealed class SVGPathElement extends ValueBase
          *  Creates a new {@code SVGQuadraticCurveTo} instance for the smooth
          *  variant.
          *
-         *  @param  isAbsolute  {@code true} if the given coordinates are
-         *      absolute, {@code false} if they are relative to the last point
+         *  @param  isAbsolute  {@true} if the given coordinates are
+         *      absolute, {@false} if they are relative to the last point
          *      on the path.
          *  @param  x   The x coordinate for the end point of the line.
          *  @param  y   The y coordinate for the end point of the line.
@@ -621,12 +621,12 @@ public abstract sealed class SVGPathElement extends ValueBase
      *  vertical line.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $
+     *  @version $Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGVLineTo extends SVGPathElement
     {
@@ -636,8 +636,8 @@ public abstract sealed class SVGPathElement extends ValueBase
         /**
          *  Creates a new {@code SVGVLineTo} instance.
          *
-         *  @param  isAbsolute  {@code true} if the given coordinate is
-         *      absolute, {@code false} if it is relative to the last point
+         *  @param  isAbsolute  {@true} if the given coordinate is
+         *      absolute, {@false} if it is relative to the last point
          *      on the path.
          *  @param  y   The y coordinate for the end point of the line.
          */
@@ -649,8 +649,8 @@ public abstract sealed class SVGPathElement extends ValueBase
         /**
          *  Creates a new {@code SVGVLineTo} instance.
          *
-         *  @param  isAbsolute  {@code true} if the given coordinate is
-         *      absolute, {@code false} if it is relative to the last point
+         *  @param  isAbsolute  {@true} if the given coordinate is
+         *      absolute, {@false} if it is relative to the last point
          *      on the path.
          *  @param  y   The y coordinate for the end point of the line.
          */

@@ -31,13 +31,13 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  The implementation for SVG values representing colors.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGColor.java 1151 2025-10-01 21:32:15Z tquadrat $
+ *  @version $Id: SVGColor.java 1258 2026-06-04 18:33:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( "EqualsAndHashcode" )
-@ClassVersion( sourceVersion = "$Id: SVGColor.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGColor.java 1258 2026-06-04 18:33:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public final class SVGColor extends SVGPaint
 {
@@ -93,8 +93,8 @@ public final class SVGColor extends SVGPaint
      *  <p>Valid values are in the range from 0 to 255, or from 0% to 100%
      *  respectively, other values will be normalised accordingly.</p>
      *
-     *  @param  flag    {@code true} if the given values are percentages,
-     *      {@code false} if they are absolute values.
+     *  @param  flag    {@true} if the given values are percentages,
+     *      {@false} if they are absolute values.
      *  @param  red The red component for the colour.
      *  @param  green   The green component for the colour.
      *  @param  blue    The blue component for the colour.
@@ -107,7 +107,7 @@ public final class SVGColor extends SVGPaint
     /**
      *  <p>{@summary Creates a new {@code SVGColor} instance, using the given
      *  argument as a CSS colour name.}</p>
-     *  <p>The given argument may not be {@code null} nor the empty String,
+     *  <p>The given argument may not be {@null} nor the empty String,
      *  but it will not undergo any further validation.</p>
      *
      *  @param  color   The CSS colour name.
@@ -123,8 +123,8 @@ public final class SVGColor extends SVGPaint
      *  <p>Valid values are in the range from 0 to 255, or from 0% to 100%
      *  respectively, other values will be normalised accordingly.</p>
      *
-     *  @param  flag    {@code true} if the given values are percentages,
-     *      {@code false} if they are absolute values.
+     *  @param  flag    {@true} if the given values are percentages,
+     *      {@false} if they are absolute values.
      *  @param  red The red component for the colour.
      *  @param  green   The green component for the colour.
      *  @param  blue    The blue component for the colour.

@@ -27,12 +27,12 @@ import org.tquadrat.foundation.svg.internal.SVGClipPathImpl;
  *  The definition of the SVG {@code <clipPath>} element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGClipPath.java 1074 2023-10-02 12:05:06Z tquadrat $
+ *  @version $Id: SVGClipPath.java 1258 2026-06-04 18:33:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGClipPath.java 1074 2023-10-02 12:05:06Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGClipPath.java 1258 2026-06-04 18:33:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVGClipPath extends AllowsConditionalProcessingAttributes, AllowsPresentationAttributes, SVGElementWithChildren
     permits SVGElementAdapter, SVGClipPathImpl
@@ -45,10 +45,10 @@ public sealed interface SVGClipPath extends AllowsConditionalProcessingAttribute
      *  defines the coordinate system for the contents of this
      *  {@code <clipPath>} element.
      *
-     *  @param  flag    {@code true} if the user coordinate system for the
+     *  @param  flag    {@true} if the user coordinate system for the
      *      contents of the {@code <clipPath>} element is established using the
      *      bounding box of the element to which the clipping path is applied,
-     *      {@code false} if the contents of the {@code <clipPath>} element
+     *      {@false} if the contents of the {@code <clipPath>} element
      *      represents values in the current user coordinate system in place at
      *      the time when the {@code <clipPath>} element is referenced.
      */

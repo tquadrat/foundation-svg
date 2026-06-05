@@ -30,12 +30,12 @@ import org.tquadrat.foundation.xml.builder.XMLElement;
  *  The definition of the SVG {@code <text>} element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGText.java 1074 2023-10-02 12:05:06Z tquadrat $
+ *  @version $Id: SVGText.java 1258 2026-06-04 18:33:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGText.java 1074 2023-10-02 12:05:06Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGText.java 1258 2026-06-04 18:33:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVGText extends SVGElementWithChildren, AllowsConditionalProcessingAttributes, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes
     permits SVGElementAdapter, SVGTextImpl
@@ -88,8 +88,8 @@ public sealed interface SVGText extends SVGElementWithChildren, AllowsConditiona
      *  target length set by
      *  {@link #setTextLength(SVGNumber)}.
      *
-     *  @param  flag    {@code true} means that both, spacing and glyph size
-     *      will be adjusted to match, {@code false} indicates that only the
+     *  @param  flag    {@true} means that both, spacing and glyph size
+     *      will be adjusted to match, {@false} indicates that only the
      *      spacing will be changed.
      */
     public void setLengthAdjust( final boolean flag );

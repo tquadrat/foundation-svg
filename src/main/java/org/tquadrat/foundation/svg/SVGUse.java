@@ -34,14 +34,14 @@ import org.tquadrat.foundation.svg.type.SVGNumber;
  *  @see SVGUtils#createUse(SVGElementWithChildren,java.net.URI)
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGUse.java 1074 2023-10-02 12:05:06Z tquadrat $
+ *  @version $Id: SVGUse.java 1258 2026-06-04 18:33:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @see "https://www.w3.org/TR/SVG/single-page.html#struct-SVGElement"
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGUse.java 1074 2023-10-02 12:05:06Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGUse.java 1258 2026-06-04 18:33:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVGUse extends SVGElement, AllowsConditionalProcessingAttributes, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsXLinkAttributes
     permits SVGElementAdapter, SVGUseImpl
@@ -52,7 +52,7 @@ public sealed interface SVGUse extends SVGElement, AllowsConditionalProcessingAt
     /**
      *  Sets the height of the cloned element.
      *
-     *  @param  value   The type; if {@code null} the
+     *  @param  value   The type; if {@null} the
      *      attribute will be removed.
      */
     @SuppressWarnings( "UseOfConcreteClass" )
@@ -61,7 +61,7 @@ public sealed interface SVGUse extends SVGElement, AllowsConditionalProcessingAt
     /**
      *  Sets the width of the cloned element.
      *
-     *  @param  value   The type; if {@code null} the
+     *  @param  value   The type; if {@null} the
      *      attribute will be removed.
      */
     @SuppressWarnings( "UseOfConcreteClass" )
@@ -70,7 +70,7 @@ public sealed interface SVGUse extends SVGElement, AllowsConditionalProcessingAt
     /**
      *  Sets the x coordinate for the top left corner of the cloned element.
      *
-     *  @param  value   The type; if {@code null} the
+     *  @param  value   The type; if {@null} the
      *      attribute will be removed.
      */
     @SuppressWarnings( "UseOfConcreteClass" )
@@ -79,7 +79,7 @@ public sealed interface SVGUse extends SVGElement, AllowsConditionalProcessingAt
     /**
      *  Sets the y coordinate for the top left corner of the cloned element.
      *
-     *  @param  value   The type; if {@code null} the
+     *  @param  value   The type; if {@null} the
      *      attribute will be removed.
      */
     @SuppressWarnings( "UseOfConcreteClass" )

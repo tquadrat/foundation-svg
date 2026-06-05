@@ -33,12 +33,12 @@ import org.tquadrat.foundation.svg.type.SVGTransform;
  *  The definition for the SVG {@code <marker>} element.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGMarker.java 1074 2023-10-02 12:05:06Z tquadrat $
+ *  @version $Id: SVGMarker.java 1258 2026-06-04 18:33:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGMarker.java 1074 2023-10-02 12:05:06Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGMarker.java 1258 2026-06-04 18:33:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVGMarker extends SVGElementWithChildren, AllowsPresentationAttributes
     permits SVGPositionedMarker, SVGMarkerImpl
@@ -50,8 +50,8 @@ public sealed interface SVGMarker extends SVGElementWithChildren, AllowsPresenta
      *  Sets the attribute that indicates whether external resources are
      *  required to render this {@code <marker>} element.
      *
-     *  @param  flag    {@code true} if external resources are needed,
-     *      {@code false} if all required resources are local to the current
+     *  @param  flag    {@true} if external resources are needed,
+     *      {@false} if all required resources are local to the current
      *      context.
      */
     public void setExternalResourcesRequired( final boolean flag );
@@ -91,8 +91,8 @@ public sealed interface SVGMarker extends SVGElementWithChildren, AllowsPresenta
      *  and
      *  {@value org.tquadrat.foundation.svg.SVGUtils#SVGATTRIBUTE_MarkerHeight}.
      *
-     *  @param  flag    {@code true} if the user space should be used,
-     *      {@code false} for the stroke width.
+     *  @param  flag    {@true} if the user space should be used,
+     *      {@false} for the stroke width.
      */
     public void setMarkerUnits( final boolean flag );
 
@@ -128,7 +128,7 @@ public sealed interface SVGMarker extends SVGElementWithChildren, AllowsPresenta
      *  Sets the mode for the aspect ratio preservation for this
      *  {@code <marker>} element.
      *
-     *  @param  value   The type; if {@code null} the
+     *  @param  value   The type; if {@null} the
      *      attribute will be removed.
      */
     public void setPreserveAspectRatio( final SVGPreserveAspectRatio value );
@@ -174,7 +174,7 @@ public sealed interface SVGMarker extends SVGElementWithChildren, AllowsPresenta
     /**
      *  Sets the transformations for this {@code <marker>} element.
      *
-     *  @param  values  The transformations; if {@code null} or empty, the
+     *  @param  values  The transformations; if {@null} or empty, the
      *      attribute will be removed.
      */
     @Override

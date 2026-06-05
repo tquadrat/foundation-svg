@@ -35,14 +35,14 @@ import org.tquadrat.foundation.svg.type.SVGPreserveAspectRatio;
  *  @see SVGUtils#createSymbol(String,SVG)
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGSymbol.java 1074 2023-10-02 12:05:06Z tquadrat $
+ *  @version $Id: SVGSymbol.java 1258 2026-06-04 18:33:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @see "https://www.w3.org/TR/SVG/single-page.html#struct-SVGElement"
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGSymbol.java 1074 2023-10-02 12:05:06Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGSymbol.java 1258 2026-06-04 18:33:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVGSymbol extends SVGElementWithChildren, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes
     permits SVGElementAdapter, SVGSymbolImpl
@@ -54,8 +54,8 @@ public sealed interface SVGSymbol extends SVGElementWithChildren, AllowsGraphica
      *  Sets the attribute that indicates whether external resources are
      *  required to render this {@code <symbol>} element.
      *
-     *  @param  flag    {@code true} if external resources are needed,
-     *      {@code false} if all required resources are local to the current
+     *  @param  flag    {@true} if external resources are needed,
+     *      {@false} if all required resources are local to the current
      *      context.
      */
     public void setExternalResourcesRequired( final boolean flag );
@@ -64,7 +64,7 @@ public sealed interface SVGSymbol extends SVGElementWithChildren, AllowsGraphica
      *  Sets the mode for the aspect ratio preservation for this
      *  {@code <symbol>} element.
      *
-     *  @param  value   The type; if {@code null} the
+     *  @param  value   The type; if {@null} the
      *      attribute will be removed.
      */
     public void setPreserveAspectRatio( final SVGPreserveAspectRatio value );

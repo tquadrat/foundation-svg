@@ -159,14 +159,14 @@
 <span class="source-line-no">146</span><span id="line-146"> *      (#x20 | #x9 | #xD | #xA)&lt;/code&gt;&lt;/pre&gt;</span>
 <span class="source-line-no">147</span><span id="line-147"> *</span>
 <span class="source-line-no">148</span><span id="line-148"> *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org</span>
-<span class="source-line-no">149</span><span id="line-149"> *  @version $Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $</span>
+<span class="source-line-no">149</span><span id="line-149"> *  @version $Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $</span>
 <span class="source-line-no">150</span><span id="line-150"> *  @since 0.0.5</span>
 <span class="source-line-no">151</span><span id="line-151"> *</span>
 <span class="source-line-no">152</span><span id="line-152"> *  @UMLGraph.link</span>
 <span class="source-line-no">153</span><span id="line-153"> */</span>
 <span class="source-line-no">154</span><span id="line-154">@SuppressWarnings( {"AbstractClassWithoutAbstractMethods", "PublicInnerClass"} )</span>
 <span class="source-line-no">155</span><span id="line-155"></span>
-<span class="source-line-no">156</span><span id="line-156">@ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $" )</span>
+<span class="source-line-no">156</span><span id="line-156">@ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $" )</span>
 <span class="source-line-no">157</span><span id="line-157">@API( status = STABLE, since = "0.0.5" )</span>
 <span class="source-line-no">158</span><span id="line-158">public abstract sealed class SVGPathElement extends ValueBase</span>
 <span class="source-line-no">159</span><span id="line-159">    permits SVGPathElement.SVGArcTo, SVGPathElement.SVGClosePath,</span>
@@ -198,17 +198,17 @@
 <span class="source-line-no">185</span><span id="line-185">     *  of greater than or equal to 180 degrees (the &amp;quot;large-arc&amp;quot;),</span>
 <span class="source-line-no">186</span><span id="line-186">     *  and two will represent an arc sweep of less than or equal to 180</span>
 <span class="source-line-no">187</span><span id="line-187">     *  degrees (the &amp;quot;small-arc&amp;quot;). If {@code largeArc} is</span>
-<span class="source-line-no">188</span><span id="line-188">     *  {@code true}, then one of the two larger arc sweeps will be chosen;</span>
-<span class="source-line-no">189</span><span id="line-189">     *  otherwise, if {@code largeArc}&amp;nbsp;==&amp;nbsp;{@code false}, one of the</span>
+<span class="source-line-no">188</span><span id="line-188">     *  {@true}, then one of the two larger arc sweeps will be chosen;</span>
+<span class="source-line-no">189</span><span id="line-189">     *  otherwise, if {@code largeArc}&amp;nbsp;==&amp;nbsp;{@false}, one of the</span>
 <span class="source-line-no">190</span><span id="line-190">     *  smaller arc sweeps will be chosen&lt;/li&gt;</span>
-<span class="source-line-no">191</span><span id="line-191">     *  &lt;li&gt;If {@code sweep}&amp;nbsp;==&amp;nbsp;{@code true}, then the arc will be</span>
+<span class="source-line-no">191</span><span id="line-191">     *  &lt;li&gt;If {@code sweep}&amp;nbsp;==&amp;nbsp;{@true}, then the arc will be</span>
 <span class="source-line-no">192</span><span id="line-192">     *  drawn in a &amp;quot;positive-angle&amp;quot; direction (i.e., the ellipse</span>
 <span class="source-line-no">193</span><span id="line-193">     *  formula &lt;code&gt;x&amp;nbsp;=&amp;nbsp;&lt;i&gt;cx&lt;/i&gt;&amp;nbsp;+&amp;nbsp;&lt;i&gt;rx&lt;/i&gt;&amp;nbsp;*&amp;nbsp;cos(&amp;nbsp;theta&amp;nbsp;)&lt;/code&gt;</span>
 <span class="source-line-no">194</span><span id="line-194">     *  and</span>
 <span class="source-line-no">195</span><span id="line-195">     *  &lt;code&gt;y&amp;nbsp;=&amp;nbsp;&lt;i&gt;cy&lt;/i&gt;&amp;nbsp;+&amp;nbsp;&lt;i&gt;ry&lt;/i&gt;&amp;nbsp;*&amp;nbsp;sin(&amp;nbsp;theta&amp;nbsp;)&lt;/code&gt;</span>
 <span class="source-line-no">196</span><span id="line-196">     *  is evaluated such that {@code theta} starts at an angle corresponding</span>
 <span class="source-line-no">197</span><span id="line-197">     *  to the current point and increases positively until the arc reaches</span>
-<span class="source-line-no">198</span><span id="line-198">     *  (&lt;i&gt;x&lt;/i&gt;,&lt;i&gt;y&lt;/i&gt;)). A type of {@code false}) causes the arc to be</span>
+<span class="source-line-no">198</span><span id="line-198">     *  (&lt;i&gt;x&lt;/i&gt;,&lt;i&gt;y&lt;/i&gt;)). A type of {@false}) causes the arc to be</span>
 <span class="source-line-no">199</span><span id="line-199">     *  drawn in a &amp;quot;negative-angle&amp;quot; direction (i.e., {@code theta}</span>
 <span class="source-line-no">200</span><span id="line-200">     *  starts at an angle type corresponding to the current point and</span>
 <span class="source-line-no">201</span><span id="line-201">     *  decreases until the arc reaches (&lt;i&gt;x&lt;/i&gt;,&lt;i&gt;y&lt;/i&gt;)).&lt;/li&gt;</span>
@@ -219,20 +219,20 @@
 <span class="source-line-no">206</span><span id="line-206">     *  based on the values of these flags. For each case, the following path</span>
 <span class="source-line-no">207</span><span id="line-207">     *  data command was used:&lt;pre&gt;&lt;code&gt;  &amp;lt;path d=&amp;quot;M 125,75 a100,50 0 ?,? 100,50&amp;quot;</span>
 <span class="source-line-no">208</span><span id="line-208">     *        style=&amp;quot;fill:none; stroke:red; stroke-width:6&amp;quot;/&amp;gt;&lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">209</span><span id="line-209">     *  In the SVG code, {@code true} is represented as {@code 1} and</span>
-<span class="source-line-no">210</span><span id="line-210">     *  {@code false} as {@code 0}, so &amp;quot;{@code ?,?}&amp;quot; is replaced by</span>
+<span class="source-line-no">209</span><span id="line-209">     *  In the SVG code, {@true} is represented as {@code 1} and</span>
+<span class="source-line-no">210</span><span id="line-210">     *  {@false} as {@code 0}, so &amp;quot;{@code ?,?}&amp;quot; is replaced by</span>
 <span class="source-line-no">211</span><span id="line-211">     *  &amp;quot;{@code 0,0}&amp;quot;, &amp;quot;{@code 0,1}&amp;quot;,</span>
 <span class="source-line-no">212</span><span id="line-212">     *  &amp;quot;{@code 1,0}&amp;quot; and &amp;quot;{@code 1,1}&amp;quot; to generate the</span>
 <span class="source-line-no">213</span><span id="line-213">     *  four possible cases.</span>
 <span class="source-line-no">214</span><span id="line-214">     *  &lt;img src="doc-files/arcs02.svg" alt="Sample Images"&gt;</span>
 <span class="source-line-no">215</span><span id="line-215">     *</span>
 <span class="source-line-no">216</span><span id="line-216">     *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org</span>
-<span class="source-line-no">217</span><span id="line-217">     *  @version $Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $</span>
+<span class="source-line-no">217</span><span id="line-217">     *  @version $Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $</span>
 <span class="source-line-no">218</span><span id="line-218">     *  @since 0.0.5</span>
 <span class="source-line-no">219</span><span id="line-219">     *</span>
 <span class="source-line-no">220</span><span id="line-220">     *  @UMLGraph.link</span>
 <span class="source-line-no">221</span><span id="line-221">     */</span>
-<span class="source-line-no">222</span><span id="line-222">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $" )</span>
+<span class="source-line-no">222</span><span id="line-222">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $" )</span>
 <span class="source-line-no">223</span><span id="line-223">    @API( status = STABLE, since = "0.0.5" )</span>
 <span class="source-line-no">224</span><span id="line-224">    public static final class SVGArcTo extends SVGPathElement</span>
 <span class="source-line-no">225</span><span id="line-225">    {</span>
@@ -242,16 +242,16 @@
 <span class="source-line-no">229</span><span id="line-229">        /**</span>
 <span class="source-line-no">230</span><span id="line-230">         *  Creates a new {@code SVGArcTo} instance.</span>
 <span class="source-line-no">231</span><span id="line-231">         *</span>
-<span class="source-line-no">232</span><span id="line-232">         *  @param  isAbsolute  {@code true} if the given coordinates are</span>
-<span class="source-line-no">233</span><span id="line-233">         *      absolute, {@code false} if they are relative to the last point</span>
+<span class="source-line-no">232</span><span id="line-232">         *  @param  isAbsolute  {@true} if the given coordinates are</span>
+<span class="source-line-no">233</span><span id="line-233">         *      absolute, {@false} if they are relative to the last point</span>
 <span class="source-line-no">234</span><span id="line-234">         *      on the path.</span>
 <span class="source-line-no">235</span><span id="line-235">         *  @param  rx  The x radius for the ellipsis.</span>
 <span class="source-line-no">236</span><span id="line-236">         *  @param  ry  The y radius for the ellipsis.</span>
 <span class="source-line-no">237</span><span id="line-237">         *  @param  rotation    The rotation of the x-axis.</span>
-<span class="source-line-no">238</span><span id="line-238">         *  @param  largeArc    {@code true} to draw the larger arc,</span>
-<span class="source-line-no">239</span><span id="line-239">         *      {@code false} for the smaller arc.</span>
-<span class="source-line-no">240</span><span id="line-240">         *  @param  sweep   {@code true} to draw the arc in</span>
-<span class="source-line-no">241</span><span id="line-241">         *      &amp;quot;positive-angle&amp;quot; direction, {@code false} for</span>
+<span class="source-line-no">238</span><span id="line-238">         *  @param  largeArc    {@true} to draw the larger arc,</span>
+<span class="source-line-no">239</span><span id="line-239">         *      {@false} for the smaller arc.</span>
+<span class="source-line-no">240</span><span id="line-240">         *  @param  sweep   {@true} to draw the arc in</span>
+<span class="source-line-no">241</span><span id="line-241">         *      &amp;quot;positive-angle&amp;quot; direction, {@false} for</span>
 <span class="source-line-no">242</span><span id="line-242">         *      drawing it in a &amp;quot;negative-angle&amp;quot; direction.</span>
 <span class="source-line-no">243</span><span id="line-243">         *  @param  x   The x coordinate for the end point of the line.</span>
 <span class="source-line-no">244</span><span id="line-244">         *  @param  y   The y coordinate for the end point of the line.</span>
@@ -265,16 +265,16 @@
 <span class="source-line-no">252</span><span id="line-252">        /**</span>
 <span class="source-line-no">253</span><span id="line-253">         *  Creates a new {@code SVGArcTo} instance.</span>
 <span class="source-line-no">254</span><span id="line-254">         *</span>
-<span class="source-line-no">255</span><span id="line-255">         *  @param  isAbsolute  {@code true} if the given coordinates are</span>
-<span class="source-line-no">256</span><span id="line-256">         *      absolute, {@code false} if they are relative to the last point</span>
+<span class="source-line-no">255</span><span id="line-255">         *  @param  isAbsolute  {@true} if the given coordinates are</span>
+<span class="source-line-no">256</span><span id="line-256">         *      absolute, {@false} if they are relative to the last point</span>
 <span class="source-line-no">257</span><span id="line-257">         *      on the path.</span>
 <span class="source-line-no">258</span><span id="line-258">         *  @param  rx  The x radius for the ellipsis.</span>
 <span class="source-line-no">259</span><span id="line-259">         *  @param  ry  The y radius for the ellipsis.</span>
 <span class="source-line-no">260</span><span id="line-260">         *  @param  rotation    The rotation of the x-axis.</span>
-<span class="source-line-no">261</span><span id="line-261">         *  @param  largeArc    {@code true} to draw the larger arc,</span>
-<span class="source-line-no">262</span><span id="line-262">         *      {@code false} for the smaller arc.</span>
-<span class="source-line-no">263</span><span id="line-263">         *  @param  sweep   {@code true} to draw the arc in</span>
-<span class="source-line-no">264</span><span id="line-264">         *      &amp;quot;positive-angle&amp;quot; direction, {@code false} for</span>
+<span class="source-line-no">261</span><span id="line-261">         *  @param  largeArc    {@true} to draw the larger arc,</span>
+<span class="source-line-no">262</span><span id="line-262">         *      {@false} for the smaller arc.</span>
+<span class="source-line-no">263</span><span id="line-263">         *  @param  sweep   {@true} to draw the arc in</span>
+<span class="source-line-no">264</span><span id="line-264">         *      &amp;quot;positive-angle&amp;quot; direction, {@false} for</span>
 <span class="source-line-no">265</span><span id="line-265">         *      drawing it in a &amp;quot;negative-angle&amp;quot; direction.</span>
 <span class="source-line-no">266</span><span id="line-266">         *  @param  x   The x coordinate for the end point of the line.</span>
 <span class="source-line-no">267</span><span id="line-267">         *  @param  y   The y coordinate for the end point of the line.</span>
@@ -291,12 +291,12 @@
 <span class="source-line-no">278</span><span id="line-278">     *  The implementation of the SVG path {@code ClosePath} element.</span>
 <span class="source-line-no">279</span><span id="line-279">     *</span>
 <span class="source-line-no">280</span><span id="line-280">     *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org</span>
-<span class="source-line-no">281</span><span id="line-281">     *  @version $Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $</span>
+<span class="source-line-no">281</span><span id="line-281">     *  @version $Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $</span>
 <span class="source-line-no">282</span><span id="line-282">     *  @since 0.0.5</span>
 <span class="source-line-no">283</span><span id="line-283">     *</span>
 <span class="source-line-no">284</span><span id="line-284">     *  @UMLGraph.link</span>
 <span class="source-line-no">285</span><span id="line-285">     */</span>
-<span class="source-line-no">286</span><span id="line-286">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $" )</span>
+<span class="source-line-no">286</span><span id="line-286">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $" )</span>
 <span class="source-line-no">287</span><span id="line-287">    @API( status = STABLE, since = "0.0.5" )</span>
 <span class="source-line-no">288</span><span id="line-288">    public static final class SVGClosePath extends SVGPathElement</span>
 <span class="source-line-no">289</span><span id="line-289">    {</span>
@@ -320,12 +320,12 @@
 <span class="source-line-no">307</span><span id="line-307">     *  coincident with the current point.</span>
 <span class="source-line-no">308</span><span id="line-308">     *</span>
 <span class="source-line-no">309</span><span id="line-309">     *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org</span>
-<span class="source-line-no">310</span><span id="line-310">     *  @version $Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $</span>
+<span class="source-line-no">310</span><span id="line-310">     *  @version $Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $</span>
 <span class="source-line-no">311</span><span id="line-311">     *  @since 0.0.5</span>
 <span class="source-line-no">312</span><span id="line-312">     *</span>
 <span class="source-line-no">313</span><span id="line-313">     *  @UMLGraph.link</span>
 <span class="source-line-no">314</span><span id="line-314">     */</span>
-<span class="source-line-no">315</span><span id="line-315">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $" )</span>
+<span class="source-line-no">315</span><span id="line-315">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $" )</span>
 <span class="source-line-no">316</span><span id="line-316">    @API( status = STABLE, since = "0.0.5" )</span>
 <span class="source-line-no">317</span><span id="line-317">    public static final class SVGCubicCurveTo extends SVGPathElement</span>
 <span class="source-line-no">318</span><span id="line-318">    {</span>
@@ -335,8 +335,8 @@
 <span class="source-line-no">322</span><span id="line-322">        /**</span>
 <span class="source-line-no">323</span><span id="line-323">         *  Creates a new {@code SVGCubicCurveTo} instance.</span>
 <span class="source-line-no">324</span><span id="line-324">         *</span>
-<span class="source-line-no">325</span><span id="line-325">         *  @param  isAbsolute  {@code true} if the given coordinates are</span>
-<span class="source-line-no">326</span><span id="line-326">         *      absolute, {@code false} if they are relative to the last point</span>
+<span class="source-line-no">325</span><span id="line-325">         *  @param  isAbsolute  {@true} if the given coordinates are</span>
+<span class="source-line-no">326</span><span id="line-326">         *      absolute, {@false} if they are relative to the last point</span>
 <span class="source-line-no">327</span><span id="line-327">         *      on the path.</span>
 <span class="source-line-no">328</span><span id="line-328">         *  @param  x1   The x coordinate for the first control point.</span>
 <span class="source-line-no">329</span><span id="line-329">         *  @param  y1   The y coordinate for the first control point.</span>
@@ -355,8 +355,8 @@
 <span class="source-line-no">342</span><span id="line-342">         *  Creates a new {@code SVGCubicCurveTo} instance for the smooth</span>
 <span class="source-line-no">343</span><span id="line-343">         *  variant.</span>
 <span class="source-line-no">344</span><span id="line-344">         *</span>
-<span class="source-line-no">345</span><span id="line-345">         *  @param  isAbsolute  {@code true} if the given coordinates are</span>
-<span class="source-line-no">346</span><span id="line-346">         *      absolute, {@code false} if they are relative to the last point</span>
+<span class="source-line-no">345</span><span id="line-345">         *  @param  isAbsolute  {@true} if the given coordinates are</span>
+<span class="source-line-no">346</span><span id="line-346">         *      absolute, {@false} if they are relative to the last point</span>
 <span class="source-line-no">347</span><span id="line-347">         *      on the path.</span>
 <span class="source-line-no">348</span><span id="line-348">         *  @param  x2   The x coordinate for the second control point</span>
 <span class="source-line-no">349</span><span id="line-349">         *  @param  y2   The y coordinate for the second control point</span>
@@ -371,8 +371,8 @@
 <span class="source-line-no">358</span><span id="line-358">        /**</span>
 <span class="source-line-no">359</span><span id="line-359">         *  Creates a new {@code SVGCubicCurveTo} instance.</span>
 <span class="source-line-no">360</span><span id="line-360">         *</span>
-<span class="source-line-no">361</span><span id="line-361">         *  @param  isAbsolute  {@code true} if the given coordinates are</span>
-<span class="source-line-no">362</span><span id="line-362">         *      absolute, {@code false} if they are relative to the last point</span>
+<span class="source-line-no">361</span><span id="line-361">         *  @param  isAbsolute  {@true} if the given coordinates are</span>
+<span class="source-line-no">362</span><span id="line-362">         *      absolute, {@false} if they are relative to the last point</span>
 <span class="source-line-no">363</span><span id="line-363">         *      on the path.</span>
 <span class="source-line-no">364</span><span id="line-364">         *  @param  x1   The x coordinate for the first control point.</span>
 <span class="source-line-no">365</span><span id="line-365">         *  @param  y1   The y coordinate for the first control point.</span>
@@ -391,8 +391,8 @@
 <span class="source-line-no">378</span><span id="line-378">         *  Creates a new {@code SVGCubicCurveTo} instance for the smooth</span>
 <span class="source-line-no">379</span><span id="line-379">         *  variant.</span>
 <span class="source-line-no">380</span><span id="line-380">         *</span>
-<span class="source-line-no">381</span><span id="line-381">         *  @param  isAbsolute  {@code true} if the given coordinates are</span>
-<span class="source-line-no">382</span><span id="line-382">         *      absolute, {@code false} if they are relative to the last point</span>
+<span class="source-line-no">381</span><span id="line-381">         *  @param  isAbsolute  {@true} if the given coordinates are</span>
+<span class="source-line-no">382</span><span id="line-382">         *      absolute, {@false} if they are relative to the last point</span>
 <span class="source-line-no">383</span><span id="line-383">         *      on the path.</span>
 <span class="source-line-no">384</span><span id="line-384">         *  @param  x2   The x coordinate for the second control point</span>
 <span class="source-line-no">385</span><span id="line-385">         *  @param  y2   The y coordinate for the second control point</span>
@@ -411,12 +411,12 @@
 <span class="source-line-no">398</span><span id="line-398">     *  horizontal line.</span>
 <span class="source-line-no">399</span><span id="line-399">     *</span>
 <span class="source-line-no">400</span><span id="line-400">     *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org</span>
-<span class="source-line-no">401</span><span id="line-401">     *  @version $Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $</span>
+<span class="source-line-no">401</span><span id="line-401">     *  @version $Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $</span>
 <span class="source-line-no">402</span><span id="line-402">     *  @since 0.0.5</span>
 <span class="source-line-no">403</span><span id="line-403">     *</span>
 <span class="source-line-no">404</span><span id="line-404">     *  @UMLGraph.link</span>
 <span class="source-line-no">405</span><span id="line-405">     */</span>
-<span class="source-line-no">406</span><span id="line-406">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $" )</span>
+<span class="source-line-no">406</span><span id="line-406">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $" )</span>
 <span class="source-line-no">407</span><span id="line-407">    @API( status = STABLE, since = "0.0.5" )</span>
 <span class="source-line-no">408</span><span id="line-408">    public static final class SVGHLineTo extends SVGPathElement</span>
 <span class="source-line-no">409</span><span id="line-409">    {</span>
@@ -426,8 +426,8 @@
 <span class="source-line-no">413</span><span id="line-413">        /**</span>
 <span class="source-line-no">414</span><span id="line-414">         *  Creates a new {@code SVGHLineTo} instance.</span>
 <span class="source-line-no">415</span><span id="line-415">         *</span>
-<span class="source-line-no">416</span><span id="line-416">         *  @param  isAbsolute  {@code true} if the given coordinate is</span>
-<span class="source-line-no">417</span><span id="line-417">         *      absolute, {@code false} if it is relative to the last point</span>
+<span class="source-line-no">416</span><span id="line-416">         *  @param  isAbsolute  {@true} if the given coordinate is</span>
+<span class="source-line-no">417</span><span id="line-417">         *      absolute, {@false} if it is relative to the last point</span>
 <span class="source-line-no">418</span><span id="line-418">         *      on the path.</span>
 <span class="source-line-no">419</span><span id="line-419">         *  @param  x   The x coordinate for the end point of the line.</span>
 <span class="source-line-no">420</span><span id="line-420">         */</span>
@@ -439,8 +439,8 @@
 <span class="source-line-no">426</span><span id="line-426">        /**</span>
 <span class="source-line-no">427</span><span id="line-427">         *  Creates a new {@code SVGHLineTo} instance.</span>
 <span class="source-line-no">428</span><span id="line-428">         *</span>
-<span class="source-line-no">429</span><span id="line-429">         *  @param  isAbsolute  {@code true} if the given coordinate is</span>
-<span class="source-line-no">430</span><span id="line-430">         *      absolute, {@code false} if it is relative to the last point</span>
+<span class="source-line-no">429</span><span id="line-429">         *  @param  isAbsolute  {@true} if the given coordinate is</span>
+<span class="source-line-no">430</span><span id="line-430">         *      absolute, {@false} if it is relative to the last point</span>
 <span class="source-line-no">431</span><span id="line-431">         *      on the path.</span>
 <span class="source-line-no">432</span><span id="line-432">         *  @param  x   The x coordinate for the end point of the line.</span>
 <span class="source-line-no">433</span><span id="line-433">         */</span>
@@ -455,12 +455,12 @@
 <span class="source-line-no">442</span><span id="line-442">     *  The implementation of the SVG path {@code LineTo} element.</span>
 <span class="source-line-no">443</span><span id="line-443">     *</span>
 <span class="source-line-no">444</span><span id="line-444">     *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org</span>
-<span class="source-line-no">445</span><span id="line-445">     *  @version $Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $</span>
+<span class="source-line-no">445</span><span id="line-445">     *  @version $Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $</span>
 <span class="source-line-no">446</span><span id="line-446">     *  @since 0.0.5</span>
 <span class="source-line-no">447</span><span id="line-447">     *</span>
 <span class="source-line-no">448</span><span id="line-448">     *  @UMLGraph.link</span>
 <span class="source-line-no">449</span><span id="line-449">     */</span>
-<span class="source-line-no">450</span><span id="line-450">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $" )</span>
+<span class="source-line-no">450</span><span id="line-450">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $" )</span>
 <span class="source-line-no">451</span><span id="line-451">    @API( status = STABLE, since = "0.0.5" )</span>
 <span class="source-line-no">452</span><span id="line-452">    public static final class SVGLineTo extends SVGPathElement</span>
 <span class="source-line-no">453</span><span id="line-453">    {</span>
@@ -470,8 +470,8 @@
 <span class="source-line-no">457</span><span id="line-457">        /**</span>
 <span class="source-line-no">458</span><span id="line-458">         *  Creates a new {@code SVGLineTo} instance.</span>
 <span class="source-line-no">459</span><span id="line-459">         *</span>
-<span class="source-line-no">460</span><span id="line-460">         *  @param  isAbsolute  {@code true} if the given coordinates are</span>
-<span class="source-line-no">461</span><span id="line-461">         *      absolute, {@code false} if they are relative to the last point</span>
+<span class="source-line-no">460</span><span id="line-460">         *  @param  isAbsolute  {@true} if the given coordinates are</span>
+<span class="source-line-no">461</span><span id="line-461">         *      absolute, {@false} if they are relative to the last point</span>
 <span class="source-line-no">462</span><span id="line-462">         *      on the path.</span>
 <span class="source-line-no">463</span><span id="line-463">         *  @param  x   The x coordinate for the end point of the line.</span>
 <span class="source-line-no">464</span><span id="line-464">         *  @param  y   The y coordinate for the end point of the line.</span>
@@ -484,8 +484,8 @@
 <span class="source-line-no">471</span><span id="line-471">        /**</span>
 <span class="source-line-no">472</span><span id="line-472">         *  Creates a new {@code SVGLineTo} instance.</span>
 <span class="source-line-no">473</span><span id="line-473">         *</span>
-<span class="source-line-no">474</span><span id="line-474">         *  @param  isAbsolute  {@code true} if the given coordinates are</span>
-<span class="source-line-no">475</span><span id="line-475">         *      absolute, {@code false} if they are relative to the last point</span>
+<span class="source-line-no">474</span><span id="line-474">         *  @param  isAbsolute  {@true} if the given coordinates are</span>
+<span class="source-line-no">475</span><span id="line-475">         *      absolute, {@false} if they are relative to the last point</span>
 <span class="source-line-no">476</span><span id="line-476">         *      on the path.</span>
 <span class="source-line-no">477</span><span id="line-477">         *  @param  x   The x coordinate for the end point of the line.</span>
 <span class="source-line-no">478</span><span id="line-478">         *  @param  y   The y coordinate for the end point of the line.</span>
@@ -501,12 +501,12 @@
 <span class="source-line-no">488</span><span id="line-488">     *  The implementation of the SVG path {@code MoveTo} element.</span>
 <span class="source-line-no">489</span><span id="line-489">     *</span>
 <span class="source-line-no">490</span><span id="line-490">     *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org</span>
-<span class="source-line-no">491</span><span id="line-491">     *  @version $Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $</span>
+<span class="source-line-no">491</span><span id="line-491">     *  @version $Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $</span>
 <span class="source-line-no">492</span><span id="line-492">     *  @since 0.0.5</span>
 <span class="source-line-no">493</span><span id="line-493">     *</span>
 <span class="source-line-no">494</span><span id="line-494">     *  @UMLGraph.link</span>
 <span class="source-line-no">495</span><span id="line-495">     */</span>
-<span class="source-line-no">496</span><span id="line-496">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $" )</span>
+<span class="source-line-no">496</span><span id="line-496">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $" )</span>
 <span class="source-line-no">497</span><span id="line-497">    @API( status = STABLE, since = "0.0.5" )</span>
 <span class="source-line-no">498</span><span id="line-498">    public static final class SVGMoveTo extends SVGPathElement</span>
 <span class="source-line-no">499</span><span id="line-499">    {</span>
@@ -516,8 +516,8 @@
 <span class="source-line-no">503</span><span id="line-503">        /**</span>
 <span class="source-line-no">504</span><span id="line-504">         *  Creates a new {@code SVGMoveTo} instance.</span>
 <span class="source-line-no">505</span><span id="line-505">         *</span>
-<span class="source-line-no">506</span><span id="line-506">         *  @param  isAbsolute  {@code true} if the given coordinates are</span>
-<span class="source-line-no">507</span><span id="line-507">         *      absolute, {@code false} if they are relative to the last point</span>
+<span class="source-line-no">506</span><span id="line-506">         *  @param  isAbsolute  {@true} if the given coordinates are</span>
+<span class="source-line-no">507</span><span id="line-507">         *      absolute, {@false} if they are relative to the last point</span>
 <span class="source-line-no">508</span><span id="line-508">         *      on the path.</span>
 <span class="source-line-no">509</span><span id="line-509">         *  @param  x   The x coordinate.</span>
 <span class="source-line-no">510</span><span id="line-510">         *  @param  y   The y coordinate.</span>
@@ -530,8 +530,8 @@
 <span class="source-line-no">517</span><span id="line-517">        /**</span>
 <span class="source-line-no">518</span><span id="line-518">         *  Creates a new {@code SVGMoveTo} instance.</span>
 <span class="source-line-no">519</span><span id="line-519">         *</span>
-<span class="source-line-no">520</span><span id="line-520">         *  @param  isAbsolute  {@code true} if the given coordinates are</span>
-<span class="source-line-no">521</span><span id="line-521">         *      absolute, {@code false} if they are relative to the last point</span>
+<span class="source-line-no">520</span><span id="line-520">         *  @param  isAbsolute  {@true} if the given coordinates are</span>
+<span class="source-line-no">521</span><span id="line-521">         *      absolute, {@false} if they are relative to the last point</span>
 <span class="source-line-no">522</span><span id="line-522">         *      on the path.</span>
 <span class="source-line-no">523</span><span id="line-523">         *  @param  x   The x coordinate.</span>
 <span class="source-line-no">524</span><span id="line-524">         *  @param  y   The y coordinate.</span>
@@ -553,12 +553,12 @@
 <span class="source-line-no">540</span><span id="line-540">     *  coincident with the current point.</span>
 <span class="source-line-no">541</span><span id="line-541">     *</span>
 <span class="source-line-no">542</span><span id="line-542">     *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org</span>
-<span class="source-line-no">543</span><span id="line-543">     *  @version $Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $</span>
+<span class="source-line-no">543</span><span id="line-543">     *  @version $Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $</span>
 <span class="source-line-no">544</span><span id="line-544">     *  @since 0.0.5</span>
 <span class="source-line-no">545</span><span id="line-545">     *</span>
 <span class="source-line-no">546</span><span id="line-546">     *  @UMLGraph.link</span>
 <span class="source-line-no">547</span><span id="line-547">     */</span>
-<span class="source-line-no">548</span><span id="line-548">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $" )</span>
+<span class="source-line-no">548</span><span id="line-548">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $" )</span>
 <span class="source-line-no">549</span><span id="line-549">    @API( status = STABLE, since = "0.0.5" )</span>
 <span class="source-line-no">550</span><span id="line-550">    public static final class SVGQuadraticCurveTo extends SVGPathElement</span>
 <span class="source-line-no">551</span><span id="line-551">    {</span>
@@ -568,8 +568,8 @@
 <span class="source-line-no">555</span><span id="line-555">        /**</span>
 <span class="source-line-no">556</span><span id="line-556">         *  Creates a new {@code SVGQuadraticCurveTo} instance.</span>
 <span class="source-line-no">557</span><span id="line-557">         *</span>
-<span class="source-line-no">558</span><span id="line-558">         *  @param  isAbsolute  {@code true} if the given coordinates are</span>
-<span class="source-line-no">559</span><span id="line-559">         *      absolute, {@code false} if they are relative to the last point</span>
+<span class="source-line-no">558</span><span id="line-558">         *  @param  isAbsolute  {@true} if the given coordinates are</span>
+<span class="source-line-no">559</span><span id="line-559">         *      absolute, {@false} if they are relative to the last point</span>
 <span class="source-line-no">560</span><span id="line-560">         *      on the path.</span>
 <span class="source-line-no">561</span><span id="line-561">         *  @param  x1   The x coordinate for the control point.</span>
 <span class="source-line-no">562</span><span id="line-562">         *  @param  y1   The y coordinate for the control point.</span>
@@ -585,8 +585,8 @@
 <span class="source-line-no">572</span><span id="line-572">         *  Creates a new {@code SVGQuadraticCurveTo} instance for the smooth</span>
 <span class="source-line-no">573</span><span id="line-573">         *  variant.</span>
 <span class="source-line-no">574</span><span id="line-574">         *</span>
-<span class="source-line-no">575</span><span id="line-575">         *  @param  isAbsolute  {@code true} if the given coordinates are</span>
-<span class="source-line-no">576</span><span id="line-576">         *      absolute, {@code false} if they are relative to the last point</span>
+<span class="source-line-no">575</span><span id="line-575">         *  @param  isAbsolute  {@true} if the given coordinates are</span>
+<span class="source-line-no">576</span><span id="line-576">         *      absolute, {@false} if they are relative to the last point</span>
 <span class="source-line-no">577</span><span id="line-577">         *      on the path.</span>
 <span class="source-line-no">578</span><span id="line-578">         *  @param  x   The x coordinate for the end point of the line.</span>
 <span class="source-line-no">579</span><span id="line-579">         *  @param  y   The y coordinate for the end point of the line.</span>
@@ -599,8 +599,8 @@
 <span class="source-line-no">586</span><span id="line-586">        /**</span>
 <span class="source-line-no">587</span><span id="line-587">         *  Creates a new {@code SVGQuadraticCurveTo} instance.</span>
 <span class="source-line-no">588</span><span id="line-588">         *</span>
-<span class="source-line-no">589</span><span id="line-589">         *  @param  isAbsolute  {@code true} if the given coordinates are</span>
-<span class="source-line-no">590</span><span id="line-590">         *      absolute, {@code false} if they are relative to the last point</span>
+<span class="source-line-no">589</span><span id="line-589">         *  @param  isAbsolute  {@true} if the given coordinates are</span>
+<span class="source-line-no">590</span><span id="line-590">         *      absolute, {@false} if they are relative to the last point</span>
 <span class="source-line-no">591</span><span id="line-591">         *      on the path.</span>
 <span class="source-line-no">592</span><span id="line-592">         *  @param  x1   The x coordinate for the control point.</span>
 <span class="source-line-no">593</span><span id="line-593">         *  @param  y1   The y coordinate for the control point.</span>
@@ -616,8 +616,8 @@
 <span class="source-line-no">603</span><span id="line-603">         *  Creates a new {@code SVGQuadraticCurveTo} instance for the smooth</span>
 <span class="source-line-no">604</span><span id="line-604">         *  variant.</span>
 <span class="source-line-no">605</span><span id="line-605">         *</span>
-<span class="source-line-no">606</span><span id="line-606">         *  @param  isAbsolute  {@code true} if the given coordinates are</span>
-<span class="source-line-no">607</span><span id="line-607">         *      absolute, {@code false} if they are relative to the last point</span>
+<span class="source-line-no">606</span><span id="line-606">         *  @param  isAbsolute  {@true} if the given coordinates are</span>
+<span class="source-line-no">607</span><span id="line-607">         *      absolute, {@false} if they are relative to the last point</span>
 <span class="source-line-no">608</span><span id="line-608">         *      on the path.</span>
 <span class="source-line-no">609</span><span id="line-609">         *  @param  x   The x coordinate for the end point of the line.</span>
 <span class="source-line-no">610</span><span id="line-610">         *  @param  y   The y coordinate for the end point of the line.</span>
@@ -634,12 +634,12 @@
 <span class="source-line-no">621</span><span id="line-621">     *  vertical line.</span>
 <span class="source-line-no">622</span><span id="line-622">     *</span>
 <span class="source-line-no">623</span><span id="line-623">     *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org</span>
-<span class="source-line-no">624</span><span id="line-624">     *  @version $Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $</span>
+<span class="source-line-no">624</span><span id="line-624">     *  @version $Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $</span>
 <span class="source-line-no">625</span><span id="line-625">     *  @since 0.0.5</span>
 <span class="source-line-no">626</span><span id="line-626">     *</span>
 <span class="source-line-no">627</span><span id="line-627">     *  @UMLGraph.link</span>
 <span class="source-line-no">628</span><span id="line-628">     */</span>
-<span class="source-line-no">629</span><span id="line-629">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1151 2025-10-01 21:32:15Z tquadrat $" )</span>
+<span class="source-line-no">629</span><span id="line-629">    @ClassVersion( sourceVersion = "$Id: SVGPathElement.java 1258 2026-06-04 18:33:06Z tquadrat $" )</span>
 <span class="source-line-no">630</span><span id="line-630">    @API( status = STABLE, since = "0.0.5" )</span>
 <span class="source-line-no">631</span><span id="line-631">    public static final class SVGVLineTo extends SVGPathElement</span>
 <span class="source-line-no">632</span><span id="line-632">    {</span>
@@ -649,8 +649,8 @@
 <span class="source-line-no">636</span><span id="line-636">        /**</span>
 <span class="source-line-no">637</span><span id="line-637">         *  Creates a new {@code SVGVLineTo} instance.</span>
 <span class="source-line-no">638</span><span id="line-638">         *</span>
-<span class="source-line-no">639</span><span id="line-639">         *  @param  isAbsolute  {@code true} if the given coordinate is</span>
-<span class="source-line-no">640</span><span id="line-640">         *      absolute, {@code false} if it is relative to the last point</span>
+<span class="source-line-no">639</span><span id="line-639">         *  @param  isAbsolute  {@true} if the given coordinate is</span>
+<span class="source-line-no">640</span><span id="line-640">         *      absolute, {@false} if it is relative to the last point</span>
 <span class="source-line-no">641</span><span id="line-641">         *      on the path.</span>
 <span class="source-line-no">642</span><span id="line-642">         *  @param  y   The y coordinate for the end point of the line.</span>
 <span class="source-line-no">643</span><span id="line-643">         */</span>
@@ -662,8 +662,8 @@
 <span class="source-line-no">649</span><span id="line-649">        /**</span>
 <span class="source-line-no">650</span><span id="line-650">         *  Creates a new {@code SVGVLineTo} instance.</span>
 <span class="source-line-no">651</span><span id="line-651">         *</span>
-<span class="source-line-no">652</span><span id="line-652">         *  @param  isAbsolute  {@code true} if the given coordinate is</span>
-<span class="source-line-no">653</span><span id="line-653">         *      absolute, {@code false} if it is relative to the last point</span>
+<span class="source-line-no">652</span><span id="line-652">         *  @param  isAbsolute  {@true} if the given coordinate is</span>
+<span class="source-line-no">653</span><span id="line-653">         *      absolute, {@false} if it is relative to the last point</span>
 <span class="source-line-no">654</span><span id="line-654">         *      on the path.</span>
 <span class="source-line-no">655</span><span id="line-655">         *  @param  y   The y coordinate for the end point of the line.</span>
 <span class="source-line-no">656</span><span id="line-656">         */</span>

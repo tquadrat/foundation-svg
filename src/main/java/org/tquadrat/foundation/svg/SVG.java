@@ -38,7 +38,7 @@ import jakarta.activation.MimeType;
  *  {@link SVG.Usage}.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVG.java 1139 2024-06-16 19:50:41Z tquadrat $
+ *  @version $Id: SVG.java 1258 2026-06-04 18:33:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @see "https://www.w3.org/TR/SVG/single-page.html#struct-SVGElement"
@@ -46,7 +46,7 @@ import jakarta.activation.MimeType;
  *  @UMLGraph.link
  */
 @SuppressWarnings( "NewClassNamingConvention" )
-@ClassVersion( sourceVersion = "$Id: SVG.java 1139 2024-06-16 19:50:41Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVG.java 1258 2026-06-04 18:33:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface SVG extends SVGElementWithChildren, AllowsConditionalProcessingAttributes, AllowsDocumentEventAttributes, AllowsDocumentElementEventAttributes, AllowsGraphicalEventAttributes, AllowsPresentationAttributes, AllowsStyleAttributes
     permits SVGImpl
@@ -58,12 +58,12 @@ public sealed interface SVG extends SVGElementWithChildren, AllowsConditionalPro
      *  The different usages for an {@code <svg>} element.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVG.java 1139 2024-06-16 19:50:41Z tquadrat $
+     *  @version $Id: SVG.java 1258 2026-06-04 18:33:06Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: SVG.java 1139 2024-06-16 19:50:41Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVG.java 1258 2026-06-04 18:33:06Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static enum Usage
     {
@@ -157,7 +157,7 @@ public sealed interface SVG extends SVGElementWithChildren, AllowsConditionalPro
     /**
      *  Sets the height of the embedded {@code <svg>} element.
      *
-     *  @param  value   The type; if {@code null} the
+     *  @param  value   The type; if {@null} the
      *      attribute will be removed.
      */
     @SuppressWarnings( "UseOfConcreteClass" )
@@ -167,7 +167,7 @@ public sealed interface SVG extends SVGElementWithChildren, AllowsConditionalPro
      *  Sets the mode for the aspect ratio preservation for this {@code <svg>}
      *  element.
      *
-     *  @param  value   The type; if {@code null} the
+     *  @param  value   The type; if {@null} the
      *      attribute will be removed.
      */
     public void setPreserveAspectRatio( final SVGPreserveAspectRatio value );
@@ -202,7 +202,7 @@ public sealed interface SVG extends SVGElementWithChildren, AllowsConditionalPro
     /**
      *  Sets the width of the embedded {@code <svg>} element.
      *
-     *  @param  value   The type; if {@code null} the
+     *  @param  value   The type; if {@null} the
      *      attribute will be removed.
      */
     @SuppressWarnings( "UseOfConcreteClass" )
@@ -212,7 +212,7 @@ public sealed interface SVG extends SVGElementWithChildren, AllowsConditionalPro
      *  Sets the x coordinate for the top left corner of the embedded
      *  {@code <svg>} element.
      *
-     *  @param  value   The type; if {@code null} the
+     *  @param  value   The type; if {@null} the
      *      attribute will be removed.
      */
     @SuppressWarnings( "UseOfConcreteClass" )
@@ -222,7 +222,7 @@ public sealed interface SVG extends SVGElementWithChildren, AllowsConditionalPro
      *  Sets the y coordinate for the top left corner of the embedded
      *  {@code <svg>} element.
      *
-     *  @param  value   The type; if {@code null} the
+     *  @param  value   The type; if {@null} the
      *      attribute will be removed.
      */
     @SuppressWarnings( "UseOfConcreteClass" )
@@ -232,9 +232,9 @@ public sealed interface SVG extends SVGElementWithChildren, AllowsConditionalPro
      *  Sets the 'Zoom-and-Pan' flag; if enabled on a stand-alone instance of
      *  the {@code <svg>} element, it allows panning and zooming the image.
      *
-     *  @param  flag    {@code true} enables the feature by setting
+     *  @param  flag    {@true} enables the feature by setting
      *      &quot;{@code magnify}&quot; to the attribute
-     *      {@value SVGUtils#SVGATTRIBUTE_ZoomAndPan}, {@code false} disables
+     *      {@value SVGUtils#SVGATTRIBUTE_ZoomAndPan}, {@false} disables
      *      it by setting the attribute to &quot;{@code disable}&quot;.
      */
     public void setZoomAndPan( final boolean flag );

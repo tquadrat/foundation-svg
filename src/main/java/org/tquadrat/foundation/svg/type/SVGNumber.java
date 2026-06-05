@@ -33,12 +33,12 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  A numeric type with a unit as used by various SVG attributes.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGNumber.java 1141 2024-06-23 12:59:01Z tquadrat $
+ *  @version $Id: SVGNumber.java 1258 2026-06-04 18:33:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGNumber.java 1141 2024-06-23 12:59:01Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGNumber.java 1258 2026-06-04 18:33:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed class SVGNumber implements Comparable<SVGNumber>
     permits SVGNumber.SVGDegree, SVGNumber.SVGMillimeter, SVGNumber.SVGPercent,
@@ -51,13 +51,13 @@ public sealed class SVGNumber implements Comparable<SVGNumber>
      *  An SVG degrees type.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGNumber.java 1141 2024-06-23 12:59:01Z tquadrat $
+     *  @version $Id: SVGNumber.java 1258 2026-06-04 18:33:06Z tquadrat $
      *  @since 0.0.5
      *
      *  @UMLGraph.link
      */
     @SuppressWarnings( {"PublicInnerClass", "MagicNumber"} )
-    @ClassVersion( sourceVersion = "$Id: SVGNumber.java 1141 2024-06-23 12:59:01Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGNumber.java 1258 2026-06-04 18:33:06Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGDegree extends SVGNumber
     {
@@ -84,7 +84,7 @@ public sealed class SVGNumber implements Comparable<SVGNumber>
      *  An SVG millimeter type.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGNumber.java 1141 2024-06-23 12:59:01Z tquadrat $
+     *  @version $Id: SVGNumber.java 1258 2026-06-04 18:33:06Z tquadrat $
      *  @since 0.0.5
      *
      *  @see SVGUnit#MILLIMETER
@@ -92,7 +92,7 @@ public sealed class SVGNumber implements Comparable<SVGNumber>
      *  @UMLGraph.link
      */
     @SuppressWarnings( "PublicInnerClass" )
-    @ClassVersion( sourceVersion = "$Id: SVGNumber.java 1141 2024-06-23 12:59:01Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGNumber.java 1258 2026-06-04 18:33:06Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGMillimeter extends SVGNumber
     {
@@ -119,7 +119,7 @@ public sealed class SVGNumber implements Comparable<SVGNumber>
      *  An SVG percent type.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGNumber.java 1141 2024-06-23 12:59:01Z tquadrat $
+     *  @version $Id: SVGNumber.java 1258 2026-06-04 18:33:06Z tquadrat $
      *  @since 0.0.5
      *
      *  @see SVGUnit#PERCENT
@@ -127,7 +127,7 @@ public sealed class SVGNumber implements Comparable<SVGNumber>
      *  @UMLGraph.link
      */
     @SuppressWarnings( "PublicInnerClass" )
-    @ClassVersion( sourceVersion = "$Id: SVGNumber.java 1141 2024-06-23 12:59:01Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGNumber.java 1258 2026-06-04 18:33:06Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGPercent extends SVGNumber
     {
@@ -154,7 +154,7 @@ public sealed class SVGNumber implements Comparable<SVGNumber>
      *  An SVG pixel type.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGNumber.java 1141 2024-06-23 12:59:01Z tquadrat $
+     *  @version $Id: SVGNumber.java 1258 2026-06-04 18:33:06Z tquadrat $
      *  @since 0.0.5
      *
      *  @see SVGUnit#PIXEL
@@ -162,7 +162,7 @@ public sealed class SVGNumber implements Comparable<SVGNumber>
      *  @UMLGraph.link
      */
     @SuppressWarnings( "PublicInnerClass" )
-    @ClassVersion( sourceVersion = "$Id: SVGNumber.java 1141 2024-06-23 12:59:01Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGNumber.java 1258 2026-06-04 18:33:06Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGPixel extends SVGNumber
     {
@@ -190,7 +190,7 @@ public sealed class SVGNumber implements Comparable<SVGNumber>
      *  {@link SVGNumber.SVGPixel}, but without a unit specifier.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: SVGNumber.java 1141 2024-06-23 12:59:01Z tquadrat $
+     *  @version $Id: SVGNumber.java 1258 2026-06-04 18:33:06Z tquadrat $
      *  @since 0.0.5
      *
      *  @see SVGUnit#NONE
@@ -198,7 +198,7 @@ public sealed class SVGNumber implements Comparable<SVGNumber>
      *  @UMLGraph.link
      */
     @SuppressWarnings( "PublicInnerClass" )
-    @ClassVersion( sourceVersion = "$Id: SVGNumber.java 1141 2024-06-23 12:59:01Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: SVGNumber.java 1258 2026-06-04 18:33:06Z tquadrat $" )
     @API( status = STABLE, since = "0.0.5" )
     public static final class SVGUserUnitValue extends SVGNumber
     {
@@ -331,7 +331,7 @@ public sealed class SVGNumber implements Comparable<SVGNumber>
      *  matter that the decimal places of a {@code double} are effectively
      *  zero.
      *
-     *  @return {@code true} if the type is an integer, {@code false}
+     *  @return {@true} if the type is an integer, {@false}
      *      otherwise.
      */
     public final boolean isInteger() { return m_IsInteger; }
@@ -339,7 +339,7 @@ public sealed class SVGNumber implements Comparable<SVGNumber>
     /**
      *  Returns a flag that indicates whether the type is a negative number.
      *
-     *  @return {@code true} if the type is less than zero, {@code false}
+     *  @return {@true} if the type is less than zero, {@false}
      *      otherwise.
      */
     public final boolean isNegative() { return m_IsNegative; }
@@ -347,7 +347,7 @@ public sealed class SVGNumber implements Comparable<SVGNumber>
     /**
      *  Returns a flag that indicates whether the type is zero.
      *
-     *  @return {@code true} if the type is 0 (or 0.0), {@code false}
+     *  @return {@true} if the type is 0 (or 0.0), {@false}
      *      otherwise.
      */
     public final boolean isZero() { return m_IsZero; }

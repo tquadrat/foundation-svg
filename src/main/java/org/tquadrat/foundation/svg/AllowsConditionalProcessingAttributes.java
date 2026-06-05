@@ -40,12 +40,12 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  will implement this interface.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: AllowsConditionalProcessingAttributes.java 1074 2023-10-02 12:05:06Z tquadrat $
+ *  @version $Id: AllowsConditionalProcessingAttributes.java 1258 2026-06-04 18:33:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: AllowsConditionalProcessingAttributes.java 1074 2023-10-02 12:05:06Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: AllowsConditionalProcessingAttributes.java 1258 2026-06-04 18:33:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public sealed interface AllowsConditionalProcessingAttributes
     permits SVG, SVGClipPath, SVGGroup, SVGLine, SVGPath, SVGRectangle, SVGTSpan, SVGText, SVGUse
@@ -71,8 +71,8 @@ public sealed interface AllowsConditionalProcessingAttributes
      *  Sets the attribute that indicates the requirement for external
      *  resources for rendering this SVG element.
      *
-     *  @param  flag    {@code true} if external resources are needed,
-     *      {@code false} if all required resources are local to the current
+     *  @param  flag    {@true} if external resources are needed,
+     *      {@false} if all required resources are local to the current
      *      context.
      */
     public void setExternalResourcesRequired( final boolean flag );

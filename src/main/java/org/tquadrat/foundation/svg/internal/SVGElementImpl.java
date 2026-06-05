@@ -215,13 +215,13 @@ import org.tquadrat.foundation.xml.builder.spi.XMLElementAdapter;
  *  why it is not abstract).</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGElementImpl.java 1074 2023-10-02 12:05:06Z tquadrat $
+ *  @version $Id: SVGElementImpl.java 1258 2026-06-04 18:33:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( {"ClassWithTooManyMethods", "OverlyComplexClass"} )
-@ClassVersion( sourceVersion = "$Id: SVGElementImpl.java 1074 2023-10-02 12:05:06Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGElementImpl.java 1258 2026-06-04 18:33:06Z tquadrat $" )
 @API( status = INTERNAL, since = "0.0.5" )
 public sealed class SVGElementImpl extends XMLElementAdapter implements SVGElement
     permits SVGElementAdapter, SVGClipPathImpl,
@@ -312,7 +312,7 @@ public sealed class SVGElementImpl extends XMLElementAdapter implements SVGEleme
      *  Sets the attribute with the given name.
      *
      *  @param  name    The name of the attribute; the name is case-sensitive.
-     *  @param  value   The attribute's type; if {@code null} the
+     *  @param  value   The attribute's type; if {@null} the
      *      attribute will be removed.
      *  @throws IllegalArgumentException    An attribute with the given name is
      *      not valid for the element, or no attributes are allowed at all.
@@ -523,10 +523,10 @@ public sealed class SVGElementImpl extends XMLElementAdapter implements SVGEleme
      *  <code>&lt;{@value org.tquadrat.foundation.svg.SVGUtils#SVGELEMENT_Description}&gt;</code>
      *  element will be added as a child.
      *
-     *  @param  description The description; nothing happens if {@code null},
+     *  @param  description The description; nothing happens if {@null},
      *      empty, or blank.
      *  @throws IllegalStateException   The given description is not
-     *      {@code null}, empty, or blank, and a title was applied already
+     *      {@null}, empty, or blank, and a title was applied already
      *      earlier.
      */
     public void setDescription( final CharSequence description )
@@ -691,8 +691,8 @@ public sealed class SVGElementImpl extends XMLElementAdapter implements SVGEleme
      *  Sets the attribute that indicates whether external resources are
      *  required to render this SVG element.
      *
-     *  @param  flag    {@code true} if external resources are needed,
-     *      {@code false} if all required resources are local to the current
+     *  @param  flag    {@true} if external resources are needed,
+     *      {@false} if all required resources are local to the current
      *      context.
      */
     public void setExternalResourcesRequired( final boolean flag )
@@ -1236,7 +1236,7 @@ public sealed class SVGElementImpl extends XMLElementAdapter implements SVGEleme
     /**
      *  Sets the mode for the aspect ratio preservation for this element.
      *
-     *  @param  value   The type; if {@code null} the
+     *  @param  value   The type; if {@null} the
      *      attribute will be removed.
      */
     public void setPreserveAspectRatio( final SVGPreserveAspectRatio value )

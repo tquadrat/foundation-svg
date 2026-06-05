@@ -105,14 +105,14 @@
 <span class="source-line-no">092</span><span id="line-92"> *  elements.</span>
 <span class="source-line-no">093</span><span id="line-93"> *</span>
 <span class="source-line-no">094</span><span id="line-94"> *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org</span>
-<span class="source-line-no">095</span><span id="line-95"> *  @version $Id: SVGUtils.java 1086 2024-01-05 23:18:33Z tquadrat $</span>
+<span class="source-line-no">095</span><span id="line-95"> *  @version $Id: SVGUtils.java 1258 2026-06-04 18:33:06Z tquadrat $</span>
 <span class="source-line-no">096</span><span id="line-96"> *  @since 0.0.5</span>
 <span class="source-line-no">097</span><span id="line-97"> *</span>
 <span class="source-line-no">098</span><span id="line-98"> *  @UMLGraph.link</span>
 <span class="source-line-no">099</span><span id="line-99"> */</span>
 <span class="source-line-no">100</span><span id="line-100">@SuppressWarnings( {"ClassWithTooManyMethods", "OverlyComplexClass", "OverlyCoupledClass"} )</span>
 <span class="source-line-no">101</span><span id="line-101">@UtilityClass</span>
-<span class="source-line-no">102</span><span id="line-102">@ClassVersion( sourceVersion = "$Id: SVGUtils.java 1086 2024-01-05 23:18:33Z tquadrat $" )</span>
+<span class="source-line-no">102</span><span id="line-102">@ClassVersion( sourceVersion = "$Id: SVGUtils.java 1258 2026-06-04 18:33:06Z tquadrat $" )</span>
 <span class="source-line-no">103</span><span id="line-103">public final class SVGUtils</span>
 <span class="source-line-no">104</span><span id="line-104">{</span>
 <span class="source-line-no">105</span><span id="line-105">        /*-----------*\</span>
@@ -1899,10 +1899,10 @@
 <span class="source-line-no">1886</span><span id="line-1886">     *  @param  rx  The x radius for the ellipsis.</span>
 <span class="source-line-no">1887</span><span id="line-1887">     *  @param  ry  The y radius for the ellipsis.</span>
 <span class="source-line-no">1888</span><span id="line-1888">     *  @param  rotation    The rotation of the x-axis.</span>
-<span class="source-line-no">1889</span><span id="line-1889">     *  @param  largeArc    {@code true} to draw the larger arc,</span>
-<span class="source-line-no">1890</span><span id="line-1890">     *      {@code false} for the smaller arc.</span>
-<span class="source-line-no">1891</span><span id="line-1891">     *  @param  sweep   {@code true} to draw the arc in</span>
-<span class="source-line-no">1892</span><span id="line-1892">     *      &amp;quot;positive-angle&amp;quot; direction, {@code false} for</span>
+<span class="source-line-no">1889</span><span id="line-1889">     *  @param  largeArc    {@true} to draw the larger arc,</span>
+<span class="source-line-no">1890</span><span id="line-1890">     *      {@false} for the smaller arc.</span>
+<span class="source-line-no">1891</span><span id="line-1891">     *  @param  sweep   {@true} to draw the arc in</span>
+<span class="source-line-no">1892</span><span id="line-1892">     *      &amp;quot;positive-angle&amp;quot; direction, {@false} for</span>
 <span class="source-line-no">1893</span><span id="line-1893">     *      drawing it in a &amp;quot;negative-angle&amp;quot; direction.</span>
 <span class="source-line-no">1894</span><span id="line-1894">     *  @param  x   The x coordinate for the end point of the line.</span>
 <span class="source-line-no">1895</span><span id="line-1895">     *  @param  y   The y coordinate for the end point of the line.</span>
@@ -1927,10 +1927,10 @@
 <span class="source-line-no">1914</span><span id="line-1914">     *  @param  rx  The x radius for the ellipsis.</span>
 <span class="source-line-no">1915</span><span id="line-1915">     *  @param  ry  The y radius for the ellipsis.</span>
 <span class="source-line-no">1916</span><span id="line-1916">     *  @param  rotation    The rotation of the x-axis.</span>
-<span class="source-line-no">1917</span><span id="line-1917">     *  @param  largeArc    {@code true} to draw the larger arc,</span>
-<span class="source-line-no">1918</span><span id="line-1918">     *      {@code false} for the smaller arc.</span>
-<span class="source-line-no">1919</span><span id="line-1919">     *  @param  sweep   {@code true} to draw the arc in</span>
-<span class="source-line-no">1920</span><span id="line-1920">     *      &amp;quot;positive-angle&amp;quot; direction, {@code false} for</span>
+<span class="source-line-no">1917</span><span id="line-1917">     *  @param  largeArc    {@true} to draw the larger arc,</span>
+<span class="source-line-no">1918</span><span id="line-1918">     *      {@false} for the smaller arc.</span>
+<span class="source-line-no">1919</span><span id="line-1919">     *  @param  sweep   {@true} to draw the arc in</span>
+<span class="source-line-no">1920</span><span id="line-1920">     *      &amp;quot;positive-angle&amp;quot; direction, {@false} for</span>
 <span class="source-line-no">1921</span><span id="line-1921">     *      drawing it in a &amp;quot;negative-angle&amp;quot; direction.</span>
 <span class="source-line-no">1922</span><span id="line-1922">     *  @param  x   The x coordinate for the end point of the line.</span>
 <span class="source-line-no">1923</span><span id="line-1923">     *  @param  y   The y coordinate for the end point of the line.</span>
@@ -1955,10 +1955,10 @@
 <span class="source-line-no">1942</span><span id="line-1942">     *  @param  rx  The x radius for the ellipsis.</span>
 <span class="source-line-no">1943</span><span id="line-1943">     *  @param  ry  The y radius for the ellipsis.</span>
 <span class="source-line-no">1944</span><span id="line-1944">     *  @param  rotation    The rotation of the x-axis.</span>
-<span class="source-line-no">1945</span><span id="line-1945">     *  @param  largeArc    {@code true} to draw the larger arc,</span>
-<span class="source-line-no">1946</span><span id="line-1946">     *      {@code false} for the smaller arc.</span>
-<span class="source-line-no">1947</span><span id="line-1947">     *  @param  sweep   {@code true} to draw the arc in</span>
-<span class="source-line-no">1948</span><span id="line-1948">     *      &amp;quot;positive-angle&amp;quot; direction, {@code false} for</span>
+<span class="source-line-no">1945</span><span id="line-1945">     *  @param  largeArc    {@true} to draw the larger arc,</span>
+<span class="source-line-no">1946</span><span id="line-1946">     *      {@false} for the smaller arc.</span>
+<span class="source-line-no">1947</span><span id="line-1947">     *  @param  sweep   {@true} to draw the arc in</span>
+<span class="source-line-no">1948</span><span id="line-1948">     *      &amp;quot;positive-angle&amp;quot; direction, {@false} for</span>
 <span class="source-line-no">1949</span><span id="line-1949">     *      drawing it in a &amp;quot;negative-angle&amp;quot; direction.</span>
 <span class="source-line-no">1950</span><span id="line-1950">     *  @param  x   The x coordinate for the end point of the line.</span>
 <span class="source-line-no">1951</span><span id="line-1951">     *  @param  y   The y coordinate for the end point of the line.</span>
@@ -1983,10 +1983,10 @@
 <span class="source-line-no">1970</span><span id="line-1970">     *  @param  rx  The x radius for the ellipsis.</span>
 <span class="source-line-no">1971</span><span id="line-1971">     *  @param  ry  The y radius for the ellipsis.</span>
 <span class="source-line-no">1972</span><span id="line-1972">     *  @param  rotation    The rotation of the x-axis.</span>
-<span class="source-line-no">1973</span><span id="line-1973">     *  @param  largeArc    {@code true} to draw the larger arc,</span>
-<span class="source-line-no">1974</span><span id="line-1974">     *      {@code false} for the smaller arc.</span>
-<span class="source-line-no">1975</span><span id="line-1975">     *  @param  sweep   {@code true} to draw the arc in</span>
-<span class="source-line-no">1976</span><span id="line-1976">     *      &amp;quot;positive-angle&amp;quot; direction, {@code false} for</span>
+<span class="source-line-no">1973</span><span id="line-1973">     *  @param  largeArc    {@true} to draw the larger arc,</span>
+<span class="source-line-no">1974</span><span id="line-1974">     *      {@false} for the smaller arc.</span>
+<span class="source-line-no">1975</span><span id="line-1975">     *  @param  sweep   {@true} to draw the arc in</span>
+<span class="source-line-no">1976</span><span id="line-1976">     *      &amp;quot;positive-angle&amp;quot; direction, {@false} for</span>
 <span class="source-line-no">1977</span><span id="line-1977">     *      drawing it in a &amp;quot;negative-angle&amp;quot; direction.</span>
 <span class="source-line-no">1978</span><span id="line-1978">     *  @param  x   The x coordinate for the end point of the line.</span>
 <span class="source-line-no">1979</span><span id="line-1979">     *  @param  y   The y coordinate for the end point of the line.</span>
@@ -2111,8 +2111,8 @@
 <span class="source-line-no">2098</span><span id="line-2098">     *  &lt;br&gt;Allowed are the values from 0 to 255, or 0% to 100% respectively,</span>
 <span class="source-line-no">2099</span><span id="line-2099">     *  other values will be normalised accordingly.</span>
 <span class="source-line-no">2100</span><span id="line-2100">     *</span>
-<span class="source-line-no">2101</span><span id="line-2101">     *  @param  flag    {@code true} if the given values are percentages,</span>
-<span class="source-line-no">2102</span><span id="line-2102">     *      {@code false} if they are absolute values.</span>
+<span class="source-line-no">2101</span><span id="line-2101">     *  @param  flag    {@true} if the given values are percentages,</span>
+<span class="source-line-no">2102</span><span id="line-2102">     *      {@false} if they are absolute values.</span>
 <span class="source-line-no">2103</span><span id="line-2103">     *  @param  red The red component for the colour.</span>
 <span class="source-line-no">2104</span><span id="line-2104">     *  @param  green   The green component for the colour.</span>
 <span class="source-line-no">2105</span><span id="line-2105">     *  @param  blue    The blue component for the colour.</span>
@@ -2131,7 +2131,7 @@
 <span class="source-line-no">2118</span><span id="line-2118">     *  Creates a new</span>
 <span class="source-line-no">2119</span><span id="line-2119">     *  {@link SVGColor}</span>
 <span class="source-line-no">2120</span><span id="line-2120">     *  instance, using the given argument as a CSS colour name.&lt;br&gt;</span>
-<span class="source-line-no">2121</span><span id="line-2121">     *  &lt;br&gt;The given argument may not be {@code null} nor the empty String,</span>
+<span class="source-line-no">2121</span><span id="line-2121">     *  &lt;br&gt;The given argument may not be {@null} nor the empty String,</span>
 <span class="source-line-no">2122</span><span id="line-2122">     *  but it will not undergo any further validation.</span>
 <span class="source-line-no">2123</span><span id="line-2123">     *</span>
 <span class="source-line-no">2124</span><span id="line-2124">     *  @param  color   The CSS colour name.</span>
@@ -2603,7 +2603,7 @@
 <span class="source-line-no">2590</span><span id="line-2590">    /**</span>
 <span class="source-line-no">2591</span><span id="line-2591">     *  Creates the namespace instance that is used for all SVG stuff.</span>
 <span class="source-line-no">2592</span><span id="line-2592">     *</span>
-<span class="source-line-no">2593</span><span id="line-2593">     *  @param  prefix  The prefix; can be empty or {@code null}.</span>
+<span class="source-line-no">2593</span><span id="line-2593">     *  @param  prefix  The prefix; can be empty or {@null}.</span>
 <span class="source-line-no">2594</span><span id="line-2594">     *  @return The new namespace instance.</span>
 <span class="source-line-no">2595</span><span id="line-2595">     */</span>
 <span class="source-line-no">2596</span><span id="line-2596">    private static final Namespace createSVGNamespace( final String prefix )</span>

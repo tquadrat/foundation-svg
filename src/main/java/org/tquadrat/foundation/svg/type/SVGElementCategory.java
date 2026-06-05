@@ -129,12 +129,12 @@ import org.tquadrat.foundation.util.LazyMap;
  *  The categories for the SVG elements.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SVGElementCategory.java 1151 2025-10-01 21:32:15Z tquadrat $
+ *  @version $Id: SVGElementCategory.java 1258 2026-06-04 18:33:06Z tquadrat $
  *  @since 0.0.5
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SVGElementCategory.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SVGElementCategory.java 1258 2026-06-04 18:33:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.5" )
 public enum SVGElementCategory
 {
@@ -355,7 +355,7 @@ public enum SVGElementCategory
      *  Retrieves the element category for the given element name.
      *
      *  @param  elementName The name of the element.
-     *  @return The categories for this element; will never be {@code null}.
+     *  @return The categories for this element; will never be {@null}.
      */
     public static final Collection<SVGElementCategory> retrieveElementCategory( final String elementName )
     {
